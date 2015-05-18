@@ -87,11 +87,17 @@
 					<li>
 						서비스 내에 공통으로 사용되는 엘리먼트는 접두어 'comm'을 추가한다.
 						<pre>
-							<span class="otmpost-txt-hilite">comm-</span>tab
+							<span class="otmpost-txt-hilite">comm-</span>header
 						</pre>
 					</li>
 					<li>
-						접두어는 각 이름에 한번만 사용될 수 있으며, 'comm'과 사용자가 지정한 모듈명을 의미하는 접두어는 다른 접두어와 중복 사용이 가능하다. (1순위로 사용)
+						사이트 내에 하나의 모듈(위젯)이 되는 엘리먼트는 접두어 'ui'를 추가한다.
+						<pre>
+							<span class="otmpost-txt-hilite">ui-</span>selbox
+						</pre>
+					</li>
+					<li>
+						접두어는 각 이름에 한번만 사용될 수 있으며, 'comm', 'ui'와 사용자가 지정한 모듈명을 의미하는 접두어는 다른 접두어와 중복 사용이 가능하다. (1순위로 사용)
 						<pre>
 							<span class="otmpost-txt-hilite">comm-pop-</span>header, <span class="otmpost-txt-hilite">snsshare-ly-</span>btn, <span class="otmpost-txt-hilite">scheduletbl-ifr-</span>list
 						</pre>
@@ -311,11 +317,11 @@
 						모듈화된 엘리먼트의 선택자에는 기본 스타일 외 스타일 추가 변경 시 직접 선택하여 변경하지 않는다.
 						<pre>
 							[HTML]
-							&lt;div class=&quot;list-item <span class="otmpost-txt-hilite">comm-list-box</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;list-item <span class="otmpost-txt-hilite">ui-list-box</span>&quot;&gt;&lt;/div&gt;
 						</pre>
 						<pre>
 							[CSS]
-							.comm-list-box{color:#ff0000} (X)
+							.ui-list-box{color:#ff0000} (X)
 							.list-item{color:#ff0000} (O)
 						</pre>
 					</li>

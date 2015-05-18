@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Markup(HTML, CSS) Coding Guide</title>
+<meta name="author" content="최규민,박용하">
+<meta name="keywords" content="마크업,HTML,CSS,코딩,가이드">
+<meta name="description" content="최규민, 박용하가 공동 제작한 마크업(HTML, CSS) 코딩 가이드입니다.">
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body style="padding:25px">
+<h1 style="font-size:2.5em">Markup(HTML, CSS) Coding Guide</h1>
+<h2 style="overflow:hidden;display:block;position:absolute;width:1px;height:1px;padding:0;border:0;margin:0;background:none;text-indent:2px;white-space:nowrap">본문</h2>
+<!-- [S] 내용 -->
+
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost-reset.css">
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost-conv.css">
+
+<div class="otmpost otmpost-conv">
+
+	<div class="otmpost-box" id="otmmcg-cover">
+		<p>작성자 : 최규민, 박용하</p>
+		<div><a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide" class="otmpost-txt-adefc">목차로 이동</a></div>
+	</div>
+
+	<div class="otmpost-box" id="otmmcg-chapter-appendix">
+		<h3>부록</h3>
+		<p>마크업에 도움이 되는 부분을 보충 설명한다.</p>
+		<div class="otmpost-indent">
+			<h4><span class="otmpost-apnt" id="otmmcg-appendix1"></span>1. 마크업 방법론</h4>
+			<p>더욱 편리하고 효용성을 높인 마크업을 위한 방법론 중 마크업 코딩 가이드에 사용된 방법론을 설명한다.</p>
+			<div class="otmpost-indent">
+				<h5>A. BEM(block__element--modifier)</h5>
+				<p>하나의 엘리먼트 모음을 독립적이고 재사용이 가능하도록 모듈화하여 제작하는 CSS 방법론이다.<br><a href="https://en.bem.info/" target="_blank">[참고] https://en.bem.info/</a></p>
+				<div class="otmpost-indent">
+					<h6>BEM의 장점</h6>
+					<ul>
+						<li>HTML, CSS를 모듈화하여 재사용이 가능하다.</li>
+						<li>고유한 네임스페이스(접두어)를 사용하여 선택자의 충돌을 방지한다.</li>
+						<li>클래스를 종속할 경우 커스터마이징이 용이하다.</li>
+						<li>CSS의 탐색 레벨이 낮아진다.</li>
+						<li>네이밍이 직관적이다.</li>
+					</ul>
+					<h6>BEM의 단점</h6>
+					<ul>
+						<li>CSS(Cascading Style Sheets)의 Cascading 규칙에 부합하지 않는다.</li>
+						<li>네이밍이 길어진다.</li>
+					</ul>
+					<h6>마크업 코딩 가이드 내의 BEM 사용</h6>
+					<p>모듈화가 필요한 공통 엘리먼트 또는 클래스 종속 시 사용된다.</p>
+				</div>
+				<h5>B. ACSS(Atomic CSS)</h5>
+				<p>모든 스타일을 클래스로 나누어 특정 엘리먼트에 종속되지 않고 어디에서나 사용이 가능하도록 제작하는 CSS 방법론이다.</p>
+				<div class="otmpost-indent">
+					<h6>ACSS의 장점</h6>
+					<ul>
+						<li>Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.</li>
+						<li>선택자가 종속되지 않아 어떤 엘리먼트에서든 적용이 가능하다.</li>
+						<li>유지보수 시 다른 HTML 페이지의 스타일 깨짐을 우려할 필요가 없다.</li>
+					</ul>
+					<h6>ACSS의 단점</h6>
+					<ul>
+						<li>HTML 문서가 복잡해진다.</li>
+						<li>대규모 사이트의 경우 오히려 CSS를 읽는 속도가 느려질 수 있다.</li>
+						<li>모듈화가 불가능하다.</li>
+						<li>인라인 스타일과 다를 바가 없어 CSS의 규칙에 부합하지 않는다.</li>
+					</ul>
+					<h6>마크업 코딩 가이드 내의 ACSS 사용</h6>
+					<p>다른 엘리먼트에 종속되지 않는 전역 또는 공통 스타일 클래스에 사용된다. (ex. .show, .hide, ...)</p>
+				</div>
+				<h5>C. OOCSS(Object Oriented CSS)</h5>
+				<p>사이트의 각 스타일을 템플릿화하여 특정 엘리먼트에 종속되지 않고 어디에서나 재사용이 가능하도록 제작하는 CSS 방법론이다.<br><a href="http://oocss.org/" target="_blank">[참고] http://oocss.org/</a></p>
+				<div class="otmpost-indent">
+					<h6>OOCSS의 장점</h6>
+					<ul>
+						<li>Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.</li>
+						<li>서로 동일한 스타일을 각 엘리먼트에 별도로 지정할 필요가 없다.</li>
+						<li>CSS만을 모듈화하여 선택자가 종속되지 않아 어떤 엘리먼트에서든 적용이 가능하다.</li>
+						<li>Sass의 @extend와 함께 사용할 경우 OOCSS의 장점을 극대화시킬 수 있다.</li>
+					</ul>
+					<h6>OOCSS의 단점</h6>
+					<ul>
+						<li>CSS 모듈화는 가능하나 HTML 엘리먼트의 모듈화는 불가능하다.</li>
+						<li>각 페이지의 디자인 가이드가 규칙적이지 않은 사이트에서는 적합하지 않다.</li>
+					</ul>
+					<h6>마크업 코딩 가이드 내의 OOCSS 사용</h6>
+					<p>다른 엘리먼트에 종속되지 않는 전역 또는 공통 스타일 템플릿 클래스에 사용된다. (ex. .blind, .clearfix, ...)</p>
+				</div>
+				<h5>D. SMACSS(Scalable and Modular Architecture for CSS)</h5>
+				<p>마크업 스타일을 기초, 레이아웃, 모듈, 상태, 테마 이 다섯가지로 구분하여 제작하는 CSS 방법론이다.<br><a href="https://smacss.com/" target="_blank">[참고] https://smacss.com/</a></p>
+				<div class="otmpost-indent">
+					<h6>SMACSS의 장점</h6>
+					<ul>
+						<li>HTML, CSS를 모듈화하여 재사용이 가능하다.</li>
+						<li>네이밍이 직관적이다.</li>
+					</ul>
+					<!-- <h6>SMACSS의 단점</h6>
+					<p>특별한 단점은 없다.</p> -->
+					<h6>마크업 코딩 가이드 내의 SMACSS 사용</h6>
+					<p>CSS 제작에 있어 전체적으로 SMACSS의 스타일 구분 규칙을 반영하였다.</p>
+				</div>
+			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-appendix2"></span>2. 네이밍 예약어</h4>
+			<p>
+				네이밍 규칙은 HTML, CSS 파일에서 사용되는 선택자, 그리고 이미지 등의 파일이나 폴더의 이름을 작성하는 규칙이다.<br>
+				네이밍을 이해하기 쉽게 작성하여야 사이트의 제작 및 유지보수를 맡은 관리자가 코드를 쉽게 파악할 수 있다.<br>
+			</p>
+			<div class="otmpost-indent">
+				<h5>A. 공통 예약어</h5>
+				<p>하이픈(-)이 별도로 표기되어 있지 않다면 자유롭게 사용 가능하며, 표기되어 있다면 해당 부분에만 사용할 수 있다.</p>
+				<table>
+					<colgroup>
+						<col style="width:23.5%">
+						<col style="width:26.5%">
+						<col style="width:23.5%">
+						<col style="width:26.5%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">예약어</th>
+							<th scope="col">의미</th>
+							<th scope="col">예약어</th>
+							<th scope="col">의미</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">tit</th>
+							<td>제목</td>
+							<th scope="row">dsc</th>
+							<td>설명</td>
+						</tr>
+						<tr>
+							<th scope="row">expl</th>
+							<td>부가설명</td>
+							<th scope="row">cate</th>
+							<td>카테고리</td>
+						</tr>
+						<tr>
+							<th scope="row">txt</th>
+							<td>문자</td>
+							<th scope="row">btn</th>
+							<td>버튼</td>
+						</tr>
+						<tr>
+							<th scope="row">subm</th>
+							<td>제출</td>
+							<th scope="row">canc</th>
+							<td>취소</td>
+						</tr>
+						<tr>
+							<th scope="row">chk</th>
+							<td>체크</td>
+							<th scope="row">clse</th>
+							<td>닫기</td>
+						</tr>
+						<tr>
+							<th scope="row">arr</th>
+							<td>화살표</td>
+							<th scope="row">srch</th>
+							<td>검색</td>
+						</tr>
+						<tr>
+							<th scope="row">nav</th>
+							<td>네비게이션</td>
+							<th scope="row">tab</th>
+							<td>탭</td>
+						</tr>
+						<tr>
+							<th scope="row">list</th>
+							<td>목록</td>
+							<th scope="row">litem</th>
+							<td>목록 내 항목</td>
+						</tr>
+						<tr>
+							<th scope="row">tbl</th>
+							<td>테이블</td>
+							<th scope="row">banr</th>
+							<td>배너</td>
+						</tr>
+						<tr>
+							<th scope="row">widg</th>
+							<td>위젯</td>
+							<th scope="row">pg</th>
+							<td>페이징</td>
+						</tr>
+						<tr>
+							<th scope="row">banr</th>
+							<td>배너</td>
+							<th scope="row">ad</th>
+							<td>광고</td>
+						</tr>
+						<tr>
+							<th scope="row">bg</th>
+							<td>배경</td>
+							<th scope="row">mask</th>
+							<td>마스크</td>
+						</tr>
+						<tr>
+							<th scope="row"><span class="otmpost-show-ib">line</span><span class="otmpost-show-ib">(-position)</span><span class="otmpost-show-ib">(-style)</span><span class="otmpost-show-ib">(-color)</span><span class="otmpost-show-ib">(-alpha)</span></th>
+							<td><span class="otmpost-show-ib">선&nbsp;&nbsp;</span><span class="otmpost-show-ib">ex. line</span><span class="otmpost-show-ib">(-ht, -hb, -vl, -vr)</span><span class="otmpost-show-ib">(-dot, -dash, -dbl, ...)</span><span class="otmpost-show-ib">(-fff)</span><span class="otmpost-show-ib">(-a20)</span></td>
+							<th scope="row">sprt</th>
+							<td>구분자</td>
+						</tr>
+						<tr>
+							<th scope="row">ico</th>
+							<td>아이콘</td>
+							<th scope="row">bu</th>
+							<td>블릿</td>
+						</tr>
+						<tr>
+							<th scope="row">photo</th>
+							<td>사진</td>
+							<th scope="row">thumb</th>
+							<td>썸네일</td>
+						</tr>
+						<tr>
+							<th scope="row">img</th>
+							<td>이미지</td>
+							<th scope="row">sp-</th>
+							<td>스프라이트 이미지</td>
+						</tr>
+						<tr>
+							<th scope="row">flt</th>
+							<td>플로팅(Floating)</td>
+							<th scope="row">dim</th>
+							<td>딤드(Dimmed)</td>
+						</tr>
+						<tr>
+							<th scope="row">ipt</th>
+							<td>입력 폼</td>
+							<th scope="row">ipt-txt</th>
+							<td>텍스트필드(입력 폼)</td>
+						</tr>
+						<tr>
+							<th scope="row">ipt-chk</th>
+							<td>체크박스(입력 폼)</td>
+							<th scope="row">ipt-rdo</th>
+							<td>라디오버튼(입력 폼)</td>
+						</tr>
+						<tr>
+							<th scope="row">ipt-sel</th>
+							<td>셀렉트박스(입력 폼)</td>
+							<th scope="row">ipt-file</th>
+							<td>파일 업로드(입력 폼)</td>
+						</tr>
+						<tr>
+							<th scope="row">hilite</th>
+							<td>강조</td>
+							<th scope="row">ellips</th>
+							<td>문장 생략</td>
+						</tr>
+						<tr>
+							<th scope="row">prev</th>
+							<td>이전</td>
+							<th scope="row">next</th>
+							<td>다음</td>
+						</tr>
+						<tr>
+							<th scope="row">top</th>
+							<td>위</td>
+							<th scope="row">btm</th>
+							<td>아래</td>
+						</tr>
+						<tr>
+							<th scope="row">lft</th>
+							<td>왼쪽</td>
+							<th scope="row">rgt</th>
+							<td>오른쪽</td>
+						</tr>
+						<tr>
+							<th scope="row">-on/-off</th>
+							<td>상태</td>
+							<th scope="row">-able/-dsble</th>
+							<td>입력 폼 활성화(상태)</td>
+						</tr>
+						<tr>
+							<th scope="row">-ovr/-unovr</th>
+							<td>마우스오버(상태)</td>
+							<th scope="row">-fcs/-unfcs</th>
+							<td>포커스(상태)</td>
+						</tr>
+						<tr>
+							<th scope="row">-chk/-unchk</th>
+							<td>체크(상태)</td>
+							<th scope="row">-fd/-unfd</th>
+							<td>펼침(상태)</td>
+						</tr>
+						<tr>
+							<th scope="row">fnc</th>
+							<td>함수(JS 또는 Back-End 개발용)</td>
+							<th scope="row">idx</th>
+							<td>인덱스(JS 또는 Back-End 개발용)</td>
+						</tr>
+						<tr>
+							<th scope="row">***-</th>
+							<td>마크업 산출물 넘버링</td>
+							<th scope="row">@</th>
+							<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
+						</tr>
+						<tr>
+							<th scope="row">--tmp</th>
+							<td>임시 파일(이미지 제외)</td>
+							<th scope="row">--bak</th>
+							<td>백업 파일</td>
+						</tr>
+						<tr>
+							<th scope="row">--comp/--decomp</th>
+							<td>압축 이미지 및 보관 폴더</td>
+							<th scope="row">psd</th>
+							<td>이미지 PSD 보관 폴더</td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>B. 레이아웃 예약어</h5>
+				<p>id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가능하며, 하이픈(-)은 표기된 부분에만 사용할 수 있다.</p>
+				<table>
+					<colgroup>
+						<col style="width:80px">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">예약어</th>
+							<th scope="col">의미</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">#wrap</th>
+							<td>사이트 전체</td>
+						</tr>
+						<tr>
+							<th scope="row">#header</th>
+							<td>사이트 머리글</td>
+						</tr>
+						<tr>
+							<th scope="row">#container</th>
+							<td>사이트 내용</td>
+						</tr>
+						<tr>
+							<th scope="row">#footer</th>
+							<td>사이트 꼬리글</td>
+						</tr>
+						<tr>
+							<th scope="row">#content</th>
+							<td>본문</td>
+						</tr>
+						<tr>
+							<th scope="row">#gnb</th>
+							<td>Global Navigation Bar(사이트 전역 메뉴. ex. Home, Login, Sitemap, Admin...)</td>
+						</tr>
+						<tr>
+							<th scope="row">#lnb</th>
+							<td>Local Navigation Bar(메인메뉴)</td>
+						</tr>
+						<tr>
+							<th scope="row">#snb</th>
+							<td>Side Navigation Bar(서브메뉴. 'Sub Navigation Bar'로도 불림)</td>
+						</tr>
+						<tr>
+							<th scope="row">#qnb</th>
+							<td>Quick Navigation Bar(퀵메뉴)</td>
+						</tr>
+						<tr>
+							<th scope="row">-nav-</th>
+							<td>Navigation(메뉴)</td>
+						</tr>
+						<tr>
+							<th scope="row">.-spot-</th>
+							<td>사이트 강조 영역</td>
+						</tr>
+						<tr>
+							<th scope="row">.-path-</th>
+							<td>사이트 경로</td>
+						</tr>
+						<tr>
+							<th scope="row">.-copyr-</th>
+							<td>카피라이트</td>
+						</tr>
+						<tr>
+							<th scope="row">-sect-</th>
+							<td>제목을 포함한 문서의 섹션</td>
+						</tr>
+						<tr>
+							<th scope="row">-artic-</th>
+							<td>글 또는 기사</td>
+						</tr>
+						<tr>
+							<th scope="row">-cont-</th>
+							<td>내용</td>
+						</tr>
+						<tr>
+							<th scope="row">.-aside-</th>
+							<td>본문 보충 설명</td>
+						</tr>
+						<tr>
+							<th scope="row">-wrap</th>
+							<td>그루핑(포장)</td>
+						</tr>
+						<tr>
+							<th scope="row">-group</th>
+							<td>그루핑(묶음)</td>
+						</tr>
+						<tr>
+							<th scope="row">-box</th>
+							<td>그루핑(상자)</td>
+						</tr>
+						<tr>
+							<th scope="row">-area</th>
+							<td>그루핑(특정 영역)</td>
+						</tr>
+						<tr>
+							<th scope="row">-zone</th>
+							<td>그루핑(영역의 일부)</td>
+						</tr>
+						<tr>
+							<th scope="row">-fld</th>
+							<td>그루핑(폼 양식)</td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>C. 접두어</h5>
+				<p>
+					접두어는 항상 맨 앞에 위치해야 하며, 'comm'과 사용자가 지정한 모듈명을 의미하는 접두어는 다른 접두어와 중복 사용이 가능하다. (1순위로 사용)<br>
+					하이픈(-)은 표기된 부분에만 사용할 수 있으며, 애트리뷰트 및 속성 별 사용 여부는 아래 표를 따른다.
+				</p>
+				<table>
+					<colgroup>
+						<col style="width:80px">
+						<col>
+						<col style="width:27%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">예약어</th>
+							<th scope="col">의미</th>
+							<th scope="col">용도</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">comm-</th>
+							<td>사이트 공통</td>
+							<td>HTML : id, class</td>
+						</tr>
+						<tr>
+							<th scope="row">t-</th>
+							<td>테이블 셀</td>
+							<td>HTML : id, headers</td>
+						</tr>
+						<tr>
+							<th scope="row">f-</th>
+							<td>폼</td>
+							<td>HTML : id, name</td>
+						</tr>
+						<tr>
+							<th scope="row">ifr-</th>
+							<td>프레임</td>
+							<td>HTML : id, class</td>
+						</tr>
+						<tr>
+							<th scope="row">ly-</th>
+							<td>레이어</td>
+							<td>HTML : id, class</td>
+						</tr>
+						<tr>
+							<th scope="row">pop-</th>
+							<td>팝업</td>
+							<td>HTML : id, class</td>
+						</tr>
+						<tr>
+							<th scope="row">-apnt-</th>
+							<td>앵커 포인트</td>
+							<td>HTML : id, name, class</td>
+						</tr>
+						<tr>
+							<th scope="row">wa-</th>
+							<td>WAI-ARIA의 상태 및 애트리뷰트</td>
+							<td>HTML : id(aria-*)</td>
+						</tr>
+						<tr>
+							<th scope="row">wf-</th>
+							<td>웹폰트</td>
+							<td>Style : font-family</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="otmpost-box otmpost-conv-pg">
+		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5">이전</a>
+		<span>다음</span>
+		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide">목차</a>
+	</div>
+
+</div>
+
+<!-- [E] 내용 -->
+<script type="text/javascript">
+$("pre").each(function(){$(this).html($(this).html().replace(/^\t+/mg,''));});
+</script>
+</body>
+</html>

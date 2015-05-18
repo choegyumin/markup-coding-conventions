@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Markup(HTML, CSS) Coding Guide</title>
+<meta name="author" content="최규민,박용하">
+<meta name="keywords" content="마크업,HTML,CSS,코딩,가이드">
+<meta name="description" content="최규민, 박용하가 공동 제작한 마크업(HTML, CSS) 코딩 가이드입니다.">
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body style="padding:25px">
+<h1 style="font-size:2.5em">Markup(HTML, CSS) Coding Guide</h1>
+<h2 style="overflow:hidden;display:block;position:absolute;width:1px;height:1px;padding:0;border:0;margin:0;background:none;text-indent:2px;white-space:nowrap">본문</h2>
+<!-- [S] 내용 -->
+
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost-reset.css">
+<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost-conv.css">
+
+<div class="otmpost otmpost-conv">
+
+	<div class="otmpost-box" id="otmmcg-cover">
+		<p>작성자 : 최규민, 박용하</p>
+		<div><a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide" class="otmpost-txt-adefc">목차로 이동</a></div>
+	</div>
+
+	<div class="otmpost-box" id="otmmcg-chapter2">
+		<h3>2. HTML 코드 작성 규칙</h3>
+		<p>HTML 코드의 작성 규칙을 설명한다.</p>
+		<div class="otmpost-indent">
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-1"></span>2-1. 개요</h4>
+			<p>
+				HTML은 사용자에게 내용을 전달하는 문서이며, 따라서 HTML 코드를 논리적으로 작성하여야 사이트를 더 효율적으로 사용할 수 있다.<br>
+				여기서는 HTML 코드의 전반적인 작성 규칙을 설명한다.
+			</p>
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-2"></span>2-2. 기본 규칙</h4>
+			<p>HTML 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.</p>
+			<div class="otmpost-indent">
+				<h5>A. 일반 규칙</h5>
+				<ul>
+					<li>HTML은 선언한 DTD 명세에 맞게 작성되어야 하며, 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C Validation을 통과해야 한다.</li>
+					<li>
+						특정 케이스(DTD 선언)를 제외한 모든 엘리먼트와 애트리뷰트는 영문 대문자를 사용하지 않는다.
+						<pre>
+							&lt;<span class="otmpost-txt-hilite">IMG</span> <span class="otmpost-txt-hilite">SRC</span>=&quot;..&quot;&gt; (X)
+							→ &lt;<span class="otmpost-txt-hilite">img</span> <span class="otmpost-txt-hilite">src</span>=&quot;..&quot;&gt; (O)
+						</pre>
+					</li>
+					<li>
+						모든 애트리뷰트 값은 큰 따옴표(&quot;)로 묶는다.<br>
+						<pre>
+							&lt;img src=<span class="otmpost-txt-hilite">'</span>..<span class="otmpost-txt-hilite">'</span>&gt; (X)
+							→ &lt;img src=<span class="otmpost-txt-hilite">&quot;</span>..<span class="otmpost-txt-hilite">&quot;</span>&gt; (O)
+						</pre>
+					</li>
+					<li>
+						모든 마크업 엘리먼트는 중첩 시 1탭 들여쓴다. (&lt;html&gt;, &lt;head&gt;, &lt;body&gt;의 자식 엘리먼트는 예외)<br>
+						1탭의 크기는 공백 2칸 또는 4칸으로 통일한다.
+					</li>
+					<li>
+						HTML 코드 내 스크립트는 사용을 지양하며, &lt;body&gt;의 마지막에 작성하거나 또는 js 파일로 분리한다.
+						<pre>
+							&lt;input type=&quot;text&quot; <span class="otmpost-txt-hilite">onfocus=&quot;this.className='on'&quot;</span>&gt; (X)
+						</pre>
+					</li>
+					<li>
+						엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
+						<pre>
+							&lt;div <span class="otmpost-txt-hilite">id</span>=&quot;sect&quot; <span class="otmpost-txt-hilite">class</span>=&quot;sect&quot; <span class="otmpost-txt-hilite">style</span>=&quot;overflow-y:scroll&quot;&gt;&lt;/div&gt;
+							&lt;input <span class="otmpost-txt-hilite">type</span>=&quot;password&quot; <span class="otmpost-txt-hilite">class</span>=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">name</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilite">id</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilite">title</span>=&quot;비밀번호&quot; <span class="otmpost-txt-hilite">style</span>=&quot;width:100px&quot; <span class="otmpost-txt-hilite">disabled</span>&gt;
+						</pre>
+					</li>
+				</ul>
+			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-3"></span>2-3. DTD 선언 및 head 엘리먼트 내부 마크업</h4>
+			<p>DTD 선언 및 HTML의 head 엘리먼트 내부 마크업 시 다음과 같은 규칙을 준수하도록 한다.</p>
+			<div class="otmpost-indent">
+				<h5>A. DTD 선언</h5>
+				<p>HTML 문서 작성 시 DTD는 아래의 예시를 따르며, DTD 선언 앞에는 서버사이드 언어를 제외한 다른 문자를 허용하지 않는다.</p>
+				<table>
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:85%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">HTML 5<br>(기본)</th>
+							<td>&lt;!DOCTYPE html&gt;</td>
+						</tr>
+						<tr>
+							<th scope="row">HTML 4.01<br>Transitional</th>
+							<td>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</td>
+						</tr>
+						<tr>
+							<th scope="row">XHTML 1.0<br>Transitional</th>
+							<td>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>B. 인코딩</h5>
+				<p>HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선언하도록 한다.</p>
+				<table>
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:85%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">HTML 5</th>
+							<td>&lt;meta charset=&quot;utf-8&quot;&gt;</td>
+						</tr>
+						<tr>
+							<th scope="row">etc.</th>
+							<td>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;</td>
+						</tr>
+					</tbody>
+				</table>
+				<ul>
+					<li>UTF-8 인코딩을 사용할 수 없다면 다른 인코딩을 사용한다. (한글은 euc-kr)</li>
+					<li>인코딩 선언은 head 엘리먼트 내부의 최초 엘리먼트로 작성한다.</li>
+				</ul>
+				<h5>C. Viewport</h5>
+				<p>HTML 문서 작성 시 다음과 같은 규칙을 준수하여 Viewport를 설정하도록 한다.</p>
+				<table>
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:85%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">IOS</th>
+							<td>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot;&gt;</td>
+						</tr>
+						<tr>
+							<th scope="row">etc.</th>
+							<td>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi&quot;&gt;</td>
+						</tr>
+					</tbody>
+				</table>
+				<h5>D. User Agent</h5>
+				<p>HTML 문서 작성 시 User Agent별로 body에 클래스를 추가한다.</p>
+				<table>
+					<colgroup>
+						<col style="width:15%">
+						<col style="width:15%">
+						<col style="width:70%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="rowgroup" rowspan="3">IOS</th>
+							<th scope="row">-</td>
+							<td>ua-ios</td>
+						</tr>
+						<tr>
+							<th scope="row">IOS 6 이하</td>
+							<td>ua-ios ua-ios-6b</td>
+						</tr>
+						<tr>
+							<th scope="row">IOS 7 이상</td>
+							<td>ua-ios ua-ios-7u</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup">Android</th>
+							<th scope="row">-</td>
+							<td>ua-android</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup">PC</th>
+							<th scope="row">-</td>
+							<td>ua-pc</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup">etc.</th>
+							<th scope="row">-</td>
+							<td>ua-etc</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-4"></span>2-4. 주석 작성</h4>
+			<p>HTML의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.</p>
+			<div class="otmpost-indent">
+				<h5>A. 일반 규칙</h5>
+				<p>한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며,<br>두줄 이상이 경우 주석기호와 주석내용 사이에 줄바꿈을 추가한다.</p>
+				<pre>
+					&lt;!-- 한줄 설명 --&gt;
+					&lt;!--
+					두줄 이상의 설명
+					두줄 이상의 설명
+					--&gt;
+				</pre>
+				<h5>B. 레이아웃 그룹 주석</h5>
+				<p>레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 시작인지 끝인지에 따라 맨 앞에 '[S]'나 '[E]'를 표기한다.</p>
+				<pre>
+					&lt;!-- <span class="otmpost-txt-hilite">[S]</span> 영역 이름 --&gt;
+					&lt;div&gt;
+					&nbsp;&nbsp;...
+					&lt;/div&gt;
+					&lt;!-- <span class="otmpost-txt-hilite">[E]</span> 영역 이름 --&gt;
+				</pre>
+				<h5>C. 개발참고 주석</h5>
+				<p>개발 적용 시에 참고해야하는 주석은 맨 앞에 '[D]'를 추가하여 작성한다.</p>
+				<pre>
+					&lt;!-- <span class="otmpost-txt-hilite">[D]</span> 개발 적용 시 참고해야 할 내용 --&gt;
+				</pre>
+			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-5"></span>2-5. 엘리멘트별 작성</h4>
+			<p>
+				HTML 작성 시 엘리멘트 별로 코드작성 유의사항을 준수하도록 한다.<br>
+				여기서는 <span class="otmpost-txt-hilite">DTD 명세와 W3C Validation과는 별도로 엘리먼트 작성 시 추가로 지켜야할 사항만을 설명</span>한다.
+			</p>
+			<div class="otmpost-indent">
+				<h5>A. 일반 규칙</h5>
+				<p>HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C Validation을 통과해야 한다.</p>
+				<h5>B. &lt;table&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</h5>
+				<p>자식 엘리먼트로 사용할 수 있는 태그가 한정되어 있는 엘리먼트는 &lt;div&gt;로 묶어서 사용한다.</p>
+				<pre>
+					&lt;<span class="otmpost-txt-hilite">table class=&quot;tbl&quot;</span>&gt;
+					&nbsp;&nbsp;...
+					&lt;/table&gt; (X)
+					→
+					&lt;<span class="otmpost-txt-hilite">div class=&quot;tbl&quot;</span>&gt;
+					&nbsp;&nbsp;&lt;table&gt;
+					&nbsp;&nbsp;&nbsp;&nbsp;...
+					&nbsp;&nbsp;&lt;/table&gt;
+					&lt;/div&gt; (O)
+				</pre>
+				<h5>C. &lt;caption&gt;</h5>
+				<p>&lt;caption&gt; 엘리먼트를 숨김 처리할 때는 &lt;caption&gt; 내부의 컨텐츠를 묶어서 숨기도록 한다.</p>
+				<pre>
+					&lt;table&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">caption class=&quot;blind&quot;</span>&gt;...&lt;/caption&gt;
+					&nbsp;&nbsp;...
+					&lt;/table&gt; (X)
+					→
+					&lt;table&gt;
+					&nbsp;&nbsp;&lt;caption&gt;
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">span class=&quot;blind&quot;</span>&gt;...&lt;/span&gt;
+					&nbsp;&nbsp;&lt;/caption&gt;
+					&nbsp;&nbsp;...
+					&lt;/table&gt; (O)
+				</pre>
+				<h5>D. &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</h5>
+				<p>회원가입 등의 문서 작성 폼의 경우 각 엘리먼트별로 너비 값 이 다르다면 인라인 스타일로 제어한다.</p>
+				<pre>
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilite">ipt-txt-w120</span>&quot;&gt;
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilite">ipt-txt-w180</span>&quot;&gt; (X)
+					→
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">style=&quot;width:120px&quot;</span>&gt;
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">style=&quot;width:180px&quot;</span>&gt; (O)
+				</pre>
+				<h5>E. &lt;button&gt;</h5>
+				<p>버튼에 별도의 type 애트리뷰트가 지정되어있지 않을 경우 반드시 type=&quot;button&quot;을 선언한다.</p>
+				<pre>
+					&lt;button&gt;버튼&lt;/button&gt; (X) → &lt;button <span class="otmpost-txt-hilite">type=&quot;button&quot;</span>&gt;버튼&lt;/button&gt; (O)
+				</pre>
+			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-6"></span>2-6. 기본 HTML 파일</h4>
+			<p>최초의 HTML 파일은 아래의 구조를 토대로 수정하여 사용한다.</p>
+			<p>PC</p>
+			<pre>
+				&lt;!DOCTYPE html&gt;
+				&lt;html lang=&quot;ko&quot;&gt;
+				&lt;head&gt;
+				&lt;meta charset=&quot;utf-8&quot;&gt;
+				&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+				&lt;title&gt;페이지명 : 서비스명&lt;/title&gt;
+				&lt;meta name=&quot;keywords&quot; content=&quot;..&quot;&gt;
+				&lt;meta name=&quot;description&quot; content=&quot;..&quot;&gt;
+				&lt;meta name=&quot;author&quot; content=&quot;..&quot;&gt;
+				&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;..&quot;&gt;
+				&lt;!--[if lt IE 9]&gt;
+				&lt;script type=&quot;text/javascript&quot; src=&quot;html5shiv-printshiv.min.js&quot;&gt;&lt;/script&gt;
+				&lt;script type=&quot;text/javascript&quot; src=&quot;respond.min.js&quot;&gt;&lt;/script&gt;
+				&lt;![endif]--&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+				&lt;div id=&quot;wrap&quot;&gt;
+				&lt;!-- [S] Skip Navigation --&gt;
+				&lt;div id=&quot;nav-skip&quot;&gt;
+				&lt;/div&gt;
+				&lt;!-- [E] Skip Navigation --&gt;
+				&lt;!-- [S] Header --&gt;
+				&lt;header id=&quot;header&quot; role=&quot;banner&quot;&gt;
+				&lt;/header&gt;
+				&lt;!-- [E] Header --&gt;
+				&lt;hr&gt;
+				&lt;!-- [S] Container --&gt;
+				&lt;div id=&quot;container&quot; role=&quot;main&quot;&gt;
+				&nbsp;&nbsp;&lt;!-- [S] Content --&gt;
+				&nbsp;&nbsp;&lt;div id=&quot;content&quot;&gt;
+				&nbsp;&nbsp;&lt;/div&gt;
+				&nbsp;&nbsp;&lt;!-- [E] Content --&gt;
+				&lt;/div&gt;
+				&lt;!-- [E] Container --&gt;
+				&lt;hr&gt;
+				&lt;!-- [S] Footer --&gt;
+				&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
+				&lt;/footer&gt;
+				&lt;!-- [E] Footer --&gt;
+				&lt;/div&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</pre>
+			<p>Mobile</p>
+			<pre>
+				&lt;!doctype html&gt;
+				&lt;html lang=&quot;ko&quot;&gt;
+				&lt;head&gt;
+				&lt;meta charset=&quot;utf-8&quot;&gt;
+				&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi&quot;&gt;
+				&lt;title&gt;페이지명 : 서비스명&lt;/title&gt;
+				&lt;meta name=&quot;keywords&quot; content=&quot;..&quot;&gt;
+				&lt;meta name=&quot;description&quot; content=&quot;..&quot;&gt;
+				&lt;meta name=&quot;author&quot; content=&quot;..&quot;&gt;
+				&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;..&quot;&gt;
+				&lt;/head&gt;
+				&lt;body class=&quot;..&quot;&gt;
+				&lt;div id=&quot;wrap&quot;&gt;
+				&lt;!-- [S] Skip Navigation --&gt;
+				&lt;div id=&quot;nav-skip&quot;&gt;
+				&lt;/div&gt;
+				&lt;!-- [E] Skip Navigation --&gt;
+				&lt;!-- [S] Header --&gt;
+				&lt;header id=&quot;header&quot; role=&quot;banner&quot;&gt;
+				&lt;/header&gt;
+				&lt;!-- [E] Header --&gt;
+				&lt;hr&gt;
+				&lt;!-- [S] Container --&gt;
+				&lt;div id=&quot;container&quot; role=&quot;main&quot;&gt;
+				&nbsp;&nbsp;&lt;!-- [S] Content --&gt;
+				&nbsp;&nbsp;&lt;div id=&quot;content&quot;&gt;
+				&nbsp;&nbsp;&lt;/div&gt;
+				&nbsp;&nbsp;&lt;!-- [E] Content --&gt;
+				&lt;/div&gt;
+				&lt;!-- [E] Container --&gt;
+				&lt;hr&gt;
+				&lt;!-- [S] Footer --&gt;
+				&lt;footer id=&quot;footer&quot; role=&quot;contentinfo&quot;&gt;
+				&lt;/footer&gt;
+				&lt;!-- [E] Footer --&gt;
+				&lt;/div&gt;
+				&lt;/body&gt;
+				&lt;/html&gt;
+			</pre>
+		</div>
+	</div>
+
+	<div class="otmpost-box otmpost-conv-pg">
+		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1">이전</a>
+		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3">다음</a>
+		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide">목차</a>
+	</div>
+
+</div>
+
+<!-- [E] 내용 -->
+<script type="text/javascript">
+$("pre").each(function(){$(this).html($(this).html().replace(/^\t+/mg,''));});
+</script>
+</body>
+</html>

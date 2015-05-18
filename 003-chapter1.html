@@ -44,7 +44,7 @@
 						일반적으로 선택자는 Cascading 방식을 사용하여 네이밍한다.
 						<pre>
 							&lt;div class=&quot;sect-exam&quot;&gt;
-							&nbsp;&nbsp;&lt;input class=&quot;<span class="otmpost-txt-hilite">input</span>&quot;&gt;
+							&nbsp;&nbsp;&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt</span>&quot;&gt;
 							&lt;/div&gt;
 						</pre>
 					</li>
@@ -59,9 +59,9 @@
 				<ul>
 					<li>하이픈(-)은 단어를 조합할 때 사용한다.</li>
 					<li>
-						네이밍의 조합은 '접두어-형태-의미-영역-확장-상태' 최대 6단계로 나뉘며, 필요에 따라 조합할 수 있다.
+						네이밍의 조합은 '접두어-형태-의미-영역-확장--상태' 최대 6단계로 나뉘며, 필요에 따라 조합할 수 있다.
 						<pre>
-							comm<span class="otmpost-txt-hilite">-</span>sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2<span class="otmpost-txt-hilite">-</span>over, sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2, sect<span class="otmpost-txt-hilite">-</span>exam
+							comm<span class="otmpost-txt-hilite">-</span>sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2<span class="otmpost-txt-hilite">--</span>over, sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2, sect<span class="otmpost-txt-hilite">-</span>exam
 						</pre>
 					</li>
 					<li>
@@ -74,6 +74,27 @@
 						숫자를 사용할 때 임의로 자릿수를 늘리지 않는다.
 						<pre>
 							list<span class="otmpost-txt-hilite">0</span>3 (X) → list3 (O)
+						</pre>
+					</li>
+					<li>
+						상태 네이밍은 조합 시 하이픈을 두번 사용한다.
+						<pre>
+							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam--on</span>&quot;&gt;
+						</pre>
+					</li>
+				</ul>
+				<h6 class="otmpost-tit-refer">[참고] 네이밍 확장의 구분</h6>
+				<ul>
+					<li>
+						종속 확장 : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용.
+						<pre>
+							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam-v2</span>&quot;&gt;
+						</pre>
+					</li>
+					<li>
+						독립 확장 : 기본 class와 동일한 형태, 의미를 사용하나 전혀 다른 스타일이 필요할 때 사용.
+						<pre>
+							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam2</span>&quot;&gt;
 						</pre>
 					</li>
 				</ul>
@@ -103,21 +124,6 @@
 						</pre>
 					</li>
 					<li>접두어 목록은 부록을 참고한다.</li>
-				</ul>
-				<h5>E. 네이밍 확장</h5>
-				<ul>
-					<li>
-						종속 확장 : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용.
-						<pre>
-							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam-v2</span>&quot;&gt;
-						</pre>
-					</li>
-					<li>
-						독립 확장 : 기본 class와 동일한 형태, 의미를 사용하나 전혀 다른 스타일이 필요할 때 사용.
-						<pre>
-							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam2</span>&quot;&gt;
-						</pre>
-					</li>
 				</ul>
 			</div>
 			<h4><span class="otmpost-apnt" id="otmmcg-chapter1-3"></span>1-3. 선택자 네이밍</h4>
@@ -308,8 +314,8 @@
 					<li>
 						고유한 네임스페이스가 필요하므로, 접두어를 추가하고 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#otmmcg-appendix1">BEM 방법론</a>을 응용하여 네이밍한다. ('__', '--' 대신 '-' 사용)
 						<pre>
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">comm-</span>sect-exam&quot;&gt;
-							&nbsp;&nbsp;&lt;input class=&quot;<span class="otmpost-txt-hilite">comm-</span>sect-exam<span class="otmpost-txt-hilite">-input</span> <span class="otmpost-txt-hilite">comm-</span>sect-exam<span class="otmpost-txt-hilite">-ipt-on</span>&quot;&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>list-box&quot;&gt;
+							&nbsp;&nbsp;&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>list-box<span class="otmpost-txt-hilite">-wrap</span>&quot;&gt;&lt;/div&gt;
 							&lt;/div&gt;
 						</pre>
 					</li>

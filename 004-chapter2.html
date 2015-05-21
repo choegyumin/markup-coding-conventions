@@ -225,7 +225,22 @@
 					&nbsp;&nbsp;&lt;/table&gt;
 					&lt;/div&gt; (O)
 				</pre>
-				<h5>C. &lt;caption&gt;</h5>
+				<h5>C. &lt;table&gt;, &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;</h5>
+				<p>&lt;table&gt; 엘리먼트를 제작 시 &lt;thead&gt;, &lt;tfoot&gt;의 유무와 관계없이 &lt;tbody&gt;를 사용하도록 한다.</p>
+				<pre>
+					&lt;table&gt;
+					&nbsp;&nbsp;&lt;tr&gt;...&lt;/tr&gt;
+					&nbsp;&nbsp;...
+					&lt;/table&gt; (X)
+					→
+					&lt;table&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">tbody</span>&gt;
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;...&lt;/tr&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">/tbody</span>&gt;
+					&nbsp;&nbsp;...
+					&lt;/table&gt; (O)
+				</pre>
+				<h5>D. &lt;caption&gt;</h5>
 				<p>&lt;caption&gt; 엘리먼트를 숨김 처리할 때는 &lt;caption&gt; 내부의 컨텐츠를 묶어서 숨기도록 한다.</p>
 				<pre>
 					&lt;table&gt;
@@ -240,7 +255,7 @@
 					&nbsp;&nbsp;...
 					&lt;/table&gt; (O)
 				</pre>
-				<h5>D. &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</h5>
+				<h5>E. &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</h5>
 				<p>회원가입 등의 문서 작성 폼의 경우 각 엘리먼트별로 너비 값이 다르다면 인라인 스타일로 제어한다.</p>
 				<pre>
 					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilite">ipt-txt-w120</span>&quot;&gt;

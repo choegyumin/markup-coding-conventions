@@ -206,9 +206,9 @@
 				.ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis}
 
 				/* Skip Navigation */
-				#nav-skip{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
-				#nav-skip a{overflow:hidden;display:block;position:absolute;top:0;right:0;left:0;height:0;background:#222;font-size:14px;line-height:44px;font-weight:bold;color:#fff;white-space:nowrap;text-align:center}
-				#nav-skip a:hover,#nav-skip a:focus,#nav-skip a:active{top:0;height:44px}
+				#sknv{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
+				#sknv a{overflow:hidden;display:block;position:absolute;top:0;right:0;left:0;height:0;background:#222;font-size:14px;line-height:44px;font-weight:bold;color:#fff;white-space:nowrap;text-align:center}
+				#sknv a:hover,#sknv a:focus,#sknv a:active{top:0;height:44px}
 
 				/* For Screen Reader */
 				@media aural, speech{
@@ -265,7 +265,7 @@
 				.ua-android textarea::-webkit-scrollbar-corner{background-color:transparent}
 
 				/* Common */
-				body .blind,#nav-skip{position:absolute;z-index:-1;opacity:0}
+				body .blind,#sknv{position:absolute;z-index:-1;opacity:0}
 				.show-b{display:block !important}
 				.show-ib{display:inline-block !important}
 				.show-i{display:inline !important}

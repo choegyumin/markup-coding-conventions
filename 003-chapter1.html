@@ -86,13 +86,13 @@
 				<h6 class="otmpost-tit-refer">[참고] 네이밍 확장의 구분</h6>
 				<ul>
 					<li>
-						종속 확장 : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용.
+						<em>종속 확장</em> : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용.
 						<pre>
 							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam-v2</span>&quot;&gt;
 						</pre>
 					</li>
 					<li>
-						독립 확장 : 기본 class와 동일한 형태, 의미를 사용하나 전혀 다른 스타일이 필요할 때 사용.
+						<em>독립 확장</em> : 기본 class와 동일한 형태, 의미를 사용하나 전혀 다른 스타일이 필요할 때 사용.
 						<pre>
 							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam2</span>&quot;&gt;
 						</pre>
@@ -163,10 +163,10 @@
 					<div style="margin-top:5px;padding:15px;border:1px solid #444">
 						#header : 사이트 머리글
 						<div style="margin-top:5px;padding:15px;border:1px solid #444">
-							#gnb : Global Navigation Bar<br>(사이트 전역 메뉴. ex. Home, Login, Sitemap, ...)
+							#gnb : Global Navigation Bar
 						</div>
 						<div style="margin-top:5px;padding:15px;border:1px solid #444">
-							#lnb : Local Navigation Bar(메인메뉴)
+							#lnb : Local Navigation Bar
 						</div>
 					</div>
 					<div style="margin-top:5px">&lt;hr&gt;</div>
@@ -177,7 +177,7 @@
 						</div>
 						<div style="float:left;width:30%;margin-top:5px">
 							<div style="padding:15px;border:1px solid #444">
-								#snb : Side Navigation Bar<span class="otmpost-show-ib">(서브메뉴. 'Sub Navigation Bar'로도 불림)</span>
+								#snb : Side Navigation Bar
 							</div>
 						</div>
 						<div style="float:left;width:38%;margin-top:5px">
@@ -192,13 +192,16 @@
 						</div>
 					</div>
 					<div style="position:absolute;top:50px;right:15px;width:53px;padding:15px;border:1px solid #444">
-						#qnb : Quick Navigation Bar<span class="otmpost-show-ib">(퀵메뉴)</span>
+						.qnb : Quick Navigation Bar
 					</div>
 					<div style="margin-top:5px">&lt;hr&gt;</div>
 					<div style="overflow:hidden;margin-top:5px;padding:15px;border:1px solid #444">
 						#footer : 사이트 꼬리글
 						<div style="margin-top:5px;padding:15px;border:1px solid #444">
-							.copyright : 카피라이트
+							.fnb : Footer Navigation Bar
+						</div>
+						<div style="margin-top:5px;padding:15px;border:1px solid #444">
+							.copyr : 카피라이트
 						</div>
 					</div>
 				</div>

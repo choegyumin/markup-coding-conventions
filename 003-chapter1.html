@@ -82,6 +82,12 @@
 							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam--on</span>&quot;&gt;
 						</pre>
 					</li>
+					<li>
+						하이픈은 띄어쓰기가 아닌 엘리먼트의 역할에 대한 구분자이므로 무분별하게 사용하지 않는다.
+						<pre>
+							<span class="otmpost-txt-hilite">service-naming-exam</span>-wrap (X) → <span class="otmpost-txt-hilite">servicenamingexam</span>-wrap (O)
+						</pre>
+					</li>
 				</ul>
 				<h6 class="otmpost-tit-refer">[참고] 네이밍 확장의 구분</h6>
 				<ul>
@@ -135,22 +141,32 @@
 					<li>class는 여러번 사용할 수 있다.</li>
 					<li>레이아웃을 위해 작성되지 않은 id는 class를 추가하여 스타일을 제공한다.</li>
 					<li>
-						네이밍이 중복되지 않도록 상속 레벨이 높지 않은 경우 항상 단어를 조합하여 네이밍한다. (서비스명은 예외)
+						일반적으로 네이밍의 중복을 방지하기 위해 상속 레벨이 낮은 엘리먼트는 단어를 조합하여 네이밍한다.
 						<pre>
-							&lt;div class=&quot;namingexam&quot;&gt; ← 서비스명
-							&nbsp;&nbsp;&lt;ul class=&quot;list-box&quot;&gt;
+							&lt;div class=&quot;servicenamingexam&quot;&gt;
+							&nbsp;&nbsp;&lt;ul class=&quot;list<span class="otmpost-txt-hilite">-box</span>&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;thmb&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;info_area&quot;&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;tit-field&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;info<span class="otmpost-txt-hilite">-area</span>&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;tit<span class="otmpost-txt-hilite">-field</span>&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong class=&quot;tit&quot;&gt;&lt;/strong&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;expl&quot;&gt;&lt;/span&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=&quot;dsc&quot;&gt;&lt;/p&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+							&nbsp;&nbsp;&lt;/ul&gt;
+							&lt;/div&gt;
+						</pre>
+					</li>
+					<li>
+						하나의 컨텐츠를 이루는 엘리먼트 모음의 최상위 엘리먼트는 독립성과 재사용성의 증진을 위해 단어의 조합 없이 컨텐츠를 확실히 식별할 수 있는 이름으로 네이밍한다.
+						<pre>
+							&lt;div class=&quot;<span class="otmpost-txt-hilite">servicenamingexam</span>&quot;&gt;
+							&nbsp;&nbsp;&lt;ul class=&quot;list-box&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;...
 							&nbsp;&nbsp;&lt;/ul&gt;
 							&lt;/div&gt;
 						</pre>

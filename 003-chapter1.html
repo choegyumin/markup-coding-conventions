@@ -67,13 +67,14 @@
 					<li>
 						단어와 숫자를 조합하는 경우 하이픈을 사용하지 않는다.
 						<pre>
-							list<span class="otmpost-txt-hilite">-</span>3 (X) → list3 (O)
+							list<span class="otmpost-txt-hilite">-3</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
 						</pre>
 					</li>
 					<li>
 						숫자를 사용할 때 임의로 자릿수를 늘리지 않는다.
 						<pre>
-							list<span class="otmpost-txt-hilite">0</span>3 (X) → list3 (O)
+							list<span class="otmpost-txt-hilite">03</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
+							list-v<span class="otmpost-txt-hilite">03</span> (X) → list-v<span class="otmpost-txt-hilite">3</span> (O)
 						</pre>
 					</li>
 					<li>

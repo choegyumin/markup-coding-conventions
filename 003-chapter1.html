@@ -57,7 +57,7 @@
 				</ul>
 				<h5>C. 네이밍 조합</h5>
 				<ul>
-					<li>하이픈(-)은 단어를 조합할 때 사용한다.</li>
+					<li>하이픈(-)은 단어를 역할별로 조합할 때 사용한다.</li>
 					<li>
 						네이밍의 조합은 '접두어-형태-의미-영역-확장--상태' 최대 6단계로 나뉘며, 필요에 따라 조합할 수 있다.
 						<pre>
@@ -65,22 +65,29 @@
 						</pre>
 					</li>
 					<li>
-						단어와 숫자를 조합하는 경우 하이픈을 사용하지 않는다.
+						단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 임의로 자릿수를 늘리지 않는다.
 						<pre>
 							list<span class="otmpost-txt-hilite">-3</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
-						</pre>
-					</li>
-					<li>
-						숫자를 사용할 때 임의로 자릿수를 늘리지 않는다.
-						<pre>
 							list<span class="otmpost-txt-hilite">03</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
-							list-v<span class="otmpost-txt-hilite">03</span> (X) → list-v<span class="otmpost-txt-hilite">3</span> (O)
 						</pre>
 					</li>
 					<li>
-						상태 네이밍은 조합 시 하이픈을 두번 사용하며, 별도의 클래스가 없는 엘리먼트의 경우 상태 네이밍 클래스만 사용한다.
+						확장 네이밍은 일반적으로 'v'와 숫자를 붙여 네이밍하며, 별도의 이름을 부여할 경우 'v'와 단어 사이에는 하이픈이 아닌 언더바(_)를 사용한다.
+						<pre>
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v2</span>&quot;&gt;
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v_wide</span>&quot;&gt;
+						</pre>
+					</li>
+					<li>
+						상태 네이밍은 하이픈을 두번 사용하여 조합한다.
 						<pre>
 							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam--on</span>&quot;&gt;
+						</pre>
+					</li>
+					<li>
+						주어진 클래스가 없는 엘리먼트를 확장 또는 상태 제어해야 할 경우 조합없이 네이밍하여 사용한다.
+						<pre>
+							&lt;div class=&quot;<span class="otmpost-txt-hilite">v_blur</span>&quot;&gt;&lt;/div&gt;
 							&lt;div class=&quot;<span class="otmpost-txt-hilite">fd</span>&quot;&gt;&lt;/div&gt;
 						</pre>
 					</li>
@@ -91,18 +98,21 @@
 						</pre>
 					</li>
 				</ul>
-				<h6 class="otmpost-tit-refer">[참고] 네이밍 확장의 구분</h6>
+				<h6 class="otmpost-tit-refer">[참고] 확장 네이밍의 구분</h6>
 				<ul>
 					<li>
-						<em>종속 확장</em> : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용.
+						<em>종속 확장</em> : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용하며, 일반적으로 확장 네이밍을 이야기할 때는 종속 확장 네이밍을 뜻한다.
 						<pre>
-							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam-v2</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam</span>&quot;&gt;
+							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilite">img-exam-v2</span>&quot;&gt;
+							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilite">img-exam-v_ratio</span>&quot;&gt;
 						</pre>
 					</li>
 					<li>
-						<em>독립 확장</em> : 기본 class와 동일한 형태, 의미를 사용하나 전혀 다른 스타일이 필요할 때 사용.
+						<em>독립 확장</em> : 기본 class와 동일한 형태와 의미를 가지고 있으나 전혀 다른 스타일이 필요할 때 사용하며, 별개의 엘리먼트로 구분된다.
 						<pre>
-							&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam</span>&quot;&gt; &lt;input class=&quot;<span class="otmpost-txt-hilite">ipt-exam2</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam2</span>&quot;&gt;
 						</pre>
 					</li>
 				</ul>

@@ -41,7 +41,38 @@
 			<div class="otmpost-indent">
 				<h5>A. 일반 규칙</h5>
 				<p>HTML 작성 시 내용의 의미에 맞는 태그를 사용하여 마크업한다.</p>
-				<h5>B. 목록 엘리먼트</h5>
+				<h5>B. 제목 엘리먼트</h5>
+				<ul>
+					<li>일반적으로 헤딩 엘리먼트(&lt;h1&gt;-&lt;h6&gt;)을 사용한다.</li>
+					<li>헤딩 엘리먼트를 사용할 수 없을 경우 &lt;strong&gt; 대신 &lt;em&gt;을 사용한다.</li>
+				</ul>
+				<h6 class="otmpost-tit-refer">[참고] &lt;strong&gt; 엘리먼트와 &lt;em&gt; 엘리먼트의 차이</h6>
+				<ul>
+					<li>
+						<em>HTML5 이전</em>
+						<p>둘 다 강조하는 내용을 가리키며, &lt;strong&gt;이 &lt;em&gt;보다 강하다.</p>
+					</li>
+					<li>
+						<em>HTML5</em>
+						<p>
+							&lt;strong&gt;은 중요성(importance)을 나타내며, &lt;em&gt;은 강조성(emphasis)을 나타낸다.
+							<pre>
+								&lt;h1&gt;당신이 오늘 해야할 작업&lt;/h1&gt;
+								&lt;ul&gt;
+								&nbsp;&nbsp;&lt;li&gt;<span class="otmpost-txt-hilite">&lt;strong&gt;오븐 끄기!&lt;/strong&gt;</span>&lt;/li&gt;
+								&nbsp;&nbsp;&lt;li&gt;쓰레기 비우기&lt;/li&gt;
+								&nbsp;&nbsp;&lt;li&gt;빨래하기&lt;/li&gt;
+								&lt;/ul&gt;
+							</pre>
+							<pre>
+								&lt;p&gt;
+								&nbsp;&nbsp;<span class="otmpost-txt-hilite">&lt;em&gt;고양이&lt;/em&gt;</span>는 귀여운 동물이다.
+								&lt;/p&gt;
+							</pre>
+						</p>
+					</li>
+				</ul>
+				<h5>C. 목록 엘리먼트</h5>
 				<p>목록 엘리먼트 작성 시 목록의 성격에 따라 각기 다른 태그를 사용한다.</p>
 				<ul>
 					<li>
@@ -87,17 +118,17 @@
 				<ul>
 					<li>&lt;ul&gt;과 &lt;ol&gt;은 스크린 리더로 음성을 출력했을 경우 따로 구분지어 읽지 않는다.</li>
 					<li>스크린 리더는 스타일의 list-style 속성 값에 따라 목록의 정보를 읽어주지만 W3C가 권장하는 표준이 아니다. 그러나 대부분의 해외 스크린 리더도 동일하므로 무분별한 스타일 list-style:none 사용은 자제하도록 한다.</li>
-					<li>&lt;li&gt; 엘리먼트 내에 순서를 기입할 경우 번호의 중복을 막기 위해 일반 목록(&lt;ul&gt;) 태그를 사용한다.</li>
+					<li>&lt;li&gt; 내에 순서를 기입할 경우 번호의 중복을 막기 위해 일반 목록(&lt;ul&gt;) 태그를 사용한다.</li>
 				</ul>
-				<h5>C. 표 엘리먼트</h5>
+				<h5>D. 표 엘리먼트</h5>
 				<ul>
 					<li>HTML5가 아니라도 &lt;table&gt; 엘리먼트에는 summary 애트리뷰트를 사용하지 않는다.</li>
-					<li>헤딩태그 등으로 &lt;table&gt; 엘리먼트 대한 제목이 표기되어있을 경우 &lt;caption&gt; 엘리먼트로 표의 제목을 적어줄 필요는 없다.</li>
+					<li>헤딩 엘리먼트 등으로 &lt;table&gt;에 대한 제목이 표기되어있을 경우 &lt;caption&gt;으로 표의 제목을 적어줄 필요는 없다.</li>
 				</ul>
-				<h5>D. 폼 엘리먼트</h5>
+				<h5>E. 폼 엘리먼트</h5>
 				<ul>
-					<li>헤딩태그 등으로 &lt;fieldset&gt; 엘리먼트 대한 제목이 표기되어있을 경우 &lt;legend&gt; 엘리먼트로 표의 제목을 적어줄 필요는 없다.</li>
-					<li>&lt;input&gt;과 같은 폼 입력 엘리먼트에 &lt;label&gt; 엘리먼트를 연결할 수 없는 상황이라면 title 애트리뷰트으로 대체한다. (굳이 보이지도 않는 &lt;label&gt; 엘리먼트를 만들 필요는 없음)</li>
+					<li>&lt;fieldset&gt;에 대한 별도의 제목 엘리먼트가 제공되어 있을 경우 &lt;legend&gt;로 표의 제목을 적어줄 필요는 없다.</li>
+					<li>&lt;input&gt;과 같은 폼 입력 엘리먼트에 &lt;label&gt;을 연결할 수 없는 상황이라면 굳이 숨김 처리된 &lt;label&gt;을 제공할 필요는 없으며, title 애트리뷰트으로 대체한다.</li>
 				</ul>
 			</div>
 			<h4><span class="otmpost-apnt" id="otmmcg-chapter4-3"></span>4-3. 논리적인 순서의 마크업</h4>

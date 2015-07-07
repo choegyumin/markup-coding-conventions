@@ -58,9 +58,9 @@
 				<ul>
 					<li>하이픈(-)은 단어를 역할별로 조합할 때 사용한다.</li>
 					<li>
-						네이밍의 조합은 '프리픽스-형태-의미-영역-확장--상태' 최대 6단계로 나뉘며, 필요에 따라 조합할 수 있다.
+						네이밍의 조합은 '프리픽스-컨텐츠명-형태-의미-영역-확장--상태' 최대 7단계로 나뉘며, 필요에 따라 조합할 수 있다.
 						<pre>
-							comm<span class="otmpost-txt-hilite">-</span>sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2<span class="otmpost-txt-hilite">--</span>over, sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2, sect<span class="otmpost-txt-hilite">-</span>exam
+							comm<span class="otmpost-txt-hilite">-</span>contname<span class="otmpost-txt-hilite">-</span>sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2<span class="otmpost-txt-hilite">--</span>over, sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2, sect<span class="otmpost-txt-hilite">-</span>exam
 						</pre>
 					</li>
 					<li>
@@ -71,16 +71,15 @@
 						</pre>
 					</li>
 					<li>
-						확장 네이밍은 일반적으로 'v'와 숫자를 붙여 네이밍하며, 별도의 이름을 부여할 경우 'v'와 단어 사이에는 하이픈이 아닌 언더바(_)를 사용한다.
-						<pre>
-							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v2</span>&quot;&gt;
-							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v_wide</span>&quot;&gt;
-						</pre>
-					</li>
-					<li>
 						상태 네이밍은 하이픈을 두번 사용하여 조합한다.
 						<pre>
 							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam--on</span>&quot;&gt;
+						</pre>
+					</li>
+					<li>
+						하이픈은 띄어쓰기가 아닌 엘리먼트 역할에 따른 네이밍 조합의 구분자이므로 무분별하게 사용하지 않으며, 아래 예제는 일반적으로 네이밍 7단계 조합 중 컨텐츠명에 해당된다.
+						<pre>
+							<span class="otmpost-txt-hilite">service-naming-exam</span>-wrap (X) → <span class="otmpost-txt-hilite">servicenamingexam</span>-wrap (O)
 						</pre>
 					</li>
 					<li>
@@ -91,9 +90,10 @@
 						</pre>
 					</li>
 					<li>
-						하이픈은 띄어쓰기가 아닌 엘리먼트의 역할에 대한 구분자이므로 무분별하게 사용하지 않는다.
+						확장 네이밍은 일반적으로 'v'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'v'와 단어 사이에는 하이픈이 아닌 언더바(_)를 사용한다.
 						<pre>
-							<span class="otmpost-txt-hilite">service-naming-exam</span>-wrap (X) → <span class="otmpost-txt-hilite">servicenamingexam</span>-wrap (O)
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v2</span>&quot;&gt;
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v_wide</span>&quot;&gt;
 						</pre>
 					</li>
 				</ul>
@@ -129,7 +129,7 @@
 						</pre>
 					</li>
 					<li>
-						사이트 내에 하나의 모듈(위젯)이 되는 엘리먼트는 플러그인 또는 컴포넌트 등이 가지고 있는 별도의 사용자 정의 프리픽스가 없을 경우 프리픽스 'ui'를 추가한다.
+						사이트 내 어디에서나 사용 가능한 하나의 모듈(위젯)이 되는 엘리먼트는 플러그인 또는 컴포넌트 등이 가지고 있는 별도의 사용자 정의 프리픽스가 없을 경우 프리픽스 'ui'를 추가한다.
 						<pre>
 							<span class="otmpost-txt-hilite">ui-</span>selbox
 						</pre>
@@ -173,7 +173,8 @@
 						</pre>
 					</li>
 					<li>
-						하나의 컨텐츠를 이루는 엘리먼트 모음의 최상위 엘리먼트는 독립성과 재사용성의 증진을 위해 단어의 조합 없이 컨텐츠를 확실히 식별할 수 있는 이름으로 네이밍한다.
+						일반적으로 하나의 컨텐츠를 이루는 엘리먼트 모음의 최상위 엘리먼트는 독립성과 재사용성의 증진을 위해 단어의 조합 없이 컨텐츠를 확실히 식별할 수 있는 이름으로 네이밍하며, 이는 네이밍 7단계 조합 중 컨텐츠명에 해당된다.<br>
+						컨텐츠명은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#otmmcg-appendix1">BEM 방법론</a>에 의하면 'Block', 'Element', 'Modifier' 중 'Block'과 같다
 						<pre>
 							&lt;div class=&quot;<span class="otmpost-txt-hilite">servicenamingexam</span>&quot;&gt;
 							&nbsp;&nbsp;&lt;ul class=&quot;list-box&quot;&gt;
@@ -356,24 +357,37 @@
 				<h5>A. 선택자 네이밍</h5>
 				<ul>
 					<li>
-						고유한 네임스페이스가 필요하므로, 프리픽스를 추가하고 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#otmmcg-appendix1">BEM 방법론</a>을 응용하여 네이밍한다.
+						고유한 네임스페이스가 필요하므로 프리픽스를 추가한다.
 						<pre>
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>list-box&quot;&gt;
-							&nbsp;&nbsp;&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>list-box<span class="otmpost-txt-hilite">-wrap</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>tabmenu&quot;&gt;&lt;/div&gt;
+						</pre>
+					</li>
+					<li>
+						일반적으로 부모 엘리먼트 선택자의 네이밍을 종속받는다.<br>
+						부모 엘리먼트의 선택자가 의미없는 네이밍이거나 또는 높은 엘리먼트 상속 레벨로 인해 네이밍이 길어짐과 같은 HTML 구조상 논리적으로 설명할 수 있는 이슈가 발생한 경우 반드시 종속받을 필요는 없으며 다만 최상위 엘리먼트의 선택자 네이밍은 무조건 종속받도록 한다.
+						<pre>
+							&lt;div class=&quot;ui-btnshare&quot;&gt;
+							&nbsp;&nbsp;&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-btnshare</span>-wrap</span>&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;<span class="otmpost-txt-hilite">ui-btnshare</span>-btn</span>&quot;&gt;&lt;/button&gt;
+							&nbsp;&nbsp;&lt;/div&gt;
 							&lt;/div&gt;
 						</pre>
 					</li>
 					<li>
-						모듈화된 엘리먼트의 선택자에는 기본 스타일 외 스타일 추가 변경 시 직접 선택하여 변경하지 않는다.
+						모듈화된 엘리먼트의 선택자에는 스타일 변경 시 직접 선택하여 변경하지 않는다.
 						<pre>
 							[HTML]
-							&lt;div class=&quot;list-item <span class="otmpost-txt-hilite">ui-list-box</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;thmb <span class="otmpost-txt-hilite">ui-imgratio</span>&quot;&gt;&lt;/div&gt;
 						</pre>
 						<pre>
 							[CSS]
-							.ui-list-box{color:#ff0000} (X)
-							.list-item{color:#ff0000} (O)
+							.ui-imgratio{width:200px} (X)
+							.thmb{width:200px} (O)
+							.thmb.ui-imgratio{width:200px} (O)
 						</pre>
+					</li>
+					<li>
+						이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 					</li>
 				</ul>
 			</div>

@@ -109,7 +109,7 @@
 							<td>&lt;meta charset=&quot;utf-8&quot;&gt;</td>
 						</tr>
 						<tr>
-							<th scope="row">etc.</th>
+							<th scope="row">Other</th>
 							<td>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;</td>
 						</tr>
 					</tbody>
@@ -127,17 +127,17 @@
 					</colgroup>
 					<tbody>
 						<tr>
-							<th scope="row">IOS</th>
+							<th scope="row">iOS</th>
 							<td>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot;&gt;</td>
 						</tr>
 						<tr>
-							<th scope="row">etc.</th>
+							<th scope="row">Other</th>
 							<td>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi&quot;&gt;</td>
 						</tr>
 					</tbody>
 				</table>
 				<h5>D. User Agent</h5>
-				<p>HTML 문서 작성 시 User Agent별로 body에 클래스를 추가한다.</p>
+				<p>HTML 문서 작성 시 필요할 경우 User Agent별로 body에 클래스를 추가하며, 다음과 같은 규칙을 기본으로 한다.</p>
 				<table>
 					<colgroup>
 						<col style="width:15%">
@@ -146,32 +146,39 @@
 					</colgroup>
 					<tbody>
 						<tr>
-							<th scope="rowgroup" rowspan="3">IOS</th>
+							<th scope="rowgroup" rowspan="3">Mobile</th>
 							<th scope="row">-</td>
-							<td>ua-ios</td>
+							<td>ua-m</td>
 						</tr>
 						<tr>
-							<th scope="row">IOS 6 이하</td>
-							<td>ua-ios ua-ios-6b</td>
+							<th scope="row">iOS</td>
+							<td>ua-m ua-m-ios</td>
 						</tr>
 						<tr>
-							<th scope="row">IOS 7 이상</td>
-							<td>ua-ios ua-ios-7u</td>
+							<th scope="row">Android</td>
+							<td>ua-m ua-m-android</td>
 						</tr>
 						<tr>
-							<th scope="rowgroup">Android</th>
-							<th scope="row">-</td>
-							<td>ua-android</td>
-						</tr>
-						<tr>
-							<th scope="rowgroup">PC</th>
+							<th scope="rowgroup" rowspan="4">PC</th>
 							<th scope="row">-</td>
 							<td>ua-pc</td>
 						</tr>
 						<tr>
-							<th scope="rowgroup">etc.</th>
+							<th scope="row">Windows</td>
+							<td>ua-pc ua-pc-windows</td>
+						</tr>
+						<tr>
+							<th scope="row">Mac</td>
+							<td>ua-pc ua-pc-mac</td>
+						</tr>
+						<tr>
+							<th scope="row">Linux</td>
+							<td>ua-pc ua-pc-linux</td>
+						</tr>
+						<tr>
+							<th scope="rowgroup">Other</th>
 							<th scope="row">-</td>
-							<td>ua-etc</td>
+							<td>ua-other</td>
 						</tr>
 					</tbody>
 				</table>

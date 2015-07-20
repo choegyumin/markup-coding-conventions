@@ -41,15 +41,15 @@
 					<li>
 						특정 케이스(DTD 선언)를 제외한 모든 엘리먼트와 애트리뷰트는 영문 대문자를 사용하지 않는다.
 						<pre>
-							&lt;<span class="otmpost-txt-hilite">IMG</span> <span class="otmpost-txt-hilite">SRC</span>=&quot;..&quot;&gt; (X)
-							→ &lt;<span class="otmpost-txt-hilite">img</span> <span class="otmpost-txt-hilite">src</span>=&quot;..&quot;&gt; (O)
+							&lt;<span class="otmpost-txt-hilight">IMG</span> <span class="otmpost-txt-hilight">SRC</span>=&quot;..&quot;&gt; (X)
+							→ &lt;<span class="otmpost-txt-hilight">img</span> <span class="otmpost-txt-hilight">src</span>=&quot;..&quot;&gt; (O)
 						</pre>
 					</li>
 					<li>
 						모든 애트리뷰트 값은 큰 따옴표(&quot;)로 묶는다.<br>
 						<pre>
-							&lt;img src=<span class="otmpost-txt-hilite">'</span>..<span class="otmpost-txt-hilite">'</span>&gt; (X)
-							→ &lt;img src=<span class="otmpost-txt-hilite">&quot;</span>..<span class="otmpost-txt-hilite">&quot;</span>&gt; (O)
+							&lt;img src=<span class="otmpost-txt-hilight">'</span>..<span class="otmpost-txt-hilight">'</span>&gt; (X)
+							→ &lt;img src=<span class="otmpost-txt-hilight">&quot;</span>..<span class="otmpost-txt-hilight">&quot;</span>&gt; (O)
 						</pre>
 					</li>
 					<li>
@@ -59,14 +59,14 @@
 					<li>
 						HTML 코드 내 스크립트는 사용을 지양하며, &lt;body&gt;의 마지막에 작성하거나 또는 js 파일로 분리한다.
 						<pre>
-							&lt;input type=&quot;text&quot; <span class="otmpost-txt-hilite">onfocus=&quot;this.className='on'&quot;</span>&gt; (X)
+							&lt;input type=&quot;text&quot; <span class="otmpost-txt-hilight">onfocus=&quot;this.className='on'&quot;</span>&gt; (X)
 						</pre>
 					</li>
 					<li>
 						엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
 						<pre>
-							&lt;div <span class="otmpost-txt-hilite">id</span>=&quot;sect&quot; <span class="otmpost-txt-hilite">class</span>=&quot;sect&quot; <span class="otmpost-txt-hilite">style</span>=&quot;overflow-y:scroll&quot;&gt;&lt;/div&gt;
-							&lt;input <span class="otmpost-txt-hilite">type</span>=&quot;password&quot; <span class="otmpost-txt-hilite">class</span>=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">name</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilite">id</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilite">title</span>=&quot;비밀번호&quot; <span class="otmpost-txt-hilite">style</span>=&quot;width:100px&quot; <span class="otmpost-txt-hilite">disabled</span>&gt;
+							&lt;div <span class="otmpost-txt-hilight">id</span>=&quot;sect&quot; <span class="otmpost-txt-hilight">class</span>=&quot;sect&quot; <span class="otmpost-txt-hilight">style</span>=&quot;overflow-y:scroll&quot;&gt;&lt;/div&gt;
+							&lt;input <span class="otmpost-txt-hilight">type</span>=&quot;password&quot; <span class="otmpost-txt-hilight">class</span>=&quot;ipt-txt&quot; <span class="otmpost-txt-hilight">name</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilight">id</span>=&quot;f-pw&quot; <span class="otmpost-txt-hilight">title</span>=&quot;비밀번호&quot; <span class="otmpost-txt-hilight">style</span>=&quot;width:100px&quot; <span class="otmpost-txt-hilight">disabled</span>&gt;
 						</pre>
 					</li>
 				</ul>
@@ -198,22 +198,22 @@
 				<h5>B. 레이아웃 그룹 주석</h5>
 				<p>레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 시작인지 끝인지에 따라 맨 앞에 '[S]'나 '[E]'를 표기한다.</p>
 				<pre>
-					&lt;!-- <span class="otmpost-txt-hilite">[S]</span> 영역 이름 --&gt;
+					&lt;!-- <span class="otmpost-txt-hilight">[S]</span> 영역 이름 --&gt;
 					&lt;div&gt;
 					&nbsp;&nbsp;...
 					&lt;/div&gt;
-					&lt;!-- <span class="otmpost-txt-hilite">[E]</span> 영역 이름 --&gt;
+					&lt;!-- <span class="otmpost-txt-hilight">[E]</span> 영역 이름 --&gt;
 				</pre>
 				<h5>C. 개발참고 주석</h5>
 				<p>개발 적용 시에 참고해야하는 주석은 맨 앞에 '[D]'를 추가하여 작성한다.</p>
 				<pre>
-					&lt;!-- <span class="otmpost-txt-hilite">[D]</span> 개발 적용 시 참고해야 할 내용 --&gt;
+					&lt;!-- <span class="otmpost-txt-hilight">[D]</span> 개발 적용 시 참고해야 할 내용 --&gt;
 				</pre>
 			</div>
 			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-5"></span>2-5. 엘리멘트별 작성</h4>
 			<p>
 				HTML 작성 시 엘리멘트 별로 코드작성 유의사항을 준수하도록 한다.<br>
-				여기서는 <span class="otmpost-txt-hilite">DTD 명세와 W3C Validation과는 별도로 엘리먼트 작성 시 추가로 지켜야할 사항만을 설명</span>한다.
+				여기서는 <span class="otmpost-txt-hilight">DTD 명세와 W3C Validation과는 별도로 엘리먼트 작성 시 추가로 지켜야할 사항만을 설명</span>한다.
 			</p>
 			<div class="otmpost-indent">
 				<h5>A. 일반 규칙</h5>
@@ -221,11 +221,11 @@
 				<h5>B. &lt;table&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</h5>
 				<p>자식 엘리먼트로 사용할 수 있는 태그가 한정적인 엘리먼트는 일반적으로 &lt;div&gt;로 묶어서 사용한다.</p>
 				<pre>
-					&lt;<span class="otmpost-txt-hilite">table class=&quot;tbl&quot;</span>&gt;
+					&lt;<span class="otmpost-txt-hilight">table class=&quot;tbl&quot;</span>&gt;
 					&nbsp;&nbsp;...
 					&lt;/table&gt; (X)
 					→
-					&lt;<span class="otmpost-txt-hilite">div class=&quot;tbl&quot;</span>&gt;
+					&lt;<span class="otmpost-txt-hilight">div class=&quot;tbl&quot;</span>&gt;
 					&nbsp;&nbsp;&lt;table&gt;
 					&nbsp;&nbsp;&nbsp;&nbsp;...
 					&nbsp;&nbsp;&lt;/table&gt;
@@ -240,9 +240,9 @@
 					&lt;/table&gt; (X)
 					→
 					&lt;table&gt;
-					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">tbody</span>&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilight">tbody</span>&gt;
 					&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;...&lt;/tr&gt;
-					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">/tbody</span>&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilight">/tbody</span>&gt;
 					&nbsp;&nbsp;...
 					&lt;/table&gt; (O)
 				</pre>
@@ -250,13 +250,13 @@
 				<p>&lt;caption&gt; 엘리먼트를 숨김 처리할 때는 &lt;caption&gt; 내부의 컨텐츠를 묶어서 숨기도록 한다.</p>
 				<pre>
 					&lt;table&gt;
-					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">caption class=&quot;blind&quot;</span>&gt;...&lt;/caption&gt;
+					&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilight">caption class=&quot;blind&quot;</span>&gt;...&lt;/caption&gt;
 					&nbsp;&nbsp;...
 					&lt;/table&gt; (X)
 					→
 					&lt;table&gt;
 					&nbsp;&nbsp;&lt;caption&gt;
-					&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilite">div class=&quot;blind&quot;</span>&gt;...&lt;/div&gt;
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="otmpost-txt-hilight">div class=&quot;blind&quot;</span>&gt;...&lt;/div&gt;
 					&nbsp;&nbsp;&lt;/caption&gt;
 					&nbsp;&nbsp;...
 					&lt;/table&gt; (O)
@@ -264,16 +264,16 @@
 				<h5>E. &lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</h5>
 				<p>회원가입 등의 문서 작성 폼의 경우 각 엘리먼트별로 너비 값이 다르다면 인라인 스타일로 제어한다.</p>
 				<pre>
-					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilite">ipt-txt-w120</span>&quot;&gt;
-					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilite">ipt-txt-w180</span>&quot;&gt; (X)
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilight">ipt-txt-w120</span>&quot;&gt;
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt <span class="otmpost-txt-hilight">ipt-txt-w180</span>&quot;&gt; (X)
 					→
-					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">style=&quot;width:120px&quot;</span>&gt;
-					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilite">style=&quot;width:180px&quot;</span>&gt; (O)
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilight">style=&quot;width:120px&quot;</span>&gt;
+					&lt;input type=&quot;text&quot; class=&quot;ipt-txt&quot; <span class="otmpost-txt-hilight">style=&quot;width:180px&quot;</span>&gt; (O)
 				</pre>
 				<h5>E. &lt;button&gt;</h5>
 				<p>버튼에 별도의 type 애트리뷰트가 지정되어있지 않을 경우 반드시 type=&quot;button&quot;을 선언한다.</p>
 				<pre>
-					&lt;button&gt;버튼&lt;/button&gt; (X) → &lt;button <span class="otmpost-txt-hilite">type=&quot;button&quot;</span>&gt;버튼&lt;/button&gt; (O)
+					&lt;button&gt;버튼&lt;/button&gt; (X) → &lt;button <span class="otmpost-txt-hilight">type=&quot;button&quot;</span>&gt;버튼&lt;/button&gt; (O)
 				</pre>
 			</div>
 			<h4><span class="otmpost-apnt" id="otmmcg-chapter2-6"></span>2-6. 기본 HTML 파일</h4>

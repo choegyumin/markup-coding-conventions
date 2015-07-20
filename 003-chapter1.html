@@ -43,7 +43,7 @@
 						일반적으로 선택자는 CSS의 Cascade 방식에 알맞은 네이밍을 한다.
 						<pre>
 							&lt;div class=&quot;sect-exam&quot;&gt;
-							&nbsp;&nbsp;&lt;input class=&quot;<span class="otmpost-txt-hilite">ipt</span>&quot;&gt;
+							&nbsp;&nbsp;&lt;input class=&quot;<span class="otmpost-txt-hilight">ipt</span>&quot;&gt;
 							&lt;/div&gt;
 						</pre>
 					</li>
@@ -60,40 +60,40 @@
 					<li>
 						네이밍의 조합은 '프리픽스-컨텐츠명-형태-의미-영역-확장--상태' 최대 7단계로 나뉘며, 필요에 따라 조합할 수 있다.
 						<pre>
-							comm<span class="otmpost-txt-hilite">-</span>contname<span class="otmpost-txt-hilite">-</span>sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2<span class="otmpost-txt-hilite">--</span>over, sect<span class="otmpost-txt-hilite">-</span>exam<span class="otmpost-txt-hilite">-</span>box<span class="otmpost-txt-hilite">-</span>v2, sect<span class="otmpost-txt-hilite">-</span>exam
+							comm<span class="otmpost-txt-hilight">-</span>contname<span class="otmpost-txt-hilight">-</span>sect<span class="otmpost-txt-hilight">-</span>exam<span class="otmpost-txt-hilight">-</span>box<span class="otmpost-txt-hilight">-</span>v2<span class="otmpost-txt-hilight">--</span>over, sect<span class="otmpost-txt-hilight">-</span>exam<span class="otmpost-txt-hilight">-</span>box<span class="otmpost-txt-hilight">-</span>v2, sect<span class="otmpost-txt-hilight">-</span>exam
 						</pre>
 					</li>
 					<li>
 						단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 임의로 자릿수를 늘리지 않는다.
 						<pre>
-							list<span class="otmpost-txt-hilite">-3</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
-							list<span class="otmpost-txt-hilite">03</span> (X) → list<span class="otmpost-txt-hilite">3</span> (O)
+							list<span class="otmpost-txt-hilight">-3</span> (X) → list<span class="otmpost-txt-hilight">3</span> (O)
+							list<span class="otmpost-txt-hilight">03</span> (X) → list<span class="otmpost-txt-hilight">3</span> (O)
 						</pre>
 					</li>
 					<li>
 						상태 네이밍은 하이픈을 두번 사용하여 조합한다.
 						<pre>
-							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilite">ipt-exam--on</span>&quot;&gt;
+							&lt;input class=&quot;ipt-exam <span class="otmpost-txt-hilight">ipt-exam--on</span>&quot;&gt;
 						</pre>
 					</li>
 					<li>
 						하이픈은 띄어쓰기가 아닌 엘리먼트 역할에 따른 네이밍 조합의 구분자이므로 무분별하게 사용하지 않으며, 아래 예제는 일반적으로 네이밍 7단계 조합 중 컨텐츠명에 해당된다.
 						<pre>
-							<span class="otmpost-txt-hilite">service-naming-exam</span>-wrap (X) → <span class="otmpost-txt-hilite">servicenamingexam</span>-wrap (O)
+							<span class="otmpost-txt-hilight">service-naming-exam</span>-wrap (X) → <span class="otmpost-txt-hilight">servicenamingexam</span>-wrap (O)
 						</pre>
 					</li>
 					<li>
 						주어진 클래스가 없는 엘리먼트를 확장 또는 상태 제어해야 할 경우 조합없이 네이밍하여 사용한다.
 						<pre>
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">v_blur</span>&quot;&gt;&lt;/div&gt;
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">fd</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilight">v_blur</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilight">fd</span>&quot;&gt;&lt;/div&gt;
 						</pre>
 					</li>
 					<li>
 						확장 네이밍은 일반적으로 'v'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'v'와 단어 사이에는 하이픈이 아닌 언더바(_)를 사용한다.
 						<pre>
-							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v2</span>&quot;&gt;
-							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilite">-v_wide</span>&quot;&gt;
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilight">-v2</span>&quot;&gt;
+							&lt;input class=&quot;ipt-exam ipt-exam<span class="otmpost-txt-hilight">-v_wide</span>&quot;&gt;
 						</pre>
 					</li>
 				</ul>
@@ -102,16 +102,16 @@
 					<li>
 						<em>종속 확장</em> : 기본 class에 종속되어 스타일을 그대로 가져가되 몇가지의 스타일을 변경할 때 사용하며, 일반적으로 확장 네이밍을 이야기할 때는 종속 확장 네이밍을 뜻한다.
 						<pre>
-							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam</span>&quot;&gt;
-							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilite">img-exam-v2</span>&quot;&gt;
-							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilite">img-exam-v_ratio</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilight">img-exam</span>&quot;&gt;
+							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilight">img-exam-v2</span>&quot;&gt;
+							&lt;img class=&quot;img-exam <span class="otmpost-txt-hilight">img-exam-v_ratio</span>&quot;&gt;
 						</pre>
 					</li>
 					<li>
 						<em>독립 확장</em> : 기본 class와 동일한 형태와 의미를 가지고 있으나 전혀 다른 스타일이 필요할 때 사용하며, 별개의 엘리먼트로 구분된다.
 						<pre>
-							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam</span>&quot;&gt;
-							&lt;img class=&quot;<span class="otmpost-txt-hilite">img-exam2</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilight">img-exam</span>&quot;&gt;
+							&lt;img class=&quot;<span class="otmpost-txt-hilight">img-exam2</span>&quot;&gt;
 						</pre>
 					</li>
 				</ul>
@@ -125,19 +125,19 @@
 					<li>
 						각각 다른 서비스 또는 서비스 내의 여러 버티컬에 전역(공통)으로 사용되는 엘리먼트는 프리픽스 'comm'을 추가한다.
 						<pre>
-							<span class="otmpost-txt-hilite">comm-</span>header
+							<span class="otmpost-txt-hilight">comm-</span>header
 						</pre>
 					</li>
 					<li>
 						사이트 내 어디에서나 사용 가능한 하나의 모듈(위젯)이 되는 엘리먼트는 플러그인 또는 컴포넌트 등이 가지고 있는 별도의 사용자 정의 프리픽스가 없을 경우 프리픽스 'ui'를 추가한다.
 						<pre>
-							<span class="otmpost-txt-hilite">ui-</span>selbox
+							<span class="otmpost-txt-hilight">ui-</span>selbox
 						</pre>
 					</li>
 					<li>
 						프리픽스는 각 이름에 한번만 사용될 수 있으며, 'comm', 'ui'와 사용자 정의 프리픽스는 다른 프리픽스와 중복 사용이 가능하다. (1순위로 사용)
 						<pre>
-							<span class="otmpost-txt-hilite">comm-pop-</span>header, <span class="otmpost-txt-hilite">snsshare-ly-</span>btn, <span class="otmpost-txt-hilite">scheduletbl-ifr-</span>list
+							<span class="otmpost-txt-hilight">comm-pop-</span>header, <span class="otmpost-txt-hilight">snsshare-ly-</span>btn, <span class="otmpost-txt-hilight">scheduletbl-ifr-</span>list
 						</pre>
 					</li>
 					<li>프리픽스 목록은 부록을 참고한다.</li>
@@ -155,13 +155,13 @@
 						일반적으로 네이밍의 중복을 방지하기 위해 상속 레벨이 낮은 엘리먼트는 단어를 조합하여 네이밍한다.
 						<pre>
 							&lt;div class=&quot;servicenamingexam&quot;&gt;
-							&nbsp;&nbsp;&lt;ul class=&quot;list<span class="otmpost-txt-hilite">-box</span>&quot;&gt;
+							&nbsp;&nbsp;&lt;ul class=&quot;list<span class="otmpost-txt-hilight">-box</span>&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;thmb&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;info<span class="otmpost-txt-hilite">-area</span>&quot;&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;tit<span class="otmpost-txt-hilite">-field</span>&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;info<span class="otmpost-txt-hilight">-area</span>&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;tit<span class="otmpost-txt-hilight">-field</span>&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong class=&quot;tit&quot;&gt;&lt;/strong&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;expl&quot;&gt;&lt;/span&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h4&gt;
@@ -176,7 +176,7 @@
 						일반적으로 하나의 컨텐츠를 이루는 엘리먼트 모음의 최상위 엘리먼트는 독립성과 재사용성의 증진을 위해 단어의 조합 없이 컨텐츠를 확실히 식별할 수 있는 이름으로 네이밍하며, 이는 네이밍 7단계 조합 중 컨텐츠명에 해당된다.<br>
 						컨텐츠명은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#otmmcg-appendix1">BEM 방법론</a>에 의하면 'Block', 'Element', 'Modifier' 중 'Block'과 같다.
 						<pre>
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">servicenamingexam</span>&quot;&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilight">servicenamingexam</span>&quot;&gt;
 							&nbsp;&nbsp;&lt;ul class=&quot;list-box&quot;&gt;
 							&nbsp;&nbsp;&nbsp;&nbsp;...
 							&nbsp;&nbsp;&lt;/ul&gt;
@@ -237,29 +237,29 @@
 				<p>
 					팝업 레이아웃의 경우 프리픽스 'pop', 레이어 레이아웃의 경우 프리픽스 'ly', 프레임 레이아웃의 경우 프리픽스 'ifr'을 추가한다.
 					<pre>
-						#<span class="otmpost-txt-hilite">pop-</span>wrap, #<span class="otmpost-txt-hilite">ly-</span>header, #<span class="otmpost-txt-hilite">ifr-</span>content
+						#<span class="otmpost-txt-hilight">pop-</span>wrap, #<span class="otmpost-txt-hilight">ly-</span>header, #<span class="otmpost-txt-hilight">ifr-</span>content
 					</pre>
 				</p>
 				<h5>C. 테이블 셀 네이밍</h5>
 				<p>
 					&lt;th&gt;, &lt;td&gt; 엘리먼트에 제공되는 id, headers 값 은 프리픽스 't'를 추가한다.
 					<pre>
-						#<span class="otmpost-txt-hilite">t-</span>price
+						#<span class="otmpost-txt-hilight">t-</span>price
 					</pre>
 				</p>
 				<h5>D. 폼 네이밍</h5>
 				<p>
 					폼과 관련된 &lt;input&gt;, &lt;select&gt; 등의 엘리먼트에 제공되는 id, name 값 은 프리픽스 'f'를 추가한다.
 					<pre>
-						#<span class="otmpost-txt-hilite">f-</span>email
+						#<span class="otmpost-txt-hilight">f-</span>email
 					</pre>
 				</p>
 				<h5>E. WAI-ARIA의 상태 및 속성 네이밍</h5>
 				<p>
 					WAI-ARIA의 상태 및 속성을 위해 제공되는 id 값은 프리픽스 'aria'를 추가한다. (별도로 주어진 값이 있을 때는 예외)
 					<pre>
-						&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-labelledby=&quot;<span class="otmpost-txt-hilite">aria-</span>nav-tit&quot;&gt;
-						&nbsp;&nbsp;&lt;h2 id=&quot;<span class="otmpost-txt-hilite">aria-</span>nav-tit&quot;&gt;네비게이션&lt;/h2&gt;
+						&lt;div id=&quot;nav&quot; role=&quot;navigation&quot; aria-labelledby=&quot;<span class="otmpost-txt-hilight">aria-</span>nav-tit&quot;&gt;
+						&nbsp;&nbsp;&lt;h2 id=&quot;<span class="otmpost-txt-hilight">aria-</span>nav-tit&quot;&gt;네비게이션&lt;/h2&gt;
 						&nbsp;&nbsp;...
 						&lt;/div&gt;
 					</pre>
@@ -268,10 +268,10 @@
 				<p>
 					앵커 포인트는 페이지 내에서 화면의 이동을 위한 지표 역할을 한다.<br>앵커 포인트에 제공되는 선택자 값은 프리픽스 'apnt'를 추가한다. (별도로 주어진 값이 있을 때는 예외)
 					<pre>
-						&lt;a href=&quot;127.0.0.1/exam.html#<span class="otmpost-txt-hilite">apnt-</span>exam&quot;&gt;바로가기&lt;/a&gt;
+						&lt;a href=&quot;127.0.0.1/exam.html#<span class="otmpost-txt-hilight">apnt-</span>exam&quot;&gt;바로가기&lt;/a&gt;
 						...
 						&lt;h4&gt;
-						&nbsp;&nbsp;&lt;span id=&quot;<span class="otmpost-txt-hilite">apnt-</span>exam&quot;&gt;&lt;/span&gt;
+						&nbsp;&nbsp;&lt;span id=&quot;<span class="otmpost-txt-hilight">apnt-</span>exam&quot;&gt;&lt;/span&gt;
 						&nbsp;&nbsp;...
 						&lt;/h4&gt;
 					</pre>
@@ -291,7 +291,7 @@
 					<li>
 						팝업의 경우 프리픽스 'pop', 레이어의 경우 프리픽스 'ly', 프레임의 경우 프리픽스 'ifr'을 추가한다.
 						<pre>
-							<span class="otmpost-txt-hilite">pop-</span>inquiry.html, <span class="otmpost-txt-hilite">ly-</span>info.html, <span class="otmpost-txt-hilite">ifr-</span>comment.html
+							<span class="otmpost-txt-hilight">pop-</span>inquiry.html, <span class="otmpost-txt-hilight">ly-</span>info.html, <span class="otmpost-txt-hilight">ifr-</span>comment.html
 						</pre>
 					</li>
 				</ul>
@@ -359,7 +359,7 @@
 					<li>
 						고유한 네임스페이스가 필요하므로 프리픽스를 추가한다.
 						<pre>
-							&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-</span>tabmenu&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;<span class="otmpost-txt-hilight">ui-</span>tabmenu&quot;&gt;&lt;/div&gt;
 						</pre>
 					</li>
 					<li>
@@ -367,8 +367,8 @@
 						부모 엘리먼트의 선택자가 의미없는 네이밍이거나 또는 높은 엘리먼트 상속 레벨로 인해 네이밍이 길어짐과 같은 HTML 구조상 논리적으로 설명할 수 있는 이슈가 발생한 경우 반드시 종속받을 필요는 없으며 다만 최상위 엘리먼트의 선택자 네이밍은 무조건 종속받도록 한다.
 						<pre>
 							&lt;div class=&quot;ui-btnshare&quot;&gt;
-							&nbsp;&nbsp;&lt;div class=&quot;<span class="otmpost-txt-hilite">ui-btnshare</span>-wrap</span>&quot;&gt;
-							&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;<span class="otmpost-txt-hilite">ui-btnshare</span>-btn</span>&quot;&gt;&lt;/button&gt;
+							&nbsp;&nbsp;&lt;div class=&quot;<span class="otmpost-txt-hilight">ui-btnshare</span>-wrap</span>&quot;&gt;
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;<span class="otmpost-txt-hilight">ui-btnshare</span>-btn</span>&quot;&gt;&lt;/button&gt;
 							&nbsp;&nbsp;&lt;/div&gt;
 							&lt;/div&gt;
 						</pre>
@@ -377,7 +377,7 @@
 						모듈화된 엘리먼트의 선택자에는 스타일 변경 시 직접 선택하여 변경하지 않는다.
 						<pre>
 							[HTML]
-							&lt;div class=&quot;thmb <span class="otmpost-txt-hilite">ui-imgratio</span>&quot;&gt;&lt;/div&gt;
+							&lt;div class=&quot;thmb <span class="otmpost-txt-hilight">ui-imgratio</span>&quot;&gt;&lt;/div&gt;
 						</pre>
 						<pre>
 							[CSS]

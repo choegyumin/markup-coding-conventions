@@ -41,17 +41,17 @@
 					<li>
 						모든 속성은 영문 대문자를 사용하지 않는다.
 						<pre>
-							.class{<span class="otmpost-txt-hilite">Font-Family</span>:NanumGothic} (X)
-							→ .class{<span class="otmpost-txt-hilite">font-family</span>:NanumGothic} (O)
+							.class{<span class="otmpost-txt-hilight">Font-Family</span>:NanumGothic} (X)
+							→ .class{<span class="otmpost-txt-hilight">font-family</span>:NanumGothic} (O)
 						</pre>
 					</li>
 					<li>
 						기본적으로 속성 값은 작은 따옴표(')로 묶으며, 따옴표가 필요없는 속성은 사용하지 않는다.<br>
 						<pre>
-							background:url(<span class="otmpost-txt-hilite">bg.gif</span>);
-							font-family:<span class="otmpost-txt-hilite">Dotum,'돋움'</span>;
-							content:<span class="otmpost-txt-hilite">'example'</span>;
-							@charset <span class="otmpost-txt-hilite">"utf-8"</span>;
+							background:url(<span class="otmpost-txt-hilight">bg.gif</span>);
+							font-family:<span class="otmpost-txt-hilight">Dotum,'돋움'</span>;
+							content:<span class="otmpost-txt-hilight">'example'</span>;
+							@charset <span class="otmpost-txt-hilight">"utf-8"</span>;
 						</pre>
 					</li>
 					<li>모든 CSS코드는 들여쓰기를 하지 않는다.</li>
@@ -59,7 +59,7 @@
 					<li>
 						여러개의 선택자를 사용할 때는 선택자 사이에 줄바꿈을 추가한다.
 						<pre>
-							.section-exam<span class="otmpost-txt-hilite">,</span>
+							.section-exam<span class="otmpost-txt-hilight">,</span>
 							.section-exam2{...}
 						</pre>
 					</li>
@@ -118,7 +118,7 @@
 				<h5>B. 레이아웃 그룹 주석</h5>
 				<p>레이아웃 또는 그루핑된 엘리먼트의 시작을 알리는 주석은 아래의 형식에 맞게 작성한다.</p>
 				<pre>
-					<span class="otmpost-txt-hilite">/* 영역 이름 */</span>
+					<span class="otmpost-txt-hilight">/* 영역 이름 */</span>
 					.lnb{...}
 				</pre>
 				<h5>C. 작성자 주석</h5>
@@ -140,11 +140,11 @@
 			</ul>
 			<pre>
 				@font-face{
-				font-family:<span class="otmpost-txt-hilite">'wf-NanumGothic'</span>;
+				font-family:<span class="otmpost-txt-hilight">'wf-NanumGothic'</span>;
 				...
 				}
 				...
-				body{font-family:<span class="otmpost-txt-hilite">'나눔고딕',NanumGothic,'wf-NanumGothic'</span>}
+				body{font-family:<span class="otmpost-txt-hilight">'나눔고딕',NanumGothic,'wf-NanumGothic'</span>}
 			</pre>
 			<h4><span class="otmpost-apnt" id="otmmcg-chapter3-5"></span>3-5. 파일 분기</h4>
 			<p>CSS 파일은 일반적으로 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 분기하도록 하며, 네이밍은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#otmmcg-chapter1-4">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 확인하도록 한다.</p>

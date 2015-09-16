@@ -46,8 +46,6 @@
 						<li>CSS(Cascading Style Sheets)의 Cascading 규칙에 부합하지 않는다.</li>
 						<li>네이밍이 길어진다.</li>
 					</ul>
-					<h6>마크업 코딩 가이드 내의 BEM 사용</h6>
-					<p>모듈화가 필요한 공통 엘리먼트 또는 클래스 종속 시 사용된다.</p>
 				</div>
 				<h5>B. ACSS(Atomic CSS)</h5>
 				<p>모든 스타일을 클래스로 나누어 특정 엘리먼트에 종속되지 않고 어디에서나 사용이 가능하도록 제작하는 CSS 방법론이다.</p>
@@ -65,8 +63,6 @@
 						<li>모듈화가 불가능하다.</li>
 						<li>인라인 스타일과 다를 바가 없어 CSS의 규칙에 부합하지 않는다.</li>
 					</ul>
-					<h6>마크업 코딩 가이드 내의 ACSS 사용</h6>
-					<p>다른 엘리먼트에 종속되지 않는 전역 또는 공통 스타일 클래스에 사용된다. (ex. .show, .hide, ...)</p>
 				</div>
 				<h5>C. OOCSS(Object Oriented CSS)</h5>
 				<p>사이트의 각 스타일을 템플릿화하여 특정 엘리먼트에 종속되지 않고 어디에서나 재사용이 가능하도록 제작하는 CSS 방법론이다.<br><a href="http://oocss.org/" target="_blank">[참고] http://oocss.org/</a></p>
@@ -83,8 +79,6 @@
 						<li>CSS 모듈화는 가능하나 HTML 엘리먼트의 모듈화는 불가능하다.</li>
 						<li>각 페이지의 디자인 가이드가 규칙적이지 않은 사이트에서는 적합하지 않다.</li>
 					</ul>
-					<h6>마크업 코딩 가이드 내의 OOCSS 사용</h6>
-					<p>다른 엘리먼트에 종속되지 않는 전역 또는 공통 스타일 템플릿 클래스에 사용된다. (ex. .blind, .clearfix, ...)</p>
 				</div>
 				<h5>D. SMACSS(Scalable and Modular Architecture for CSS)</h5>
 				<p>마크업 스타일을 기초, 레이아웃, 모듈, 상태, 테마 이 다섯가지로 구분하여 제작하는 CSS 방법론이다.<br><a href="https://smacss.com/" target="_blank">[참고] https://smacss.com/</a></p>
@@ -94,8 +88,6 @@
 						<li>HTML, CSS를 모듈화하여 재사용이 가능하다.</li>
 						<li>네이밍이 직관적이다.</li>
 					</ul>
-					<h6>마크업 코딩 가이드 내의 SMACSS 사용</h6>
-					<p>CSS 제작에 있어 전체적으로 SMACSS의 스타일 구분 규칙을 반영하였다.</p>
 				</div>
 			</div>
 			<h4><span class="otmpost-apnt" id="otmmcg-appendix2"></span>2. 네이밍 예약어</h4>

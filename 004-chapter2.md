@@ -295,4 +295,6 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 </html>
 ```
 
+---
+
 [이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

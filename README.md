@@ -16,12 +16,6 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 <link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/markdown-reference.css">
 ```
 
-레퍼런스 문서 내 목차용 추가 CSS
-
-```html
-<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/markdown-reference-index.css">
-```
-
 ### HTML
 
 [StackEdit](https://stackedit.io/editor)에서 변환한 HTML을 export하여 아래 엘리먼트 내에 붙여넣기

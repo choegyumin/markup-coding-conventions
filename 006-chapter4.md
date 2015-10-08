@@ -3,7 +3,7 @@ Markup Coding Guide - 4장. 웹 접근성 준수 방법
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
 
 4. 웹 접근성 준수 방법
 ---
@@ -196,4 +196,4 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 마우스를 사용할 수 없는 환경에서 웹을 이용할 수 있도록 제작하기 위해서는 키보드 접근성이 반드시 보장되어야 한다.  
 그러므로 JavaScript 등을 이용한 마우스 이벤트 핸들러 사용 시 키보드 사용자를 위한 별도의 대응이 필요하다.
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

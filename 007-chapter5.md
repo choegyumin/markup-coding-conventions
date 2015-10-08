@@ -3,7 +3,7 @@ Markup Coding Guide - 5장. 사이트 성능 향상을 위한 마크업
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
 
 5. 사이트 성능 향상을 위한 마크업
 ---
@@ -25,19 +25,14 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 #### B. 스프라이트 기법의 예제
 
-<!-- [D] 인클루드 -->
---- 
-
-/img/003-chapter1-3-F-a.html
-
----
+**[D] Include**: /img/003-chapter1-3-F-a.html
 
 ```css
-/* 3번 이미지를 예로 들었을 경우 */
+/* 컴퓨터 이미지를 예로 들었을 경우 */
 .img-exam{
-	width:218px;
-	height:52px;
-	background:url(../img/sp-comm.png) no-repeat 0 -54px;
+	width:182px;
+	height:150px;
+	background:url(../img/sp-comm.png) no-repeat 0 -232px;
 	background-size:360px auto;
 }
 ```
@@ -50,4 +45,4 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 용량이 클 경우 이슈가 발생할 수 있으므로 원본, 압축 이미지를 따로 관리하여 압축된 이미지를 사용하도록 한다.
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

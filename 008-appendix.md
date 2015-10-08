@@ -79,7 +79,7 @@ SMACSS의 장점
 : - HTML, CSS를 모듈화하여 재사용이 가능하다.
 - 네이밍이 직관적이다.
 
-### 2. CSS Margin collapsing(여백 병합)
+### 2. CSS Collapsing margin(여백 병합)
 
 추후 작성.
 

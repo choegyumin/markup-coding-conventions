@@ -1,8 +1,6 @@
 Markup Coding Guide - 부록
 ===
 
-<!-- 표는 HTML 그대로 적용 -->
-
 ---
 
 [목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)

@@ -24,7 +24,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
 ### HTML
 
-[StackEdit](https://stackedit.io/editor)에서 변환된 HTML을 export하여 얻은 산출물을 아래 엘리먼트 내에 복사
+[StackEdit](https://stackedit.io/editor)에서 변환한 HTML을 export하여 아래 엘리먼트 내에 복사
 
 ```html
 <div class="markdown"></div>

@@ -30,11 +30,18 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 <div class="markdown"></div>
 ```
 
-> 문서 제목 영역(```<h1>```-```<hr>```)은 생략
->
-> ```markdown
-> Markup Coding Guide
-> ===
-> 
-> ---
-> ```
+- 문서 제목 영역(```<h1>```-```<hr>```)은 생략
+```markdown
+Markup Coding Guide
+===
+
+---
+```
+- 변환 후 ```<!-- [D] 인클루드 -->``` 영역에 추가 작성된 URL의 코드를 복사
+```html
+--- <!-- [D] 인클루드 -->
+
+/table/003-chapter1-3-F-a.html
+
+---
+```

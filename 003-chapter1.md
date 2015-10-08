@@ -250,4 +250,6 @@ bg-exam3.png
 ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 
+---
+
 [이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Preface#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

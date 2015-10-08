@@ -29,10 +29,10 @@ HTML 코드의 작성 규칙을 설명한다.
 
 [1. 개요](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-1-개요)
 [2. 기본 규칙](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-2-기본-규칙)
-[3. DTD 선언 및 head 엘리먼트 내부 마크업](http://overtimeman.tistor.com/entry/Markup-Coding-Guide-Chapter2#2-3-DTD-선언-및-head-엘리먼트-내부-마크업)
+[3. DTD 선언 및 head 엘리먼트 내부 마크업](http://overtimeman.tistor.com/entry/Markup-Coding-Guide-Chapter2#2-3-dtd-선언-및-head-엘리먼트-내부-마크업)
 [4. 주석 작성](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-4-주석-작성)
 [5. 엘리먼트별 작성](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-5-엘리먼트별-작성)
-[6. 기본 HTML 파일](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-6-기본-HTML-파일)
+[6. 기본 HTML 파일](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#2-6-기본-html-파일)
 
 ### [3장. CSS 코드 작성 규칙](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3)
 
@@ -43,7 +43,7 @@ CSS 코드의 작성 규칙을 설명한다.
 [3. 주석 작성](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#3-3-주석-작성)
 [4. 웹폰트 사용](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#3-4-웹폰트-사용)
 [5. 파일 분기](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#3-5-파일-분기)
-[6. 기본 CSS 파일](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#3-6-기본-CSS-파일)
+[6. 기본 CSS 파일](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#3-6-기본-css-파일)
 
 ### [4장. 웹 접근성 준수 방법](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4)
 
@@ -60,7 +60,7 @@ CSS 코드의 작성 규칙을 설명한다.
 
 사이트의 성능 향상을 위한 마크업 방법을 설명한다.
 
-[1. CSS Image Sprites](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#5-1-CSS-Image-Sprites)
+[1. CSS Image Sprites](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#5-1-css-image-sprites)
 
 ### [부록](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix)
 

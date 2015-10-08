@@ -51,20 +51,21 @@ DTD 선언 및 HTML의 head 엘리먼트 내부 마크업 시 다음과 같은 �
 
 HTML 문서 작성 시 DTD는 아래의 예시를 따르며, DTD 선언 앞에는 서버사이드 언어를 제외한 다른 문자를 허용하지 않는다.
 
-| 문서형 | DTD 선언 |
-| :--- | :--- |
-| HTML 5 | ```<!DOCTYPE html>``` |
-| HTML 4.01 Transitional | ```<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">``` |
-| XHTML 1.0 Transitional | ```<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">``` |
+---
+
+/table/004-chapter2-3-A.html
+
+---
 
 #### B. 인코딩
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선언하도록 한다.
 
-| 문서형 | 인코딩 |
-| :--- | :--- |
-| HTML 5 | ```<meta charset="utf-8">``` |
-| Other | ```<meta http-equiv="Content-Type" content="text/html;charset=utf-8">``` |
+---
+
+/table/004-chapter2-3-B.html
+
+---
 
 - UTF-8 인코딩을 사용할 수 없다면 다른 인코딩을 사용한다. (한글은 euc-kr)
 - 인코딩 선언은 head 엘리먼트 내부의 최초 엘리먼트로 작성한다.
@@ -73,24 +74,21 @@ HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선�
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 Viewport를 설정하도록 한다.
 
-| User Agent | Viewport |
-| :--- | :--- |
-| All | ```<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">``` |
+---
+
+/table/004-chapter2-3-C.html
+
+---
 
 #### D. User Agent
 
 HTML 문서 작성 시 필요할 경우 User Agent별로 body에 클래스를 추가하며, 다음과 같은 규칙을 기본으로 한다.
 
-| 디바이스 | User Agent | 클래스 |
-| :--- | :--- | :--- |
-| Mobile | - | ua-m |
-| | iOS | ua-m ua-m-ios |
-| | Android | ua-m ua-m-android |
-| PC | - | ua-pc |
-| | Windows | ua-pc ua-pc-windows |
-| | Mac | ua-pc ua-pc-mac |
-| | Linux | ua-pc ua-pc-linux |
-| Other | - | ua-other |
+---
+
+/table/004-chapter2-3-D.html
+
+---
 
 ### 2-4. 주석 작성
 

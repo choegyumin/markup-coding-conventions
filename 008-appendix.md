@@ -3,7 +3,7 @@ Markup Coding Guide - 부록
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
 
 부록
 ---
@@ -107,4 +107,4 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 **[D] Include**: /table/008-appendix-3-C.html
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5) 다음 [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article) 다음 [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article#article)  

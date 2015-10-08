@@ -3,7 +3,7 @@ Markup Coding Guide - 2장. HTML 코드 작성 규칙
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
 
 2. HTML 코드 작성 규칙
 ---
@@ -295,4 +295,4 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 </html>
 ```
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

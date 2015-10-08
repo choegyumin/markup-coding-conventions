@@ -3,7 +3,7 @@ Markup Coding Guide - 3장. CSS 코드 작성 규칙
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
 
 3. CSS 코드 작성 규칙
 ---
@@ -42,38 +42,40 @@ content:'example';
 .section-exam2{...}
 ```
 - CSS 속성의 작성 순서는 아래 예시를 따르며, 명시되지 않은 속성은 적절한 순서에 맞게 사용한다.
-> - overflow(-x, -y)
-> - display
-> - zoom
-> - visibility
-> - flex
-> - float
-> - clear
-> - position
-> - z-index
-> - top · right · bottom · left
-> - width(min-, max-)
-> - height(min-, max-)
-> - padding(-top, -right, -bottom, -left)
-> - border(-width, -style, -color, -radius, -image)
-> - margin(-top, -right, -bottom, -left)
-> - box-sizing
-> - background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
-> - font-family
-> - font-size
-> - line-height
-> - letter-spacing
-> - color
-> - text-decoration
-> - white-space
-> - word-wrap
-> - word-break
-> - text-overflow
-> - text-indent
-> - text-align
-> - vertical-align
-> - cursor
-> - content
+```css
+overflow(-x, -y)
+display
+zoom
+visibility
+flex
+float
+clear
+position
+z-index
+top, right, bottom, left
+width(min-, max-)
+height(min-, max-)
+padding(-top, -right, -bottom, -left)
+border(-width, -style, -color, -radius, -image)
+margin(-top, -right, -bottom, -left)
+box-sizing
+background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
+font-family
+font-size
+line-height
+letter-spacing
+color
+text-decoration
+white-space
+word-wrap
+word-break
+text-overflow
+text-indent
+text-align
+vertical-align
+cursor
+content
+```
 - 스타일 작성 시 [margin collapsing](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합)을 적극적으로 사용하도록 한다.
 
 ### 3-3. 주석 작성
@@ -256,4 +258,4 @@ src:local('☺'),
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'폰트명','wf-폰트명','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif}
 ```
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

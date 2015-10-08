@@ -67,7 +67,7 @@ CSS 코드의 작성 규칙을 설명한다.
 마크업에 도움이 되는 부분을 보충 설명한다.
 
 [1. 마크업 방법론](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#1-마크업-방법론)
-[2. CSS 여백 병합(Margin collapsing)](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-여백-병합margin-collapsing)
+[2. CSS Margin collapsing(여백 병합)](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합)
 [3. 네이밍 예약어](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#3-네이밍-예약어)
 
 문서 수정 이력

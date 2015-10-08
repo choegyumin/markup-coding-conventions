@@ -34,7 +34,7 @@ font-family:Dotum,'돋움';
 content:'example';
 @charset "utf-8";
 ```
-- 모든 CSS코드는 들여쓰기를 하지 않는다.
+- CSS 코드는 일반적으로 들여쓰기를 하지 않는다.
 - 선택자 기호 · 중괄호 · 속성 사이의 모든 공백 및 마지막 속성의 세미콜론(;)은 제거한다. (파일 압축 시 예외)
 - 여러개의 선택자를 사용할 때는 선택자 사이에 줄바꿈을 추가한다.
 ```css
@@ -74,6 +74,7 @@ content:'example';
 > - vertical-align
 > - cursor
 > - content
+- 스타일 작성 시 [margin collapsing](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합)을 적극적으로 사용하도록 한다.
 
 ### 3-3. 주석 작성
 

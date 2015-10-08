@@ -72,6 +72,8 @@ Markup Coding Guide - 부록
 					</ul>
 				</div>
 			</div>
+			<h4><span class="otmpost-apnt" id="otmmcg-appendix2"></span>2. CSS Margin collapsing(여백 병합)</h4>
+			<p>추후 작성.</p>
 			<h4><span class="otmpost-apnt" id="otmmcg-appendix3"></span>3. 네이밍 예약어</h4>
 			<p>
 				네이밍 규칙은 HTML, CSS 파일에서 사용되는 선택자, 그리고 이미지 등의 파일이나 폴더의 이름을 작성하는 규칙이다.<br>

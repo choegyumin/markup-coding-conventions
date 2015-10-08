@@ -50,4 +50,6 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 
 네이밍 시 사용되는 접두사를 의미한다.
 
+---
+
 이전 [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

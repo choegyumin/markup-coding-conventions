@@ -102,11 +102,7 @@ list3 (O)
 
 아래의 표에 해당하는 엘리먼트는 선택자에 프리픽스를 추가한다.
 
---- <!-- [D] 인클루드 -->
-
-/table/003-chapter1-3-F-a.html
-
----
+**[D] Include**: /table/003-chapter1-3-F-a.html
 
 ```shell
 #pop-wrap

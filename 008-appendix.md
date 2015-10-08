@@ -92,31 +92,19 @@ SMACSS의 장점
 
 하이픈(-)이 별도로 표기되어 있지 않다면 자유롭게 사용 가능하며, 표기되어 있다면 해당 부분에만 사용할 수 있다.
 
---- <!-- [D] 인클루드 -->
-
-/table/008-appendix-3-A.html
-
----
+**[D] Include**: /table/008-appendix-3-A.html
 
 #### B. 레이아웃 예약어
 
 id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가능하며, 하이픈(-)은 표기된 부분에만 사용할 수 있다.
 
---- <!-- [D] 인클루드 -->
-
-/table/008-appendix-3-B.html
-
----
+**[D] Include**: /table/008-appendix-3-B.html
 
 #### C. 프리픽스
 
 여기서는 가이드 정의 프리픽스만을 설명하며, 하이픈(-)은 표기된 부분에만 사용할 수 있다.  
 애트리뷰트 및 속성 별 사용 여부는 아래 표를 따른다.
 
---- <!-- [D] 인클루드 -->
-
-/table/008-appendix-3-C.html
-
----
+**[D] Include**: /table/008-appendix-3-C.html
 
 [이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5) 다음 [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  

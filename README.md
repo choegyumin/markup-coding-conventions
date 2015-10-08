@@ -37,11 +37,7 @@ Markup Coding Guide
 
 ---
 ```
-- ```<!-- [D] 인클루드 -->``` 영역에 추가 작성된 URL의 코드를 변환된 HTML 코드의 해당 영역에 덮어쓰기
+- ```**[D] Include**:``` 영역에 추가 작성된 URL의 코드를 변환된 HTML 코드의 해당 영역에 덮어쓰기
 ```markdown
---- <!-- [D] 인클루드 -->
-
-/table/003-chapter1-3-F-a.html
-
----
+**[D] Include**: /table/003-chapter1-3-F-a.html
 ```

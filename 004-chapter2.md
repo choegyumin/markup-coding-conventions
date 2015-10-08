@@ -51,21 +51,13 @@ DTD 선언 및 HTML의 head 엘리먼트 내부 마크업 시 다음과 같은 �
 
 HTML 문서 작성 시 DTD는 아래의 예시를 따르며, DTD 선언 앞에는 서버사이드 언어를 제외한 다른 문자를 허용하지 않는다.
 
---- <!-- [D] 인클루드 -->
-
-/table/004-chapter2-3-A.html
-
----
+**[D] Include**: /table/004-chapter2-3-A.html
 
 #### B. 인코딩
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선언하도록 한다.
 
---- <!-- [D] 인클루드 -->
-
-/table/004-chapter2-3-B.html
-
----
+**[D] Include**: /table/004-chapter2-3-B.html
 
 - UTF-8 인코딩을 사용할 수 없다면 다른 인코딩을 사용한다. (한글은 euc-kr)
 - 인코딩 선언은 head 엘리먼트 내부의 최초 엘리먼트로 작성한다.
@@ -74,21 +66,13 @@ HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선�
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 Viewport를 설정하도록 한다.
 
---- <!-- [D] 인클루드 -->
-
-/table/004-chapter2-3-C.html
-
----
+**[D] Include**: /table/004-chapter2-3-C.html
 
 #### D. User Agent
 
 HTML 문서 작성 시 필요할 경우 User Agent별로 body에 클래스를 추가하며, 다음과 같은 규칙을 기본으로 한다.
 
---- <!-- [D] 인클루드 -->
-
-/table/004-chapter2-3-D.html
-
----
+**[D] Include**: /table/004-chapter2-3-D.html
 
 ### 2-4. 주석 작성
 

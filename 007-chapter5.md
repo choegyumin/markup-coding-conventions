@@ -45,4 +45,6 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 용량이 클 경우 이슈가 발생할 수 있으므로 원본, 압축 이미지를 따로 관리하여 압축된 이미지를 사용하도록 한다.
 
+---
+
 [이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  

@@ -72,7 +72,7 @@ Markup Coding Guide - 부록
 					</ul>
 				</div>
 			</div>
-			<h4><span class="otmpost-apnt" id="otmmcg-appendix2"></span>2. 네이밍 예약어</h4>
+			<h4><span class="otmpost-apnt" id="otmmcg-appendix3"></span>3. 네이밍 예약어</h4>
 			<p>
 				네이밍 규칙은 HTML, CSS 파일에서 사용되는 선택자, 그리고 이미지 등의 파일이나 폴더의 이름을 작성하는 규칙이다.<br>
 				네이밍을 이해하기 쉽게 작성하여야 사이트의 제작 및 유지보수를 맡은 관리자가 코드를 쉽게 파악할 수 있다.<br>
@@ -217,9 +217,9 @@ Markup Coding Guide - 부록
 							<td>파일 업로드(입력 폼)</td>
 						</tr>
 						<tr>
-							<th scope="row">hilight</th>
+							<th scope="row">highlight</th>
 							<td>강조</td>
-							<th scope="row">ellips</th>
+							<th scope="row">ellipsis</th>
 							<td>문장 생략</td>
 						</tr>
 						<tr>

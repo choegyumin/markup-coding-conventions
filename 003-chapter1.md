@@ -21,7 +21,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 
 #### A. 일반 규칙
 
-- 이름은 영문 소문자, 숫자, 하이픈(-), 언더바(_)를 사용하여 작성한다.
+- 이름은 영문 소문자, 숫자, 하이픈(```-```), 언더바(```_```)를 사용하여 작성한다.
 - 이름은 일반적으로 영문 소문자로 시작하여야 한다.
 - 일반적으로 선택자는 CSS의 Cascade 방식에 알맞은 네이밍을 한다.
 ```html
@@ -41,7 +41,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 - 하이픈은 엘리먼트 역할에 따라 네이밍 단어를 역할별로 조합할 때 사용되며, 단순히 띄어쓰기가 필요한 경우 언더바를 사용한다.
 ```shell
 service-naming-exam-wrap (X)
-→ service_naming_exam-wrap (O)
+service_naming_exam-wrap (O)
 ```
 - 네이밍의 조합은 '사용자 정의 프리픽스-가이드 정의 프리픽스-컨텐츠명-형태-의미-영역-확장--상태' 최대 8단계로 나뉘며, 필요에 따라 조합할 수 있다.
 ```shell
@@ -73,7 +73,7 @@ list3 (O)
 - 일반적으로 모듈화되는 엘리먼트에 사용한다.
 - 프리픽스는 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
-- 프리픽스 목록은 [부록 &gt; 2. 네이밍 예약어 &gt; C. 프리픽스](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#c-프리픽스)를 참고한다.
+- 프리픽스 목록은 [부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#c-프리픽스)를 참고한다.
 
 ### 1-3. 선택자 네이밍
 
@@ -116,7 +116,7 @@ list3 (O)
 
 ##### b. 테이블 셀
 
-&lt;th&gt;, &lt;td&gt; 엘리먼트에 제공되는 **id**, **headers** 값 은 프리픽스 ```t```를 추가한다.
+```<th>```, ```<td>``` 엘리먼트에 제공되는 ```id```, ```headers``` 애트리뷰트 값 은 프리픽스 ```t```를 추가한다.
 
 ```shell
 #t-price
@@ -124,7 +124,7 @@ list3 (O)
 
 ##### c. 폼
 
-폼과 관련된 &lt;input&gt;, &lt;select&gt; 등의 엘리먼트에 제공되는 **id**, **name** 값 은 프리픽스 ```f```를 추가한다.
+폼과 관련된 ```<input>```, ```<select>``` 등의 엘리먼트에 제공되는 ```id```, ```name``` 애트리뷰트 값 은 프리픽스 ```f```를 추가한다.
 
 ```shell
 #f-email
@@ -132,7 +132,7 @@ list3 (O)
 
 ##### d. WAI-ARIA의 상태 및 속성
 
-WAI-ARIA의 상태 및 속성만을 위해 제공되는 **id** 값은 프리픽스 ```aria```를 추가한다. (별도로 정의된 값이 있을 때는 예외)
+WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. (별도로 정의된 값이 있을 때는 예외)
 
 ```html
 <div id="nav" role="navigation" aria-labelledby="aria-nav-tit">
@@ -161,7 +161,7 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 **id** 값은 프리픽�
 ##### f. 컴포넌트
 
 컴포넌트란 하나의 독립적인 모듈로 사용되는 유저 인터페이스를 뜻한다.  
-컴포넌트에 제공되는 선택자는 프리픽스 ```ui```를 추가하며, [1장. 네이밍 규칙 &gt; 1-5. 모듈화](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화)의 규칙을 따른다.
+컴포넌트에 제공되는 선택자는 프리픽스 ```ui```를 추가하며, [1-5. 모듈화](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화)의 규칙을 따른다.
 
 ```html
 <div class="ui-exam">....</div>
@@ -248,9 +248,9 @@ bg-exam3.png
 <div class="thmb ui-imgratio"></div>
 ```
 ```css
-.ui-imgratio{width:200px} (X)
-.thmb{width:200px} (O)
-.thmb.ui-imgratio{width:200px} (O)
+.ui-imgratio{width:200px} /* X */
+.thmb{width:200px} /* O */
+.thmb.ui-imgratio{width:200px} /* O */
 ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 

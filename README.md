@@ -6,7 +6,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 블로그 업로드 시 작성 가이드
 ---
 
-> [layout.html](./blob/master/layout.html) 참고
+> [layout.html](https://github.com/choi4450/markup-coding-guide/blob/master/layout.html) 참고
 
 ### CSS
 

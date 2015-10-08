@@ -1,27 +1,9 @@
-<!doctype html>
-<html lang="ko">
-<head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>Markup(HTML, CSS) Coding Guide</title>
-<meta name="author" content="최규민,박용하">
-<meta name="keywords" content="마크업,HTML,CSS,코딩,가이드">
-<meta name="description" content="최규민, 박용하가 공동 제작한 마크업(HTML, CSS) 코딩 가이드입니다.">
-<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/style.css">
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-</head>
-<body style="padding:25px">
-<h1 style="font-size:2.5em">Markup(HTML, CSS) Coding Guide</h1>
-<h2 style="overflow:hidden;display:block;position:absolute;width:1px;height:1px;padding:0;border:0;margin:0;background:none;text-indent:2px;white-space:nowrap">본문</h2>
-<!-- [S] 내용 -->
+Markup Coding Guide - 부록
+===
 
-<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost.css">
-<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/otmpost-ref.css">
+---
 
-<div class="otmpost otmpost-ref">
-
-	<div class="otmpost-box" id="otmmcg-cover">
-		<div><a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide" class="otmpost-txt-adefc">목차로 이동</a></div>
-	</div>
+[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)
 
 	<div class="otmpost-box" id="otmmcg-chapter-appendix">
 		<h3>부록</h3>
@@ -438,11 +420,6 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">comm-</th>
-							<td>서비스 공통</td>
-							<td>HTML : id, class</td>
-						</tr>
-						<tr>
 							<th scope="row">ui-</th>
 							<td>모듈(위젯)</td>
 							<td>HTML : id, class</td>
@@ -459,7 +436,7 @@
 						</tr>
 						<tr>
 							<th scope="row">ifr-</th>
-							<td>프레임</td>
+							<td>아이프레임</td>
 							<td>HTML : id, class</td>
 						</tr>
 						<tr>
@@ -493,17 +470,4 @@
 		</div>
 	</div>
 
-	<div class="otmpost-box otmpost-ref-pg">
-		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5">이전</a>
-		<span>다음</span>
-		<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide">목차</a>
-	</div>
-
-</div>
-
-<!-- [E] 내용 -->
-<script type="text/javascript">
-// $("pre").each(function(){$(this).html($(this).html().replace(/^\t+/mg,''));});
-</script>
-</body>
-</html>
+[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5) 다음 [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide)  

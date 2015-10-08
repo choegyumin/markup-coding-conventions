@@ -24,7 +24,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
 ### HTML
 
-[StackEdit](https://stackedit.io/editor)에서 변환한 HTML을 export하여 아래 엘리먼트 내에 복사
+[StackEdit](https://stackedit.io/editor)에서 변환한 HTML을 export하여 아래 엘리먼트 내에 붙여넣기
 
 ```html
 <div class="markdown"></div>
@@ -37,8 +37,8 @@ Markup Coding Guide
 
 ---
 ```
-- 변환 후 ```<!-- [D] 인클루드 -->``` 영역에 추가 작성된 URL의 코드를 복사
-```html
+- ```<!-- [D] 인클루드 -->``` 영역에 추가 작성된 URL의 코드를 변환된 HTML 코드의 해당 영역에 덮어쓰기
+```markdown
 --- <!-- [D] 인클루드 -->
 
 /table/003-chapter1-3-F-a.html

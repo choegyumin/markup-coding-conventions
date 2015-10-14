@@ -472,7 +472,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</tr>
 	<tr>
 		<th align="center" scope="row">ui-</th>
-		<td align="left">모듈(위젯)</td>
+		<td align="left">공통 컴포넌트</td>
 		<td align="left">HTML : id, class</td>
 	</tr>
 	<tr>

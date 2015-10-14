@@ -3,12 +3,12 @@ Markup coding guide
 
 http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
-> 마크다운 문법은 [StackEdit](https://stackedit.io/editor)의 지원 여부를 기준으로 작성한다.
-
 문서 작성 가이드
 ---
 
 ### Markdown
+
+마크다운 문법은 [StackEdit](https://stackedit.io/editor)의 지원 여부를 기준으로 작성한다.
 
 #### 인클루드
 
@@ -18,9 +18,9 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 <!-- [D] Include --> ./img/exam_sprite.html
 ```
 
-##### 엘리먼트별 작성 규칙
+#### 엘리먼트별 작성 규칙
 
-###### 테이블
+##### 테이블
 
 - 테이블은 마크다운에서 지원하지 않는 구조가 많아 제약이 크므로 HTML 문법으로 작성한다.
 - 마크다운 코드를 HTML로 컴파일 시 ```style``` 애트리뷰트를 무시하므로 doctype과 관계없이 컬럼의 가로 폭은 ```style``` 애트리뷰트 대신 ```width``` 애트리뷰트를 사용하여 지정한다.
@@ -30,7 +30,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 ```
 - 작성하고자 하는 테이블의 구조가 마크다운에서도 완벽히 지원하며 각 컬럼의 가로 폭 지정이 필요 없을 경우 마크다운 문법으로 제작 가능하다.
 
-###### 이미지
+##### 이미지
 
 - 이미지는 티스토리에서 지원하는 'Light TT EX (이미지 크게보기)' 플러그인을 사용함에 따라 ```img``` 엘리먼트 대신 티스토리에서 지원하는 이미지 치환자를 사용하여야 하며, 치환된 코드는 HTML 파일로 제작하여 원본 이미지와 같이 ```img```폴더에 보관한다.
 

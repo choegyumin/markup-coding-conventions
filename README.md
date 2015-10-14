@@ -3,6 +3,8 @@ Markup coding guide
 
 http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
+> 마크다운 문법은 [StackEdit](https://stackedit.io/editor)의 지원 여부를 기준으로 작성한다.
+
 문서 작성 가이드
 ---
 

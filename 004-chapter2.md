@@ -51,13 +51,57 @@ DTD 선언 및 HTML의 head 엘리먼트 내부 마크업 시 다음과 같은 �
 
 HTML 문서 작성 시 DTD는 아래의 예시를 따르며, DTD 선언 앞에는 서버사이드 언어를 제외한 다른 문자를 허용하지 않는다.
 
-<!-- [D] Include --> ./table/004-chapter2-3-A.html
+<table>
+	<colgroup>
+		<col width="22%">
+		<col>
+	</colgroup>
+	<tbody>
+	<tr>
+		<th align="center" scope="row">HTML 5</th>
+		<td align="left">
+			<code>&lt;!DOCTYPE html&gt;</code>
+		</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">HTML 4.01<br>Transitional</th>
+		<td align="left">
+			<code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code>
+		</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">XHTML 1.0<br>Transitional</th>
+		<td align="left">
+			<code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</code>
+		</td>
+	</tr>
+	</tbody>
+</table>
 
 #### B. 인코딩
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선언하도록 한다.
 
-<!-- [D] Include --> ./table/004-chapter2-3-B.html
+<table>
+	<colgroup>
+		<col width="22%">
+		<col>
+	</colgroup>
+	<tbody>
+	<tr>
+		<th align="center" scope="row">HTML 5</th>
+		<td align="left">
+			<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>
+		</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Other</th>
+		<td align="left">
+			<code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;</code>
+		</td>
+	</tr>
+	</tbody>
+</table>
 
 - UTF-8 인코딩을 사용할 수 없다면 다른 인코딩을 사용한다. (한글은 euc-kr)
 - 인코딩 선언은 head 엘리먼트 내부의 최초 엘리먼트로 작성한다.
@@ -66,13 +110,75 @@ HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선�
 
 HTML 문서 작성 시 다음과 같은 규칙을 준수하여 Viewport를 설정하도록 한다.
 
-<!-- [D] Include --> ./table/004-chapter2-3-C.html
+<table>
+	<colgroup>
+		<col width="22%">
+		<col>
+	</colgroup>
+	<tbody>
+	<tr>
+		<th align="center" scope="row">iOS</th>
+		<td align="left">
+			<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot;&gt;</code>
+		</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Other</th>
+		<td align="left">
+			<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi&quot;&gt;</code>
+		</td>
+	</tr>
+	</tbody>
+</table>
 
 #### D. User Agent
 
 HTML 문서 작성 시 필요할 경우 User Agent별로 body에 클래스를 추가하며, 다음과 같은 규칙을 기본으로 한다.
 
-<!-- [D] Include --> ./table/004-chapter2-3-D.html
+<table>
+	<colgroup>
+		<col width="22%">
+		<col width="22%">
+		<col>
+	</colgroup>
+	<tbody>
+	<tr>
+		<th align="center" scope="rowgroup" rowspan="3">Mobile</th>
+		<th align="center" scope="row">-</th>
+		<td align="left">ua-m</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">iOS</th>
+		<td align="left">ua-m ua-m-ios</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Android</th>
+		<td align="left">ua-m ua-m-android</td>
+	</tr>
+	<tr>
+		<th align="center" scope="rowgroup" rowspan="4">PC</th>
+		<th align="center" scope="row">-</th>
+		<td align="left">ua-pc</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Windows</th>
+		<td align="left">ua-pc ua-pc-windows</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Mac</th>
+		<td align="left">ua-pc ua-pc-mac</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">Linux</th>
+		<td align="left">ua-pc ua-pc-linux</td>
+	</tr>
+	<tr>
+		<th align="center" scope="rowgroup">Other</th>
+		<th align="center" scope="row">-</th>
+		<td align="left">ua-other</td>
+	</tr>
+	</tbody>
+</table>
 
 ### 2-4. 주석 작성
 

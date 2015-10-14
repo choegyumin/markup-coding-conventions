@@ -100,7 +100,32 @@ list3 (O)
 
 아래의 표에 해당하는 엘리먼트는 선택자에 프리픽스를 추가한다.
 
-<!-- [D] Include --> ./table/003-chapter1-3-F-a.html
+<table>
+	<colgroup>
+		<col width="25%">
+		<col>
+	</colgroup>
+	<thead>
+	<tr>
+		<th align="center" scope="col">의미</th>
+		<th align="center" scope="col">예약어</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<th align="center" scope="row">팝업</th>
+		<td align="left">pop</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">레이아웃</th>
+		<td align="left">ly</td>
+	</tr>
+	<tr>
+		<th align="center" scope="row">아이프레임</th>
+		<td align="left">ifr</td>
+	</tr>
+	</tbody>
+</table>
 
 ```shell
 #pop-wrap

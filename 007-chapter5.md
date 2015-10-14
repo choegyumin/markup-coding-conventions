@@ -25,7 +25,7 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 #### B. 스프라이트 기법의 예제
 
-<!-- [D] Include --> ./img/003-chapter1-3-F-a.html
+<!-- [D] Include --> ./img/exam_sprite.html
 
 ```css
 /* 컴퓨터 이미지를 예로 들었을 경우 */

@@ -81,18 +81,13 @@ list3 (O)
 - 한 페이지에서 동일한 id를 여러번 사용하지 않는다.
 - class는 여러번 사용할 수 있다.
 - 엘리먼트의 id가 레이아웃을 위해 작성된 것이 아닐 경우 class를 추가하여 스타일을 제공한다.
+- 일반적으로 선택자는 CSS의 Cascade 방식에 알맞은 네이밍을 한다.
 - 컴포넌트의 **최상위 엘리먼트**는 독립성과 재사용성의 증진을 위해 확실히 식별할 수 있는 이름으로 네이밍하며, 이는 일반적으로 네이밍 조합 단계 중 **컴포넌트명**에 해당한다.
 ```html
-<div class="service_naming_exam">
-	<ul class="list-box">
+<div class="component_exam">
+	<ul class="list-exam">
 		...
 	</ul>
-</div>
-```
-- 일반적으로 선택자는 CSS의 Cascade 방식에 알맞은 네이밍을 한다.
-```html
-<div class="sect-exam">
-	<input class="ipt">
 </div>
 ```
 

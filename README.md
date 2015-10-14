@@ -34,7 +34,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
 - 이미지는 티스토리에서 지원하는 'Light TT EX (이미지 크게보기)' 플러그인을 사용함에 따라 ```img``` 엘리먼트 대신 티스토리에서 지원하는 이미지 치환자를 사용하여야 하며, 치환된 코드는 HTML 파일로 제작하여 원본 이미지와 같이 ```img```폴더에 보관한다.
 
-블로그 업로드 시 작성 가이드
+블로그 업로드 시 문서 수정 가이드
 ---
 
 > [layout.html](https://github.com/choi4450/markup-coding-guide/blob/master/layout.html) 참고

@@ -58,20 +58,20 @@ HTML 문서 작성 시 DTD는 아래의 예시를 따르며, DTD 선언 앞에�
 	</colgroup>
 	<tbody>
 	<tr>
-		<th align="center" scope="row">HTML 5</th>
-		<td align="left">
+		<th scope="row">HTML 5</th>
+		<td>
 			<code>&lt;!DOCTYPE html&gt;</code>
 		</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">HTML 4.01<br>Transitional</th>
-		<td align="left">
+		<th scope="row">HTML 4.01<br>Transitional</th>
+		<td>
 			<code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code>
 		</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">XHTML 1.0<br>Transitional</th>
-		<td align="left">
+		<th scope="row">XHTML 1.0<br>Transitional</th>
+		<td>
 			<code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</code>
 		</td>
 	</tr>
@@ -89,14 +89,14 @@ HTML 문서 작성 시 다음과 같은 규칙을 준수하여 인코딩을 선�
 	</colgroup>
 	<tbody>
 	<tr>
-		<th align="center" scope="row">HTML 5</th>
-		<td align="left">
+		<th scope="row">HTML 5</th>
+		<td>
 			<code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>
 		</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Other</th>
-		<td align="left">
+		<th scope="row">Other</th>
+		<td>
 			<code>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;</code>
 		</td>
 	</tr>
@@ -117,14 +117,14 @@ HTML 문서 작성 시 다음과 같은 규칙을 준수하여 Viewport를 설�
 	</colgroup>
 	<tbody>
 	<tr>
-		<th align="center" scope="row">iOS</th>
-		<td align="left">
+		<th scope="row">iOS</th>
+		<td>
 			<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no&quot;&gt;</code>
 		</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Other</th>
-		<td align="left">
+		<th scope="row">Other</th>
+		<td>
 			<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi&quot;&gt;</code>
 		</td>
 	</tr>
@@ -143,39 +143,39 @@ HTML 문서 작성 시 필요할 경우 User Agent별로 body에 클래스를 �
 	</colgroup>
 	<tbody>
 	<tr>
-		<th align="center" scope="rowgroup" rowspan="3">Mobile</th>
-		<th align="center" scope="row">-</th>
-		<td align="left">ua-m</td>
+		<th scope="rowgroup" rowspan="3">Mobile</th>
+		<th scope="row">-</th>
+		<td>ua-m</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">iOS</th>
-		<td align="left">ua-m ua-m-ios</td>
+		<th scope="row">iOS</th>
+		<td>ua-m ua-m-ios</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Android</th>
-		<td align="left">ua-m ua-m-android</td>
+		<th scope="row">Android</th>
+		<td>ua-m ua-m-android</td>
 	</tr>
 	<tr>
-		<th align="center" scope="rowgroup" rowspan="4">PC</th>
-		<th align="center" scope="row">-</th>
-		<td align="left">ua-pc</td>
+		<th scope="rowgroup" rowspan="4">PC</th>
+		<th scope="row">-</th>
+		<td>ua-pc</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Windows</th>
-		<td align="left">ua-pc ua-pc-windows</td>
+		<th scope="row">Windows</th>
+		<td>ua-pc ua-pc-windows</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Mac</th>
-		<td align="left">ua-pc ua-pc-mac</td>
+		<th scope="row">Mac</th>
+		<td>ua-pc ua-pc-mac</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">Linux</th>
-		<td align="left">ua-pc ua-pc-linux</td>
+		<th scope="row">Linux</th>
+		<td>ua-pc ua-pc-linux</td>
 	</tr>
 	<tr>
-		<th align="center" scope="rowgroup">Other</th>
-		<th align="center" scope="row">-</th>
-		<td align="left">ua-other</td>
+		<th scope="rowgroup">Other</th>
+		<th scope="row">-</th>
+		<td>ua-other</td>
 	</tr>
 	</tbody>
 </table>

@@ -107,22 +107,22 @@ list3 (O)
 	</colgroup>
 	<thead>
 	<tr>
-		<th align="center" scope="col">의미</th>
-		<th align="center" scope="col">예약어</th>
+		<th scope="col">의미</th>
+		<th scope="col">예약어</th>
 	</tr>
 	</thead>
 	<tbody>
 	<tr>
-		<th align="center" scope="row">팝업</th>
-		<td align="left">pop</td>
+		<th scope="row">팝업</th>
+		<td>pop</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">레이아웃</th>
-		<td align="left">ly</td>
+		<th scope="row">레이아웃</th>
+		<td>ly</td>
 	</tr>
 	<tr>
-		<th align="center" scope="row">아이프레임</th>
-		<td align="left">ifr</td>
+		<th scope="row">아이프레임</th>
+		<td>ifr</td>
 	</tr>
 	</tbody>
 </table>

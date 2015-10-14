@@ -24,12 +24,16 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
 - 테이블은 마크다운에서 지원하지 않는 구조가 많아 제약이 크므로 HTML 문법으로 작성한다.
 - 테이블의 열(col: column)은 6개를 넘을 수 없다.
-- 마크다운 코드를 HTML로 변환 시 ```style``` 애트리뷰트를 무시하므로 doctype과 관계없이 컬럼의 가로 폭은 ```style``` 애트리뷰트 대신 ```width``` 애트리뷰트를 사용하여 지정한다.
+- HTML로 변환 시 ```style``` 애트리뷰트를 무시하므로 doctype과 관계없이 ```style``` 애트리뷰트 대신 ```width```, ```align``` 애트리뷰트를 사용한다.
 ```html
 <col style="width:20%"> <!-- X -->
 <col width="20%"> <!-- O -->
 ```
-- 작성하고자 하는 테이블의 구조가 마크다운에서도 완벽히 지원하며 각 컬럼의 가로 폭 지정이 필요 없을 경우 마크다운 문법으로 제작 가능하다.
+```html
+<td style="text-align:center">...</td> <!-- X -->
+<td align="center">...</td> <!-- O -->
+```
+- 작성하고자 하는 테이블의 구조가 마크다운에서 정상적으로 지원할 경우 마크다운 문법으로 제작 가능하다.
 
 ##### 이미지
 
@@ -44,7 +48,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 ```html
 <link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/markdown-reference.css">
 ```
-- 마크다운 코드를 [StackEdit](https://stackedit.io/editor)에서 HTML로 변환 후 export하여 아래 엘리먼트 내에 붙여넣는다. (문서 제목 영역(```<h1>```-```<hr>```)은 생략)
+- [StackEdit](https://stackedit.io/editor)에서 HTML로 변환 후 export하여 아래 엘리먼트 내에 붙여넣는다. (문서 제목 영역(```<h1>```-```<hr>```)은 생략)
 ```html
 <div class="markdown"></div>
 ```

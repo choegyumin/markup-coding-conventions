@@ -1,4 +1,4 @@
-Markup coding guide
+Markup Coding Guide
 ===
 
 http://overtimeman.tistory.com/entry/Markup-Coding-Guide
@@ -58,9 +58,20 @@ Markup Coding Guide - 1장. 네이밍 규칙
 블로그 업로드 규칙
 ---
 
+### 기본 설정
+
+| 항목 | 설정값 |
+| :--- | :--- |
+| 공개 형태 | 발행 |
+| 주제 | IT 인터넷 |
+| 권한 | 댓글 허용 X, 트랙백 허용 X |
+| CCL | 저작물 사용 허가 표시, 상업적 이용 X, 콘텐츠 변경 X |
+| 태그 | coding, Convention, CSS, Guide, HTML, Markup, ui, ux, 가이드, 마크업, 컨벤션, 코딩 |
+| 서식 | Markup Coding Guide |
+
 ### 본문
 
-> [layout.html](https://github.com/choi4450/markup-coding-guide/blob/master/layout.html) 참고
+> [레이아웃](https://github.com/choi4450/markup-coding-guide/blob/master/layout.html) 참고
 
 - 최상단에 레퍼런스 문서용 추가 CSS를 불러온다.
 

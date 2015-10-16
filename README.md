@@ -37,9 +37,10 @@ Markup Coding Guide - 1장. 네이밍 규칙
 ##### 앵커(링크)
 
 - 앵커는 새창 열림을 유도하기 위하여 HTML 문법으로 작성한다.
+- 앵커 엘리먼트 안의 URL이 별도의 앵커 엘리먼트로 컴파일되지 않도록 슬래시(```/```)를 엔티티 코드 ```&#47;```로 작성한다
 
 ```html
-<a href="http://overtimeman.tistory.com/" target="_blank">야근맨</a>
+<a href="http://overtimeman.tistory.com/" target="_blank">http:&#47;&#47;overtimeman.tistory.com&#47;</a>
 ```
 
 #### 테이블

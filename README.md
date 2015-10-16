@@ -1,7 +1,7 @@
 Markup Coding Guide
 ===
 
-http://overtimeman.tistory.com/entry/Markup-Coding-Guide
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide">http:&#47;&#47;overtimeman.tistory.com&#47;entry&#47;Markup-Coding-Guide</a>
 
 문서 작성 규칙
 ---
@@ -10,7 +10,7 @@ http://overtimeman.tistory.com/entry/Markup-Coding-Guide
 
 - 테이블의 열(col: column)은 6개를 넘을 수 없다.
 - 이미지는 티스토리에서 지원하는 'Light TT EX (이미지 크게보기)' 플러그인을 사용함에 따라 ```img``` 엘리먼트 대신 티스토리에서 지원하는 이미지 치환자를 사용한다.
-- 마크다운 문법은 [StackEdit](https://stackedit.io/editor)의 지원 여부를 기준으로 작성한다.
+- 마크다운 문법은 <a target="_blank" href="https://stackedit.io/editor">StackEdit</a>의 지원 여부를 기준으로 작성한다.
 
 ### 제목
 
@@ -80,7 +80,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 
 ### 본문
 
-> [레이아웃](https://github.com/choi4450/markup-coding-guide/blob/master/layout.html) 참고
+> <a target="_blank" href="https://github.com/choi4450/markup-coding-guide/blob/master/layout.html">레이아웃</a> 참고
 
 - 최상단에 레퍼런스 문서용 추가 CSS를 불러온다.
 
@@ -88,7 +88,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 <link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/markdown-reference.css">
 ```
 
-- [StackEdit](https://stackedit.io/editor)에서 변환한 HTML을 export하여 얻은 코드를 아래 엘리먼트 내에 붙여넣는다. (제목 영역은 생략)
+- <a target="_blank" href="https://stackedit.io/editor">StackEdit</a>에서 변환한 HTML을 export하여 얻은 코드를 아래 엘리먼트 내에 붙여넣는다. (제목 영역은 생략)
 
 ```html
 <div class="markdown"></div>

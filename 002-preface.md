@@ -3,7 +3,7 @@ Markup Coding Guide - 머리글
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
 
 머리글
 ---
@@ -52,4 +52,4 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 
 ---
 
-이전 [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  
+이전 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

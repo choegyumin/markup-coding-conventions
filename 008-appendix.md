@@ -3,7 +3,7 @@ Markup Coding Guide - 부록
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
 
 부록
 ---
@@ -18,7 +18,7 @@ Markup Coding Guide - 부록
 
 하나의 엘리먼트 모음을 독립적이고 재사용이 가능하도록 모듈화하여 제작하는 CSS 방법론이다.
 
-[https://en.bem.info/](https://en.bem.info/)
+<a target="_blank" href="https://en.bem.info/">https:&#47;&#47;en.bem.info&#47;</a>
 
 BEM의 장점
 
@@ -54,7 +54,7 @@ ACSS의 단점
 
 사이트의 각 스타일을 템플릿화하여 특정 엘리먼트에 종속되지 않고 어디에서나 재사용이 가능하도록 제작하는 CSS 방법론이다.
 
-[http://oocss.org/](http://oocss.org/)
+<a target="_blank" href="http://oocss.org/">http:&#47;&#47;oocss.org&#47;</a>
 
 OOCSS의 장점
 
@@ -72,7 +72,7 @@ OOCSS의 단점
 
 마크업 스타일을 기초, 레이아웃, 모듈, 상태, 테마 이 다섯가지로 구분하여 제작하는 CSS 방법론이다.
 
-[https://smacss.com/](https://smacss.com/)
+<a target="_blank" href="https://smacss.com/">https:&#47;&#47;smacss.com&#47;</a>
 
 SMACSS의 장점
 
@@ -485,4 +485,4 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 ---
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article) 다음 [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article#article)  
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article">이전</a> 다음 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

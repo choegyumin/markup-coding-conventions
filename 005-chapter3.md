@@ -3,7 +3,7 @@ Markup Coding Guide - 3장. CSS 코드 작성 규칙
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
 
 3. CSS 코드 작성 규칙
 ---
@@ -76,7 +76,7 @@ vertical-align
 cursor
 content
 ```
-- 스타일 작성 시 [margin collapsing](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합)을 적극적으로 사용하도록 한다.
+- 스타일 작성 시 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극적으로 사용하도록 한다.
 
 ### 3-3. 주석 작성
 
@@ -130,12 +130,12 @@ body{font-family:'나눔고딕',NanumGothic,'wf-NanumGothic'}
 
 ### 3-5. 파일 분기
 
-CSS 파일은 일반적으로 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 분기하도록 하며, 네이밍은 [1-4. 파일 및 폴더 네이밍 &gt; B. CSS](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#b-css)를 확인하도록 한다.
+CSS 파일은 일반적으로 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 분기하도록 하며, 네이밍은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#b-css">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 확인하도록 한다.
 
 ### 3-6. 기본 CSS 파일
 
 최초의 CSS 파일은 아래의 코드를 기본으로 서비스에 맞게 재정의하여 사용한다.  
-CSS 초기화가 필요하지 않다면 [normalize.css](http://necolas.github.io/normalize.css/)를 먼저 불러온 후 ```/* Reset */```에 해당하는 스타일을 삭제하거나 수정하여 사용하여야 한다.
+CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 먼저 불러온 후 ```/* Reset */```에 해당하는 스타일을 삭제하거나 수정하여 사용하여야 한다.
 
 **comm.css (PC)**
 
@@ -260,4 +260,4 @@ body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'폰트명
 
 ---
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

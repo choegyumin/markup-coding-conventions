@@ -3,7 +3,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
 
 1. 네이밍 규칙
 ---
@@ -70,7 +70,7 @@ list3 (O)
 - 일반적으로 모듈화되는 엘리먼트에 사용한다.
 - 프리픽스는 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
-- 프리픽스 목록은 [부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#c-프리픽스)를 참고한다.
+- 프리픽스 목록은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
 
 ### 1-3. 선택자 네이밍
 
@@ -180,7 +180,7 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 ##### f. 공통 컴포넌트
 
 컴포넌트란 하나의 독립적인 모듈로 사용되는 유저 인터페이스를 뜻한다.  
-모듈화해야 할 컴포넌트 즉, 공통 컴포넌트에 제공되는 선택자는 프리픽스 ```ui```를 추가하며, [1-5. 모듈화](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화)의 규칙을 따른다.
+모듈화해야 할 컴포넌트 즉, 공통 컴포넌트에 제공되는 선택자는 프리픽스 ```ui```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
 
 ```html
 <div class="ui-exam">....</div>
@@ -275,4 +275,4 @@ bg-exam3.png
 
 ---
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Preface#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Preface#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

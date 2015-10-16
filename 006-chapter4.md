@@ -3,7 +3,7 @@ Markup Coding Guide - 4장. 웹 접근성 준수 방법
 
 ---
 
-[목차로 이동](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
 
 4. 웹 접근성 준수 방법
 ---
@@ -167,7 +167,7 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 <img src=".." alt="">
 ```
 - 이미지의 alt 애트리뷰트 가이드는 W3C에서 제공하는 아래 URL을 확인한다.  
-[http://www.w3.org/TR/html-alt-techniques/](http://www.w3.org/TR/html-alt-techniques/)
+ <a href="http://www.w3.org/TR/html-alt-techniques/">http:&#47;&#47;www.w3.org&#47;TR&#47;html-alt-techniques&#47;</a>
 
 ### 4-5. 스킵 네비게이션 제공
 
@@ -198,4 +198,4 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 
 ---
 
-[이전](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article) [다음](http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article) [목차](http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article)  
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

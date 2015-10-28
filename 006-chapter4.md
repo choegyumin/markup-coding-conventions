@@ -196,6 +196,19 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 마우스를 사용할 수 없는 환경에서 웹을 이용할 수 있도록 제작하기 위해서는 키보드 접근성이 반드시 보장되어야 한다.  
 그러므로 JavaScript 등을 이용한 마우스 이벤트 핸들러 사용 시 키보드 사용자를 위한 별도의 대응이 필요하다.
 
+#### A. tabindex
+
+- 엘리먼트의 ```id``` 애트리뷰트가 ```<a>``` 태그로 이동할 수 있는 인덱스 역할을 하는 경우 ```tabindex``` 애트리뷰트를 제공하여 포커스를 받을 수 있도록 한다.
+```html
+<a href="#contnet">본문으로 이동</a>
+<div id="content" role="main" tabindex="0"></div>
+```
+- ```tabindex``` 없이 포커스를 받을 수 있는 태그를 사용한 경우 별도로 제공하지 않는다.
+- 특별한 기능 없이 단지 영역임을 나타내는 엘리먼트일 경우 아래 스타일을 이용하여 포커스 아웃라인을 제거할 수 있다.
+```css
+#content{outline:0}
+```
+
 ---
 
 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

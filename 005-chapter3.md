@@ -144,13 +144,15 @@ CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.
 /* [작업구분] 소속 이니셜 작업일 */
 
 /* Reset */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 html{overflow-y:scroll;height:100%;font-size:12px}
 body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* IE9 이하 제외 시 주석 해제 */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td{padding:0;margin:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:1em}
 a,input,textarea,button{color:#000} /* IE7 이하 제외 시 color:inherit */
 img,fieldset,iframe{border:0}
-ul,ol,li{list-style:none}
+ul,ol{list-style:none}
+li{list-style:inherit}
 img,input,select,button{vertical-align:middle}
 a{text-decoration:none}
 a:hover{color:inherit;text-decoration:underline}
@@ -159,9 +161,10 @@ cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:0.92em}
 mark{display:inline;padding:2px 1px 1px;background-color:#ff5566;font-weight:bold;color:#fff}
+code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image]{border:0;background:none;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
-hr,legend{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
+legend{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
 input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}
@@ -198,21 +201,23 @@ body .placeholder{color:#999}
 /* Reset */
 html{overflow-y:scroll;height:100%;font-size:14px}
 body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td{padding:0;margin:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-size:1em}
 a,input,textarea,button{color:inherit}
 img,fieldset,iframe{border:0}
-ul,ol,li{list-style:none}
+ul,ol{list-style:none}
+li{list-style:inherit}
 img,input,select,button{vertical-align:middle}
 a{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:0.92em}
 mark{display:inline;padding:2px 1px 1px;background-color:#ff5566;font-weight:bold;color:#fff}
+code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 input,textarea,select,button,input[type="file"]::-webkit-file-upload-button{border-radius:0;-webkit-appearance:none}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image],input[type="file"]::-webkit-file-upload-button{background:none;border:0;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
-hr,legend{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
+legend{position:absolute;z-index:-1;opacity:0}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
 input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}

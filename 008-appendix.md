@@ -235,6 +235,12 @@ SMACSS의 장점
 		<td>문장 생략</td>
 	</tr>
 	<tr>
+		<th scope="row">nwin</th>
+		<td>새 창</td>
+		<th scope="row">modal</th>
+		<td>모달 다이얼로그(레이어 팝업)</td>
+	</tr>
+	<tr>
 		<th scope="row">prev</th>
 		<td>이전</td>
 		<th scope="row">next</th>
@@ -271,14 +277,8 @@ SMACSS의 장점
 		<td>펼침(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">fnc</th>
-		<td>함수(JS 또는 Back-End 개발용)</td>
-		<th scope="row">idx</th>
-		<td>인덱스(JS 또는 Back-End 개발용)</td>
-	</tr>
-	<tr>
-		<th scope="row">***-</th>
-		<td>마크업 산출물 넘버링</td>
+		<th scope="row">js-</th>
+		<td>스크립트 개발용</td>
 		<th scope="row">@</th>
 		<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
 	</tr>
@@ -437,12 +437,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	<tbody>
 	<tr>
 		<th scope="row">ifr-</th>
-		<td>아이프레임</td>
-		<td>HTML : id, class</td>
-	</tr>
-	<tr>
-		<th scope="row">ly-</th>
-		<td>레이어</td>
+		<td>프레임</td>
 		<td>HTML : id, class</td>
 	</tr>
 	<tr>

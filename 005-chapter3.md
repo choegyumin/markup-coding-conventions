@@ -169,11 +169,14 @@ input::-ms-clear{display:none}
 input::-ms-reveal{display:none}
 
 /* Global */
+.show-b{display:block !important}
+.show-i{display:inline !important}
+.show-ib{display:inline-block !important}
+.hide{display:none !important}
+.js-modal[tabindex=0]{outline:0 !important}
 body .blind{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
-body .show-b{display:block !important}
-body .show-ib{display:inline-block !important}
-body .show-i{display:inline !important}
-body .hide{display:none !important}
+body .blind-ie7{overflow:hidden;display:block;float:none;clear:both;position:relative;z-index:-1;top:0;right:0;bottom:0;left:0;width:1px;min-width:0;height:1px;min-height:0;margin:0 -1px -1px 0;line-height:1px;white-space:nowrap;opacity:0;filter:alpha(opacity=0)} /* IE7 E(position:absolute) + E(margin-top:) 버그 대응 */
+body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis}
 body .placeholder{color:#999}
 
 /* UI widget */
@@ -220,17 +223,19 @@ input:-moz-placeholder{color:#999}
 input::-moz-placeholder{color:#999}
 input:-ms-input-placeholder{color:#999}
 .ua-m textarea::-webkit-scrollbar{width:8px;height:8px}
-ua-m textarea::-webkit-scrollbar-thumb{border:3px solid rgba(0,0,0,0);background-color:rgba(0,0,0,.3);-webkit-background-clip:padding-box;background-clip:padding-box}
+.ua-m textarea::-webkit-scrollbar-thumb{border:3px solid rgba(0,0,0,0);background-color:rgba(0,0,0,.3);-webkit-background-clip:padding-box;background-clip:padding-box}
 .ua-m textarea::-webkit-scrollbar-button{display:none;width:0;height:0}
 .ua-m textarea::-webkit-scrollbar-corner{background-color:transparent}
 .ua-m-android input,.ua-m-android textarea,.ua-m-android button{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
 
 /* Global */
-body .blind,#sknv{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
-body .show-b{display:block !important}
-body .show-ib{display:inline-block !important}
-body .show-i{display:inline !important}
-body .hide{display:none !important}
+.show-b{display:block !important}
+.show-i{display:inline !important}
+.show-ib{display:inline-block !important}
+.hide{display:none !important}
+.js-modal[tabindex=0]{outline:0 !important}
+body .blind,#sknv{position:absolute;z-index:-1;opacity:0}
+body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* UI widget */
 

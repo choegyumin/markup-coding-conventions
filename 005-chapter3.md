@@ -144,7 +144,7 @@ CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.
 /* [작업구분] 소속 이니셜 작업일 */
 
 /* Reset */
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
 html{overflow-y:scroll;height:100%;font-size:12px}
 body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* IE9 이하 제외 시 주석 해제 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote{padding:0;margin:0}

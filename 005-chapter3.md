@@ -60,9 +60,12 @@ border(-width, -style, -color, -radius, -image)
 margin(-top, -right, -bottom, -left)
 box-sizing
 background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
-font-family
+font-style
+font-variant
+font-weight
 font-size
 line-height
+font-family
 letter-spacing
 color
 text-decoration

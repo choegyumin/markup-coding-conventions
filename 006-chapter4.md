@@ -176,7 +176,7 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 ...
 <body>
 <div id="wrap">
-<div id="sknv">
+<div id="sknav">
 	<a href="#content">본문 바로가기</a>
 </div>
 ...

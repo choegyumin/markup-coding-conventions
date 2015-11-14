@@ -39,7 +39,7 @@ HTML 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 ```
 - 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
 ```html
-<input type="password" class="ipt-txt" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
+<input type="password" class="input-txt" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
 ```
 
 ### 2-3. DTD 선언 및 head 엘리먼트 내부 마크업
@@ -288,12 +288,12 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 
 ```html
 <!-- X -->
-<input type="text" class="ipt-txt ipt-txt-w120">
-<input type="text" class="ipt-txt ipt-txt-w180">
+<input type="text" class="input-txt input-txt-w120">
+<input type="text" class="input-txt input-txt-w180">
 
 <!-- O -->
-<input type="text" class="ipt-txt" style="width:120px">
-<input type="text" class="ipt-txt" style="width:180px">
+<input type="text" class="input-txt" style="width:120px">
+<input type="text" class="input-txt" style="width:180px">
 ```
 
 #### E. ```<button>```
@@ -327,7 +327,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body>
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknv">
+<div id="sknav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->
@@ -374,7 +374,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body>
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknv">
+<div id="sknav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->
@@ -418,7 +418,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body class="..">
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknv">
+<div id="sknav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->

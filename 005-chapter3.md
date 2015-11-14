@@ -188,9 +188,9 @@ body .placeholder{color:#999}
 /* UI widget */
 
 /* Skip Navigation */
-#sknv{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
-#sknv a{overflow:hidden;display:block;position:absolute;top:0;right:0;left:0;height:0;background:#222;font-size:14px;line-height:44px;font-weight:bold;color:#fff;white-space:nowrap;text-align:center}
-#sknv a:hover,#sknv a:focus,#sknv a:active{top:0;height:44px}
+#sknav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
+#sknav a{overflow:hidden;display:block;position:absolute;top:0;right:0;left:0;height:0;background:#222;font-size:14px;line-height:44px;font-weight:bold;color:#fff;white-space:nowrap;text-align:center}
+#sknav a:hover,#sknav a:focus,#sknav a:active{top:0;height:44px}
 
 /* Layout */
 ```
@@ -242,7 +242,7 @@ input:-ms-input-placeholder{color:#999}
 .show-ib{display:inline-block !important}
 .hide{display:none !important}
 .js-modal[tabindex=0]{outline:0 !important}
-body .blind,#sknv{position:absolute;z-index:-1;opacity:0}
+body .blind,#sknav{position:absolute;z-index:-1;opacity:0}
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* UI widget */

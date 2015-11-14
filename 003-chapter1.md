@@ -52,12 +52,12 @@ list3 (O)
 ```
 - 상태 네이밍은 하이픈을 두번 사용하여 조합한다.
 ```html
-<input class="ipt-exam ipt-exam--on">
+<input class="input-exam input-exam--on">
 ```
 - 확장 네이밍은 일반적으로 'type'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'type'와 단어 사이에 하이픈이 아닌 언더바를 사용한다.
 ```html
-<input class="ipt-exam ipt-exam-type2">
-<input class="ipt-exam ipt-exam-type_compact">
+<input class="input-exam input-exam-type2">
+<input class="input-exam input-exam-type_compact">
 ```
 - 정의된 클래스가 없는 엘리먼트를 확장 또는 상태 제어해야 할 경우 조합없이 네이밍하여 사용한다.
 ```html

@@ -201,21 +201,21 @@ SMACSS의 장점
 		<td>딤드(Dimmed)</td>
 	</tr>
 	<tr>
-		<th scope="row">ipt</th>
+		<th scope="row">input</th>
 		<td>입력 폼</td>
-		<th scope="row">ipt-txt</th>
+		<th scope="row">input-txt</th>
 		<td>텍스트필드(입력 폼)</td>
 	</tr>
 	<tr>
-		<th scope="row">ipt-chk</th>
+		<th scope="row">input-chk</th>
 		<td>체크박스(입력 폼)</td>
-		<th scope="row">ipt-rdo</th>
+		<th scope="row">input-rdo</th>
 		<td>라디오버튼(입력 폼)</td>
 	</tr>
 	<tr>
-		<th scope="row">ipt-sel</th>
+		<th scope="row">input-sel</th>
 		<td>셀렉트박스(입력 폼)</td>
-		<th scope="row">ipt-file</th>
+		<th scope="row">input-file</th>
 		<td>파일 업로드(입력 폼)</td>
 	</tr>
 	<tr>
@@ -348,7 +348,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>Quick Navigation Bar</td>
 	</tr>
 	<tr>
-		<th scope="row">#-sknv</th>
+		<th scope="row">#-sknav</th>
 		<td>SKip NaVigation</td>
 	</tr>
 	<tr>

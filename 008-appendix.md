@@ -90,8 +90,6 @@ SMACSS의 장점
 
 #### A. 공통 예약어
 
-하이픈(-)이 별도로 표기되어 있지 않다면 자유롭게 사용 가능하며, 표기되어 있다면 해당 부분에만 사용할 수 있다.
-
 <table>
 	<colgroup>
 		<col width="23.5%">
@@ -127,21 +125,21 @@ SMACSS의 장점
 		<td>버튼</td>
 	</tr>
 	<tr>
-		<th scope="row">subm</th>
+		<th scope="row">submit</th>
 		<td>제출</td>
-		<th scope="row">canc</th>
+		<th scope="row">cancel</th>
 		<td>취소</td>
 	</tr>
 	<tr>
 		<th scope="row">chk</th>
 		<td>체크</td>
-		<th scope="row">clse</th>
+		<th scope="row">close</th>
 		<td>닫기</td>
 	</tr>
 	<tr>
 		<th scope="row">arr</th>
 		<td>화살표</td>
-		<th scope="row">srch</th>
+		<th scope="row">search</th>
 		<td>검색</td>
 	</tr>
 	<tr>
@@ -157,15 +155,9 @@ SMACSS의 장점
 		<td>목록 내 항목</td>
 	</tr>
 	<tr>
-		<th scope="row">tbl</th>
+		<th scope="row">table</th>
 		<td>테이블</td>
-		<th scope="row">banr</th>
-		<td>배너</td>
-	</tr>
-	<tr>
-		<th scope="row">widg</th>
-		<td>위젯</td>
-		<th scope="row">pg</th>
+		<th scope="row">paginate</th>
 		<td>페이징</td>
 	</tr>
 	<tr>
@@ -181,10 +173,8 @@ SMACSS의 장점
 		<td>마스크</td>
 	</tr>
 	<tr>
-		<th scope="row"><span class="otmpost-show-ib">line</span><span class="otmpost-show-ib">(-position)</span><span class="otmpost-show-ib">(-style)</span><span class="otmpost-show-ib">(-color)</span><span class="otmpost-show-ib">(-alpha)</span></th>
-		<td><span class="otmpost-show-ib">선&nbsp;&nbsp;</span><span class="otmpost-show-ib">ex. line</span><span class="otmpost-show-ib">(-ht, -hb, -vl, -vr)</span><span class="otmpost-show-ib">(-dot, -dash, -dbl, ...)</span><span class="otmpost-show-ib">(-fff)</span><span class="otmpost-show-ib">(-a20)</span></td>
-		<th scope="row">sprt</th>
-		<td>구분자</td>
+		<th scope="row">line<br>(-position)<br>(-style)<br>(-color)<br>(-alpha)</th>
+		<td colspan="3">선<br>ex. line(-ht, -hb, -vl, -vr)(-dot, -dash, -dbl, ...)(-fff, -...)(-a20, -...)</td>
 	</tr>
 	<tr>
 		<th scope="row">ico</th>
@@ -201,12 +191,12 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">img</th>
 		<td>이미지</td>
-		<th scope="row">sp-</th>
+		<th scope="row">sp</th>
 		<td>스프라이트 이미지</td>
 	</tr>
 	<tr>
-		<th scope="row">flt</th>
-		<td>플로팅(Floating)</td>
+		<th scope="row">separ</th>
+		<td>구분자</td>
 		<th scope="row">dim</th>
 		<td>딤드(Dimmed)</td>
 	</tr>
@@ -253,43 +243,43 @@ SMACSS의 장점
 		<td>아래</td>
 	</tr>
 	<tr>
-		<th scope="row">lft</th>
+		<th scope="row">left</th>
 		<td>왼쪽</td>
-		<th scope="row">rgt</th>
+		<th scope="row">right</th>
 		<td>오른쪽</td>
 	</tr>
 	<tr>
-		<th scope="row">--on/--off</th>
+		<th scope="row">on/off</th>
 		<td>상태</td>
-		<th scope="row">--able/--dsble</th>
-		<td>입력 폼 활성화(상태)</td>
+		<th scope="row">able/disable</th>
+		<td>활성화(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">--ovr/--unovr</th>
+		<th scope="row">over/unover</th>
 		<td>마우스오버(상태)</td>
-		<th scope="row">--fcs/--unfcs</th>
+		<th scope="row">focus/unfocus</th>
 		<td>포커스(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">--chk/--unchk</th>
+		<th scope="row">chk/unchk</th>
 		<td>체크(상태)</td>
-		<th scope="row">--fd/--unfd</th>
-		<td>펼침(상태)</td>
+		<th scope="row">fold/unfold</th>
+		<td>접힘/펼침(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">js-</th>
+		<th scope="row">js</th>
 		<td>스크립트 개발용</td>
-		<th scope="row">@</th>
-		<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
-	</tr>
-	<tr>
-		<th scope="row">--tmp</th>
-		<td>임시 파일(이미지 제외)</td>
-		<th scope="row">--bak</th>
+		<th scope="row">bak</th>
 		<td>백업 파일</td>
 	</tr>
 	<tr>
-		<th scope="row">--comp/--decomp</th>
+		<th scope="row">@</th>
+		<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
+		<th scope="row">tmp</th>
+		<td>임시 파일(이미지 제외)</td>
+	</tr>
+	<tr>
+		<th scope="row">comp/decomp</th>
 		<td>압축 이미지 및 보관 폴더</td>
 		<th scope="row">psd</th>
 		<td>이미지 PSD 보관 폴더</td>

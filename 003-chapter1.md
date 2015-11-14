@@ -41,7 +41,7 @@ service_naming_exam-wrap (O)
 - 네이밍의 조합은 '사용자 정의 프리픽스-가이드 정의 프리픽스-컴포넌트명-형태-의미-영역-확장--상태' 최대 8단계로 나뉘며, 필요에 따라 조합할 수 있다.
  일반적으로 형태-의미 + (-영역-확장--상태)` 조합이 가장 많이 사용된다.
 ```shell
-comm-ui-name-sect-exam-box-v2--over
+comm-ui-name-sect-exam-box-type2--over
 sect-exam
 ```
 - 단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 특별한 경우가 아니라면 임의로 자릿수를 늘리지 않는다.
@@ -54,14 +54,14 @@ list3 (O)
 ```html
 <input class="ipt-exam ipt-exam--on">
 ```
-- 확장 네이밍은 일반적으로 'v'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'v'와 단어 사이에 하이픈이 아닌 언더바를 사용한다.
+- 확장 네이밍은 일반적으로 'type'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'type'와 단어 사이에 하이픈이 아닌 언더바를 사용한다.
 ```html
-<input class="ipt-exam ipt-exam-v2">
-<input class="ipt-exam ipt-exam-v_wide">
+<input class="ipt-exam ipt-exam-type2">
+<input class="ipt-exam ipt-exam-type_compact">
 ```
 - 정의된 클래스가 없는 엘리먼트를 확장 또는 상태 제어해야 할 경우 조합없이 네이밍하여 사용한다.
 ```html
-<div class="v_blur"></div>
+<div class="type_blur"></div>
 <div class="fd"></div>
 ```
 
@@ -127,8 +127,8 @@ list3 (O)
 
 ```shell
 .pop-join
-.pop-join-v_nwin (새 창 팝업)
-.pop-join-v_modal (모달 팝업)
+.pop-join-type_nwin (새 창 팝업)
+.pop-join-type_modal (모달 팝업)
 ```
 
 ##### e. WAI-ARIA의 상태 및 속성

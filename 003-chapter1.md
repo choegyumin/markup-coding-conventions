@@ -38,11 +38,10 @@ Markup Coding Guide - 1장. 네이밍 규칙
 service-naming-exam-wrap (X)
 service_naming_exam-wrap (O)
 ```
-- 네이밍의 조합은 '사용자 정의 프리픽스-가이드 정의 프리픽스-컴포넌트명-형태-의미-영역-확장--상태' 최대 8단계로 나뉘며, 필요에 따라 조합할 수 있다.
- 일반적으로 형태-의미 + (-영역-확장--상태)` 조합이 가장 많이 사용된다.
+- 네이밍의 조합은 '사용자 정의 프리픽스-가이드 정의 프리픽스-컴포넌트명-형태-의미-영역-확장' 최대 7단계로 나뉘며, 필요에 따라 조합할 수 있다.
+ 일반적으로 형태-의미 + (-영역-확장)` 조합이 가장 많이 사용되며, 상태의 경우 조합하지 않고 분리된 이름을 가진다.
 ```shell
-comm-ui-name-sect-exam-box-type2--over
-sect-exam
+.comm-ui-name-sect-exam-box-type2.is-over
 ```
 - 단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 특별한 경우가 아니라면 임의로 자릿수를 늘리지 않는다.
 ```shell
@@ -50,16 +49,16 @@ list-3 (X)
 list03 (X)
 list3 (O)
 ```
-- 상태 네이밍은 하이픈을 두번 사용하여 조합한다.
+- 상태 네이밍은 다른 이름과 조합하지 않으며, 'is-' 프리픽스를 붙이도록 한다.
 ```html
-<input class="input-exam input-exam--on">
+<input class="input-exam input-exam is-on">
 ```
 - 확장 네이밍은 일반적으로 'type'와 숫자 또는 식별 가능한 이름을 붙여 네이밍하며, 이름을 부여하는 경우 'type'와 단어 사이에 하이픈이 아닌 언더바를 사용한다.
 ```html
 <input class="input-exam input-exam-type2">
 <input class="input-exam input-exam-type_compact">
 ```
-- 정의된 클래스가 없는 엘리먼트를 확장 또는 상태 제어해야 할 경우 조합없이 네이밍하여 사용한다.
+- 정의된 클래스가 없는 엘리먼트를 확장 제어해야 할 경우 상태 네이밍처럼 조합없이 네이밍하여 사용한다.
 ```html
 <div class="type_blur"></div>
 <div class="fd"></div>
@@ -246,12 +245,14 @@ bg-exam3.png
 ```
 - 모듈화된 엘리먼트를 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
 ```html
-<div class="thmb ui-imgratio"></div>
+<div class="exam-area">
+	<div class="thmb ui-imgratio"></div>
+</div>
 ```
 ```css
-.ui-imgratio{width:200px} /* X */
-.thmb{width:200px} /* O */
-.thmb.ui-imgratio{width:200px} /* O */
+.exam-area .ui-imgratio{width:200px} /* X */
+.exam-area .thmb{width:200px} /* O */
+.exam-area .thmb.ui-imgratio{width:200px} /* △ */
 ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 

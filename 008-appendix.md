@@ -396,10 +396,6 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>그루핑(특정 영역)</td>
 	</tr>
 	<tr>
-		<th scope="row">-zone</th>
-		<td>그루핑(영역의 일부)</td>
-	</tr>
-	<tr>
 		<th scope="row">-fld</th>
 		<td>그루핑(폼 양식)</td>
 	</tr>
@@ -425,6 +421,11 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</tr>
 	</thead>
 	<tbody>
+	<tr>
+		<th scope="row">is-</th>
+		<td>상태</td>
+		<td>HTML : id, class</td>
+	</tr>
 	<tr>
 		<th scope="row">ifr-</th>
 		<td>프레임</td>

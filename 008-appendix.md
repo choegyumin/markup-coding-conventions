@@ -109,7 +109,7 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">tit</th>
 		<td>제목</td>
-		<th scope="row">dsc</th>
+		<th scope="row">desc</th>
 		<td>설명</td>
 	</tr>
 	<tr>

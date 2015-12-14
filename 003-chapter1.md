@@ -66,7 +66,7 @@ list3 (O)
 
 #### D. 네이밍 프리픽스
 
-- 일반적으로 모듈화되는 엘리먼트에 사용한다.
+- 일반적으로 하나의 공통 컴포넌트가 되는 엘리먼트에 사용된다.
 - 프리픽스는 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
 - 프리픽스 목록은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
@@ -161,10 +161,12 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 ##### f. 공통 컴포넌트
 
 컴포넌트란 하나의 독립적인 모듈로 사용되는 유저 인터페이스를 뜻한다.  
-모듈화해야 할 컴포넌트 즉, 공통 컴포넌트에 제공되는 선택자는 프리픽스 ```ui```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
+공통 컴포넌트에 제공되는 선택자는 용도에 따라 프리픽스 ```ui```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화공통-컴포넌트">1-5. 모듈화(공통 컴포넌트)</a>의 규칙을 따른다.
 
 ```html
-<div class="ui-exam">....</div>
+<div class="ui-exam">
+	<div class="ui_extn-exam">...</div>
+</div>
 ```
 
 ### 1-4. 파일 및 폴더 네이밍
@@ -224,9 +226,9 @@ bg-exam3.png
 - 이미지, CSS, JavaScript 폴더는 'img', 'css', 'js'로 네이밍한다.
 - HTML파일을 메뉴별로 분기해야할 경우 서비스명을 토대로 네이밍한다.
 
-### 1-5. 모듈화
+### 1-5. 모듈화(공통 컴포넌트)
 
-모듈화가 필요한 경우 아래의 네이밍 방법을 준수하도록 한다.
+공통 컴포넌트를 제작할 경우 아래의 네이밍 방법을 준수하도록 한다.
 
 #### A. 선택자 네이밍
 
@@ -234,16 +236,28 @@ bg-exam3.png
 ```html
 <div class="ui-tabmenu"></div>
 ```
-- 일반적으로 부모 엘리먼트 선택자의 네이밍을 종속받는다.  
-종속 시 부모 엘리먼트 네이밍이 의미를 가지지 않거나 네이밍이 과도하게 길어질 경우 생략 가능하나, 최상위 엘리먼트의 선택자 네이밍은 항상 종속받도록 한다.
+- 일반적으로 부모 엘리먼트 선택자의 컴포넌트명을 종속받아 네이밍한다.
 ```html
-<div class="ui-btnshare">
-	<div class="ui-btnshare-wrap">
-		<button class="ui-btnshare-btn"></button>
+<div class="ui-btn_share">
+	<div class="ui-btn_share-wrap">
+		<button class="ui-btn_share-btn"></button>
 	</div>
 </div>
 ```
-- 모듈화된 엘리먼트를 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
+- 공통 컴포넌트 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장(extension) UI인 것을 나타낸다.  
+이것을 '공통 컴포넌트 익스텐션'이라 부른다.
+```html
+<div role="tablist" class="ui-tab_dropdown">
+	...
+	<div role="tabpanel" class="ui-tab_dropdown-panel">
+		<div class="ui_extn-tab_dropdown-panel-listbox">리스트...</div>
+	</div>
+	<div role="tabpanel" class="ui-tab_dropdown-panel">
+		<div class="ui_extn-tab_dropdown-panel-optionbox">옵션...</div>
+	</div>
+</div>
+```
+- 공통 컴포넌트를 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
 ```html
 <div class="exam-area">
 	<div class="thmb ui-imgratio"></div>

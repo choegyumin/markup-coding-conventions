@@ -149,11 +149,12 @@ CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.
 /* Reset */
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
 html{overflow-y:scroll;height:100%;font-size:12px}
-body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* IE9 이하 제외 시 주석 해제 */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote{padding:0;margin:0}
+body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,hr,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:1em}
-a,input,textarea,button{color:#000} /* IE7 이하 제외 시 color:inherit */
-img,fieldset,iframe{border:0}
+a,input,textarea,button{color:#000} /* [D] IE7 이하 제외 시 color:inherit */
+img,fieldset,iframe,hr{border:0}
+hr{display:block;height:0}
 ul,ol{list-style:none}
 li{list-style:inherit}
 img,input,select,button{vertical-align:middle}
@@ -179,18 +180,16 @@ input::-ms-reveal{display:none}
 .show-i{display:inline !important}
 .show-ib{display:inline-block !important}
 .hide{display:none !important}
-.js-modal[tabindex=0]{outline:0 !important}
-body .blind{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
-body .blind-ie7{overflow:hidden;display:block;float:none;clear:both;position:relative;z-index:-1;top:0;right:0;bottom:0;left:0;width:1px;min-width:0;height:1px;min-height:0;margin:0 -1px -1px 0;line-height:1px;white-space:nowrap;opacity:0;filter:alpha(opacity=0)} /* IE7 E(position:absolute) + E(margin-top:) 버그 대응 */
-body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis}
+body .blind{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0;filter:alpha(opacity=0)}
+body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 body .placeholder{color:#999}
 
-/* UI widget */
+/* UI Component */
 
 /* Skip Navigation */
 #sknav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
-#sknav a{overflow:hidden;display:block;position:absolute;top:0;right:0;left:0;height:0;background:#222;font-size:14px;line-height:44px;font-weight:bold;color:#fff;white-space:nowrap;text-align:center}
-#sknav a:hover,#sknav a:focus,#sknav a:active{top:0;height:44px}
+#sknav a{overflow:hidden;display:block;position:absolute;top:-45px;right:0;left:0;height:45px;background:#222;color:#fff;font-size:14px;line-height:43px;font-weight:bold;text-decoration:none;white-space:nowrap;text-align:center}
+#sknav a:hover,#sknav a:focus,#sknav a:active{top:0}
 
 /* Layout */
 ```
@@ -204,10 +203,11 @@ body .placeholder{color:#999}
 /* Reset */
 html{overflow-y:scroll;height:100%;font-size:14px}
 body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote{padding:0;margin:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-size:1em}
 a,input,textarea,button{color:inherit}
-img,fieldset,iframe{border:0}
+img,fieldset,iframe,hr{border:0}
+hr{display:block;height:0}
 ul,ol{list-style:none}
 li{list-style:inherit}
 img,input,select,button{vertical-align:middle}
@@ -230,10 +230,6 @@ input::-webkit-input-placeholder{color:#999}
 input:-moz-placeholder{color:#999}
 input::-moz-placeholder{color:#999}
 input:-ms-input-placeholder{color:#999}
-.ua-m textarea::-webkit-scrollbar{width:8px;height:8px}
-.ua-m textarea::-webkit-scrollbar-thumb{border:3px solid rgba(0,0,0,0);background-color:rgba(0,0,0,.3);-webkit-background-clip:padding-box;background-clip:padding-box}
-.ua-m textarea::-webkit-scrollbar-button{display:none;width:0;height:0}
-.ua-m textarea::-webkit-scrollbar-corner{background-color:transparent}
 .ua-m-android input,.ua-m-android textarea,.ua-m-android button{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
 
 /* Global */
@@ -241,11 +237,10 @@ input:-ms-input-placeholder{color:#999}
 .show-i{display:inline !important}
 .show-ib{display:inline-block !important}
 .hide{display:none !important}
-.js-modal[tabindex=0]{outline:0 !important}
-body .blind,#sknav{position:absolute;z-index:-1;opacity:0}
+body .blind,#sknav{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0}
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
-/* UI widget */
+/* UI Component */
 
 /* Layout */
 ```

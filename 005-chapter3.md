@@ -44,22 +44,23 @@ content:'example';
 - CSS 속성의 작성 순서는 아래 예시를 따르며, 명시되지 않은 속성은 적절한 순서에 맞게 사용한다.
 ```css
 overflow(-x, -y)
+position
+z-index
+top, right, bottom, left
 display
 zoom
 visibility
 flex
 float
 clear
-position
-z-index
-top, right, bottom, left
+box-sizing
 width(min-, max-)
 height(min-, max-)
 padding(-top, -right, -bottom, -left)
 border(-width, -style, -color, -radius, -image)
 margin(-top, -right, -bottom, -left)
-box-sizing
 background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
+color
 font-style
 font-variant
 font-weight
@@ -67,7 +68,6 @@ font-size
 line-height
 font-family
 letter-spacing
-color
 text-decoration
 white-space
 word-wrap

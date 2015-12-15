@@ -85,7 +85,7 @@ Markup Coding Guide - 1장. 네이밍 규칙
 - 최상단에 레퍼런스 문서용 추가 CSS를 불러온다.
 
 ```html
-<link rel="stylesheet" type="text/css" href="http://ts.daumcdn.net/custom/blog/173/1735446/skin/images/markdown-reference.css">
+<link rel="stylesheet" type="text/css" href="./images/markdown-reference.css">
 ```
 
 - 변환한 HTML 코드를 아래 엘리먼트 내에 붙여넣는다. (제목 영역은 생략)

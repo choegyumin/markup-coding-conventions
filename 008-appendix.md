@@ -18,7 +18,7 @@ Markup Coding Guide - 부록
 
 하나의 엘리먼트 모음을 독립적이고 재사용이 가능하도록 모듈화하여 제작하는 CSS 방법론이다.
 
-<a target="_blank" href="https://en.bem.info/">https:&#47;&#47;en.bem.info&#47;</a>
+<a target="_blank" href="http://getbem.com/">http:&#47;&#47;getbem.com&#47;</a>
 
 BEM의 장점
 

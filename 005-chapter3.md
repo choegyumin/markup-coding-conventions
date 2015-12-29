@@ -164,7 +164,7 @@ a:active{color:inherit;text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:0.92em}
-mark{display:inline;padding:2px 1px 1px;background-color:#ff5566;font-weight:bold;color:#fff}
+mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image]{border:0;background:none;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
@@ -215,7 +215,7 @@ a{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:0.92em}
-mark{display:inline;padding:2px 1px 1px;background-color:#ff5566;font-weight:bold;color:#fff}
+mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 input,textarea,select,button,input[type="file"]::-webkit-file-upload-button{border-radius:0;-webkit-appearance:none}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image],input[type="file"]::-webkit-file-upload-button{background:none;border:0;cursor:pointer}

@@ -148,10 +148,10 @@ CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.
 
 /* Reset */
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
-html{overflow-y:scroll;height:100%;font-size:12px}
-body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
+html{overflow-y:scroll;height:100%;font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:12px;line-height:1.2}
+body{min-height:100%;background-color:#fff;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,hr,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
-body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:1em}
+body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
 a,input,textarea,button{color:#000} /* [D] IE7 이하 제외 시 color:inherit */
 img,fieldset,iframe,hr{border:0}
 hr{display:block;height:0}
@@ -201,10 +201,10 @@ body .placeholder{color:#999}
 /* [작업구분] 소속 이니셜 작업일 */
 
 /* Reset */
-html{overflow-y:scroll;height:100%;font-size:14px}
-body{min-height:100%;background-color:#fff;line-height:1.2;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
+html{overflow-y:scroll;height:100%;font-size:14px;line-height:1.2}
+body{min-height:100%;background-color:#fff;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
-body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-size:1em}
+body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
 a,input,textarea,button{color:inherit}
 img,fieldset,iframe,hr{border:0}
 hr{display:block;height:0}

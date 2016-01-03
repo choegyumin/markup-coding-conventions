@@ -148,8 +148,9 @@ CSS 초기화가 필요하지 않다면 <a target="_blank" href="http://necolas.
 
 /* Reset */
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
-html{overflow-y:scroll;height:100%;font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:12px;line-height:1.2}
-body{min-height:100%;background-color:#fff;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
+html,body{height:100%}
+html{overflow-y:scroll;font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:12px;line-height:1.2}
+body{background-color:#fff;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,hr,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
 a,input,textarea,button{color:#000} /* [D] IE7 이하 제외 시 color:inherit */
@@ -184,7 +185,7 @@ body .blind{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;bo
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 body .placeholder{color:#999}
 
-/* UI Component */
+/* UI component */
 
 /* Skip Navigation */
 #sknav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
@@ -192,6 +193,15 @@ body .placeholder{color:#999}
 #sknav a:hover,#sknav a:focus,#sknav a:active{top:0}
 
 /* Layout */
+#wrap{position:relative;min-height:100%}
+
+/* Print */
+@media print{
+}
+
+/* Screen Reader */
+@media aural, speech{
+}
 ```
 
 **comm.css (Mobile)**
@@ -201,8 +211,9 @@ body .placeholder{color:#999}
 /* [작업구분] 소속 이니셜 작업일 */
 
 /* Reset */
-html{overflow-y:scroll;height:100%;font-size:14px;line-height:1.2}
-body{min-height:100%;background-color:#fff;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
+html,body{height:100%}
+html{overflow-y:scroll;font-size:14px;line-height:1.2}
+body{background-color:#fff;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
 a,input,textarea,button{color:inherit}
@@ -240,9 +251,10 @@ input:-ms-input-placeholder{color:#999}
 body .blind,#sknav{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0}
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
-/* UI Component */
+/* UI component */
 
 /* Layout */
+#wrap{position:relative;min-height:100%}
 ```
 
 **font.css**

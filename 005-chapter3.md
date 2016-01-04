@@ -22,12 +22,12 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 #### A. 일반 규칙
 
 - CSS는 Hack과 같이 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C Validation을 통과해야 한다.
-- 모든 속성은 영문 대문자를 사용하지 않는다.
+- 모든 프로퍼티는 영문 대문자를 사용하지 않는다.
 ```css
 .class{Font-Family:NanumGothic} /* X */
 .class{font-family:NanumGothic} /* O */
 ```
-- 기본적으로 속성 값은 작은 따옴표(')로 묶으며, 따옴표가 필요없는 속성은 사용하지 않는다.
+- 기본적으로 프로퍼티 값은 작은 따옴표(')로 묶으며, 따옴표가 필요없는 프로퍼티는 사용하지 않는다.
 ```css
 background:url(bg.gif);
 font-family:Dotum,'돋움';
@@ -35,21 +35,22 @@ content:'example';
 @charset "utf-8";
 ```
 - CSS 코드는 일반적으로 들여쓰기를 하지 않는다.
-- 선택자 기호 · 중괄호 · 속성 사이의 모든 공백 및 마지막 속성의 세미콜론(;)은 제거한다. (파일 압축 시 예외)
+- 선택자 기호 · 중괄호 · 프로퍼티 사이의 모든 공백 및 마지막 프로퍼티의 세미콜론(;)은 제거한다. (최종 CSS 파일을 압축하여 관리할 경우 예외)
 - 여러개의 선택자를 사용할 때는 선택자 사이에 줄바꿈을 추가한다.
 ```css
 .section-exam,
 .section-exam2{...}
 ```
-- CSS 속성의 작성 순서는 아래 예시를 따르며, 명시되지 않은 속성은 적절한 순서에 맞게 사용한다.
-```css
+- CSS 프로퍼티의 작성 순서는 일반적으로 아래 순서를 따르며, 명시되지 않은 프로퍼티는 적절한 순서에 맞게 사용한다.
+```shell
+content
 overflow(-x, -y)
-position
-z-index
-top, right, bottom, left
 display
 zoom
 visibility
+position
+z-index
+top, right, bottom, left
 flex
 float
 clear
@@ -77,7 +78,6 @@ text-indent
 text-align
 vertical-align
 cursor
-content
 ```
 - 스타일 작성 시 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극적으로 사용하도록 한다.
 

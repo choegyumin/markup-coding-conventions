@@ -61,6 +61,7 @@ CSS 코드의 작성 규칙을 설명한다.
 사이트의 성능 향상을 위한 마크업 방법을 설명한다.
 
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#5-1-css-image-sprites">1. CSS Image Sprites</a>
+- <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#5-2-reflow의-최소화">2. Reflow의 최소화</a>
 
 ### <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#article">부록</a>
 

@@ -45,6 +45,10 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 용량이 클 경우 이슈가 발생할 수 있으므로 원본, 압축 이미지를 따로 관리하여 압축된 이미지를 사용하도록 한다.
 
+### 5-2. Reflow의 최소화
+
+추후 작성.
+
 ---
 
 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>

@@ -41,6 +41,7 @@ HTML 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 ```html
 <input type="password" class="input-txt" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
 ```
+- 렌더링 엔진 최적화를 위해 스타일 또는 스크립트 제어가 필요한 **모든 엘리먼트에는 클래스명을 부여**하도록 한다.
 
 ### 2-3. DTD 선언 및 head 엘리먼트 내부 마크업
 

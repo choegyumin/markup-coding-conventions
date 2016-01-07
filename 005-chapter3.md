@@ -34,9 +34,15 @@ font-family:Dotum,'돋움';
 content:'example';
 @charset "utf-8";
 ```
-- CSS 코드는 일반적으로 들여쓰기를 하지 않는다.
+- CSS 코드 블럭은 일반적으로 들여쓰기를 하지 않는다.
 - 선택자 기호 · 중괄호 · 프로퍼티 사이의 모든 공백과 마지막 프로퍼티의 세미콜론(;)은 제거한다. (최종 CSS 파일을 압축하여 관리할 경우 예외)
-- 여러개의 선택자를 사용할 때는 선택자 사이에 줄바꿈을 추가한다.
+- **선택자의 상속을 최소화하며, 가능하다면 id나 class 하나만을 유지한다.**.
+```css
+.example .example-wrap .example-group .example-box{width:400px} /* X */
+.example .example-box{width:400px} /* △ */
+.example-box{width:400px} /* O */
+```
+- 여러개의 선택자를 선택할 때는 선택자 사이에 줄바꿈을 추가한다.
 ```css
 .section-exam,
 .section-exam2{...}

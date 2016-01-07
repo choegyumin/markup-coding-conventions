@@ -73,7 +73,7 @@ list3 (O)
 	</ul>
 </div>
 ```
-- 네이밍의 조합 시 확장, 상태는 조합하지 않고 분리하며, 확장 네이밍은 'type', 상태 네이밍은 'is' 프리픽스를 붙이도록 한다.
+- 네이밍의 조합 시 확장, 상태는 조합하지 않고 분리하며, 각각 'type', 'is' 프리픽스를 붙이도록 한다.
 ```html
 <input class="example-input type-wide is-focus">
 ```
@@ -207,7 +207,7 @@ bg-exam3.png
 @img-exam.png
 @bg-exam.png
 ```
-- 엘리먼트의 확장, 상태를 표현하는 이미지의 네이밍은 마지막에 각각 'type', 'is'를 붙여 조합하며, 언더바를 사용하도록 한다.
+- 엘리먼트의 확장, 상태를 표현하는 이미지의 네이밍은 마지막에 각각 'type', 'is'를 붙인 후 언더바를 사용하여 조합한다.
 ```shell
 bg-header-type_compact.jpg
 bg-header-type_compact-is_scrolled.jpg
@@ -232,7 +232,7 @@ bg-header-type_compact-is_scrolled.jpg
 ```html
 <div class="ui-tabmenu"></div>
 ```
-- 일반적으로 부모 엘리먼트 선택자의 컴포넌트명을 종속받아 네이밍한다.
+- 항상 **조상 엘리먼트의 컴포넌트명을 상속**받아 네이밍한다.
 ```html
 <div class="ui-btn_share">
 	<div class="ui-btn_share-wrap">
@@ -240,7 +240,7 @@ bg-header-type_compact-is_scrolled.jpg
 	</div>
 </div>
 ```
-- 공통 컴포넌트 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장(extension) UI인 것을 나타낸다.  
+- 공통 컴포넌트 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 추가로 붙여 확장(extension) UI인 것을 나타낸다.  
 이것을 '공통 컴포넌트 익스텐션'이라 부른다.
 ```html
 <div role="tablist" class="ui-tab_dropdown">
@@ -255,14 +255,14 @@ bg-header-type_compact-is_scrolled.jpg
 ```
 - 공통 컴포넌트를 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
 ```html
-<div class="exam-area">
-	<div class="thmb ui-imgratio"></div>
+<div class="example">
+	<div class="example-thumb ui-imgratio"></div>
 </div>
 ```
 ```css
-.exam-area .ui-imgratio{width:200px} /* X */
-.exam-area .thmb{width:200px} /* O */
-.exam-area .thmb.ui-imgratio{width:200px} /* △ */
+.example .ui-imgratio{width:200px} /* X */
+.example-thumb.ui-imgratio{width:200px} /* △ */
+.example-thumb{width:200px} /* O */
 ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 

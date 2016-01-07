@@ -422,6 +422,11 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</thead>
 	<tbody>
 	<tr>
+		<th scope="row">type-</th>
+		<td>확장</td>
+		<td>HTML : id, class</td>
+	</tr>
+	<tr>
 		<th scope="row">is-</th>
 		<td>상태</td>
 		<td>HTML : id, class</td>

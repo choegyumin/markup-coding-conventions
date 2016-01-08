@@ -166,8 +166,8 @@ ul,ol{list-style:none}
 li{list-style:inherit}
 img,input,select,button{vertical-align:middle}
 a{text-decoration:none}
-a:hover{color:inherit;text-decoration:underline}
-a:active{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline}
+a:active{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:0.92em}

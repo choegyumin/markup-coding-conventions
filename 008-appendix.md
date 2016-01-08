@@ -113,7 +113,7 @@ SMACSS의 장점
 		<td>설명</td>
 	</tr>
 	<tr>
-		<th scope="row">expl</th>
+		<th scope="row">subsc</th>
 		<td>부가설명</td>
 		<th scope="row">cate</th>
 		<td>카테고리</td>

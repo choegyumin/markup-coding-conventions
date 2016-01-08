@@ -149,9 +149,9 @@ SMACSS의 장점
 		<td>탭</td>
 	</tr>
 	<tr>
-		<th scope="row">list</th>
+		<th scope="row">listbox</th>
 		<td>목록</td>
-		<th scope="row">litem</th>
+		<th scope="row">listitem</th>
 		<td>목록 내 항목</td>
 	</tr>
 	<tr>
@@ -263,8 +263,8 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">chk/unchk</th>
 		<td>체크(상태)</td>
-		<th scope="row">fold/unfold</th>
-		<td>접힘/펼침(상태)</td>
+		<th scope="row">expand/unexpand</th>
+		<td>펼침/접힘(상태)</td>
 	</tr>
 	<tr>
 		<th scope="row">js</th>

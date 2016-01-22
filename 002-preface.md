@@ -40,7 +40,7 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 #### D. 스타일(Style)
 
 엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미한다.  
-마크업 코딩 가이드에서 사용되는 스타일 용어로는 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 이렇게 네가지가 있다.
+마크업 코딩 가이드에서 사용되는 스타일 용어로는 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지가 존재한다.
 
 #### E. 프로퍼티(Property)
 
@@ -49,6 +49,10 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 #### F. 프리픽스(Prefix)
 
 네이밍 시 사용되는 접두사를 의미한다.
+
+#### G. 컴포넌트(Component)
+
+모듈화되어 하나의 UI를 이루고 있는 엘리먼트 모음을 의미한다.
 
 ---
 

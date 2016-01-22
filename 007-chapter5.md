@@ -28,12 +28,11 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 <!-- [D] Include --> ./img/exam_sprite.html
 
 ```css
-/* 컴퓨터 이미지를 예로 들었을 경우 */
-.img-exam{
-	width:182px;
-	height:150px;
-	background:url(../img/sp-comm.png) no-repeat 0 -232px;
-	background-size:360px auto;
+/* GitLab 이미지를 예로 들었을 경우 */
+.ico-gitlab{
+	width:35px;
+	height:32px;
+	background:url(../img/sp-ico.png) no-repeat -68px 0;
 }
 ```
 

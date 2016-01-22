@@ -225,8 +225,8 @@ SMACSS의 장점
 		<td>문장 생략</td>
 	</tr>
 	<tr>
-		<th scope="row">nwin</th>
-		<td>새 창</td>
+		<th scope="row">win</th>
+		<td>창(새 창)</td>
 		<th scope="row">modal</th>
 		<td>모달 다이얼로그(레이어 팝업)</td>
 	</tr>
@@ -404,7 +404,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 #### C. 프리픽스
 
-여기서는 가이드 정의 프리픽스만을 설명하며, 하이픈(-)은 표기된 부분에만 사용할 수 있다.  
+여기서는 내장 프리픽스만을 설명하며, 하이픈(-)은 표기된 부분에만 사용할 수 있다.  
 애트리뷰트 및 프로퍼티 별 사용 여부는 아래 표를 따른다.
 
 <table>
@@ -421,16 +421,6 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</tr>
 	</thead>
 	<tbody>
-	<tr>
-		<th scope="row">type-</th>
-		<td>확장</td>
-		<td>HTML : id, class</td>
-	</tr>
-	<tr>
-		<th scope="row">is-</th>
-		<td>상태</td>
-		<td>HTML : id, class</td>
-	</tr>
 	<tr>
 		<th scope="row">ifr-</th>
 		<td>프레임</td>
@@ -463,7 +453,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</tr>
 	<tr>
 		<th scope="row">ui-</th>
-		<td>공통 컴포넌트</td>
+		<td>글로벌 컴포넌트</td>
 		<td>HTML : id, class</td>
 	</tr>
 	<tr>

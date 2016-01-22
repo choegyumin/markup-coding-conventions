@@ -21,7 +21,7 @@ Markup Coding Guide
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-2-기본-규칙">2. 기본 규칙</a>
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-3-선택자-네이밍">3. 선택자 네이밍</a>
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-4-파일-및-폴더-네이밍">4. 파일 및 폴더 네이밍</a>
-- <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화공통-컴포넌트">5. 모듈화(공통 컴포넌트)</a>
+- <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#1-5-모듈화글로벌-컴포넌트">5. 모듈화(글로벌 컴포넌트)</a>
 
 ### <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter2#article">2장. HTML 코드 작성 규칙</a>
 
@@ -77,10 +77,10 @@ CSS 코드의 작성 규칙을 설명한다.
 <a target="_blank" href="https://github.com/choi4450/markup-coding-guide">https:&#47;&#47;github.com&#47;choi4450&#47;markup-coding-guide</a>
 
 > - 2015.04.15 작성 완료
-> - 2015.05.18 상태 네이밍 조합 방법 변경, 모듈(위젯) 엘리먼트 네이밍 프리픽스 'ui' 추가 - 최규민
-> - 2015.05.29 확장 네이밍 조합 방법 변경, 전역 및 컨텐츠 네이밍 내용 보충 - 최규민
+> - 2015.05.18 글로벌 컴포넌트 네이밍 방법 정의 - 최규민
+> - 2015.05.29 전역 및 컨텐츠 네이밍 내용 보충 - 최규민
 > - 2015.09.10 네이밍 규칙 개선 - 최규민
 > - 2015.10.28 프리픽스 네이밍 수정, 키보드 접근성 내용 추가 - 최규민
-> - 2015.12.13 상태 네이밍 조합 방법 변경('--' → 'is-')
-> - 2015.12.14 공통 컴포넌트 익스텐션 정의 - 최규민
+> - 2015.12.14 글로벌 컴포넌트 익스텐션 정의 - 최규민
 > - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의 - 최규민
+> - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경 - 최규민

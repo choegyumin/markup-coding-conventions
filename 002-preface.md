@@ -1,9 +1,9 @@
-Markup Coding Guide - 머리글
+Markup Coding Conventions - 머리글
 ===
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
 
 머리글
 ---
@@ -23,7 +23,7 @@ Front-End 개발이란 사용자가 브라우저를 이용하여 사이트에서
 
 ### 2. 용어 설명
 
-마크업 코딩 가이드에서 자주 사용되는 용어를 설명한다.
+마크업 코딩 컨벤션에서 자주 사용되는 용어를 설명한다.
 
 #### A. 엘리먼트(Element)
 
@@ -40,7 +40,7 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 #### D. 스타일(Style)
 
 엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미한다.  
-마크업 코딩 가이드에서 사용되는 스타일 용어로는 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지가 존재한다.
+마크업 코딩 컨벤션에서 사용되는 스타일 용어로는 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지가 존재한다.
 
 #### E. 프로퍼티(Property)
 
@@ -56,4 +56,4 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 
 ---
 
-이전 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>
+이전 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>

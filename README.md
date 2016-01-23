@@ -1,7 +1,7 @@
-Markup Coding Guide
+Markup Coding Conventions
 ===
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide">http:&#47;&#47;overtimeman.tistory.com&#47;entry&#47;Markup-Coding-Guide</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions">http:&#47;&#47;overtimeman.tistory.com&#47;entry&#47;Markup-Coding-Conventions</a>
 
 문서 작성 규칙
 ---
@@ -17,7 +17,7 @@ Markup Coding Guide
 - 제목 영역은 아래와 같이 작성하며, 블로그에는 제외하여 업로드한다.
 
 ```markdown
-Markup Coding Guide - 1장. 네이밍 규칙
+Markup Coding Conventions - 1장. 네이밍 규칙
 ===
 
 ---
@@ -75,12 +75,12 @@ Markup Coding Guide - 1장. 네이밍 규칙
 | 주제 | IT 인터넷 |
 | 권한 | 댓글 허용 X, 트랙백 허용 X |
 | CCL | 저작물 사용 허가 표시, 상업적 이용 X, 콘텐츠 변경 X |
-| 태그 | coding, Convention, CSS, Guide, HTML, Markup, ui, ux, 가이드, 마크업, 컨벤션, 코딩 |
-| 서식 | Markup Coding Guide |
+| 태그 | CODE, coding, Conventions, CSS, Guide, guidelines, HTML, Markup, Style, ui, ux, 가이드, 가이드라인, 마크업, 스타일, 컨벤션, 코드, 코딩 |
+| 서식 | Markup Coding Conventions |
 
 ### 본문
 
-> <a target="_blank" href="https://github.com/choi4450/markup-coding-guide/blob/master/layout.html">레이아웃</a> 참고
+> <a target="_blank" href="https://github.com/choi4450/markup-coding-conventions/blob/master/layout.html">레이아웃</a> 참고
 
 - 최상단에 레퍼런스 문서용 추가 CSS를 불러온다.
 

@@ -1,9 +1,9 @@
-Markup Coding Guide - 부록
+Markup Coding Conventions - 부록
 ===
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
 
 부록
 ---
@@ -12,7 +12,7 @@ Markup Coding Guide - 부록
 
 ### 1. 마크업 방법론
 
-더욱 편리하고 효용성을 높인 마크업을 위한 방법론 중 마크업 코딩 가이드에 사용된 방법론을 설명한다.
+더욱 편리하고 효용성을 높인 마크업을 위한 방법론 중 마크업 코딩 컨벤션에 사용된 방법론을 설명한다.
 
 #### A. BEM(Block__Element--Modifier)
 
@@ -466,4 +466,4 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article">이전</a> 다음 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter5#article">이전</a> 다음 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>

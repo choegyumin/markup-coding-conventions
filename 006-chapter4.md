@@ -1,9 +1,9 @@
-Markup Coding Guide - 4장. 웹 접근성 준수 방법
+Markup Coding Conventions - 4장. 웹 접근성 준수 방법
 ===
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
 
 4. 웹 접근성 준수 방법
 ---
@@ -206,4 +206,4 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter5#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter3#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter5#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>

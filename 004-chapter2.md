@@ -1,9 +1,9 @@
-Markup Coding Guide - 2장. HTML 코드 작성 규칙
+Markup Coding Conventions - 2장. HTML 코드 작성 규칙
 ===
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
 
 2. HTML 코드 작성 규칙
 ---
@@ -447,4 +447,4 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter1#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter3#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter3#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>

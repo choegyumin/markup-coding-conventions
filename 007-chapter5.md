@@ -1,9 +1,9 @@
-Markup Coding Guide - 5장. 사이트 성능 향상을 위한 마크업
+Markup Coding Conventions - 5장. 사이트 성능 향상을 위한 마크업
 ===
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차로 이동</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
 
 5. 사이트 성능 향상을 위한 마크업
 ---
@@ -50,4 +50,4 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Chapter4#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide-Appendix#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Guide#article">목차</a>
+<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter4#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>

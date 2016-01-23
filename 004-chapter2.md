@@ -328,7 +328,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body>
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknav">
+<div id="skipnav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->
@@ -375,7 +375,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body>
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknav">
+<div id="skipnav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->
@@ -419,7 +419,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <body class="..">
 <div id="wrap">
 <!-- [S] Skip Navigation -->
-<div id="sknav">
+<div id="skipnav">
 </div>
 <!-- [E] Skip Navigation -->
 <!-- [S] Header -->

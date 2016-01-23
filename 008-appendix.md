@@ -22,20 +22,19 @@ Markup Coding Guide - 부록
 
 BEM의 장점
 
-: - HTML, CSS를 모듈화하여 재사용이 가능하다.
-- 고유한 네임스페이스(프리픽스)를 사용하여 선택자의 충돌을 방지한다.
-- 클래스를 종속할 경우 커스터마이징이 용이하다.
-- CSS의 탐색 레벨이 낮아진다.
-- 네이밍이 직관적이다.
+: - 네이밍이 직관적이다.
+- 고유한 네임스페이스를 사용하여 컴포넌트 간의 선택자 충돌을 방지한다.
+- Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
+- 클래스 종속으로 커스터마이징이 용이하다.
+- HTML, CSS를 모듈화하여 재사용이 가능하다.
 
 BEM의 단점
 
-: - CSS(Cascading Style Sheets)의 Cascading 규칙에 부합하지 않는다.
-- 네이밍이 길어진다.
+: - 네이밍이 길어 HTML의 가독성이 떨어진다.
 
 #### B. ACSS(Atomic CSS)
 
-모든 스타일을 클래스로 나누어 특정 엘리먼트에 종속되지 않고 어디에서나 사용이 가능하도록 제작하는 CSS 방법론이다.
+모든 스타일을 클래스로 나누어 특정 엘리먼트에 종속되지 않고 어디에서나 사용 가능하도록 제작하는 CSS 방법론이다.
 
 ACSS의 장점
 
@@ -45,28 +44,26 @@ ACSS의 장점
 
 ACSS의 단점
 
-: - HTML 문서가 복잡해진다.
-- 대규모 사이트의 경우 오히려 CSS를 읽는 속도가 느려질 수 있다.
+: - 인라인 스타일과 크게 다를 바가 없어 HTML 문서가 복잡해진다.
+- 대규모 사이트의 경우 관리가 매우 어려우며, 오히려 CSS를 읽는 속도가 느려질 수 있다.
 - 모듈화가 불가능하다.
-- 인라인 스타일과 다를 바가 없다.
 
 #### C. OOCSS(Object Oriented CSS)
 
-사이트의 각 스타일을 템플릿화하여 특정 엘리먼트에 종속되지 않고 어디에서나 재사용이 가능하도록 제작하는 CSS 방법론이다.
+사이트의 각 스타일을 템플릿화하여 특정 엘리먼트에 종속되지 않고 어디에서나 재사용이 가능하도록 제작하는 CSS 방법론이다.  
+Sass의 @extend를 HTML에 옮겨놓은 느낌이다.
 
 <a target="_blank" href="http://oocss.org/">http:&#47;&#47;oocss.org&#47;</a>
 
 OOCSS의 장점
 
 : - Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
-- 서로 동일한 스타일을 각 엘리먼트에 별도로 지정할 필요가 없다.
-- CSS만을 모듈화하여 선택자가 종속되지 않아 어떤 엘리먼트에서든 적용이 가능하다.
-- Sass의 @extend와 함께 사용할 경우 OOCSS의 장점을 극대화시킬 수 있다.
+- CSS를 모듈화하여 어떤 엘리먼트에서든 재사용이 가능하다.
 
 OOCSS의 단점
 
 : - CSS 모듈화는 가능하나 HTML 엘리먼트의 모듈화는 불가능하다.
-- 각 페이지의 디자인 가이드가 규칙적이지 않은 사이트에서는 적합하지 않다.
+- 디자인의 재사용 빈도가 적은 사이트의 경우 적합하지 않다.
 
 #### D. SMACSS(Scalable and Modular Architecture for CSS)
 
@@ -76,8 +73,12 @@ OOCSS의 단점
 
 SMACSS의 장점
 
-: - HTML, CSS를 모듈화하여 재사용이 가능하다.
-- 네이밍이 직관적이다.
+: - 네이밍이 직관적이다.
+- 모듈 카테고리에 한하여 HTML, CSS 재사용이 가능하다.
+
+SMACSS의 단점
+
+: - 모듈의 스타일이 수정될 경우 사이트 전체에 일으킬 수 있는 위험 부담이 크다.
 
 ### 2. CSS Collapsing margin(여백 병합)
 
@@ -92,10 +93,10 @@ SMACSS의 장점
 
 <table>
 	<colgroup>
-		<col width="23.5%">
-		<col width="26.5%">
-		<col width="23.5%">
-		<col width="26.5%">
+		<col width="23%">
+		<col width="27%">
+		<col width="23%">
+		<col width="27%">
 	</colgroup>
 	<thead>
 	<tr>
@@ -191,8 +192,8 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">img</th>
 		<td>이미지</td>
-		<th scope="row">sp</th>
-		<td>스프라이트 이미지</td>
+		<th scope="row">bak</th>
+		<td>백업 파일</td>
 	</tr>
 	<tr>
 		<th scope="row">separ</th>
@@ -203,19 +204,19 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">input</th>
 		<td>입력 폼</td>
-		<th scope="row">input-txt</th>
+		<th scope="row">input_txt</th>
 		<td>텍스트필드(입력 폼)</td>
 	</tr>
 	<tr>
-		<th scope="row">input-chk</th>
+		<th scope="row">input_chk</th>
 		<td>체크박스(입력 폼)</td>
-		<th scope="row">input-rdo</th>
+		<th scope="row">input_rdo</th>
 		<td>라디오버튼(입력 폼)</td>
 	</tr>
 	<tr>
-		<th scope="row">input-sel</th>
+		<th scope="row">input_sel</th>
 		<td>셀렉트박스(입력 폼)</td>
-		<th scope="row">input-file</th>
+		<th scope="row">input_file</th>
 		<td>파일 업로드(입력 폼)</td>
 	</tr>
 	<tr>
@@ -239,7 +240,7 @@ SMACSS의 장점
 	<tr>
 		<th scope="row">top</th>
 		<td>위</td>
-		<th scope="row">btm</th>
+		<th scope="row">bottom</th>
 		<td>아래</td>
 	</tr>
 	<tr>
@@ -250,7 +251,7 @@ SMACSS의 장점
 	</tr>
 	<tr>
 		<th scope="row">on/off</th>
-		<td>상태</td>
+		<td>켜짐/꺼짐(상태)</td>
 		<th scope="row">able/disable</th>
 		<td>활성화(상태)</td>
 	</tr>
@@ -267,22 +268,16 @@ SMACSS의 장점
 		<td>펼침/접힘(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">js</th>
-		<td>스크립트 개발용</td>
-		<th scope="row">bak</th>
-		<td>백업 파일</td>
-	</tr>
-	<tr>
 		<th scope="row">@</th>
 		<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
 		<th scope="row">tmp</th>
-		<td>임시 파일(이미지 제외)</td>
+		<td>이미지 제외를 제외한 임시 파일</td>
 	</tr>
 	<tr>
-		<th scope="row">comp/decomp</th>
-		<td>압축 이미지 및 보관 폴더</td>
+		<th scope="row">decomp</th>
+		<td>압축 전 파일 보관 폴더</td>
 		<th scope="row">psd</th>
-		<td>이미지 PSD 보관 폴더</td>
+		<td>PSD 보관 폴더</td>
 	</tr>
 	</tbody>
 </table>
@@ -324,32 +319,32 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>본문</td>
 	</tr>
 	<tr>
+		<th scope="row">#-skipnav</th>
+		<td>SKip NAVigation(스킵 네비게이션)</td>
+	</tr>
+	<tr>
 		<th scope="row">-aside-</th>
 		<td>본문 보충 설명</td>
 	</tr>
 	<tr>
 		<th scope="row">-gnb-</th>
-		<td>Global Navigation Bar(사이트 전역 네비게이션. ex. Home, Login, Sitemap, Admin...)</td>
+		<td>Global Navigation Bar(서비스 전역 네비게이션)</td>
 	</tr>
 	<tr>
 		<th scope="row">-lnb-</th>
-		<td>Local Navigation Bar(메인 네비게이션)</td>
+		<td>Local Navigation Bar(현재 서비스 네비게이션)</td>
 	</tr>
 	<tr>
 		<th scope="row">-snb-</th>
-		<td>Side Navigation Bar(서브 네비게이션)</td>
+		<td>Sub Navigation Bar</td>
 	</tr>
 	<tr>
 		<th scope="row">-fnb-</th>
-		<td>Footer Navigation Bar</td>
+		<td>Foot Navigation Bar</td>
 	</tr>
 	<tr>
 		<th scope="row">-qnb-</th>
 		<td>Quick Navigation Bar</td>
-	</tr>
-	<tr>
-		<th scope="row">#-sknav</th>
-		<td>SKip NaVigation</td>
 	</tr>
 	<tr>
 		<th scope="row">-nav-</th>
@@ -460,6 +455,11 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<th scope="row">wf-</th>
 		<td>웹폰트</td>
 		<td>Style : font-family</td>
+	</tr>
+	<tr>
+		<th scope="row">js-</th>
+		<td>스크립트 개발용 선택자</td>
+		<td>HTML : id, class</td>
 	</tr>
 	</tbody>
 </table>

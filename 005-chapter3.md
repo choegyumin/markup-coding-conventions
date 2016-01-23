@@ -194,9 +194,9 @@ body .placeholder{color:#999}
 /* UI component */
 
 /* Skip Navigation */
-#sknav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
-#sknav a{overflow:hidden;display:block;position:absolute;top:-45px;right:0;left:0;height:45px;background:#222;color:#fff;font-size:14px;line-height:43px;font-weight:bold;text-decoration:none;white-space:nowrap;text-align:center}
-#sknav a:hover,#sknav a:focus,#sknav a:active{top:0}
+#skipnav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
+#skipnav a{overflow:hidden;display:block;position:absolute;top:-45px;right:0;left:0;height:45px;background:#222;color:#fff;font-size:14px;line-height:43px;font-weight:bold;text-decoration:none;white-space:nowrap;text-align:center}
+#skipnav a:hover,#skipnav a:focus,#skipnav a:active{top:0}
 
 /* Layout */
 #wrap{position:relative;min-height:100%}
@@ -254,7 +254,7 @@ input:-ms-input-placeholder{color:#999}
 .show-i{display:inline !important}
 .show-ib{display:inline-block !important}
 .hide{display:none !important}
-body .blind,#sknav{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0}
+body .blind,#skipnav{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0}
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* UI component */

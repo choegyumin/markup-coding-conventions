@@ -75,7 +75,7 @@ Markup Coding Conventions - 1장. 네이밍 규칙
 | 주제 | IT 인터넷 |
 | 권한 | 댓글 허용 X, 트랙백 허용 X |
 | CCL | 저작물 사용 허가 표시, 상업적 이용 X, 콘텐츠 변경 X |
-| 태그 | CODE, coding, Conventions, CSS, Guide, guidelines, HTML, Markup, Style, ui, ux, 가이드, 가이드라인, 마크업, 스타일, 컨벤션, 코드, 코딩 |
+| 태그 | CODE, coding, Convention, Conventions, CSS, Guide, guidelines, HTML, Markup, Style, ui, ux, 가이드, 가이드라인, 마크업, 마크업 코딩 가이드, 마크업 코딩 가이드라인, 마크업 코딩 스타일 가이드, 마크업 코딩 스타일 가이드라인, 마크업 코딩 컨벤션, 스타일, 컨벤션, 코드, 코딩, 코딩 가이드, 코딩 가이드라인, 코딩 스타일 가이드, 코딩 스타일 가이드라인, 코딩 컨벤션 |
 | 서식 | Markdown reference |
 
 ### 본문

@@ -1,4 +1,4 @@
-Markup Coding Conventions
+Markup Coding Conventions<small>(Markup Coding Style Guide)</small>
 ===
 
 ---

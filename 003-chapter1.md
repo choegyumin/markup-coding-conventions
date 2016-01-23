@@ -76,10 +76,10 @@ list3 (O)
 ```
 - 네이밍의 조합 시 확장 네이밍은 조합하지 않고 분리한다.
 ```html
-<input class="input-basic type-wide is-focus">
+<input class="input_txt type-wide is-focus">
 ```
 ```shell
-.input-basic.type-wide.is-focus
+.input_txt.type-wide.is-focus
 ```
 
 #### B. 확장 네이밍
@@ -120,7 +120,7 @@ data
 엘리먼트의 현재 상태를 나타낼 경우 프리픽스 ```is```를 추가한다.
 
 ```html
-<input class="input_text is-focus">
+<input class="input_txt is-focus">
 ```
 
 #### C. 프리픽스 네이밍

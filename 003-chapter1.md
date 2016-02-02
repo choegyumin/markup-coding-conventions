@@ -283,8 +283,7 @@ bg-header-type_compact-is_scrolled.jpg
 	</div>
 </div>
 ```
-- 모듈 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장형(extension) UI임을 나타낸다.  
-이것을 '모듈 익스텐션'이라 부른다.
+- 모듈 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장형(extension) UI임을 나타낸다. 이것을 '모듈 익스텐션'이라 부른다.
 ```html
 <div role="tablist" class="mod-dropdown_tab">
 	...

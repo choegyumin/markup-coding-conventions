@@ -269,7 +269,7 @@ SMACSS의 단점
 	</tr>
 	<tr>
 		<th scope="row">@</th>
-		<td>임시 이미지 또는 마크업 산출물 외 파일 및 폴더</td>
+		<td>임시 이미지 또는, 마크업 산출물 외 파일 및 폴더</td>
 		<th scope="row">tmp</th>
 		<td>이미지 제외를 제외한 임시 파일</td>
 	</tr>
@@ -368,7 +368,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</tr>
 	<tr>
 		<th scope="row">-artic-</th>
-		<td>글 또는 기사</td>
+		<td>글 또는, 기사</td>
 	</tr>
 	<tr>
 		<th scope="row">-cont-</th>
@@ -447,8 +447,8 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>HTML : id, name, class</td>
 	</tr>
 	<tr>
-		<th scope="row">ui-</th>
-		<td>글로벌 컴포넌트</td>
+		<th scope="row">mod-</th>
+		<td>모듈</td>
 		<td>HTML : id, class</td>
 	</tr>
 	<tr>

@@ -23,9 +23,9 @@ Markup Coding Conventions - 1장. 네이밍 규칙
 
 - 이름은 영문 소문자, 숫자, 하이픈(```-```), 언더바(```_```)를 사용하여 작성한다.
 - 이름은 일반적으로 영문 소문자로 시작하여야 한다.
-- 컨텐츠가 메뉴 및 페이지 등에 상속받지 않도록 최대한 컴포넌트를 기준으로 구분하여 네이밍한다.
-- 각 컴포넌트를 서로 겹치거나 조합해서는 안되며, 컴포넌트 내에 글로벌 컴포넌트를 삽입하는 것만 가능하다. (글로벌 컴포넌트는 영역 상관없이 추가 가능)
-- 렌더링 엔진 최적화를 위해 스타일 또는 스크립트 제어가 필요한 **모든 엘리먼트에는 클래스명을 부여**하도록 한다.
+- 컨텐츠가 메뉴 및 페이지 등에 상속받지 않도록 최대한 컴포넌트 또는, 모듈과 같이 기능을 기준으로 구분하여 네이밍한다.
+- 각 컴포넌트를 서로 겹치거나 조합해서는 안되며, 컴포넌트 내에 모듈을 삽입하는 것만 가능하다. (레이아웃 내에는 무엇이든 추가 가능)
+- 렌더링 엔진 최적화를 위해 스타일 또는, 스크립트 제어가 필요한 **모든 엘리먼트에는 클래스명을 부여**하도록 한다.
 
 #### B. 예약어 사용
 
@@ -40,8 +40,8 @@ Markup Coding Conventions - 1장. 네이밍 규칙
 service-naming-exam-wrap (X)
 service_naming_exam-wrap (O)
 ```
-- 네이밍의 조합은 역할별로 분류했을 때 '프리픽스-컴포넌트-엘리먼트-확장' 최대 4단계로 나뉘며, 필요에 따라 조합할 수 있다.  
-선택자 네이밍의 경우 확장 네이밍을 조합하지 않고 분리하며, 별도의 프리픽스를 가진다.
+- 네이밍의 조합은 역할별로 분류했을 때 '프리픽스-컴포넌트(모듈)-엘리먼트-효과' 최대 4단계로 나뉘며, 필요에 따라 조합할 수 있다.  
+선택자 네이밍의 경우 효과 네이밍은 조합하지 않고 분리되며, 별도의 프리픽스를 가진다.
 - 단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 특별한 경우가 아니라면 임의로 자릿수를 늘리지 않는다.
 ```shell
 list-3 (X)
@@ -52,21 +52,20 @@ list3 (O)
 
 #### D. 네이밍 프리픽스
 
-- 일반적으로 하나의 글로벌 컴포넌트가 되는 엘리먼트에 사용된다.
-- 프리픽스는 모듈의 의미를 나타낸다.
+- 일반적으로 주로 API 또는, 하나의 모듈이 되는 엘리먼트에 사용되며, 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
 - 프리픽스 목록은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
 
 ### 1-3. 선택자 네이밍
 
-선택자 네이밍 시 다음과 같은 규칙을 준수하도록 한다.
+선택자 네이밍 시 다음과 같은 규칙을 준수하도록 하며, CSS 방법론은 <a href="http://ceecss.github.io/" target="_blank">CEE CSS</a>를 참고한다.
 
 #### A. 일반 규칙
 
 - 한 페이지에서 동일한 id를 여러번 사용하지 않는다.
 - class는 여러번 사용할 수 있다.
 - 엘리먼트의 id가 레이아웃을 위해 작성된 것이 아닐 경우 class를 추가하여 스타일을 제공한다.
-- 컴포넌트의 **최상위 엘리먼트**는 독립성과 재사용성의 증진을 위해 확실히 식별할 수 있는 이름으로 네이밍하며, 이는 일반적으로 네이밍 조합 항목 중 **컴포넌트명**에 해당한다.
+- 컴포넌트명은 독립성과 재사용성의 증진을 위해 확실히 식별할 수 있는 이름으로 네이밍한다.
 ```html
 <div class="component_name">
 	<ul class="component_name-element_name">
@@ -74,7 +73,7 @@ list3 (O)
 	</ul>
 </div>
 ```
-- 네이밍의 조합 시 확장 네이밍은 조합하지 않고 분리한다.
+- 네이밍의 조합 시 효과 네이밍은 조합하지 않고 분리한다.
 ```html
 <input class="input_txt type-wide is-focus">
 ```
@@ -82,10 +81,10 @@ list3 (O)
 .input_txt.type-wide.is-focus
 ```
 
-#### B. 확장 네이밍
+#### B. 효과 네이밍
 
-확장 선택자는 엘리먼트에 부가적인 효과를 주거나 추가 제어가 필요할 때 사용된다.  
-선택자의 확장 네이밍은 다른 네이밍과 조합하지 않으며, 프리픽스를 붙여 어떤 역할을 하는 것인지 나타낸다.
+효과 선택자는 엘리먼트에 부가적인 효과를 주거나 추가 제어가 필요할 때 사용된다.  
+선택자의 효과 네이밍은 다른 네이밍과 조합하지 않으며, 프리픽스를 붙여 어떤 역할을 하는 것인지 나타낸다.
 
 ##### a. 스프라이트 이미지
 
@@ -97,7 +96,7 @@ list3 (O)
 
 ##### b. 타입
 
-엘리먼트의 테마, 스킨, UI의 변경을 위한 확장 네이밍은 프리픽스 ```type```을 추가한다
+엘리먼트의 테마, 스킨, UI의 변경을 위한 효과 네이밍은 프리픽스 ```type```을 추가한다
 
 ```html
 <div class="editor_area type-theme_black">...</div>
@@ -105,7 +104,7 @@ list3 (O)
 
 ##### c. 데이터
 
-엘리먼트의 데이터 또는 컨텐츠에 따라 추가 제어가 필요한 경우 프리픽스 ```data```를 추가한다.
+엘리먼트의 데이터 또는, 컨텐츠에 따라 추가 제어가 필요한 경우 프리픽스 ```data```를 추가한다.
 
 ```html
 data
@@ -126,7 +125,7 @@ data
 #### C. 프리픽스 네이밍
 
 프리픽스는 사용자 정의 프리픽스와 내장 프리픽스로 구분된다.  
-사용자 정의 프리픽스는 네이밍 기본 규칙을 준수하는 선에서 마음대로 사용 가능하며, 내장 프리픽스의 앞 또는 단독으로 사용한다.  
+사용자 정의 프리픽스는 네이밍 기본 규칙을 준수하는 선에서 마음대로 사용 가능하며, 내장 프리픽스의 앞 또는, 단독으로 사용한다.  
 여기서는 내장 프리픽스만을 설명한다.
 
 ##### a. 테이블 셀
@@ -147,7 +146,7 @@ data
 
 ##### c. 프레임
 
-```iframe``` 엘리먼트, 또는 ```iframe```으로 불러올 HTML에 종속된 엘리먼트에 제공되는 선택자는 프리픽스 ```ifr```을 추가한다.
+```iframe``` 엘리먼트 또는, ```iframe```으로 불러올 HTML에 종속된 엘리먼트에 제공되는 선택자는 프리픽스 ```ifr```을 추가한다.
 
 ```shell
 #ifr-aside
@@ -156,7 +155,7 @@ data
 ##### d. 팝업
 
 팝업과 관련된 엘리먼트에 제공되는 선택자는 프리픽스 ```pop```를 추가한다.  
-이는 모달 다이얼로그(레이어 팝업)에도 해당되며, 새 창 팝업과의 구분이 필요할 경우 상태 확장 클래스를 사용한다.
+이는 모달 다이얼로그(레이어 팝업)에도 해당되며, 새 창 팝업과의 구분이 필요할 경우 상태 효과 클래스를 사용한다.
 
 ```shell
 .pop-join
@@ -192,14 +191,14 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 </p>
 ```
 
-##### f. 글로벌 컴포넌트
+##### f. 모듈
 
-컴포넌트란 하나의 독립적인 모듈로 사용되는 유저 인터페이스를 뜻한다.  
-글로벌 컴포넌트에 제공되는 선택자는 용도에 따라 프리픽스 ```ui```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화글로벌-컴포넌트">1-5. 모듈화(글로벌 컴포넌트)</a>의 규칙을 따른다.
+모듈이란 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
+모듈에 제공되는 선택자는 용도에 따라 프리픽스 ```mod```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
 
 ```html
-<div class="ui-component_name">
-	<div class="ui_extn-component_name">...</div>
+<div class="mod-selectbox">
+	<button class="mod-selectbox-toggle_btn">...</button>
 </div>
 ```
 
@@ -250,7 +249,7 @@ bg-exam3.png
 @img-exam.png
 @bg-exam.png
 ```
-- 엘리먼트의 확장, 상태를 표현하는 이미지의 네이밍은 마지막에 각각 'type', 'is'를 붙인 후 언더바를 사용하여 조합한다.
+- 엘리먼트의 타입, 상태를 표현하는 이미지의 네이밍은 마지막에 각각 'type', 'is'를 붙인 후 언더바를 사용하여 조합한다.
 ```shell
 bg-header-type_compact.jpg
 bg-header-type_compact-is_scrolled.jpg
@@ -265,46 +264,46 @@ bg-header-type_compact-is_scrolled.jpg
 - 이미지, CSS, JavaScript 폴더는 'img', 'css', 'js'로 네이밍한다.
 - HTML파일을 메뉴별로 분기해야할 경우 서비스명을 토대로 네이밍한다.
 
-### 1-5. 모듈화(글로벌 컴포넌트)
+### 1-5. 모듈화
 
-글로벌 컴포넌트를 제작할 경우 아래의 네이밍 방법을 준수하도록 한다.
+모듈을 제작할 경우 아래의 네이밍 방법을 준수하도록 한다.
 
 #### A. 선택자 네이밍
 
 - 고유한 네임스페이스가 필요하므로 프리픽스를 추가한다.
 ```html
-<div class="ui-tabmenu"></div>
+<div class="mod-tabmenu"></div>
 ```
 - **항상 컴포넌트명을 상속**받아 네이밍한다.
 ```html
-<div class="ui-btn_share">
-	<div class="ui-btn_share-wrap">
-		<button class="ui-btn_share-btn"></button>
+<div class="mod-share_btn">
+	<div class="mod-share_btn-wrap">
+		<button class="mod-share_btn-btn"></button>
 	</div>
 </div>
 ```
-- 글로벌 컴포넌트 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장(extension) UI인 것을 나타낸다.  
-이것을 '글로벌 컴포넌트 익스텐션'이라 부른다.
+- 모듈 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장형(extension) UI임을 나타낸다.  
+이것을 '모듈 익스텐션'이라 부른다.
 ```html
-<div role="tablist" class="ui-tab_dropdown">
+<div role="tablist" class="mod-dropdown_tab">
 	...
-	<div role="tabpanel" class="ui-tab_dropdown-panel">
-		<div class="ui_extn-tab_dropdown-panel_listbox">리스트...</div>
+	<div role="tabpanel" class="mod-dropdown_tab-panel">
+		<div class="mod_extn-dropdown_tab-panel_listbox">리스트...</div>
 	</div>
-	<div role="tabpanel" class="ui-tab_dropdown-panel">
-		<div class="ui_extn-tab_dropdown-panel_optionbox">옵션...</div>
+	<div role="tabpanel" class="mod-dropdown_tab-panel">
+		<div class="mod_extn-dropdown_tab-panel_optionbox">옵션...</div>
 	</div>
 </div>
 ```
-- 글로벌 컴포넌트를 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
+- 모듈을 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
 ```html
 <div class="goods_list">
-	<div class="goods_list-thumb ui-imgratio"></div>
+	<div class="goods_list-thumb mod-imgratio"></div>
 </div>
 ```
 ```css
-.goods_list .ui-imgratio{width:200px} /* X */
-.goods_list-thumb.ui-imgratio{width:200px} /* △ */
+.goods_list .mod-imgratio{width:200px} /* X */
+.goods_list-thumb.mod-imgratio{width:200px} /* △ */
 .goods_list-thumb{width:200px} /* O */
 ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.

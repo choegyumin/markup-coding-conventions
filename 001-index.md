@@ -21,7 +21,7 @@ Markup Coding Conventions(Markup Coding Style Guide)
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-2-기본-규칙">2. 기본 규칙</a>
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-3-선택자-네이밍">3. 선택자 네이밍</a>
 - <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-4-파일-및-폴더-네이밍">4. 파일 및 폴더 네이밍</a>
-- <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화글로벌-컴포넌트">5. 모듈화(글로벌 컴포넌트)</a>
+- <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화">5. 모듈화</a>
 
 ### <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter2#article">2장. HTML 코드 작성 규칙</a>
 
@@ -84,3 +84,4 @@ CSS 코드의 작성 규칙을 설명한다.
 > - 2015.12.14 글로벌 컴포넌트 익스텐션 정의 - 최규민
 > - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의 - 최규민
 > - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경 - 최규민
+> - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod) - 최규민

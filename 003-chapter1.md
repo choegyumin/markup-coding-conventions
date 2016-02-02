@@ -194,7 +194,8 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 ##### f. 모듈
 
 모듈이란 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
-모듈에 제공되는 선택자는 용도에 따라 프리픽스 ```mod```를 추가하며, <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
+모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.  
+모듈 마크업은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
 
 ```html
 <div class="mod-selectbox">

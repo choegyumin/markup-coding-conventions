@@ -79,7 +79,7 @@ list3 (O)
 
 ### 1-3. 선택자 네이밍
 
-선택자 네이밍 시 다음과 같은 규칙을 준수하도록 하며, CSS 방법론은 <a href="http://ceecss.github.io/" target="_blank">CEE CSS</a>를 참고한다.
+선택자 네이밍 시 다음과 같은 규칙을 준수하도록 하며, **<a href="http://ceecss.github.io/" target="_blank">CEE CSS</a> 방법론을 참고한다.**
 
 #### A. 일반 규칙
 

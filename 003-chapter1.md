@@ -126,7 +126,6 @@ list3 (O)
 엘리먼트의 데이터 또는, 컨텐츠에 따라 추가 제어가 필요한 경우 프리픽스 ```data```를 추가한다.
 
 ```html
-data
 <a href="#" class="link_shortcut data-search">검색</a>
 <a href="#" class="link_shortcut data-shopping">쇼핑</a>
 <a href="#" class="link_shortcut data-blog">블로그</a>

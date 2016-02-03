@@ -49,11 +49,25 @@ list03 (X)
 list3 (O)
 ```
 - 일반적으로 **모든 네이밍에는 컴포넌트명을 상속**받는다.
-- 긴 컴포넌트명으로 인해 네이밍이 과도하게 길어질 경우 컴포넌트명을 축약하여 사용할 수 있다. 대신 컴포넌트의 최상위 엘리먼트에도 축약된 네이밍 클래스를 추가한다.
+- 네이밍이 과도하게 길어질 경우 컴포넌트명을 축약하여 사용할 수 있다. 대신 컴포넌트의 최상위 엘리먼트에 축약된 네이밍 클래스를 추가한다.
 ```
+<!-- Before -->
+<div class="workspace">
+	<div class="workspace-canvas">
+		<div class="workspace-canvas_tablist">
+			<div class="workspace-canvas_tabitem">...</div>
+			<div class="workspace-canvas_tabpanel">...</div>
+		</div>
+	</div>
+</div>
+<!-- After -->
 <div class="workspace ws">
-	<div class="ws_menu">...</div>
-	<div class="ws_canvas">...</div>
+	<div class="ws-canvas">
+		<div class="ws-canvas_tablist">
+			<div class="ws-canvas_tabitem">...</div>
+			<div class="ws-canvas_tabpanel">...</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -276,13 +290,13 @@ bg-header-type_compact-is_scrolled.jpg
 
 - 고유한 네임스페이스가 필요하므로 프리픽스를 추가한다.
 ```html
-<div class="mod-tabmenu"></div>
+<div class="mod-tabmenu">...</div>
 ```
 - **항상 컴포넌트명을 상속**받아 네이밍한다.
 ```html
 <div class="mod-share_btn">
 	<div class="mod-share_btn-wrap">
-		<button class="mod-share_btn-btn"></button>
+		<button class="mod-share_btn-btn">...</button>
 	</div>
 </div>
 ```
@@ -301,7 +315,7 @@ bg-header-type_compact-is_scrolled.jpg
 - 모듈을 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
 ```html
 <div class="goods_list">
-	<div class="goods_list-thumb mod-imgratio"></div>
+	<div class="goods_list-thumb mod-imgratio">...</div>
 </div>
 ```
 ```css

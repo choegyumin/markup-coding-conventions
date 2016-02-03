@@ -170,7 +170,7 @@ a:hover{text-decoration:underline}
 a:active{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
-small{font-size:0.92em}
+small{font-size:.92em}
 mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image]{border:0;background:none;cursor:pointer}
@@ -233,7 +233,7 @@ img,input,select,button{vertical-align:middle}
 a{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
-small{font-size:0.92em}
+small{font-size:.92em}
 mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 input,textarea,select,button,input[type="file"]::-webkit-file-upload-button{border-radius:0;-webkit-appearance:none}

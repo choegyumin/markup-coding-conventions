@@ -85,7 +85,7 @@ text-align
 vertical-align
 cursor
 ```
-- 스타일 작성 시 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극적으로 사용하도록 한다.
+- 스타일 작성 시 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극 활용하도록 한다.
 
 ### 3-3. 주석 작성
 

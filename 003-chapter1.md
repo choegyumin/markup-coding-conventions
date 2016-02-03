@@ -59,7 +59,7 @@ list3 (O)
 
 #### D. 네이밍 프리픽스
 
-- 일반적으로 주로 API 또는, 하나의 모듈이 되는 엘리먼트에 사용되며, 모듈의 의미를 나타낸다.
+- 주로 API 또는, 하나의 모듈이 되는 엘리먼트에 사용되며, 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
 - 프리픽스 목록은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
 

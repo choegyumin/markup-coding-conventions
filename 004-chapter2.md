@@ -202,9 +202,7 @@ HTML의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 ```html
 <!-- [S] 영역 이름 -->
-<div>
-	...
-</div>
+<div>...</div>
 <!-- [E] 영역 이름 -->
 ```
 
@@ -231,15 +229,11 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 
 ```html
 <!-- X -->
-<table class="tbl">
-	...
-</table>
+<table class="tbl">...</table>
 
 <!-- O -->
 <div class="tbl">
-	<table>
-		...
-	</table>
+	<table>...</table>
 </div>
 ```
 

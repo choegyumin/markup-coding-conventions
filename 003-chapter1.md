@@ -49,6 +49,13 @@ list03 (X)
 list3 (O)
 ```
 - 일반적으로 **모든 네이밍에는 컴포넌트명을 상속**받는다.
+- 긴 컴포넌트명으로 인해 네이밍이 과도하게 길어질 경우 컴포넌트명을 축약하여 사용할 수 있다. 대신 컴포넌트의 최상위 엘리먼트에도 축약된 네이밍 클래스를 추가한다.
+```
+<div class="workspace ws">
+	<div class="ws_menu">...</div>
+	<div class="ws_canvas">...</div>
+</div>
+```
 
 #### D. 네이밍 프리픽스
 
@@ -68,9 +75,7 @@ list3 (O)
 - 컴포넌트명은 독립성과 재사용성의 증진을 위해 확실히 식별할 수 있는 이름으로 네이밍한다.
 ```html
 <div class="component_name">
-	<ul class="component_name-element_name">
-		...
-	</ul>
+	<ul class="component_name-element_name">...</ul>
 </div>
 ```
 - 네이밍의 조합 시 효과 네이밍은 조합하지 않고 분리한다.
@@ -186,9 +191,7 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 	<span id="apnt-exam"></span>
 	예제입니다
 </h4>
-<p>
-	...
-</p>
+<p>...</p>
 ```
 
 ##### f. 모듈

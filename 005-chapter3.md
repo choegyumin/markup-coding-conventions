@@ -191,7 +191,7 @@ body .blind{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;bo
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 body .placeholder{color:#999}
 
-/* UI component */
+/* Module */
 
 /* Skip Navigation */
 #skipnav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
@@ -200,6 +200,8 @@ body .placeholder{color:#999}
 
 /* Layout */
 #wrap{position:relative;min-height:100%}
+
+/* Component */
 
 /* Print */
 @media print{
@@ -257,10 +259,12 @@ input:-ms-input-placeholder{color:#999}
 body .blind,#skipnav{overflow:hidden;position:absolute;z-index:-1;width:1px;height:1px;border:0;padding:0;opacity:0}
 body .ellips{overflow:hidden;width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
-/* UI component */
+/* Module */
 
 /* Layout */
 #wrap{position:relative;min-height:100%}
+
+/* Component */
 ```
 
 **font.css**

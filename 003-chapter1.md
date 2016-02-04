@@ -60,6 +60,7 @@ list3 (O)
 		</div>
 	</div>
 </div>
+
 <!-- After -->
 <div class="workspace ws">
 	<div class="ws-canvas">
@@ -105,25 +106,17 @@ list3 (O)
 효과 선택자는 엘리먼트에 부가적인 효과를 주거나 추가 제어가 필요할 때 사용된다.  
 선택자의 효과 네이밍은 다른 네이밍과 조합하지 않으며, 프리픽스를 붙여 어떤 역할을 하는 것인지 나타낸다.
 
-##### a. 스프라이트 이미지
-
-만약 스프라이트 이미지를 하나의 클래스로 관리할 경우 프리픽스 ```sp```를 추가한다.
-
-```html
-<small class="ico_new sp-comm">(새 소식)</small>
-```
-
-##### b. 타입
+##### a. 타입
 
 엘리먼트의 테마, 스킨, UI의 변경을 위한 효과 네이밍은 프리픽스 ```type```을 추가한다
 
 ```html
-<div class="editor_area type-theme_black">...</div>
+<div class="posteditor type-theme_black">...</div>
 ```
 
-##### c. 데이터
+##### b. 데이터
 
-엘리먼트의 데이터 또는, 컨텐츠에 따라 추가 제어가 필요한 경우 프리픽스 ```data```를 추가한다.
+엘리먼트의 데이터 또는, 컨텐츠에 따라 제어가 필요한 경우 프리픽스 ```data```를 추가한다.
 
 ```html
 <a href="#" class="link_shortcut data-search">검색</a>
@@ -132,12 +125,28 @@ list3 (O)
 <a href="#" class="link_shortcut data-cafe">카페</a>
 ```
 
-##### d. 상태
+##### c. 상태
 
-엘리먼트의 현재 상태를 나타낼 경우 프리픽스 ```is```를 추가한다.
+엘리먼트의 현재 상태를 나타내는 경우 프리픽스 ```is```를 추가한다.
 
 ```html
 <input class="input_txt is-focus">
+```
+
+##### d. 스프라이트 이미지
+
+스프라이트 이미지를 하나의 클래스로 관리할 경우 프리픽스 ```sp```를 추가하며, 각각의 이미지는 b. 데이터 네이밍 클래스로 구분한다.
+
+```html
+<small class="ico_new sp-comm data-ico_new">(새 소식)</small>
+```
+
+##### e. 스크립트
+
+스크립트로 동적 제어가 필요한 엘리먼트의 네이밍은 프리픽스 ```js```를 추가한다.
+
+```html
+<input class="input_txt js-chk_valid">
 ```
 
 #### C. 프리픽스 네이밍

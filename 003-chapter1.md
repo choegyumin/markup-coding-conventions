@@ -313,10 +313,10 @@ bg-header-type_compact-is_scrolled.jpg
 <div role="tablist" class="mod-dropdown_tab">
 	...
 	<div role="tabpanel" class="mod-dropdown_tab-panel">
-		<div class="mod_extn-dropdown_tab-panel_listbox">리스트...</div>
+		<div class="mod_extn-dropdown_tab-list">리스트...</div>
 	</div>
 	<div role="tabpanel" class="mod-dropdown_tab-panel">
-		<div class="mod_extn-dropdown_tab-panel_optionbox">옵션...</div>
+		<div class="mod_extn-dropdown_tab-option">옵션...</div>
 	</div>
 </div>
 ```

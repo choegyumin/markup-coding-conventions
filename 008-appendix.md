@@ -252,19 +252,19 @@ SMACSS의 단점
 	<tr>
 		<th scope="row">on/off</th>
 		<td>켜짐/꺼짐(상태)</td>
-		<th scope="row">able/disable</th>
+		<th scope="row">abled/disabled</th>
 		<td>활성화(상태)</td>
 	</tr>
 	<tr>
 		<th scope="row">over/unover</th>
 		<td>마우스오버(상태)</td>
-		<th scope="row">focus/unfocus</th>
+		<th scope="row">focused/unfocused</th>
 		<td>포커스(상태)</td>
 	</tr>
 	<tr>
-		<th scope="row">chk/unchk</th>
+		<th scope="row">chked/unchked</th>
 		<td>체크(상태)</td>
-		<th scope="row">expand/unexpand</th>
+		<th scope="row">expanded/unexpanded</th>
 		<td>펼침/접힘(상태)</td>
 	</tr>
 	<tr>

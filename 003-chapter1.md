@@ -275,10 +275,11 @@ bg-exam3.png
 @img-exam.png
 @bg-exam.png
 ```
-- 엘리먼트의 타입, 상태를 표현하는 이미지의 네이밍은 하이픈을 두번 사용하여 구분하며, 각각 'type', 'is'를 붙여 조합한다.
+- 가상 엘리먼트에 사용되는 이미지는 하이픈을 두번 사용하여 선택자명을 조합하며, 멀티 클래스 엘리먼트는 CSS와 동일한 방식으로 ```.```을 사용하여 조합한다.
 ```shell
-bg-header--type_compact.jpg
-bg-header--type_compact--is_scrolled.jpg
+bg-header--hover.jpg
+bg-header.type-compact--hover.jpg
+bg-header.type-compact.is-scrolled.jpg
 ```
 
 #### D. 폴더

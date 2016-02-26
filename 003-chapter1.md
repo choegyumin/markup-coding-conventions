@@ -135,10 +135,17 @@ list3 (O)
 
 ##### d. 스프라이트 이미지
 
-스프라이트 이미지를 클래스로 관리할 경우 프리픽스 ```sp```를 추가하며, 각각의 이미지는 b. 데이터 네이밍 클래스로 구분한다. 스프라이트 클래스는 다른 엘리먼트에 상속받지 않고 글로벌 클래스로 관리한다.
+스프라이트 이미지를 클래스로 관리할 경우 프리픽스 ```sp```를 추가하며, 각각의 이미지는 프리픽스 뒤에 ```_img```를 추가한다. 스프라이트 클래스는 다른 엘리먼트에 상속받지 않고 글로벌 클래스로 관리한다.
 
 ```html
-<small class="ico_new sp-comm data-ico_new">(새 소식)</small>
+<small class="ico_new sp-comm sp_img-ico_new">(새 소식)</small>
+```
+
+```css
+.sp-comm { background: ... }
+.sp-comm.sp_img-ico_new { background-position: ... }
+...
+.ico_new { ... }
 ```
 
 ##### e. 스크립트

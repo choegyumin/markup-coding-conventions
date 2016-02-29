@@ -135,16 +135,15 @@ list3 (O)
 
 ##### d. 스프라이트 이미지
 
-스프라이트 이미지를 클래스로 관리할 경우 프리픽스 ```sp```를 추가하며, 각각의 이미지는 스프라이트 클래스명 뒤에 이미지명을 추가하여 멀티 클래스로 제어한다. 스프라이트 클래스는 컴포넌트에 상속받지 않도록 글로벌 클래스로 관리한다.
+스프라이트 이미지를 클래스로 관리할 경우 프리픽스 ```spr```을 추가하며, 스프라이트명과 이미지명을 조합한다. 스프라이트 클래스는 컴포넌트에 상속받지 않도록 글로벌 클래스로 관리한다.
 
 ```html
-<small class="ico_new sp-comm sp-comm-ico_new">(새 소식)</small>
+<small class="ico_new spr-comm-ico_new">(새 소식)</small>
 ```
 
 ```css
-.sp-comm { background: ... }
-.sp-comm-ico_new { background-position: ... }
-...
+[class*="spr-comm-"] { background: ... }
+.spr-comm-ico_new { background-position: ... }
 .ico_new { ... }
 ```
 

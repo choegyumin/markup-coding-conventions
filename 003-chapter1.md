@@ -49,35 +49,6 @@ list03 (X)
 list3 (O)
 ```
 - 일반적으로 **모든 네이밍에는 컴포넌트명을 상속**받는다.
-- 컴포넌트명이 너무 길어질 경우 축약하여 사용할 수 있다. 대신 컴포넌트의 최상위 엘리먼트는 기존 컴포넌트명과 축약된 컴포넌트명을 모두 가지며, 스타일 제어 시 기존 컴포넌트명 클래스를 이용하여 제어한다.
-```html
-<!-- Before -->
-<div class="workspace">
-	<div class="workspace-canvas">
-		<div class="workspace-canvas_tablist">
-			<div class="workspace-canvas_tabitem">...</div>
-			<div class="workspace-canvas_tabpanel">...</div>
-		</div>
-	</div>
-</div>
-
-<!-- After -->
-<div class="workspace ws">
-	<div class="ws-canvas">
-		<div class="ws-canvas_tablist">
-			<div class="ws-canvas_tabitem">...</div>
-			<div class="ws-canvas_tabpanel">...</div>
-		</div>
-	</div>
-</div>
-```
-
-```css
-.workspace { ... }
-.ws-canvas_tabitem { ... }
-.ws-canvas_tabpanel { ... }
-...
-```
 
 #### D. 네이밍 프리픽스
 
@@ -229,7 +200,7 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 <p>...</p>
 ```
 
-##### f. 모듈
+##### g. 모듈
 
 모듈이란 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
 모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.  
@@ -239,6 +210,39 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 <div class="mod-selectbox">
 	<button class="mod-selectbox-toggle_btn">...</button>
 </div>
+```
+
+#### D. 컴포넌트명 축약
+
+컴포넌트명이 너무 길어질 경우 축약하여 사용할 수 있다. 대신 컴포넌트의 최상위 엘리먼트는 기존 컴포넌트명과 축약된 컴포넌트명을 모두 가지며, 스타일 제어 시 기존 컴포넌트명 클래스를 이용하여 제어한다.
+
+```html
+<!-- Before -->
+<div class="workspace">
+	<div class="workspace-canvas">
+		<div class="workspace-canvas_tablist">
+			<div class="workspace-canvas_tabitem">...</div>
+			<div class="workspace-canvas_tabpanel">...</div>
+		</div>
+	</div>
+</div>
+
+<!-- After -->
+<div class="workspace ws">
+	<div class="ws-canvas">
+		<div class="ws-canvas_tablist">
+			<div class="ws-canvas_tabitem">...</div>
+			<div class="ws-canvas_tabpanel">...</div>
+		</div>
+	</div>
+</div>
+```
+
+```css
+.workspace { ... }
+.ws-canvas_tabitem { ... }
+.ws-canvas_tabpanel { ... }
+...
 ```
 
 ### 1-4. 파일 및 폴더 네이밍

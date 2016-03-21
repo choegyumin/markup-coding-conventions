@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 머리글
+markdown_page: true
+---
+
 Markup Coding Conventions - 머리글
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 머리글
 ---
@@ -60,4 +63,4 @@ HTML 문서를 구성하는 요소(태그)를 의미한다.
 
 ---
 
-이전 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+이전 <a href="./chapter1.html#article">다음</a> <a href="./#article">목차</a>

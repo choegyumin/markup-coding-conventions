@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 1장. 네이밍 규칙
+markdown_page: true
+---
+
 Markup Coding Conventions - 1장. 네이밍 규칙
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 1. 네이밍 규칙
 ---
@@ -36,25 +39,25 @@ Markup Coding Conventions - 1장. 네이밍 규칙
 #### C. 네이밍 조합
 
 - 하이픈은 네이밍 단어를 역할별로 조합할 때 사용되며, 단순히 띄어쓰기가 필요한 경우 언더바를 사용한다.
-```shell
-service-naming-exam-wrap (X)
-service_naming_exam-wrap (O)
-```
+    ```shell
+    service-naming-exam-wrap (X)
+    service_naming_exam-wrap (O)
+    ```
 - 네이밍의 조합은 역할별로 분류했을 때 '프리픽스-컴포넌트(모듈)-엘리먼트-효과' 최대 4단계로 나뉘며, 필요에 따라 조합할 수 있다.  
 선택자 네이밍의 경우 효과 네이밍은 조합하지 않고 분리되며, 별도의 프리픽스를 가진다.
 - 단어와 숫자를 조합하는 경우 하이픈을 사용하지 않으며, 숫자는 특별한 경우가 아니라면 임의로 자릿수를 늘리지 않는다.
-```shell
-list-3 (X)
-list03 (X)
-list3 (O)
-```
+    ```shell
+    list-3 (X)
+    list03 (X)
+    list3 (O)
+    ```
 - 일반적으로 **모든 네이밍에는 컴포넌트명을 상속**받는다.
 
 #### D. 네이밍 프리픽스
 
 - 주로 API 또는, 하나의 모듈이 되는 엘리먼트에 사용되며, 모듈의 의미를 나타낸다.
 - 프리픽스는 기본적으로 id, class, name 등 엘리먼트를 식별하기 위한 애트리뷰트에 사용 가능하다.
-- 프리픽스 목록은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
+- 프리픽스 목록은 <a href="./appendix.html#c-프리픽스">부록 &gt; 3. 네이밍 예약어 &gt; C. 프리픽스</a>를 참고한다.
 
 ### 1-3. 선택자 네이밍
 
@@ -66,18 +69,18 @@ list3 (O)
 - class는 여러번 사용할 수 있다.
 - 엘리먼트의 id가 레이아웃을 위해 작성된 것이 아닐 경우 class를 추가하여 스타일을 제공한다.
 - 컴포넌트명은 독립성과 재사용성의 증진을 위해 확실히 식별할 수 있는 이름으로 네이밍한다.
-```html
-<div class="component_name">
-	<ul class="component_name-element_name">...</ul>
-</div>
-```
+    ```html
+    <div class="component_name">
+        <ul class="component_name-element_name">...</ul>
+    </div>
+    ```
 - 네이밍의 조합 시 효과 네이밍은 조합하지 않고 분리한다.
-```html
-<input class="input_txt type-wide is-focus">
-```
-```shell
-.input_txt.type-wide.is-focus
-```
+    ```html
+    <input class="input_txt type-wide is-focus">
+    ```
+    ```shell
+    .input_txt.type-wide.is-focus
+    ```
 
 #### B. 효과 네이밍
 
@@ -204,7 +207,7 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 
 모듈이란 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
 모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.  
-모듈 마크업은 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
+모듈 마크업은 <a href="./chapter1.html#1-5-모듈화">1-5. 모듈화</a>의 규칙을 따른다.
 
 ```html
 <div class="mod-selectbox">
@@ -251,7 +254,8 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 
 #### A. HTML
 
-- HTML 파일은 페이지명을 토대로 네이밍한다.
+HTML 파일은 페이지명을 토대로 네이밍한다.
+
 ```shell
 news-list.html
 customer.html
@@ -260,51 +264,51 @@ customer.html
 #### B. CSS
 
 - 가장 기본이 되는 CSS는 일반적으로 'comm'으로 네이밍한다.
-```shell
-comm.css (기본 CSS)
-```
+    ```shell
+    comm.css (기본 CSS)
+    ```
 - 버티컬의 유뮤나 서비스 간의 컨셉 통일 등 다른 서비스와의 연계성을 가지는 경우 기본이 되는 CSS를 서비스명으로 네이밍하며, 여러 서비스에 전역(공통)으로 사용되는 CSS는 'comm'으로 네이밍한다.
-```shell
-comm.css (전역 CSS)
-front.css, manage.css, ... (기본 CSS)
-```
+    ```shell
+    comm.css (전역 CSS)
+    front.css, manage.css, ... (기본 CSS)
+    ```
 - 기본 CSS를 제외한 나머지 CSS는 상황에 맞게 분류하여 네이밍하며, 연계 서비스의 경우 앞에 서비스명을 추가하여 네이밍한다.
-```shell
-main.css, sub.css, bbs.css, ...
-front-main.css, front-sub.css, front-bbs.css, ...
-```
+    ```shell
+    main.css, sub.css, bbs.css, ...
+    front-main.css, front-sub.css, front-bbs.css, ...
+    ```
 - 미디어쿼리와 별개로 환경에 따라 CSS가 필요한 경우 마지막에 환경명을 추가하여 네이밍한다.
-```shell
-comm-pc.css
-comm-mobile.css
-```
+    ```shell
+    comm-pc.css
+    comm-mobile.css
+    ```
 
 #### C. 이미지
 
 - 이미지 확장자와 관계없이 중복되지 않도록 네이밍한다.
-```shell
-bg-exam.jpg
-bg-exam2.gif
-bg-exam3.png
-```
+    ```shell
+    bg-exam.jpg
+    bg-exam2.gif
+    bg-exam3.png
+    ```
 - 임시 이미지의 경우 앞에 @를 추가한다.
-```shell
-@img-exam.png
-@bg-exam.png
-```
+    ```shell
+    @img-exam.png
+    @bg-exam.png
+    ```
 - 가상 엘리먼트에 사용되는 이미지는 하이픈을 두번 사용하여 선택자명을 조합하며, 멀티 클래스 엘리먼트는 CSS와 동일한 방식으로 ```.```을 사용하여 조합한다.
-```shell
-bg-header--hover.jpg
-bg-header.type-compact--hover.jpg
-bg-header.type-compact.is-scrolled.jpg
-```
+    ```shell
+    bg-header--hover.jpg
+    bg-header.type-compact--hover.jpg
+    bg-header.type-compact.is-scrolled.jpg
+    ```
 
 #### D. 폴더
 
 - 프로젝트 폴더는 '생성일-프로젝트명'으로 네이밍하며, 생성일은 YYMMDD 형식을 사용한다.
-```shell
-140825-overtimeman
-```
+    ```shell
+    140825-overtimeman
+    ```
 - 이미지, CSS, JavaScript 폴더는 'img', 'css', 'js'로 네이밍한다.
 - HTML파일을 메뉴별로 분기해야할 경우 서비스명을 토대로 네이밍한다.
 
@@ -315,42 +319,42 @@ bg-header.type-compact.is-scrolled.jpg
 #### A. 선택자 네이밍
 
 - 고유한 네임스페이스가 필요하므로 프리픽스를 추가한다.
-```html
-<div class="mod-tabmenu">...</div>
-```
+    ```html
+    <div class="mod-tabmenu">...</div>
+    ```
 - **항상 컴포넌트명을 상속**받아 네이밍한다.
-```html
-<div class="mod-share_btn">
-	<div class="mod-share_btn-wrap">
-		<button class="mod-share_btn-btn">...</button>
-	</div>
-</div>
-```
+    ```html
+    <div class="mod-share_btn">
+        <div class="mod-share_btn-wrap">
+            <button class="mod-share_btn-btn">...</button>
+        </div>
+    </div>
+    ```
 - 모듈 내에서 항상 사용되지 않고 케이스에 따라 필요여부가 결정되는 UI 엘리먼트는 프리픽스에 ```_extn```을 붙여 확장형(extension) UI임을 나타낸다. 이것을 '모듈 익스텐션'이라 부른다.
-```html
-<div role="tablist" class="mod-dropdown_tab">
-	...
-	<div role="tabpanel" class="mod-dropdown_tab-panel">
-		<div class="mod_extn-dropdown_tab-list">리스트...</div>
-	</div>
-	<div role="tabpanel" class="mod-dropdown_tab-panel">
-		<div class="mod_extn-dropdown_tab-option">옵션...</div>
-	</div>
-</div>
-```
+    ```html
+    <div role="tablist" class="mod-dropdown_tab">
+        ...
+        <div role="tabpanel" class="mod-dropdown_tab-panel">
+            <div class="mod_extn-dropdown_tab-list">리스트...</div>
+        </div>
+        <div role="tabpanel" class="mod-dropdown_tab-panel">
+            <div class="mod_extn-dropdown_tab-option">옵션...</div>
+        </div>
+    </div>
+    ```
 - 모듈을 각 영역에서 사용함에 따라 부가적인 스타일 변경이 필요할 경우 직접 선택하여 변경하지 않는다.
-```html
-<div class="goods_list">
-	<div class="goods_list-thumb mod-imgratio">...</div>
-</div>
-```
-```css
-.goods_list .mod-imgratio{width:200px} /* X */
-.goods_list-thumb.mod-imgratio{width:200px} /* △ */
-.goods_list-thumb{width:200px} /* O */
-```
+    ```html
+    <div class="goods_list">
+        <div class="goods_list-thumb mod-imgratio">...</div>
+    </div>
+    ```
+    ```css
+    .goods_list .mod-imgratio{width:200px} /* X */
+    .goods_list-thumb.mod-imgratio{width:200px} /* △ */
+    .goods_list-thumb{width:200px} /* O */
+    ```
 - 이 외의 규칙은 일반적인 선택자 네이밍 규칙과 동일하다.
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Preface#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter2#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+<a href="./preface.html#article">이전</a> <a href="./chapter2.html#article">다음</a> <a href="./#article">목차</a>

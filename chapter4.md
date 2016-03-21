@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 4장. 웹 접근성 준수 방법
+markdown_page: true
+---
+
 Markup Coding Conventions - 4장. 웹 접근성 준수 방법
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 4. 웹 접근성 준수 방법
 ---
@@ -56,37 +59,37 @@ HTML 작성 시 내용의 의미에 맞는 태그를 사용하여 마크업한�
 목록 엘리먼트 작성 시 목록의 성격에 따라 각기 다른 태그를 사용한다.
 
 - 일반 목록
-```html
-<h1>메뉴판</h1>
-<ul>
-	<li>치킨 17,000원</li>
-	<li>피자 13,000원</li>
-	<li>햄버거 6,000원</li>
-</ul>
-```
+    ```html
+    <h1>메뉴판</h1>
+    <ul>
+        <li>치킨 17,000원</li>
+        <li>피자 13,000원</li>
+        <li>햄버거 6,000원</li>
+    </ul>
+    ```
 - 순서 목록
-```html
-<h1>IP 확인방법</h1>
-<ol>
-	<li>'Windows+R'을 눌러 '실행'창을 엽니다.</li>
-	<li>'cmd'를 입력하여 '명령 프롬프트'창을 엽니다.</li>
-	<li>'ipconfig'을 입력하여 자신의 IP를 확인합니다.</li>
-</ol>
-
-<h1>IP 확인방법</h1> <!-- 엘리먼트에 직접 순서를 기입하는 경우 -->
-<ul>
-	<li><span>1.</span> 'Windows+R'을 눌러 '실행'창을 엽니다.</li>
-	<li><span>2.</span> 'cmd'를 입력하여 '명령 프롬프트'창을 엽니다.</li>
-	<li><span>3.</span> 'ipconfig'을 입력하여 자신의 IP를 확인합니다.</li>
-</ul>
-```
+    ```html
+    <h1>IP 확인방법</h1>
+    <ol>
+        <li>'Windows+R'을 눌러 '실행'창을 엽니다.</li>
+        <li>'cmd'를 입력하여 '명령 프롬프트'창을 엽니다.</li>
+        <li>'ipconfig'을 입력하여 자신의 IP를 확인합니다.</li>
+    </ol>
+    
+    <h1>IP 확인방법</h1> <!-- 엘리먼트에 직접 순서를 기입하는 경우 -->
+    <ul>
+        <li><span>1.</span> 'Windows+R'을 눌러 '실행'창을 엽니다.</li>
+        <li><span>2.</span> 'cmd'를 입력하여 '명령 프롬프트'창을 엽니다.</li>
+        <li><span>3.</span> 'ipconfig'을 입력하여 자신의 IP를 확인합니다.</li>
+    </ul>
+    ```
 - 정의 목록
-```html
-<dl>
-	<dt>치킨이란?</dt>
-	<dd>지방질이 적고 소화흡수가 좋은 단백질이 많으며, 값이 싸고 경제적, 근육 속에 지방이 섞여 있지 않아 맛이 담백하다. '치느님'이라고도 부른다.</dd>
-</dl>
-```
+    ```html
+    <dl>
+        <dt>치킨이란?</dt>
+        <dd>지방질이 적고 소화흡수가 좋은 단백질이 많으며, 값이 싸고 경제적, 근육 속에 지방이 섞여 있지 않아 맛이 담백하다. '치느님'이라고도 부른다.</dd>
+    </dl>
+    ```
 
 
 #### D. 표 엘리먼트
@@ -154,13 +157,13 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 
 #### A. 일반 규칙
 - 이미지 사용 시 항상 대체 텍스트를 제공하도록 한다.
-```html
-<img src=".." alt="내용">
-```
+    ```html
+    <img src=".." alt="내용">
+    ```
 - 의미가 없거나 배경으로 img 엘리먼트를 사용할 경우 대체 텍스트는 빈 값으로 제공한다.
-```html
-<img src=".." alt="">
-```
+    ```html
+    <img src=".." alt="">
+    ```
 - 이미지의 alt 애트리뷰트 가이드는 W3C에서 제공하는 아래 URL을 확인한다.  
  <a href="http://www.w3.org/TR/html-alt-techniques/">http:&#47;&#47;www.w3.org&#47;TR&#47;html-alt-techniques&#47;</a>
 
@@ -192,16 +195,16 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 #### A. tabindex
 
 - 엘리먼트의 ```id``` 애트리뷰트가 ```<a>``` 태그로 이동할 수 있는 인덱스 역할을 하는 경우 ```tabindex``` 애트리뷰트를 제공하여 포커스를 받을 수 있도록 한다.
-```html
-<a href="#contnet">본문으로 이동</a>
-<div id="content" role="main" tabindex="0"></div>
-```
+    ```html
+    <a href="#contnet">본문으로 이동</a>
+    <div id="content" role="main" tabindex="0"></div>
+    ```
 - ```tabindex``` 없이 포커스를 받을 수 있는 태그를 사용한 경우 별도로 제공하지 않는다.
 - 특별한 기능 없이 단지 영역임을 나타내는 엘리먼트일 경우 아래 스타일을 이용하여 포커스 아웃라인을 제거할 수 있다.
-```css
-#content{outline:0}
-```
+    ```css
+    #content{outline:0}
+    ```
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter3#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter5#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+<a href="./chapter3.html#article">이전</a> <a href="./chapter5.html#article">다음</a> <a href="./#article">목차</a>

@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 부록
+markdown_page: true
+---
+
 Markup Coding Conventions - 부록
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 부록
 ---
@@ -466,4 +469,4 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter5#article">이전</a> 다음 <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+<a href="./chapter5.html#article">이전</a> 다음 <a href="./#article">목차</a>

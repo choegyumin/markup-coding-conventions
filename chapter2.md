@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 2장. HTML 코드 작성 규칙
+markdown_page: true
+---
+
 Markup Coding Conventions - 2장. HTML 코드 작성 규칙
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 2. HTML 코드 작성 규칙
 ---
@@ -23,24 +26,24 @@ HTML 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 - HTML은 선언한 DTD 명세에 맞게 작성되어야 하며, 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C Validation을 통과해야 한다.
 - 특정 케이스(DTD 선언)를 제외한 모든 엘리먼트와 애트리뷰트는 영문 대문자를 사용하지 않는다.
-```html
-<IMG SRC=".."> <!-- X -->
-<img src=".."> <!-- O -->
-```
+    ```html
+    <IMG SRC=".."> <!-- X -->
+    <img src=".."> <!-- O -->
+    ```
 - 모든 애트리뷰트 값은 큰 따옴표(```"```)로 묶는다.
-```html
-<img src='..'> <!-- X -->
-<img src=".."> <!-- O -->
-```
+    ```html
+    <img src='..'> <!-- X -->
+    <img src=".."> <!-- O -->
+    ```
 - 모든 마크업 엘리먼트는 중첩 시 1탭 들여쓴다. (```<html>```, ```<head>```, ```<body>```의 자식 엘리먼트는 예외)
 - HTML 코드 내 스크립트는 사용을 지양하며, ```<body>```의 마지막에 작성하거나 또는, js 파일로 분리한다.
-```html
-<input type="text" onfocus="this.className='on'"> <!-- X -->
-```
+    ```html
+    <input type="text" onfocus="this.className='on'"> <!-- X -->
+    ```
 - 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
-```html
-<input type="password" class="input_exam" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
-```
+    ```html
+    <input type="password" class="input_exam" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
+    ```
 - 렌더링 엔진 최적화를 위해 스타일 또는, 스크립트 제어가 필요한 **모든 엘리먼트에는 클래스명을 부여**하도록 한다.
 
 ### 2-3. DTD 선언 및 head 엘리먼트 내부 마크업
@@ -441,4 +444,4 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter1#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter3#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+<a href="./chapter1.html#article">이전</a> <a href="./chapter3.html#article">다음</a> <a href="./#article">목차</a>

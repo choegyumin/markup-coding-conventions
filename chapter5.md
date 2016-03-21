@@ -1,9 +1,12 @@
+---
+title: Markup Coding Conventions - 5장. 사이트 성능 향상을 위한 마크업
+markdown_page: true
+---
+
 Markup Coding Conventions - 5장. 사이트 성능 향상을 위한 마크업
 ===
 
----
-
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차로 이동</a>
+<a href="./#article">목차로 이동</a>
 
 5. 사이트 성능 향상을 위한 마크업
 ---
@@ -25,7 +28,7 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 #### B. 스프라이트 기법의 예제
 
-<!-- [D] Include --> ./img/exam_sprite.html
+<img src="./img/007-chapter5-1-B.jpg" alt="예제 이미지">
 
 ```css
 /* GitLab 이미지를 예로 들었을 경우 */
@@ -50,4 +53,4 @@ Static 이미지들은 스프라이트 기법을 활용하여 파일의 용량�
 
 ---
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Chapter4#article">이전</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions-Appendix#article">다음</a> <a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions#article">목차</a>
+<a href="./chapter4.html#article">이전</a> <a href="./appendix.html#article">다음</a> <a href="./#article">목차</a>

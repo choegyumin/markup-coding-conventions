@@ -25,7 +25,7 @@ Markup Coding Conventions - 1장. 네이밍 규칙
 - 앵커 엘리먼트 안의 URL이 별도의 앵커 엘리먼트로 컴파일되지 않도록 슬래시(```/```)를 엔티티 코드 ```&#47;```로 작성한다.
 
 ```html
-<a href="http://overtimeman.tistory.com/" target="_blank">http:&#47;&#47;overtimeman.tistory.com&#47;</a>
+<a href="http://overtimeman.github.io/" target="_blank">http:&#47;&#47;overtimeman.github.io&#47;</a>
 ```
 
 #### 테이블

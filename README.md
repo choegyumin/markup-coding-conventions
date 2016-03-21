@@ -1,7 +1,7 @@
 Markup Coding Conventions
 ===
 
-<a href="http://overtimeman.tistory.com/entry/Markup-Coding-Conventions">http:&#47;&#47;overtimeman.tistory.com&#47;entry&#47;Markup-Coding-Conventions</a>
+<a href="http://overtimeman.github.io/conventions/markup/">http:&#47;&#47;overtimeman.github.io/conventions/markup/</a>
 
 문서 작성 규칙
 ---

@@ -1,15 +1,8 @@
----
-title: Markup Coding Conventions - 4장. 웹 접근성 준수 방법
-markdown_page: true
----
-
-Markup Coding Conventions - 4장. 웹 접근성 준수 방법
-===
+# Markup Coding Conventions - 4장. 웹 접근성 준수 방법
 
 <a href="./#article">목차로 이동</a>
 
-4. 웹 접근성 준수 방법
----
+## 4. 웹 접근성 준수 방법
 
 웹 접근성을 준수하여 마크업하는 방법을 설명한다.
 
@@ -207,4 +200,4 @@ HTML 작성 시 코드는 내용의 순서를 따라가도록 마크업하며, �
 
 ---
 
-<a href="./chapter3.html#article">이전</a> <a href="./chapter5.html#article">다음</a> <a href="./#article">목차</a>
+<a href="./chapter3.html#article">이전</a> <a href="./chapter5.html#article">다음</a> <a href="./#article">목차</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="float:right"><img alt="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." title="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>

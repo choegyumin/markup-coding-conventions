@@ -1,15 +1,8 @@
----
-title: Markup Coding Conventions - 1장. 네이밍 규칙
-markdown_page: true
----
-
-Markup Coding Conventions - 1장. 네이밍 규칙
-===
+# Markup Coding Conventions - 1장. 네이밍 규칙
 
 <a href="./#article">목차로 이동</a>
 
-1. 네이밍 규칙
----
+## 1. 네이밍 규칙
 
 선택자, 이미지, 파일 및 폴더의 네이밍 규칙을 설명한다.
 
@@ -357,4 +350,4 @@ customer.html
 
 ---
 
-<a href="./preface.html#article">이전</a> <a href="./chapter2.html#article">다음</a> <a href="./#article">목차</a>
+<a href="./preface.html#article">이전</a> <a href="./chapter2.html#article">다음</a> <a href="./#article">목차</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="float:right"><img alt="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." title="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>

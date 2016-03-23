@@ -1,15 +1,8 @@
----
-title: Markup Coding Conventions - 부록
-markdown_page: true
----
-
-Markup Coding Conventions - 부록
-===
+# Markup Coding Conventions - 부록
 
 <a href="./#article">목차로 이동</a>
 
-부록
----
+## 부록
 
 마크업에 도움이 되는 부분을 보충 설명한다.
 
@@ -23,31 +16,31 @@ Markup Coding Conventions - 부록
 
 <a target="_blank" href="http://getbem.com/">http:&#47;&#47;getbem.com&#47;</a>
 
-BEM의 장점
+##### BEM의 장점
 
-: - 네이밍이 직관적이다.
+- 네이밍이 직관적이다.
 - 고유한 네임스페이스를 사용하여 컴포넌트 간의 선택자 충돌을 방지한다.
 - Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
 - 클래스 종속으로 커스터마이징이 용이하다.
 - HTML, CSS를 모듈화하여 재사용이 가능하다.
 
-BEM의 단점
+##### BEM의 단점
 
-: - 네이밍이 길어 HTML의 가독성이 떨어진다.
+- 네이밍이 길어 HTML의 가독성이 떨어진다.
 
 #### B. ACSS(Atomic CSS)
 
 모든 스타일을 클래스로 나누어 특정 엘리먼트에 종속되지 않고 어디에서나 사용 가능하도록 제작하는 CSS 방법론이다.
 
-ACSS의 장점
+##### ACSS의 장점
 
-: - Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
+- Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
 - 선택자가 종속되지 않아 어떤 엘리먼트에서든 적용이 가능하다.
 - 유지보수 시 다른 HTML 페이지의 스타일 깨짐을 우려할 필요가 없다.
 
-ACSS의 단점
+##### ACSS의 단점
 
-: - 인라인 스타일과 크게 다를 바가 없어 HTML 문서가 복잡해진다.
+- 인라인 스타일과 크게 다를 바가 없어 HTML 문서가 복잡해진다.
 - 대규모 사이트의 경우 관리가 매우 어려우며, 오히려 CSS를 읽는 속도가 느려질 수 있다.
 - 모듈화가 불가능하다.
 
@@ -58,14 +51,14 @@ Sass의 @extend를 HTML에 옮겨놓은 느낌이다.
 
 <a target="_blank" href="http://oocss.org/">http:&#47;&#47;oocss.org&#47;</a>
 
-OOCSS의 장점
+##### OOCSS의 장점
 
-: - Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
+- Dom Tree를 거치지 않고 CSS의 탐색 레벨이 낮아 브라우저에서 CSS를 읽는 속도가 빠르다.
 - CSS를 모듈화하여 어떤 엘리먼트에서든 재사용이 가능하다.
 
-OOCSS의 단점
+##### OOCSS의 단점
 
-: - CSS 모듈화는 가능하나 HTML 엘리먼트의 모듈화는 불가능하다.
+- CSS 모듈화는 가능하나 HTML 엘리먼트의 모듈화는 불가능하다.
 - 디자인의 재사용 빈도가 적은 사이트의 경우 적합하지 않다.
 
 #### D. SMACSS(Scalable and Modular Architecture for CSS)
@@ -74,14 +67,14 @@ OOCSS의 단점
 
 <a target="_blank" href="https://smacss.com/">https:&#47;&#47;smacss.com&#47;</a>
 
-SMACSS의 장점
+##### SMACSS의 장점
 
-: - 네이밍이 직관적이다.
+- 네이밍이 직관적이다.
 - 모듈 카테고리에 한하여 HTML, CSS 재사용이 가능하다.
 
-SMACSS의 단점
+##### SMACSS의 단점
 
-: - 모듈의 스타일이 수정될 경우 사이트 전체에 일으킬 수 있는 위험 부담이 크다.
+- 모듈의 스타일이 수정될 경우 사이트 전체에 일으킬 수 있는 위험 부담이 크다.
 
 ### 2. CSS Collapsing margin(여백 병합)
 
@@ -469,4 +462,4 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 
 ---
 
-<a href="./chapter5.html#article">이전</a> 다음 <a href="./#article">목차</a>
+<a href="./chapter5.html#article">이전</a> 다음 <a href="./#article">목차</a> <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="float:right"><img alt="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." title="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>

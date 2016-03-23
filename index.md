@@ -1,13 +1,6 @@
----
-title: Markup Coding Conventions(Markup Coding Style Guide)
-markdown_page: true
----
+# Markup Coding Conventions<small>(Markup Coding Style Guide)</small>
 
-Markup Coding Conventions<small>(Markup Coding Style Guide)</small>
-===
-
-목차
----
+## 목차
 
 ### <a href="./preface.html#article">머리글</a>
 
@@ -88,3 +81,5 @@ CSS 코드의 작성 규칙을 설명한다.
 > - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의 - 최규민
 > - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경 - 최규민
 > - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod) - 최규민
+
+<div style="margin-top:25px;text-align:right"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" style="vertical-align:top"><img alt="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." title="이 저작물은 크리에이티브 커먼즈 저작자표시-비영리-변경금지 4.0 국제 라이선스에 따라 이용할 수 있습니다." style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a></div>

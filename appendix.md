@@ -1,4 +1,4 @@
-# Markup Coding Conventions - 부록
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 <a href="./#article">목차로 이동</a>
 
@@ -438,9 +438,9 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>HTML : id(aria-*)</td>
 	</tr>
 	<tr>
-		<th scope="row">-apnt-</th>
-		<td>앵커 포인트</td>
-		<td>HTML : id, name, class</td>
+		<th scope="row">anchor-</th>
+		<td>앵커</td>
+		<td>HTML : id, class</td>
 	</tr>
 	<tr>
 		<th scope="row">mod-</th>

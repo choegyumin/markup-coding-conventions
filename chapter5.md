@@ -1,4 +1,4 @@
-# Markup Coding Conventions - 5장. 사이트 성능 향상을 위한 마크업
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 <a href="./#article">목차로 이동</a>
 

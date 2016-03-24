@@ -1,4 +1,4 @@
-# Markup Coding Conventions - 4장. 웹 접근성 준수 방법
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 <a href="./#article">목차로 이동</a>
 

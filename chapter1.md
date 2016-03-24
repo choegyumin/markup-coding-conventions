@@ -1,4 +1,4 @@
-# Markup Coding Conventions - 1장. 네이밍 규칙
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 <a href="./#article">목차로 이동</a>
 
@@ -181,16 +181,15 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 </div>
 ```
 
-##### f. 앵커 포인트
+##### f. 앵커
 
-앵커 포인트는 페이지 내에서 화면의 이동을 위한 지표 역할을 한다.  
-의미가 없는 역할의 앵커에만 사용 가능하며, 이 때 제공되는 선택자는 프리픽스 ```apnt```를 추가한다. (별도로 정의된 값이 있을 때는 예외)
+앵커로 화면을 이동하기 위해 제공되는 엘리먼트의 선택자는 프리픽스 ```anchor```를 추가한다. (별도로 정의된 값이 있을 때는 예외)
 
 ```html
-<a href="#apnt-exam">예제 바로가기</a>
+<a href="#anchor-exam">예제 바로가기</a>
 ...
 <h4>
-	<span id="apnt-exam"></span>
+	<span id="anchor-exam" class="anchor-exam"></span>
 	예제입니다
 </h4>
 <p>...</p>

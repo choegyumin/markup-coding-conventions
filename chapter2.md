@@ -1,4 +1,4 @@
-# Markup Coding Conventions - 2장. HTML 코드 작성 규칙
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 <a href="./#article">목차로 이동</a>
 

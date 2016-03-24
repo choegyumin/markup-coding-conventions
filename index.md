@@ -1,4 +1,4 @@
-# Markup Coding Conventions<small>(Markup Coding Style Guide)</small>
+# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 ## 목차
 

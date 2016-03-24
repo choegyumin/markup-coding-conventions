@@ -17,7 +17,6 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 #### A. 일반 규칙
 
-- CSS는 Hack과 같이 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C Validation을 통과해야 한다.
 - 모든 프로퍼티는 영문 대문자를 사용하지 않는다.
     ```css
     .class{Font-Family:NanumGothic} /* X */
@@ -51,9 +50,8 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     zoom
     visibility
     position
-    z-index
     top, right, bottom, left
-    flex
+    z-index
     float
     clear
     box-sizing
@@ -64,12 +62,11 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     margin(-top, -right, -bottom, -left)
     background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
     color
+    font-family
     font-style
-    font-variant
     font-weight
     font-size
     line-height
-    font-family
     letter-spacing
     text-decoration
     white-space
@@ -93,7 +90,7 @@ CSS의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 ```css
 /* 한줄 설명 */
-/*
+/**
 두줄 이상의 설명
 두줄 이상의 설명
 */
@@ -126,12 +123,12 @@ CSS의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 ### 3-4. 웹폰트 사용
 
-- 웹폰트는 프리픽스 'wf'를 추가하여 네이밍한다.
+- 웹폰트는 시스템폰트와 동일한 이름을 사용하거나 프리픽스 'wf'를 추가하여 네이밍한다.
 - 사용자의 시스템에 이미 폰트가 있을 경우를 고려하여 웹폰트 이전에 시스템폰트를 먼저 선언한다.
     ```css
     @font-face{
-    font-family:'wf-NanumGothic';
-    ...
+        font-family:'wf-NanumGothic';
+        ...
     }
     ...
     body{font-family:'나눔고딕',NanumGothic,'wf-NanumGothic'}
@@ -139,7 +136,7 @@ CSS의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 ### 3-5. 파일 분기
 
-CSS 파일은 일반적으로 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 분기하도록 하며, 네이밍은 <a href="./chapter1.html#b-css">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 확인하도록 한다.
+CSS 파일의 종류는 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 나뉘며, 필요에 따라 분기한다. 네이밍은 <a href="./chapter1.html#b-css">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 참고도록 한다.
 
 ### 3-6. 기본 CSS 파일
 
@@ -152,19 +149,28 @@ CSS 초기화(```/* Reset */```) 대신 <a target="_blank" href="http://necolas.
 @charset "utf-8";
 /* [작업구분] 소속 이니셜 작업일 */
 
+/* Font Set */
+@font-face{
+	font-family:'wf-FONTNAME';
+	font-weight:normal;
+	src:url(FILENAME.eot);
+	src:local('☺'),
+		url(FILENAME.woff) format('woff'),
+		url(FILENAME.ttf) format('truetype')
+}
+
 /* Reset */
 article,aside,details,figcaption,figure,footer,header,menu,nav,section{display:block}
 html,body{height:100%}
-html{overflow-y:scroll;font-family:'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:12px;line-height:1.2}
-body{background-color:#fff;color:#000;/* word-wrap:break-word;word-break:break-all; */-webkit-text-size-adjust:none} /* [D] IE9 이하 제외 시 주석 해제 */
+html{overflow-y:scroll;font-family:'FONTNAME','wf-FONTNAME','맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:12px;line-height:1.2}
+body{background:#fff;color:#000;-webkit-text-size-adjust:none}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,hr,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
-a,input,textarea,button{color:#000} /* [D] IE7 이하 제외 시 color:inherit */
-img,fieldset,iframe,hr{border:0}
-hr{display:block;height:0}
+a,input,textarea,button{color:inherit} /* [D] IE7 크로스브라우징 시 body와 동일한 color 지정 */
+img,fieldset,iframe{border:0}
+hr{border:solid #9a9a9a;border-width:1px 0 0 0}
 ul,ol{list-style:none}
-li{list-style:inherit}
-img,input,select,button{vertical-align:middle}
+img,input,select,button,textarea{vertical-align:middle}
 a{text-decoration:none}
 a:hover{text-decoration:underline}
 a:active{text-decoration:none}
@@ -173,30 +179,28 @@ em{font-weight:bold}
 small{font-size:.92em}
 mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
+input,textarea{-webkit-box-sizing:border-box;box-sizing:border-box} /* [D] IE7 크로스브라우징 시 라인 삭제 */
 button,input[type=button],input[type=submit],input[type=reset],input[type=image]{border:0;background:none;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
 legend{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
-input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}
-input::-ms-clear{display:none}
-input::-ms-reveal{display:none}
 
 /* Global */
-html .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
+html>body .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
 .show_b{display:block !important}
 .show_i{display:inline !important}
 .show_ib{display:inline-block !important}
 .hide{display:none !important}
-.placeholder{color:#999 !important}
-.ellips{overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
+html>body .placeholder{color:#a9a9a9}
+.ellipsis{overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* Module */
 
 /* Skip Navigation */
 #skipnav{position:fixed;z-index:16777271;top:0;right:0;left:0;height:0}
-#skipnav a{overflow:hidden;display:block;position:absolute;top:-45px;right:0;left:0;height:45px;background:#222;color:#fff;font-size:14px;line-height:43px;font-weight:bold;text-decoration:none;white-space:nowrap;text-align:center}
-#skipnav a:hover,#skipnav a:focus,#skipnav a:active{top:0}
+#skipnav a{overflow:hidden;display:block;position:absolute;top:-45px;right:0;left:0;height:45px;background:#222;color:#fff;font-size:14px;line-height:43px;font-weight:bold;text-decoration:none;white-space:nowrap;text-align:center;clip:rect(0 0 0 0)}
+#skipnav a:hover,#skipnav a:focus,#skipnav a:active{top:0;clip:auto}
 
 /* Layout */
 #wrap{position:relative;min-height:100%}
@@ -221,43 +225,40 @@ html .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;mar
 /* Reset */
 html,body{height:100%}
 html{overflow-y:scroll;font-size:14px;line-height:1.2}
-body{background-color:#fff;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
+body{background:#fff;color:#000;word-wrap:break-word;word-break:break-all;-webkit-text-size-adjust:none}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,input,textarea,select,button,th,td,blockquote,figure{padding:0;margin:0}
 body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:inherit;font-size:1em}
 a,input,textarea,button{color:inherit}
-img,fieldset,iframe,hr{border:0}
-hr{display:block;height:0}
+img,fieldset,iframe{border:0}
+hr{border:solid #9a9a9a;border-width:1px 0 0 0}
 ul,ol{list-style:none}
-li{list-style:inherit}
-img,input,select,button{vertical-align:middle}
+img,input,select,button,textarea{vertical-align:middle}
 a{text-decoration:none}
 cite,em,address{font-style:normal}
 em{font-weight:bold}
 small{font-size:.92em}
 mark{padding:1px}
 code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
+input,textarea{-webkit-box-sizing:border-box;box-sizing:border-box}
 input,textarea,select,button,input[type="file"]::-webkit-file-upload-button{border-radius:0;-webkit-appearance:none}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image],input[type="file"]::-webkit-file-upload-button{background:none;border:0;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
 legend{position:absolute;z-index:-1;opacity:0}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
-input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none}
-input::-ms-clear{display:none}
-input::-ms-reveal{display:none}
-input::-webkit-input-placeholder{color:#999}
-input:-moz-placeholder{color:#999}
-input::-moz-placeholder{color:#999}
-input:-ms-input-placeholder{color:#999}
-.ua-m-android input,.ua-m-android textarea,.ua-m-android button{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}
+html>body .placeholder{color:#a9a9a9}
+input::-webkit-input-placeholder{color:#a9a9a9}
+input:-moz-placeholder{color:#a9a9a9}
+input::-moz-placeholder{color:#a9a9a9}
+input:-ms-input-placeholder{color:#a9a9a9}
 
 /* Global */
-html .blind,#skipnav{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
+html>body .blind,#skipnav{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
 .show_b{display:block !important}
 .show_i{display:inline !important}
 .show_ib{display:inline-block !important}
 .hide{display:none !important}
-.ellips{overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
+.ellipsiss{overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* Module */
 
@@ -265,27 +266,6 @@ html .blind,#skipnav{overflow:hidden;position:absolute;width:1px;height:1px;padd
 #wrap{position:relative;min-height:100%}
 
 /* Component */
-```
-
-**font.css**
-
-```css
-@charset "utf-8";
-/* [작업구분] 소속 이니셜 작업일 */
-
-/* Font Set */
-@font-face{
-font-family:'wf-폰트명';
-font-weight:normal;
-src:url(파일명.eot);
-src:local('☺'),
-	url(파일명.eot?#iefix) format('embedded-opentype'),
-	url(파일명.woff) format('woff'),
-	url(파일명.ttf) format('truetype')
-}
-
-/* Reset */
-body,h1,h2,h3,h4,h5,h6,input,textarea,select,button,table{font-family:'폰트명','wf-폰트명','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif}
 ```
 
 ---

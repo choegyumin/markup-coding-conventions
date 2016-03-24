@@ -50,16 +50,15 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     zoom
     visibility
     position
-    top, right, bottom, left
     z-index
     float
     clear
     box-sizing
     width(min-, max-)
     height(min-, max-)
-    padding(-top, -right, -bottom, -left)
-    border(-width, -style, -color, -radius, -image)
-    margin(-top, -right, -bottom, -left)
+    padding
+    border(-style, -color, -width, -radius, -image)
+    margin
     background(-color, -image, -repeat, -position, -size, -origin, -clip, -attachment)
     color
     font-family

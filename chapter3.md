@@ -77,7 +77,7 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     vertical-align
     cursor
     ```
-- 스타일 작성 시 <a href="./appendix.html#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극 활용하도록 한다.
+- 스타일 작성 시 <a href="./appendix.html#user-content-2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극 활용하도록 한다.
 
 #### B. z-index 선언 규칙
 
@@ -143,7 +143,7 @@ CSS의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
 
 ### 3-5. 파일 분기
 
-CSS 파일의 종류는 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 나뉘며, 필요에 따라 분기한다. 네이밍은 <a href="./chapter1.html#b-css">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 참고도록 한다.
+CSS 파일의 종류는 기본 CSS, 전역 CSS, 서비스별 CSS, 폰트 CSS로 나뉘며, 필요에 따라 분기한다. 네이밍은 <a href="./chapter1.html#user-content-b-css">1-4. 파일 및 폴더 네이밍 &gt; B. CSS</a>를 참고도록 한다.
 
 ### 3-6. 기본 CSS 파일
 

@@ -79,6 +79,19 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     ```
 - 스타일 작성 시 <a href="./appendix.html#2-css-margin-collapsing여백-병합">collapsing margin(여백 병합)</a>을 적극 활용하도록 한다.
 
+#### B. z-index 선언 규칙
+
+- 스킵 네비게이션:
+    ```16777271```
+- Dimmed background를 포함하는 레이어:
+    ```16600000``` ~ ```16699999```
+- 플로팅 레이어:
+    ```16500000``` ~ ```16599999```
+- 사용자와의 상호작용으로 활성화된 엘리먼트 및 레이어 (ex. 커스텀 콤보박스):
+    ```16400000``` ~ ```16499999```
+- 그 외 엘리먼트:
+    ```-1``` ~ ```100000```
+
 ### 3-3. 주석 작성
 
 CSS의 주석 작성 시 다음과 같은 규칙을 준수하도록 한다.
@@ -181,7 +194,7 @@ code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,'Courier New',monospace}
 input,textarea{-webkit-box-sizing:border-box;box-sizing:border-box} /* [D] IE7 크로스브라우징 시 라인 삭제 */
 button,input[type=button],input[type=submit],input[type=reset],input[type=image]{border:0;background:none;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
-legend{position:absolute;z-index:-1;opacity:0;filter:alpha(opacity=0)}
+legend{position:absolute;width:1px;height:1px;padding:0;clip:rect(0 0 0 0)}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
 
@@ -242,7 +255,7 @@ input,textarea{-webkit-box-sizing:border-box;box-sizing:border-box}
 input,textarea,select,button,input[type="file"]::-webkit-file-upload-button{border-radius:0;-webkit-appearance:none}
 button,input[type=button],input[type=submit],input[type=reset],input[type=image],input[type="file"]::-webkit-file-upload-button{background:none;border:0;cursor:pointer}
 textarea{overflow:hidden;overflow-y:auto}
-legend{position:absolute;z-index:-1;opacity:0}
+legend{position:absolute;width:1px;height:1px;padding:0;clip:rect(0 0 0 0)}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
 .placeholder{color:#a9a9a9}
@@ -252,7 +265,7 @@ input::-moz-placeholder{color:#a9a9a9}
 input:-ms-input-placeholder{color:#a9a9a9}
 
 /* Global */
-html>body .blind,#skipnav{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
+html>body .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:0;clip:rect(0 0 0 0)}
 .show_b{display:block !important}
 .show_i{display:inline !important}
 .show_ib{display:inline-block !important}
@@ -262,6 +275,7 @@ html>body .blind,#skipnav{overflow:hidden;position:absolute;width:1px;height:1px
 /* Module */
 
 /* Layout */
+#skipnav{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0)}
 #wrap{position:relative;min-height:100%}
 
 /* Component */

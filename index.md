@@ -2,14 +2,14 @@
 
 ## 목차
 
-### [머리글](./preface.html#article)
+### [머리글](./preface.html#content)
 
 먼저 마크업 코딩 컨벤션의 목적과 사용되는 용어를 설명한다.
 
 - <a href="./preface.html#1-서론">1. 서론</a>
 - <a href="./preface.html#2-용어-설명">2. 용어 설명</a>
 
-### [1장. 네이밍 규칙](./chapter1.html#article)
+### [1장. 네이밍 규칙](./chapter1.html#content)
 
 선택자, 이미지, 파일 및 폴더의 네이밍 규칙을 설명한다.
 
@@ -19,7 +19,7 @@
 - <a href="./chapter1.html#1-4-파일-및-폴더-네이밍">4. 파일 및 폴더 네이밍</a>
 - <a href="./chapter1.html#1-5-모듈화">5. 모듈화</a>
 
-### [2장. HTML 코드 작성 규칙](./chapter2.html#article)
+### [2장. HTML 코드 작성 규칙](./chapter2.html#content)
 
 HTML 코드의 작성 규칙을 설명한다.
 
@@ -30,7 +30,7 @@ HTML 코드의 작성 규칙을 설명한다.
 - <a href="./chapter2.html#2-5-엘리먼트별-작성">5. 엘리먼트별 작성</a>
 - <a href="./chapter2.html#2-6-기본-html-파일">6. 기본 HTML 파일</a>
 
-### [3장. CSS 코드 작성 규칙](./chapter3.html#article)
+### [3장. CSS 코드 작성 규칙](./chapter3.html#content)
 
 CSS 코드의 작성 규칙을 설명한다.
 
@@ -41,7 +41,7 @@ CSS 코드의 작성 규칙을 설명한다.
 - <a href="./chapter3.html#3-5-파일-분기">5. 파일 분기</a>
 - <a href="./chapter3.html#3-6-기본-css-파일">6. 기본 CSS 파일</a>
 
-### [4장. 웹 접근성 준수 방법](./chapter4.html#article)
+### [4장. 웹 접근성 준수 방법](./chapter4.html#content)
 
 웹 접근성을 준수하여 마크업하는 방법을 설명한다.
 
@@ -52,14 +52,14 @@ CSS 코드의 작성 규칙을 설명한다.
 - <a href="./chapter4.html#4-5-스킵-네비게이션-제공">5. 스킵 네비게이션 제공</a>
 - <a href="./chapter4.html#4-6-키보드-접근성-보장">6. 키보드 접근성 보장</a>
 
-### [5장. 사이트 성능 향상을 위한 마크업](./chapter5.html#article)
+### [5장. 사이트 성능 향상을 위한 마크업](./chapter5.html#content)
 
 사이트의 성능 향상을 위한 마크업 방법을 설명한다.
 
 - <a href="./chapter5.html#5-1-css-image-sprites">1. CSS Image Sprites</a>
 - <a href="./chapter5.html#5-2-reflow의-최소화">2. Reflow의 최소화</a>
 
-### [부록](./appendix.html#article)
+### [부록](./appendix.html#content)
 
 마크업에 도움이 되는 부분을 보충 설명한다.
 

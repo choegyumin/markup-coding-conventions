@@ -21,7 +21,7 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
     ```css
     .class{Font-Family:NanumGothic} /* X */
     .class{font-family:NanumGothic} /* O */
-```
+    ```
 - 기본적으로 프로퍼티 값은 작은 따옴표(')로 묶으며, 따옴표가 필요없는 프로퍼티는 사용하지 않는다.
     ```css
     background:url(bg.gif);
@@ -191,7 +191,7 @@ html>body .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:
 .show_i{display:inline !important}
 .show_ib{display:inline-block !important}
 .hide{display:none !important}
-html>body .placeholder{color:#a9a9a9}
+.placeholder{color:#a9a9a9}
 .ellipsis{overflow:hidden;max-width:100%;white-space:nowrap;text-overflow:ellipsis;word-wrap:normal;word-break:normal}
 
 /* Module */
@@ -245,7 +245,7 @@ textarea{overflow:hidden;overflow-y:auto}
 legend{position:absolute;z-index:-1;opacity:0}
 fieldset{min-width:0}
 table{border-collapse:collapse;border-spacing:0}
-html>body .placeholder{color:#a9a9a9}
+.placeholder{color:#a9a9a9}
 input::-webkit-input-placeholder{color:#a9a9a9}
 input:-moz-placeholder{color:#a9a9a9}
 input::-moz-placeholder{color:#a9a9a9}

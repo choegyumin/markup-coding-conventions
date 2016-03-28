@@ -33,8 +33,8 @@
 
 - 하이픈은 네이밍 단어를 역할별로 조합할 때 사용되며, 단순히 띄어쓰기가 필요한 경우 언더바를 사용한다.
     ```shell
-    service-naming-exam-wrap (X)
-    service_naming_exam-wrap (O)
+    service-naming-exam-wrapper (X)
+    service_naming_exam-wrapper (O)
     ```
 - 네이밍의 조합은 역할별로 분류했을 때 '프리픽스-컴포넌트(모듈)-엘리먼트-효과' 최대 4단계로 나뉘며, 필요에 따라 조합할 수 있다.  
 선택자 네이밍의 경우 효과 네이밍은 조합하지 않고 분리되며, 별도의 프리픽스를 가진다.
@@ -317,7 +317,7 @@ customer.html
 - **항상 컴포넌트명을 상속**받아 네이밍한다.
     ```html
     <div class="mod-share_btn">
-        <div class="mod-share_btn-wrap">
+        <div class="mod-share_btn-wrapper">
             <button class="mod-share_btn-btn">...</button>
         </div>
     </div>

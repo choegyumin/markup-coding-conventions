@@ -295,7 +295,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 	</thead>
 	<tbody>
 	<tr>
-		<th scope="row">#-wrap</th>
+		<th scope="row">#-wrapper</th>
 		<td>사이트 전체</td>
 	</tr>
 	<tr>
@@ -371,7 +371,7 @@ id와 class는 별도로 표기되어 있지 않다면 자유롭게 사용 가�
 		<td>내용</td>
 	</tr>
 	<tr>
-		<th scope="row">-wrap</th>
+		<th scope="row">-wrapper</th>
 		<td>그루핑(포장)</td>
 	</tr>
 	<tr>

@@ -33,7 +33,7 @@ CSS 코드 작성 시 다음과 같은 규칙을 준수하도록 한다.
 - 선택자 기호 · 중괄호 · 프로퍼티 사이의 모든 공백과 마지막 프로퍼티의 세미콜론(;)은 제거한다. (최종 CSS 파일을 압축하여 관리할 경우 예외)
 - **선택자의 상속을 최소화하며, 가능하다면 id나 class 하나로 유지한다.**
     ```css
-    .exam .exam-wrap .exam-group .exam-box{width:400px} /* X */
+    .exam .exam-wrapper .exam-group .exam-box{width:400px} /* X */
     .exam .exam-box{width:400px} /* △ */
     .exam-box{width:400px} /* O */
     ```
@@ -210,7 +210,7 @@ html>body .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:
 #skipnav a:hover,#skipnav a:focus,#skipnav a:active{top:0;clip:auto}
 
 /* Layout */
-#wrap{position:relative;min-height:100%}
+#wrapper{position:relative;min-height:100%}
 
 /* Component */
 
@@ -271,7 +271,7 @@ html>body .blind{overflow:hidden;position:absolute;width:1px;height:1px;padding:
 
 /* Layout */
 #skipnav{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0)}
-#wrap{position:relative;min-height:100%}
+#wrapper{position:relative;min-height:100%}
 
 /* Component */
 ```

@@ -316,7 +316,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <link rel="stylesheet" type="text/css" href="..">
 </head>
 <body>
-<div id="wrap">
+<div id="wrapper">
 <!-- [S] Skip Navigation -->
 <div id="skipnav">
 </div>
@@ -363,7 +363,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <![endif]-->
 </head>
 <body>
-<div id="wrap">
+<div id="wrapper">
 <!-- [S] Skip Navigation -->
 <div id="skipnav">
 </div>
@@ -407,7 +407,7 @@ HTML은 부득이하게 문법을 지킬수 없는 경우를 제외하고는 W3C
 <link rel="stylesheet" type="text/css" href="..">
 </head>
 <body class="..">
-<div id="wrap">
+<div id="wrapper">
 <!-- [S] Skip Navigation -->
 <div id="skipnav">
 </div>

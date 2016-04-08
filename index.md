@@ -6,8 +6,7 @@
 
 먼저 마크업 코딩 컨벤션의 목적과 사용되는 용어를 설명한다.
 
-- <a href="./preface.html#1-서론">1. 서론</a>
-- <a href="./preface.html#2-용어-설명">2. 용어 설명</a>
+- <a href="./preface.html#1-용어-설명">1. 용어 설명</a>
 
 ### [1장. 네이밍 규칙](./chapter1.html#content)
 

@@ -199,26 +199,35 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 <h3 id="html-comments">1-8. Comments</h3>
 
-- 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
-    ```html
-    <!-- This comment is 1 line -->
-    <!--
-        This comment is
-        2 lines
-    -->
-    ```
-- 레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 시작인지 끝인지에 따라 맨 앞에 ```@start```, ```@end```를 표기한다.
-    ```html
-    <!-- @start Content -->
-    <div id="content" role="main"></div>
-    <!-- @end Content -->
-    ```
-- 작업 진행에 참고해야 하는 주석은 맨 앞에 ```@desc```를 추가하여 작성한다.
-    ```html
-    <!-- @desc
-        blah, blah, blah...
-    -->
-    ```
+주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
+
+```html
+<!-- This comment is 1 line -->
+<!--
+    This comment is
+    2 lines
+-->
+```
+
+#### A. 참고 주석
+
+작업 진행에 참고해야 하는 주석은 맨 앞에 ```@desc```를 추가하여 작성한다.
+
+```html
+<!-- @desc
+    blah, blah, blah...
+-->
+```
+
+#### B. 엘리먼트 주석
+
+레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 맨 앞에 ```@start``` 또는 ```@end```를 표기한다.
+
+```html
+<!-- @start Content -->
+<div id="content" role="main"></div>
+<!-- @end Content -->
+```
 
 
 
@@ -386,79 +395,85 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 
 <h3 id="css-comments">2-9. Comments</h3>
 
-- 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
-    ```css
-    /* This comment is 1 line */
-    /*
-        This comment is
-        2 lines
-    */
-    ```
-- 마크업을 진행한 작성자의 정보를 나타내는 주석은 아래의 양식에 맞게 ```@charset``` 바로 아래에 작성한다. @version은 버전 또는 작성일을 표기하며, 둘 중 하나만 작성하여도 상관없다. (```/*! */```)
-    ```css
-    /*!
-        @author My Name <email_id@domain.com> 
-        @version v1.0.0 2016-04-08
-    */
-    ```
-- 작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (```/*# */```)
-    ```css
-    /*#
-        @desc CSS z-index Guidelines 
-    
-        blah, blah, blah...
-    */
-    ```
-- 엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, 타입은 베이스, 레이아웃, 컴포넌트, 모듈, 미디어로 나뉜다. (```/*= */```)
-    - 베이스
-        ```css
-        /*=
-            @type Base
-            @name Reset
-        */
-        article, aside, details, figcaption, figure, footer, header, menu, nav, section { }
-        ``` 
-    - 레이아웃
-        ```css
-        /*=
-            @type Layout
-            @name Header
-        */
-        #header {}
-        ``` 
-    - 컴포넌트
-        ```css
-        /*=
-            @type Component
-            @name Local Navigation Bar
-        */
-        #lnb {}
-        ```
-    - 모듈
-    
-        > 모듈은 <a href="#naming">3. Naming</a> 섹션에서 설명할 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이며, ```@namespace```는 기본값(```mod```)이라면 생략 가능하다.
-    
-        ```css
-        /*=
-            @type Module
-            @name Combobox
-        */
-        #mod-cbo {}
-        /*=
-            @type Module
-            @name Combobox
-            @namespace foo
-        */
-        #foo-cbo {}
-        ``` 
-    - 미디어
-        ```css
-        /*=
-            @type Media
-            @name Screen Reader
-        */
-        @media aural,speech{ }
-        ```
+주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
+
+```css
+/* This comment is 1 line */
+/*
+    This comment is
+    2 lines
+*/
+```
+
+#### A. 작성자 주석
+
+작성자의 정보를 나타내는 주석은 아래의 양식에 맞게 ```@charset``` 바로 아래에 작성한다. (```/*! */```)
+
+```css
+/*!
+    @author My Name <email_id@domain.com> 
+    @version v1.0.0 2016-04-08
+*/
+```
+
+<dl>
+    <dt><code>@author</code></dt>
+    <dd>작성자 정보. 이름과 이메일을 작성한다.</dd>
+    <dt><code>@version</code></dt>
+    <dd>버전 또는 작성일. 둘 중 하나만 작성하여도 상관없다.</dd>
+</dl>
+
+#### B. 참고 주석
+
+작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (```/*# */```)
+```css
+/*#
+    @title CSS z-index Guidelines 
+
+    blah, blah, blah...
+*/
+```
+
+<dl>
+    <dt><code>@title</code></dt>
+    <dd>주석 내용의 제목.</dd>
+</dl>
+
+#### C. 엘리먼트 주석
+
+엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, ```@type```은 ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다. (```/*= */```)
+  
+```css
+/*=
+    @type Base
+    @name Reset
+*/
+article, aside, details, figcaption, figure, footer, header, menu, nav, section { }
+
+/*=
+    @type Module
+    @name Combobox
+    @namespace foo
+*/
+#foo-cbo {}
+
+/*=
+    @type Media
+    @name Screen Reader
+*/
+@media aural,speech{ }
+```
+
+<dl>
+    <dt><code>@type</code></dt>
+    <dd>엘리먼트 그룹의 타입.</dd>
+    <dt><code>@version</code></dt>
+    <dd>엘리먼트 그룹의 이름.</dd>
+    <dt><code>@namespace</code></dt>
+    <dd>엘리먼트 그룹의 네임스페이스. 네임스페이스가 없거나 모듈의 기본값(<code>mod</code>)이라면 생략 가능하다.</dd>
+</dl>
+
+> 모듈은 <a href="#naming">3. Naming</a> 섹션에서 설명할 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이다. 
 
 
 

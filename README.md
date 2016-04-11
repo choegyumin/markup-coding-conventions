@@ -201,21 +201,23 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 - 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
     ```html
-    <!-- Comment is 1 line -->
+    <!-- This comment is 1 line -->
     <!--
-        Comment is
+        This comment is
         2 lines
     -->
     ```
-- 레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 시작인지 끝인지에 따라 맨 앞에 ```[S]```, ```[E]```를 표기한다.
+- 레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 시작인지 끝인지에 따라 맨 앞에 ```@start```, ```@end```를 표기한다.
     ```html
-    <!-- [S] Content -->
+    <!-- @start Content -->
     <div id="content" role="main"></div>
-    <!-- [E] Content -->
+    <!-- @end Content -->
     ```
-- 개발 시 참고해야 하는 주석은 맨 앞에 ```[D]```를 추가하여 작성한다.
+- 작업 진행에 참고해야 하는 주석은 맨 앞에 ```@desc```를 추가하여 작성한다.
     ```html
-    <!-- [D] 개발 시 참고해야 할 내용 -->
+    <!-- @desc
+        blah, blah, blah...
+    -->
     ```
 
 
@@ -280,26 +282,26 @@ CSS 코드의 작성 규칙을 설명한다.
 - 프로퍼티값 안의 콤마는 뒤에 공백 문자 하나를 포함한다.
     ```css
     /* Bad */
-    .foo { box-shadow:0px 1px 2px #ccc,inset 0 1px 0 #fff; }
+    .foo { box-shadow: 0px 1px 2px #ccc,inset 0 1px 0 #fff; }
     
     /* Good */
-    .foo { box-shadow:0px 1px 2px #ccc, inset 0 1px 0 #fff; }
+    .foo { box-shadow: 0px 1px 2px #ccc, inset 0 1px 0 #fff; }
     ```
 - rgb(), rgba(), hsl(), hsla() 등의 색상을 나타내는 프로퍼티값은 다른 프로퍼티값과의 차별화를 위해 콤마 뒤에 공백 문자를 포함시키지 않는다.
     ```css
     /* Bad */
-    .foo { background:rgba(0, 0, 0, .33); }
+    .foo { background: rgba(0, 0, 0, .33); }
     
     /* Good */
-    .foo { background:rgba(0,0,0,.33); }
+    .foo { background: rgba(0,0,0,.33); }
     ```
 - rect() 프로퍼티값 안에서는 구버전의 IE 브라우저와의 호환성을 위해 콤마 대신 공백 문자만 표기한다.
     ```css
     /* Bad */
-    .foo { position:absolute;clip:rect(0, 0, 0, 0); }
+    .foo { position: absolute; clip: rect(0, 0, 0, 0); }
     
     /* Good */
-    .foo { position:absolute;clip:rect(0 0 0 0); }
+    .foo { position: absolute; clip: rect(0 0 0 0); }
     ```
 - 프로퍼티 작성 순서는 아래 순서를 따르며, 명시되지 않은 프로퍼티는 적절한 위치에 배치하여 사용한다.
     - content
@@ -384,24 +386,55 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 
 <h3 id="css-comments">2-9. Comments</h3>
 
-- 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
+- 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
     ```css
-    /* Comment is 1 line */
+    /* This comment is 1 line */
     /*
-        Comment is
+        This comment is
         2 lines
     */
     ```
-
-- 레이아웃 또는 그루핑된 엘리먼트의 시작을 알리는 주석은 아래의 형식에 맞게 작성한다.
+- 마크업을 진행한 작성자의 정보를 나타내는 주석은 ```@charset``` 바로 아래에 선언하며, 아래의 양식에 맞게 작성한다. @version은 버전 정보 또는 작성일을 표기하며, 둘 중 하나만 작성하여도 상관없다.
     ```css
-    /* Local Navigation Bar */
-    .lnb {}
+    /*!
+        @author My Name <id@domain.com> 
+        @version v1.0.0 2016-04-08
+    */
     ```
-- 마크업을 진행한 작성자의 정보를 나타내는 주석은 최상위(```@charset```보다 위)에 선언하며, 소속 회사 및 부서, 영문 이름 이니셜, 작업 시작일을 표기한다.
-    ```css
-    /* [P] Overtimaman Front-end Development Group CGM 160408 */
-    ```
+- 엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, 타입은 레이아웃, 컴포넌트, 모듈로 나뉜다.
+    - 레이아웃
+        ```css
+        /*=
+            @type Layout
+            @name Header
+        */
+        #header {}
+        ``` 
+    - 컴포넌트
+        ```css
+        /*=
+            @type Component
+            @name Local Navigation Bar
+        */
+        #lnb {}
+        ```
+    - 모듈
+    
+        > 모듈은 <a href="#naming">3. Naming</a> 섹션에서 사용할 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이며, ```@namespace```는 기본값(```mod```)이라면 생략 가능하다.
+    
+        ```css
+        /*=
+            @type Module
+            @name Combobox
+        */
+        #mod-cbo {}
+        /*=
+            @type Module
+            @name Combobox
+            @namespace foo
+        */
+        #foo-cbo {}
+        ``` 
 
 
 

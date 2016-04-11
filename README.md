@@ -405,14 +405,14 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 */
 ```
 
-#### A. 작성자 주석
+#### A. 프로젝트 주석
 
-작성자의 정보를 나타내는 주석은 아래의 양식에 맞게 ```@charset``` 바로 아래에 작성한다. (```/*! */```)
+프로젝트 정보를 나타내는 주석은 아래의 양식에 맞게 ```@charset``` 바로 아래에 작성한다. (```/*! */```)
 
 ```css
 /*!
     @author My Name <email_id@domain.com> 
-    @version v1.0.0 2016-04-08
+    @version v1.2.0 2016-04-11
 */
 ```
 
@@ -420,7 +420,7 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
     <dt><code>@author</code></dt>
     <dd>작성자 정보. 이름과 이메일을 작성한다.</dd>
     <dt><code>@version</code></dt>
-    <dd>버전 또는 작성일. 둘 중 하나만 작성하여도 상관없다.</dd>
+    <dd>문서의 버전 및 작성일. 둘 중 하나만 작성하여도 상관없다.</dd>
 </dl>
 
 #### B. 참고 주석
@@ -441,7 +441,7 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 
 #### C. 엘리먼트 주석
 
-엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, ```@type```은 ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다. (```/*= */```)
+엘리먼트 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성하며, ```@type```은 ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다. (```/*= */```)
   
 ```css
 /*=
@@ -454,12 +454,14 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
     @type Module
     @name Combobox
     @namespace foo
+    @since v1.1.0 2016-04-08
 */
 #foo-cbo {}
 
 /*=
     @type Media
     @name Screen Reader
+    @author Your Name <email_id@domain.com>
 */
 @media aural,speech{ }
 ```
@@ -467,10 +469,14 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 <dl>
     <dt><code>@type</code></dt>
     <dd>엘리먼트 그룹의 타입.</dd>
-    <dt><code>@version</code></dt>
+    <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>
     <dd>엘리먼트 그룹의 네임스페이스. 네임스페이스가 없거나 모듈의 기본값(<code>mod</code>)이라면 생략 가능하다.</dd>
+    <dt><code>@author</code></dt>
+    <dd>작성자 정보. 프로젝트 주석에 표기된 작성자와 동일 인물이 아닐 경우에만 작성한다.</dd>
+    <dt><code>@since</code></dt>
+    <dd>작성된 버전 및 작성일. 문서의 최초 작성 이후 추가된 코드에만 표기하며, 프로젝트 주석의 <code>@version</code>과 같은 양식으로 작성한다.</dd>
 </dl>
 
 > 모듈은 <a href="#naming">3. Naming</a> 섹션에서 설명할 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이다. 

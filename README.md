@@ -265,12 +265,12 @@ CSS 코드의 작성 규칙을 설명한다.
 - 여러개의 선택자를 사용하는 경우 선택자 사이에 개행을 추가한다.
     ```css
     /* Bad */
-    .one, .two, .three {}
+    .one, .two, .three { }
     
     /* Good */
     .one,
     .two,
-    .three {}
+    .three { }
     ```
 
 <dl>
@@ -456,14 +456,14 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
     @namespace foo
     @since v1.1.0 2016-04-08
 */
-#foo-cbo {}
+#foo-cbo { }
 
 /*=
     @type Media
     @name Screen Reader
     @author Your Name <email_id@domain.com>
 */
-@media aural,speech{ }
+@media aural, speech { }
 ```
 
 <dl>

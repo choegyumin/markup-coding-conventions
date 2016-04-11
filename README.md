@@ -401,7 +401,15 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
         @version v1.0.0 2016-04-08
     */
     ```
-- 엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, 타입은 레이아웃, 컴포넌트, 모듈로 나뉜다.
+- 엘리먼트 그룹의 시작을 알리는 주석은 아래의 형식에 맞게 작성하며, 타입은 베이스, 레이아웃, 컴포넌트, 모듈로 나뉜다.
+    - 베이스
+        ```css
+        /*=
+            @type Base
+            @name Reset
+        */
+        article, aside, details, figcaption, figure, footer, header, menu, nav, section { }
+        ``` 
     - 레이아웃
         ```css
         /*=

@@ -441,7 +441,7 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 
 #### C. 엘리먼트 주석
 
-엘리먼트 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성하며, ```@type```은 ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다. (```/*= */```)
+엘리먼트 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성한다. (```/*= */```)
   
 ```css
 /*=
@@ -468,7 +468,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입.</dd>
+    <dd>엘리먼트 그룹의 타입. ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>

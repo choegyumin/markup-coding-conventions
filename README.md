@@ -468,7 +468,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. ```Base```, ```Layout```, ```Component```, ```Module```, ```Media```로 나뉜다</dd>
+    <dd>엘리먼트 그룹의 타입. <code>Base</code>, <code>Layout</code>, <code>Component</code>, <code>Module</code>, <code>Media</code>로 나뉜다</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>

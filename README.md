@@ -1,8 +1,3 @@
----
-title: Markup Coding Conventions(Markup Coding Style Guide)
-markdown_page: true
----
-
 # Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 
@@ -43,7 +38,7 @@ markdown_page: true
 
 <h2 id="glossaries">Glossaries</h2>
 
-먼저 컨벤션에 자주 사용되는 용어의 정의를 설명한다.
+먼저 **마크업 코딩 컨벤션**에 자주 사용되는 용어의 정의를 설명한다.
 
 <dl>
     <dt>엘리먼트(Element)</dt>

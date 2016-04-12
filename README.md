@@ -1,3 +1,8 @@
+---
+title: Markup Coding Conventions(Markup Coding Style Guide)
+markdown_page: true
+---
+
 # Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
 
 
@@ -479,8 +484,6 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
     <dd>작성된 버전 및 작성일. 문서의 최초 작성 이후 추가된 코드에만 표기하며, 프로젝트 주석의 <code>@version</code>과 같은 양식으로 작성한다.</dd>
 </dl>
 
-> 모듈은 <a href="#naming">3. Naming</a> 섹션에서 설명할 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이다. 
-
 
 
 <h2 id="naming">3. Naming</h2>
@@ -509,32 +512,9 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 HTML 파일은 페이지명을 토대로 네이밍한다.
 
-```shell
-news-list.html
-customer.html
-```
-
 #### B. CSS
 
-- 가장 기본이 되는 CSS는 일반적으로 'comm'으로 네이밍한다.
-    ```shell
-    comm.css (기본 CSS)
-    ```
-- 버티컬의 유뮤나 서비스 간의 컨셉 통일 등 다른 서비스와의 연계성을 가지는 경우 기본이 되는 CSS를 서비스명으로 네이밍하며, 여러 서비스에 전역(공통)으로 사용되는 CSS는 'comm'으로 네이밍한다.
-    ```shell
-    comm.css (전역 CSS)
-    front.css, manage.css, ... (기본 CSS)
-    ```
-- 기본 CSS를 제외한 나머지 CSS는 상황에 맞게 분류하여 네이밍하며, 연계 서비스의 경우 앞에 서비스명을 추가하여 네이밍한다.
-    ```shell
-    main.css, sub.css, bbs.css, ...
-    front-main.css, front-sub.css, front-bbs.css, ...
-    ```
-- 미디어쿼리와 별개로 환경에 따라 CSS가 필요한 경우 마지막에 환경명을 추가하여 네이밍한다.
-    ```shell
-    comm-pc.css
-    comm-mobile.css
-    ```
+CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할 경우 ```style.css```로 네이밍한다.
 
 #### C. 이미지
 
@@ -549,21 +529,13 @@ customer.html
     _img-exam.png
     _bg-exam.png
     ```
-- 가상 엘리먼트에 사용되는 이미지는 하이픈을 두번 사용하여 선택자명을 조합하며, 멀티 클래스 엘리먼트는 CSS와 동일한 방식으로 ```.```을 사용하여 조합한다.
+- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">CEE CSS 방법론의 Effect</a> 선택자처럼 점(```.```)으로 조합한다.
     ```shell
-    bg-header--hover.jpg
-    bg-header.type-compact--hover.jpg
-    bg-header.type-compact.is-scrolled.jpg
+    bg-menu
+    bg-menu--hover.jpg
+    bg-menu.type-compact--hover.jpg
+    bg-menu.type-compact.is-scrolled.jpg
     ```
-
-#### D. 폴더
-
-- 프로젝트 폴더는 '생성일-프로젝트명'으로 네이밍하며, 생성일은 YYMMDD 형식을 사용한다.
-    ```shell
-    140825-overtimeman
-    ```
-- 이미지, CSS, JS 폴더는 'img', 'css', 'js'로 네이밍한다.
-- HTML파일을 메뉴별로 분기해야할 경우 폴더로 구분하며 메뉴명을 토대로 네이밍한다.
 
 <h3 id="naming-prefix">3-4. Prefix</h3>
 
@@ -588,21 +560,21 @@ customer.html
 
 #### C. 프레임
 
-```<iframe>``` 엘리먼트 또는 ```<iframe>```으로 불러올 HTML에 포함된 엘리먼트에 제공되는 선택자는 프리픽스 ```ifr```을 추가한다.
+```<iframe>``` 엘리먼트 또는 ```<iframe>```으로 불러올 HTML에 포함된 엘리먼트에 제공되는 선택자는 프리픽스 ```frame```을 추가한다.
 
 ```shell
-#ifr-aside
+#frame-aside
 ```
 
 #### D. 팝업과 다이얼로그
 
-팝업과 관련된 엘리먼트에 제공되는 선택자는 프리픽스 ```pop```를 추가한다.  
+팝업과 관련된 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.  
 이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 상태 효과 클래스를 사용한다.
 
 ```shell
-.pop-event
-.pop-event.is-window (새 창 팝업)
-.pop-event.is-layer (레이어 팝업)
+.popup-event
+.popup-event.is-window (새 창 팝업)
+.popup-event.is-layer (레이어 팝업)
 ```  
   
 **레이어 팝업은 팝업을 레이어의 형태로 띄운 것이므로 엄연히 다이얼로그와는 구분**되며, 다이얼로그는 프리픽스 ```dialog```를 추가한다.
@@ -613,7 +585,7 @@ customer.html
 
 #### E. WAI-ARIA의 상태 및 속성
 
-WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. (별도로 정의된 값이 있을 때는 사용하지 않음)
+**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. 이는 **반드시 앵커의 참조 엘리먼트로 사용하지 않는다.**
 
 ```html
 <div id="nav" role="navigation" aria-labelledby="aria-nav_heading">
@@ -622,24 +594,10 @@ WAI-ARIA의 상태 및 속성만을 위해 제공되는 ```id``` 애트리뷰트
 </div>
 ```
 
-#### F. 앵커
+#### F. 모듈
 
-앵커로 화면을 이동하기 위해 제공되는 엘리먼트의 선택자는 프리픽스 ```anchor```를 추가한다. (별도로 정의된 값이 있을 때는 사용하지 않음)
-
-```html
-<a href="#anchor-exam">예제 바로가기</a>
-...
-<h4>
-    <span id="anchor-exam" class="anchor-exam"></span>
-    예제입니다
-</h4>
-<p>...</p>
-```
-
-#### G. 모듈
-
-이것은 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 규칙이며 모듈은 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
-모듈에 제공되는 선택자는 미리 정의된 이름(사용자 정의 프리픽스)을 프리픽스로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.
+<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈은 CEE CSS 방법론의 규칙</a>이며 모듈은 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
+모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스(사용자 정의 프리픽스)로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.
 
 ```html
 <div class="mod-selectbox">

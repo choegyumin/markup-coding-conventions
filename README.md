@@ -537,56 +537,73 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 프리픽스는 사용자 정의 프리픽스와 내장 프리픽스로 구분된다.  
 사용자 정의 프리픽스는 네이밍 기본 규칙을 준수하는 선에서 마음대로 사용 가능하며, 여기서는 내장 프리픽스만을 설명한다.
 
-#### A. 테이블 셀
+#### A. 폼
 
-```<th>```, ```<td>``` 엘리먼트에 제공되는 ```id```, ```headers``` 애트리뷰트 값은 프리픽스 ```t```를 추가한다.
+```<input>```, ```<select>``` 등의 사용자 입력을 받는 폼과 관련된 엘리먼트에 제공되는 ```id```, ```name``` 애트리뷰트 값은 프리픽스 ```field```를 추가한다.
 
-```shell
-#t-price
+```html
+<label for="field-car">Select car</label>
+<select id="field-car" name="field-car">
+    <option value="volvo">Volvo</option>
+    <option value="mercedes">Mercedes</option>
+    <option value="audi">Audi</option>
+</select>
 ```
 
-#### B. 폼
+#### B. 테이블 셀
 
-폼과 관련된 ```<input>```, ```<select>``` 등의 엘리먼트에 제공되는 ```id```, ```name``` 애트리뷰트 값은 프리픽스 ```f```를 추가한다.
+```<th>```, ```<td>``` 엘리먼트에 제공되는 ```id```, ```headers``` 애트리뷰트 값은 프리픽스 ```cell```를 추가한다.
 
-```shell
-#f-email
+```html
+<table>
+    <tbody>
+        <tr>
+            <th id="cell-name">Name</th>
+            <th id="cell-email">Email</th>
+        </tr>
+        <tr>
+            <td headers="cell-name">Overtimeman</td>
+            <td headers="cell-email">overtimeman@example.com</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
-#### C. 프레임
+#### C. WAI-ARIA의 상태 및 속성
 
-```<iframe>``` 엘리먼트 또는 ```<iframe>```으로 불러올 HTML에 포함된 엘리먼트에 제공되는 선택자는 프리픽스 ```frame```을 추가한다.
+**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. 이는 **앵커의 참조 엘리먼트로 절대 사용할 수 없다.**
 
-```shell
-#frame-aside
+```html
+<div id="lnb" role="navigation" aria-labelledby="aria-lnb_heading">
+    <h2 id="aria-lnb_heading">Local Navigation Bar</h2>
+</div>
 ```
 
 #### D. 팝업과 다이얼로그
 
-팝업과 관련된 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.  
-이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 상태 효과 클래스를 사용한다.
+팝업과 관련된 엘리먼트 중 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.  
+이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 상태 효과 클래스(```.is-window```, ```is-layer```)를 사용한다.
 
-```shell
-.popup-event
-.popup-event.is-window (새 창 팝업)
-.popup-event.is-layer (레이어 팝업)
+```css
+.popup-event {}
+.popup-event.is-window {} /* 새 창 팝업 */
+.popup-event.is-layer {} /* 레이어 팝업 */
+.popup-event_header {}
 ```  
   
-**레이어 팝업은 팝업을 레이어의 형태로 띄운 것이므로 엄연히 다이얼로그와는 구분**되며, 다이얼로그는 프리픽스 ```dialog```를 추가한다.
+**레이어 팝업은 단순히 팝업을 레이어의 형태로 띄운 것이므로 다이얼로그와는 엄연히 다른 의미**이며, 다이얼로그의 레이아웃 엘리먼트는 프리픽스 ```dialog```를 추가한다.
 
-```shell
-.dialog-event
+```css
+.dialog-notice {}
+.dialog-notice_header {}
 ```
 
-#### E. WAI-ARIA의 상태 및 속성
+#### E. 프레임
 
-**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. 이는 **반드시 앵커의 참조 엘리먼트로 사용하지 않는다.**
+```<iframe>```과 관련된 엘리먼트 중 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```frame```을 추가한다.
 
-```html
-<div id="nav" role="navigation" aria-labelledby="aria-nav_heading">
-    <h2 id="aria-nav_heading">네비게이션</h2>
-    ...
-</div>
+```css
+#frame-aside {}
 ```
 
 #### F. 모듈
@@ -595,8 +612,8 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스(사용자 정의 프리픽스)로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.
 
 ```html
-<div class="mod-selectbox">
-    <button class="mod-selectbox-toggle_btn">...</button>
+<div class="mod-cbo">
+    <button class="mod-cbo-toggle_btn">Select another option</button>
 </div>
 ```
 

@@ -582,7 +582,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 #### D. 팝업과 다이얼로그
 
 팝업과 관련된 엘리먼트 중 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.  
-이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 상태 효과 클래스(```.is-window```, ```is-layer```)를 사용한다.
+이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">CEE CSS 방법론의 State Effect</a> 클래스(```.is-window```, ```is-layer```)를 사용한다.
 
 ```css
 .popup-event {}

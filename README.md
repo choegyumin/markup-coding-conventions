@@ -571,11 +571,11 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### C. WAI-ARIA의 상태 및 속성
 
-**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```aria```를 추가한다. 이는 **앵커의 참조 엘리먼트로 절대 사용할 수 없다.**
+**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```a```를 추가한다. 이는 **앵커의 참조 엘리먼트로 절대 사용할 수 없다.**
 
 ```html
-<div id="lnb" role="navigation" aria-labelledby="aria-lnb_heading">
-    <h2 id="aria-lnb_heading">Local Navigation Bar</h2>
+<div id="lnb" role="navigation" aria-labelledby="a-lnb_heading">
+    <h2 id="a-lnb_heading">Local Navigation Bar</h2>
 </div>
 ```
 

@@ -490,7 +490,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h3 id="naming-general-rules">3-1. General Rules</h3>
 
-- 이름은 영문 소문자, 숫자, 하이픈(```-```), 언더바(```_```)를 사용하여 작성한다.
+- 이름은 영문 소문자, 숫자, 하이픈(```-```), 언더스코어(```_```)를 사용하여 작성한다.
 - 이름은 일반적으로 영문 소문자로 시작하여야 한다.
 - 클래스명은 가능하다면 짧고 간결한 것이 좋으나 반드시 엘리먼트의 의미를 전부 담을 수 있도록 한다.
 - 컨텐츠가 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인 적인 측면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
@@ -519,7 +519,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     bg-exam2.gif
     bg-exam3.png
     ```
-- 임시 이미지의 경우 앞에 언더바(```_```)를 추가한다.
+- 임시 이미지의 경우 앞에 언더스코어(```_```)를 추가한다.
     ```shell
     _img-exam.png
     _bg-exam.png
@@ -571,11 +571,12 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### C. WAI-ARIA의 상태 및 속성
 
-**오로지 WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 프리픽스 ```a```를 추가한다. 이는 **앵커의 참조 엘리먼트로 절대 사용할 수 없다.**
+**WAI-ARIA의 상태 및 속성만을 위해 제공**되는 ```id``` 애트리뷰트 값은 앞에 언더스코어(```_```) 하나를 추가한다.  
+만약 **앵커의 참조 엘리먼트로 사용될 경우 언더스코어를 반드시 지우도록 한다.**
 
 ```html
-<div id="lnb" role="navigation" aria-labelledby="a-lnb_heading">
-    <h2 id="a-lnb_heading">Local Navigation Bar</h2>
+<div id="lnb" role="navigation" aria-labelledby="_lnb_heading">
+    <h2 id="_lnb_heading">Local Navigation Bar</h2>
 </div>
 ```
 

@@ -592,7 +592,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     .popup-submit {}
     .popup-submit-header {}
     ```
-- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">State Effect</a> 클래스(```.is-popup```, ```is-dialog```)를 사용한다.
+- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">State Effect</a> 클래스(```is-popup```, ```is-dialog```)를 사용한다.
     ```css
     .dialog-submit {}
     .dialog-submit.is-popup {} /* 팝업 */

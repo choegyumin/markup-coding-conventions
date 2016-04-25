@@ -524,7 +524,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     _img-exam.png
     _bg-exam.png
     ```
-- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">CEE CSS 방법론의 Effect</a> 선택자처럼 점(```.```)으로 조합한다.
+- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">Effect</a> 선택자처럼 점(```.```)으로 조합한다.
     ```shell
     bg-menu
     bg-menu--hover.jpg
@@ -582,22 +582,27 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### D. 팝업과 다이얼로그
 
-팝업과 관련된 엘리먼트 중 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.  
-이는 **팝업의 확장성을 위해 레이어 팝업에도 해당**되며, 새 창 팝업과의 구분이 필요할 경우 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">CEE CSS 방법론의 State Effect</a> 클래스(```.is-window```, ```is-layer```)를 사용한다.
-
-```css
-.popup-event {}
-.popup-event.is-window {} /* 새 창 팝업 */
-.popup-event.is-layer {} /* 레이어 팝업 */
-.popup-event_header {}
-```  
-  
-**레이어 팝업은 단순히 팝업을 레이어의 형태로 띄운 것이므로 다이얼로그와는 엄연히 다른 의미**이며, 다이얼로그의 레이아웃 엘리먼트는 프리픽스 ```dialog```를 추가한다.
-
-```css
-.dialog-notice {}
-.dialog-notice_header {}
-```
+- 팝업의 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.
+    ```css
+    .popup-event {}
+    .popup-event-header {}
+    ```
+- 다이얼로그의 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```dialog```를 추가한다.
+    ```css
+    .popup-submit {}
+    .popup-submit-header {}
+    ```
+- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">State Effect</a> 클래스(```.is-popup```, ```is-dialog```)를 사용한다.
+    ```css
+    .dialog-submit {}
+    .dialog-submit.is-popup {} /* 팝업 */
+    .dialog-submit.is-dialog {} /* 다이얼로그 */
+    .dialog-submit-header {}
+    ```
+- 토스트(잠깐 나타났다 사라지는 작은 메시지)는 프리픽스 ```toast```를 추가한다.
+    ```css
+    .toast-notice {}
+    ```
 
 #### E. 프레임
 
@@ -609,7 +614,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### F. 모듈
 
-<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈은 CEE CSS 방법론의 규칙</a>이며 모듈은 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
+<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈</a>은 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
 모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스(사용자 정의 프리픽스)로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.
 
 ```html

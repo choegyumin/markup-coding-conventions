@@ -614,7 +614,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### F. 모듈
 
-<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈</a>은 재사용이 가능한 아주 작은 단위의 UI를 뜻한다.  
+<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈</a>은 재사용이 가능한 아주 작은 단위의 UI를 뜻하며, 공유 및 재사용을 위한 스타일 세트로 사용된다.  
 모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스(사용자 정의 프리픽스)로 사용하며, 없다면 프리픽스 ```mod```를 추가한다.
 
 ```html

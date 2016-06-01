@@ -23,8 +23,9 @@
     - <a href="#css-import">2-5. Import</a>
     - <a href="#css-nesting">2-6. Nesting</a>
     - <a href="#css-media-query">2-7. Media Query</a>
-    - <a href="#css-prefix">2-8. Prefix</a>
-    - <a href="#css-comments">2-9. Comments</a>
+    - <a href="#css-resets">2-8. Resets</a>
+    - <a href="#css-prefix">2-9. Prefix</a>
+    - <a href="#css-comments">2-10. Comments</a>
 - <a href="#naming">3. Naming</a>
     - <a href="#naming-general-rules">3-1. General Rules</a>
     - <a href="#naming-selectors">3-2. Selectors</a>
@@ -376,7 +377,12 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 }
 ```
 
-<h3 id="css-prefix">2-8. Prefix</h3>
+<h3 id="css-resets">2-8. Resets</h3>
+
+CSS 초기화 스타일은 서비스에 맞게 정의한다.  
+단 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 사용하는 경우 스타일 초기화는 하지 않는다.
+
+<h3 id="css-prefix">2-9. Prefix</h3>
 
 브라우저별 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언한다. 
 
@@ -393,7 +399,7 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 }
 ```
 
-<h3 id="css-comments">2-9. Comments</h3>
+<h3 id="css-comments">2-10. Comments</h3>
 
 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
 

@@ -321,7 +321,6 @@ CSS 코드의 작성 규칙을 설명한다.
     - zoom
     - visibility
     - position
-    - z-index
     - float
     - clear
     - box-sizing
@@ -339,10 +338,10 @@ CSS 코드의 작성 규칙을 설명한다.
 
 **CSS에서 기본으로 제공하는 ```@import```는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용하도록 한다.
 
-- 하나의 CSS 파일만 작성
-    - 개발도구를 사용하여 CSS 파일을 하나로 합침
-    - CSS 전처리기에서 제공하는 import 기능을 사용
 - 여러개의 ```<link>``` 엘리먼트를 사용
+- 하나의 CSS 파일로 작성
+    - 도구를 이용하여 CSS 파일을 하나로 합침
+    - SASS나 Stylus 등의 CSS 전처리기에서 제공하는 ```@import```를 사용
 
 ```html
 <!-- Too Bad -->

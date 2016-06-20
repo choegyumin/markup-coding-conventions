@@ -54,9 +54,9 @@
     <dt>프리픽스(Prefix)</dt>
     <dd>네이밍 시 사용되는 접두사를 의미한다.</dd>
     <dt>컴포넌트(Component)</dt>
-    <dd>온전한 기능을 가지면서 재사용이 가능한 컨텐츠 단위의 엘리먼트 모음을 의미한다. 사이트의 메뉴, 쇼핑몰의 상품 목록, 언론 사이트의 댓글 폼 등을 예로 들 수 있다.</dd>
+    <dd>온전한 기능을 가진 컨텐츠 단위의 UI 구성요소를 의미한다. 사이트의 메뉴, 쇼핑몰의 상품 목록, 언론 사이트의 댓글 폼 등을 예로 들 수 있다.</dd>
     <dt>모듈(Module)</dt>
-    <dd>컴포넌트 내에 삽입할 수 있는 미리 정의된 아주 작은 단위의 UI를 의미한다. 예를 들어 텍스트 박스, 셀렉트 박스, 버튼 등이 있다.</dd>
+    <dd>반복적이며 재사용이 가능한 작은 단위의 UI 구성요소를 의미한다. 이는 컴포넌트보다 작은 단위이다. 예를 들어 텍스트 박스, 셀렉트 박스, 버튼 등이 있다.</dd>
 </dl>
 
 
@@ -492,178 +492,217 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *ITCSS 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>*를 사용한다.** (BEM + ITCSS = BEMIT)
+> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *ITCSS 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>*를 기본으로 한다.** (BEM + ITCSS = BEMIT)
 >
-> *ITCSS 참고 문서*
+> *참고 문서*
 > - <a target="_blank" href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">https:&#47;&#47;speakerdeck.com&#47;dafed&#47;managing-css-projects-with-itcss</a>
 > - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">https:&#47;&#47;willianjusten.com.br&#47;organizando-seu-css-com-itcss&#47;</a>
+> - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">http:$#47;$#47;csswizardry.com$#47;2015$#47;03$#47;more-transparent-ui-code-with-namespaces$#47;</a>
 
-- **아이디는 스타일 제어를 위한 선택자로 사용하지 않는다.**
+- **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
   용량 축소의 문제로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
 - 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인적인 면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
 
-#### A. General
+#### A. Naming
 
 > - <a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM Rules</a>
 
-Syntax: ```[<namespace->]<block-name>[<__element-name>][<--modifier-name>]```
+Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
 
 ```html
-<form class="form form--theme-xmas form--simple">
-    <input class="form__input" type="text" />
-    <input class="form__submit form__submit--disabled" type="submit" />
-</form>
+<fieldset class="fieldset fieldset--simple">
+    <input class="fieldset__input" type="text">
+    <input class="fieldset__btn" type="reset">
+    <input class="fieldset__btn fieldset__btn--submit is-disabled" type="submit">
+</fieldset>
 ```
 
 ```css
-.form { }
-.form--theme-xmas { }
-.form--simple { }
-.form__input { }
-.form__submit { }
-.form__submit--disabled { }
+.fieldset { }
+.fieldset--simple { }
+.fieldset__input { }
+.fotn__btn {}
+.fieldset__btn--submit { }
+.fieldset__btn--submit.is-disabled { }
 ```
 
-```sass
-@import "settings/colors";
-@import "settings/global";
+#### B. Architecture
 
-@import "tools/mixins";
+##### a. Settings
 
-@import "normalize/scss/normalize.scss";
-@import "generic/reset";
-@import "generic/box-sizing";
-@import "generic/shared";
-
-@import "base/headings";
-@import "base/hr";
-@import "base/forms";
-@import "base/links";
-@import "base/lists";
-@import "base/page";
-@import "base/quotes";
-@import "base/tables";
-
-@import "objects/animations";
-@import "objects/drawer";
-@import "objects/list-bare";
-@import "objects/media";
-@import "objects/layout";
-@import "objects/overlays";
-
-@import "components/404";
-@import "components/about";
-@import "components/archive";
-@import "components/avatars";
-@import "components/blog-post";
-@import "components/buttons";
-@import "components/callout";
-@import "components/clients";
-@import "components/comments";
-@import "components/contact";
-@import "components/cta";
-@import "components/faq";
-@import "components/features";
-@import "components/footer";
-@import "components/forms";
-@import "components/header";
-@import "components/headings";
-@import "components/hero";
-@import "components/jobs";
-@import "components/legal-nav";
-@import "components/main-cta";
-@import "components/main-nav";
-@import "components/newsletter";
-@import "components/page-title";
-@import "components/pagination";
-@import "components/post-teaser";
-@import "components/process";
-@import "components/quote-banner";
-@import "components/offices";
-@import "components/sec-nav";
-@import "components/services";
-@import "components/share-buttons";
-@import "components/social-media";
-@import "components/team";
-@import "components/testimonials";
-@import "components/topbar";
-@import "components/reasons";
-@import "components/wordpress";
-@import "components/work-list";
-@import "components/work-detail";
-
-@import "vendor/prism";
-
-@import "trumps/clearfix";
-@import "trumps/utilities";
-
-@import "healthcheck";
-```
-
-#### B. Settings
-
-Global variables config switches (colours, screen sizes)
+전역 변수를 작성한다.
 
 ```sass
 $breakpoints: (
-		'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
-		'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
-		'tablet_landscape': 'screen and (min-width: 1024px)'
+        'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
+        'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
+        'tablet_landscape': 'screen and (min-width: 1024px)'
 );
 ```
 
-#### C. Tools
+##### b. Tools
 
-Functions and mixins
+CSS 전처리기를 사용할 경우 Function과 Mixin을 작성한다.
 
 ```sass
 $default-breakpoint: root;
 $current-breakpoint: $default-breakpoint;
 @mixin media($breakpoint) {
-	$value: map-get($breakpoints, $breakpoint);
-	@if $value != null {
-		$current-breakpoint: $breakpoint !global;
-		@media #{$value} {
-			@content;
-		}
-		$current-breakpoint: $default-breakpoint !global;
-	}
-	@else {
-		@warn "Invalid breakpoint `#{$breakpoint}`.";
-	}
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value != null {
+        $current-breakpoint: $breakpoint !global;
+        @media #{$value} {
+            @content;
+        }
+        $current-breakpoint: $default-breakpoint !global;
+    }
+    @else {
+        @warn "Invalid breakpoint `#{$breakpoint}`.";
+    }
 }
 ```
 
-#### D. Generic
+##### c. Generic
 
-Ground-zero styles (normalize/reset.css)
+CSS 초기화 또는 normalize.css 등의 초기 스타일을 지정한다.
 
 ```sass
-* {
-    box-sizing: border-box;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {}
+html,
+body {}
+```
+
+##### d. Base
+
+클래스 없이 태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성한다.
+
+```sass
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='image'] {}
+```
+
+##### e. Objects
+
+Namespace: `o`
+
+반복적이며 재사용이 가능한 디자인 패턴을 작성한다.
+블로그 댓글, 트윗 등의 미디어 객체 또는 모듈 등이 해당된다.
+
+```sass
+.o-combobox {}
+.o-combobox__item {}
+.o-combobox.is-expanded {}
+```
+
+##### f. Layouts
+
+Namespace: `l`
+
+레이아웃의 스타일을 작성한다.
+이는 *ITCSS*의 규칙에 포함되지 않으며, `Objects` 규칙에서 파생되었다.
+
+```sass
+.o-header {}
+.o-header__item {}
+.o-header--fixed {}
+```
+
+##### g. Components
+
+Namespace: `c`
+
+컴포넌트의 스타일을 작성한다.
+
+```sass
+.c-modal {}
+.c-modal__title {}
+.c-modal--gallery {}
+```
+
+##### h. Themes - optional
+
+Namespace: `t`
+
+테마 스타일을 작성한다. 이 클래스는 반드시 `body` 엘리먼트에 추가해야 하며, 테마 스타일만 별도의 CSS 파일로 분리하여 관리하는 방법도 있다.
+이는 `Trumps` 규칙에서 파생되었다.
+
+```sass
+.c-btn {
+    .t-light & {}
 }
 ```
 
-#### E. Base
+##### h. Trumps(Utilities)
 
-Unclassed HTML elements (type selectors)
+Namespace: `u`
 
-#### F. Objects
+스타일을 오버라이드하거나 전역에 사용할 수 있는 헬퍼를 작성한다.
 
-Unstyled design patterns (media object)
+```sass
+.u-blind {}
+.u-clearfix {}
+```
 
-#### G. Components
+###### `@import` example with SASS
 
-Styled objects, chunks of UI
+```sass
+@import "settings/_breakpoints";
+@import "settings/_colors";
 
-#### H. Theme(optional)
+@import "tools/_functions";
+@import "tools/_mixins";
 
-Themed components, used for multiple sites with the same layout and components. Can be utilised for multi-site Magento setups.
+@import "generic/_normalize.scss";
 
-#### H. Trumps
+@import "base/_forms";
+@import "base/_headings";
+@import "base/_hr";
+@import "base/_links";
+@import "base/_lists";
+@import "base/_page";
+@import "base/_quotes";
+@import "base/_tables";
 
-Helpers and overrides, e.g. .float-left { float:left !important;}
+@import "objects/_combobox";
+@import "objects/_overlays";
+@import "objects/_toggle-button";
+
+@import "layouts/_aside";
+@import "layouts/_container";
+@import "layouts/_drawer";
+@import "layouts/_footer";
+@import "layouts/_header";
+@import "layouts/_wrapper";
+_
+@import "components/_about";
+@import "components/_ads-banner";
+@import "components/_archive";
+@import "components/_comments";
+@import "components/_contact";
+@import "components/_error";
+@import "components/_faq";
+@import "components/_page-title";
+@import "components/_pagination";
+@import "components/_post";
+@import "components/_process";
+@import "components/_share-menu";
+
+@import "trumps/_blind";
+@import "trumps/_clearfix";
+```
 
 <h3 id="naming-files">3-2. Files</h3>
 
@@ -673,7 +712,7 @@ HTML 파일은 페이지명을 토대로 네이밍한다.
 
 #### B. CSS
 
-CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할 경우 ```style.css```로 네이밍한다.
+CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할 경우 `style.css`로 네이밍한다.
 
 #### C. 이미지
 
@@ -682,18 +721,15 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     bg-exam.jpg
     bg-exam2.gif
     bg-exam3.png
-    ```
-- 임시 이미지의 경우 앞에 언더스코어(```_```)를 추가한다.
-    ```shell
-    _img-exam.png
-    _bg-exam.png
-    ```
-- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a target="_blank" href="http://ceecss.github.io/#naming_rules-effect">Effect</a> 선택자처럼 점(```.```)으로 조합한다.
-    ```shell
     bg-menu
     bg-menu--hover.jpg
     bg-menu.type-compact--hover.jpg
-    bg-menu.type-compact.is-scrolled.jpg
+    bg-menu.type-compact--scrolled.jpg
+    ```
+- 임시 이미지의 경우 앞에 언더스코어(`_`)를 추가한다.
+    ```shell
+    _img-exam.png
+    _bg-exam.png
     ```
 
 <h3 id="naming-prefix">3-3. Prefix</h3>
@@ -703,7 +739,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 > 여기서 얘기하는 관계 애트리뷰트(Relationship Attributes)란,  
 > 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.
 
-엘리먼트의 관계를 설명하기 위해 제공되는 ```id``` 애트리뷰트 값은 앞에 언더스코어(```_```) 하나를 추가한다.  
+엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다.
 **앵커의 참조 엘리먼트로 사용될 경우 가급적 언더스코어를 지우도록 한다.**
 
 ```html
@@ -714,7 +750,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### B. 폼 애트리뷰트
 
-```<input>```, ```<select>``` 등의 사용자 입력을 받는 폼과 관련된 엘리먼트에 제공되는 ```id```, ```name``` 애트리뷰트 값은 프리픽스 ```field```를 추가한다.  
+`<input>`, `<select>` 등의 사용자 입력을 받는 폼과 관련된 엘리먼트에 제공되는 `id`, `name` 애트리뷰트 값은 프리픽스 `field`를 추가한다.
 **엘리먼트가 데이터를 주고받는 용도로 사용되지 않을 경우 *관계 애트리뷰트*의 규칙을 따른다.**
 
 ```html
@@ -728,7 +764,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 #### B. 테이블 셀 애트리뷰트
 
-```<th>```, ```<td>``` 엘리먼트에 제공되는 ```id```, ```headers``` 애트리뷰트 값은 프리픽스 ```cell```를 추가한다.
+`<th>`, `<td>` 엘리먼트에 제공되는 `id`, `headers` 애트리뷰트 값은 프리픽스 `cell`를 추가한다.
 
 ```html
 <table>
@@ -743,38 +779,6 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
         </tr>
     </tbody>
 </table>
-```
-
-#### D. 팝업과 다이얼로그
-
-- 팝업의 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```popup```를 추가한다.
-    ```css
-    .popup-event {}
-    .popup-event-header {}
-    ```
-- 다이얼로그의 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```dialog```를 추가한다.
-    ```css
-    .popup-submit {}
-    .popup-submit-header {}
-    ```
-- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 @@@@클래스(```is-popup```, ```is-dialog```)를 사용한다.
-    ```css
-    .dialog-submit {}
-    .dialog-submit.is-popup {} /* 팝업 */
-    .dialog-submit.is-dialog {} /* 다이얼로그 */
-    .dialog-submit-header {}
-    ```
-- 토스트(잠깐 나타났다 사라지는 작은 메시지)는 프리픽스 ```toast```를 추가한다.
-    ```css
-    .toast-notice {}
-    ```
-
-#### E. 프레임
-
-```<iframe>```과 관련된 엘리먼트 중 레이아웃 엘리먼트에 제공되는 선택자는 프리픽스 ```frame```을 추가한다.
-
-```css
-#frame-aside {}
 ```
 
 

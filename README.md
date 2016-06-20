@@ -27,10 +27,9 @@
     - <a href="#css-prefix">2-9. Prefix</a>
     - <a href="#css-comments">2-10. Comments</a>
 - <a href="#naming">3. Naming</a>
-    - <a href="#naming-general-rules">3-1. General Rules</a>
-    - <a href="#naming-selectors">3-2. Selectors</a>
-    - <a href="#naming-files">3-3. Files</a>
-    - <a href="#naming-prefix">3-4. Prefix</a>
+    - <a href="#naming-selectors">3-1. Selectors</a>
+    - <a href="#naming-files">3-2. Files</a>
+    - <a href="#naming-prefix">3-3. Prefix</a>
 
 <a href="#changelogs">Changelogs</a>  
 <a href="#license">License</a>
@@ -55,7 +54,7 @@
     <dt>프리픽스(Prefix)</dt>
     <dd>네이밍 시 사용되는 접두사를 의미한다.</dd>
     <dt>컴포넌트(Component)</dt>
-    <dd>하나의 독립된 컨텐츠로써 온전한 기능을 가진 큰 단위의 엘리먼트 모음을 의미한다. 사이트의 메뉴, 쇼핑몰의 상품 목록, 언론 사이트의 댓글 폼 등을 예로 들 수 있다.</dd>
+    <dd>온전한 기능을 가지면서 재사용이 가능한 컨텐츠 단위의 엘리먼트 모음을 의미한다. 사이트의 메뉴, 쇼핑몰의 상품 목록, 언론 사이트의 댓글 폼 등을 예로 들 수 있다.</dd>
     <dt>모듈(Module)</dt>
     <dd>컴포넌트 내에 삽입할 수 있는 미리 정의된 아주 작은 단위의 UI를 의미한다. 예를 들어 텍스트 박스, 셀렉트 박스, 버튼 등이 있다.</dd>
 </dl>
@@ -105,7 +104,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 <h3 id="html-elements">1-5. Elements</h3>
 
-- 렌더링 엔진 최적화를 위해 스타일 또는 스크립트 제어가 필요한 **모든 엘리먼트에는 ID 또는 클래스를 부여**하도록 한다.
+- 렌더링 엔진 최적화를 위해 스타일 또는 스크립트 제어가 필요한 **모든 엘리먼트에는 아이디 또는 클래스를 부여**하도록 한다.
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
@@ -262,7 +261,8 @@ CSS 코드의 작성 규칙을 설명한다.
 <h3 id="css-selectors">2-3. Selectors</h3>
 
 - **선택자는 최대 3개까지만 종속한다. (아예 종속하지 않는 것을 권장)**
-- **렌더링 성능 최적화를 위해 ID &middot; 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**  
+- **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
+- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**  
 - 여러개의 선택자를 사용하는 경우 선택자 사이에 개행을 추가한다.
     ```css
     /* Bad */
@@ -490,23 +490,182 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 선택자, 이미지, 파일 및 폴더의 네이밍 규칙을 설명한다.
 
->**이 문서는 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>의 네이밍 규칙을 따른다.**  
-> <a href="http://getbem.com/" target="_blank">BEM 방법론</a>을 사용하여도 상관없으나 이 문서는 CEE CSS를 기준으로 설명한다.
+<h3 id="naming-selectors">3-1. Selectors</h3>
 
-<h3 id="naming-general-rules">3-1. General Rules</h3>
+> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *ITCSS 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>*를 사용한다.** (BEM + ITCSS = BEMIT)
+>
+> *ITCSS 참고 문서*
+> - <a target="_blank" href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">https:&#47;&#47;speakerdeck.com&#47;dafed&#47;managing-css-projects-with-itcss</a>
+> - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">https:&#47;&#47;willianjusten.com.br&#47;organizando-seu-css-com-itcss&#47;</a>
 
-- 이름은 영문 소문자, 숫자, 하이픈(```-```), 언더스코어(```_```)를 사용하여 작성한다.
-- 이름은 일반적으로 영문 소문자로 시작하여야 한다.
-- 클래스명은 가능하다면 짧고 간결한 것이 좋으나 반드시 엘리먼트의 의미를 전부 담을 수 있도록 한다.
-- 컨텐츠가 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인 적인 측면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
-- 네이밍을 역할별로 구분했을 때 '프리픽스', '구조', '엘리먼트', '효과'로 나뉘며, 필요에 따라 사용하며, 그 중 구조는 '레이아웃', '컴포넌트', 모듈'을 말한다.
-- 일반적으로 구조는 서로 겹치거나 조합해서는 안되며, 레이아웃 내에 컴포넌트와 모듈, 컴포넌트 내에 모듈을 삽입하는 것만 허용된다.
+- **아이디는 스타일 제어를 위한 선택자로 사용하지 않는다.**
+- 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
+  용량 축소의 문제로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
+- 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인적인 면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
 
-<h3 id="naming-selectors">3-2. Selectors</h3>
+#### A. General
 
-선택자 네이밍은 <a href="http://ceecss.github.io/" target="_blank">CEE CSS 방법론</a>을 참고한다.
+> - <a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM Rules</a>
 
-<h3 id="naming-files">3-3. Files</h3>
+Syntax: ```[<namespace->]<block-name>[<__element-name>][<--modifier-name>]```
+
+```html
+<form class="form form--theme-xmas form--simple">
+    <input class="form__input" type="text" />
+    <input class="form__submit form__submit--disabled" type="submit" />
+</form>
+```
+
+```css
+.form { }
+.form--theme-xmas { }
+.form--simple { }
+.form__input { }
+.form__submit { }
+.form__submit--disabled { }
+```
+
+```sass
+@import "settings/colors";
+@import "settings/global";
+
+@import "tools/mixins";
+
+@import "normalize/scss/normalize.scss";
+@import "generic/reset";
+@import "generic/box-sizing";
+@import "generic/shared";
+
+@import "base/headings";
+@import "base/hr";
+@import "base/forms";
+@import "base/links";
+@import "base/lists";
+@import "base/page";
+@import "base/quotes";
+@import "base/tables";
+
+@import "objects/animations";
+@import "objects/drawer";
+@import "objects/list-bare";
+@import "objects/media";
+@import "objects/layout";
+@import "objects/overlays";
+
+@import "components/404";
+@import "components/about";
+@import "components/archive";
+@import "components/avatars";
+@import "components/blog-post";
+@import "components/buttons";
+@import "components/callout";
+@import "components/clients";
+@import "components/comments";
+@import "components/contact";
+@import "components/cta";
+@import "components/faq";
+@import "components/features";
+@import "components/footer";
+@import "components/forms";
+@import "components/header";
+@import "components/headings";
+@import "components/hero";
+@import "components/jobs";
+@import "components/legal-nav";
+@import "components/main-cta";
+@import "components/main-nav";
+@import "components/newsletter";
+@import "components/page-title";
+@import "components/pagination";
+@import "components/post-teaser";
+@import "components/process";
+@import "components/quote-banner";
+@import "components/offices";
+@import "components/sec-nav";
+@import "components/services";
+@import "components/share-buttons";
+@import "components/social-media";
+@import "components/team";
+@import "components/testimonials";
+@import "components/topbar";
+@import "components/reasons";
+@import "components/wordpress";
+@import "components/work-list";
+@import "components/work-detail";
+
+@import "vendor/prism";
+
+@import "trumps/clearfix";
+@import "trumps/utilities";
+
+@import "healthcheck";
+```
+
+#### B. Settings
+
+Global variables config switches (colours, screen sizes)
+
+```sass
+$breakpoints: (
+		'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
+		'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
+		'tablet_landscape': 'screen and (min-width: 1024px)'
+);
+```
+
+#### C. Tools
+
+Functions and mixins
+
+```sass
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
+@mixin media($breakpoint) {
+	$value: map-get($breakpoints, $breakpoint);
+	@if $value != null {
+		$current-breakpoint: $breakpoint !global;
+		@media #{$value} {
+			@content;
+		}
+		$current-breakpoint: $default-breakpoint !global;
+	}
+	@else {
+		@warn "Invalid breakpoint `#{$breakpoint}`.";
+	}
+}
+```
+
+#### D. Generic
+
+Ground-zero styles (normalize/reset.css)
+
+```sass
+* {
+    box-sizing: border-box;
+}
+```
+
+#### E. Base
+
+Unclassed HTML elements (type selectors)
+
+#### F. Objects
+
+Unstyled design patterns (media object)
+
+#### G. Components
+
+Styled objects, chunks of UI
+
+#### H. Theme(optional)
+
+Themed components, used for multiple sites with the same layout and components. Can be utilised for multi-site Magento setups.
+
+#### H. Trumps
+
+Helpers and overrides, e.g. .float-left { float:left !important;}
+
+<h3 id="naming-files">3-2. Files</h3>
 
 #### A. HTML
 
@@ -529,7 +688,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     _img-exam.png
     _bg-exam.png
     ```
-- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">Effect</a> 선택자처럼 점(```.```)으로 조합한다.
+- 가상 엘리먼트를 위한 이미지는 두개의 하이픈(```--```)으로 조합하며, 엘리먼트의 효과에 따른 이미지는 <a target="_blank" href="http://ceecss.github.io/#naming_rules-effect">Effect</a> 선택자처럼 점(```.```)으로 조합한다.
     ```shell
     bg-menu
     bg-menu--hover.jpg
@@ -537,7 +696,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     bg-menu.type-compact.is-scrolled.jpg
     ```
 
-<h3 id="naming-prefix">3-4. Prefix</h3>
+<h3 id="naming-prefix">3-3. Prefix</h3>
 
 #### A. 관계 애트리뷰트
 
@@ -598,7 +757,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     .popup-submit {}
     .popup-submit-header {}
     ```
-- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 <a href="http://ceecss.github.io/#naming_rules-effect" target="_blank">State Effect</a> 클래스(```is-popup```, ```is-dialog```)를 사용한다.
+- 엘리먼트가 팝업 또는 다이얼로그로 둘 다 사용될 수 있는 경우 다이얼로그의 프리픽스를 사용하며, 팝업과 다이얼로그의 구분은 @@@@클래스(```is-popup```, ```is-dialog```)를 사용한다.
     ```css
     .dialog-submit {}
     .dialog-submit.is-popup {} /* 팝업 */
@@ -616,17 +775,6 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 ```css
 #frame-aside {}
-```
-
-#### F. 모듈
-
-<a href="http://ceecss.github.io/#naming_rules-module" target="_blank">모듈</a>은 재사용이 가능한 아주 작은 단위의 UI를 뜻하며, 공유 및 재사용을 위한 스타일 세트로 사용된다.  
-모듈에 제공되는 선택자는 미리 정의된 이름을 프리픽스로 사용하며, 없다면 ```mod```를 프리픽스로 추가한다.
-
-```html
-<div class="mod-cbo">
-    <button class="mod-cbo-toggle_btn">Select another option</button>
-</div>
 ```
 
 
@@ -650,6 +798,6 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 <h2 id="license">License</h2>
 
-이 저작물은 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="vertical-align:top">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
+이 저작물은 <a rel="license" target="ccl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="vertical-align:top">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
 
 <img alt="" title="" style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />

@@ -512,6 +512,8 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
 
+BEM의 네이밍 문법에 ITCSS의 네임스페이스가 추가되었다.
+
 ```html
 <fieldset class="fieldset fieldset--simple">
     <input class="fieldset__input" type="text">
@@ -663,12 +665,12 @@ Namespace: `o`
 Namespace: `l`
 
 레이아웃의 스타일을 작성한다.  
-이는 *ITCSS*의 규칙에 포함되지 않으며, `Objects` 규칙에서 파생되었다.
+이는 `Objects` 계층에 포함되어 있었으나 용도를 더 명확히 구분하기 위해 분리하였다.
 
 ```sass
-.o-header {}
-.o-header__item {}
-.o-header--fixed {}
+.l-header {}
+.l-header__item {}
+.l-header--fixed {}
 ```
 
 ##### g. Components
@@ -695,15 +697,15 @@ Namespace: `t`
 엘리먼트와 함께 작성한다.
 
 ```sass
-.c-btn {
+.c-modal {
     .t-light & {}
 }
 ```
 
 ```sass
-.c-btn {}
+.c-modal {}
 .t-light {
-    .c-btn {}
+    .c-modal {}
 }
 ```
 

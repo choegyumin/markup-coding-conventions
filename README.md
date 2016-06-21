@@ -192,7 +192,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 - 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
     ```html
-    <input type="password" class="input" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
+    <input class="input" type="password" name="field-pw" id="field-pw" title="비밀번호" style="width:100px" disabled>
     ```
 - HTML5에서 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
 
@@ -265,19 +265,9 @@ CSS 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-selectors">2-3. Selectors</h3>
 
-- **선택자는 최대 3개까지만 종속한다. (아예 종속하지 않는 것을 권장)**
+- **선택자는 가급적 종속하지 않는다.**
 - **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
-- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**  
-- 여러개의 선택자를 사용하는 경우 선택자 사이에 개행을 추가한다.
-    ```css
-    /* Bad */
-    .one, .two, .three {}
-    
-    /* Good */
-    .one,
-    .two,
-    .three {}
-    ```
+- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.** 
 
 <dl>
     <dt>참고 자료</dt>
@@ -345,7 +335,7 @@ CSS 코드의 작성 규칙을 설명한다.
 
 - 여러개의 `<link>` 엘리먼트를 사용
 - 하나의 CSS 파일로 작성
-    - 도구를 이용하여 CSS 파일을 하나로 합침
+    - 태스크러너 등의 도구를 이용하여 CSS 파일을 하나로 합침
     - SASS나 Stylus 등의 CSS 전처리기에서 제공하는 `@import`를 사용
 
 ```html

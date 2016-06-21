@@ -492,16 +492,16 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >
 > *참고 문서*
 > - BEM
->   - https://en.bem.info/
->   - http://getbem.com/
+>   - <a target="_blank" href="https://en.bem.info/">BEM</a>
+>   - <a target="_blank" href="http://getbem.com/">Get BEM</a>
 > - ITCSS
->   - http://csswizardry.net/talks/2014/11/itcss-dafed.pdf
->   - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
->   - https://willianjusten.com.br/organizando-seu-css-com-itcss/
+>   - <a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">itcss-dafed.pdf</a>
+>   - <a target="_blank" href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/">ITCSS: SCALABLE AND MAINTAINABLE CSS ARCHITECTURE</a>
+>   - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">https://willianjusten.com.br/organizando-seu-css-com-itcss/</a>
 > - BEMIT
->   - http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
->   - http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
->   - http://www.jamesturneronline.net/blog/bemit-naming-convention.html
+>   - <a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a>
+>   - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a>
+>   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
 - **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  

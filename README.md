@@ -69,9 +69,9 @@ HTML 코드의 작성 규칙을 설명한다.
 
 - 들여쓰기는 4개의 공백 문자를 가지는 하드탭(<kbd>tab</kbd>)을 사용한다.
 - 엘리먼트 명과 애트리뷰트 명은 영문 소문자를 사용한다.
-- 모든 애트리뷰트값은 큰 따옴표(```"```)를 사용하여 묶는다.
-- 단일 태그 엘리먼트는 슬래시(```/```)를 사용하지 않는다.
-- 닫는 태그가 선택적인 경우에도 생략하지 않는다. (ex: ```</li>```, ```</body>```)
+- 모든 애트리뷰트값은 큰 따옴표(`"`)를 사용하여 감싼다.
+- 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 않는다.
+- 닫는 태그가 선택적인 경우에도 생략하지 않는다. (ex: `</li>`, `</body>`)
 
 <h3 id="html-doctype">1-2. Doctype</h3>
 
@@ -83,7 +83,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 <h3 id="html-encoding">1-3. Encoding</h3>
 
-문서의 ```Charset```은 일반적으로 ```UTF-8```으로 선언하며 ```<head>``` 엘리먼트 내에서 최초의 엘리먼트로 작성한다.
+문서의 `Charset`은 일반적으로 `UTF-8`으로 선언하며 `<head>` 엘리먼트 내에서 최초의 엘리먼트로 작성한다.
 
 ```html
 <meta charset="utf-8">
@@ -91,24 +91,29 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 <h3 id="html-metadata">1-4. Metadata</h3>
 
-- 호환성을 위해 IE의 문서모드를 엣지모드를 선언하여 최신 버전의 IE로 렌더링되도록 하며 ```Charset``` 다음으로 선언한다.
+- IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 최신 버전의 IE로 렌더링되도록 한다.
     ```html
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     ```
-- ```<title>```은 현재 문서의 내용에 알맞은 제목을 가지며 IE 호환성 코드 다음으로 선언한다.
-- 아래의 ```<meta>``` 엘리먼트를 추가하여 브라우저가 전화번호 또는 이메일, 주소 포맷을 가진 문자를 감지하지 못하도록 한다.
+- 아래의 `<meta>` 엘리먼트를 추가하여 브라우저가 전화번호 또는 이메일, 주소 포맷을 가진 문자를 감지하지 못하도록 한다.
     ```html
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     ```
-- 필요에 따라 ```keywords```, ```description``` 등의 다른 ```<meta>```를 추가하도록 한다.
+- 필요에 따라 `keywords`, `description` 등의 다른 `<meta>` 엘리먼트를 추가하도록 한다.
+- `<head>` 엘리먼트의 자식 엘리먼트 작성 순서는 아래와 같다.
+    1. Charset
+    2. X-UA-Compatible
+    3. Viewport
+    4. Title
+    5. ..
 
 <h3 id="html-elements">1-5. Elements</h3>
 
-- 렌더링 엔진 최적화를 위해 스타일 또는 스크립트 제어가 필요한 **모든 엘리먼트에는 아이디 또는 클래스를 부여**하도록 한다.
+- 렌더링 엔진 최적화를 위해 **스타일 또는 스크립트 제어가 필요한 모든 엘리먼트에는 클래스를 부여**하도록 한다.
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
-자식 엘리먼트로 사용할 수 있는 태그가 한정적인 엘리먼트(```<table>```, ```<ul>```, ..) 또는 자기 자신의 스타일 제어에 한계를 가진 엘리먼트(```<img>```, ```<select>```, ..)는 의미없는 엘리먼트로 감싸는 것을 권장한다. (이 외의 불필요한 엘리먼트 상속은 피하도록 함)
+자식 엘리먼트로 사용할 수 있는 태그가 한정적인 엘리먼트(`<table>`, `<ul>`, ..) 또는 자기 자신의 스타일 제어에 한계를 가진 엘리먼트(`<img>`, `<select>`, ..)는 의미없는 엘리먼트로 감싸는 것을 권장한다. (이 외의 불필요한 엘리먼트 상속은 피하도록 함)
 
 ```html
 <!-- Not Bad -->
@@ -122,7 +127,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### B. 테이블 제목
 
-```<caption>``` 엘리먼트를 숨김 처리할 때는 의미없는 엘리먼트로 감싸서 숨기도록 한다.
+`<caption>` 엘리먼트를 숨김 처리할 때는 의미없는 엘리먼트로 감싸서 숨기도록 한다.
 
 ```html
 <!-- Bad -->
@@ -141,7 +146,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### C. 테이블 그룹
 
-```<table>``` 엘리먼트를 제작 시 ```<thead>```, ```<tfoot>```의 유무와 관계없이 ```<tbody>```를 사용하도록 한다.
+`<table>` 엘리먼트를 제작 시 `<thead>`, `<tfoot>`의 유무와 관계없이 `<tbody>`를 사용하도록 한다.
 
 ```html
 <!-- Bad -->
@@ -159,7 +164,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### D. 입력 폼
 
-회원가입 등의 문서 작성 폼에 사용되는 ```<input>```, ```<select>```, ```<textarea>``` 엘리먼트는 서로 너비 값이 상이하다면 인라인 스타일로 제어한다.
+회원가입 등의 문서 작성 폼에 사용되는 `<input>`, `<select>`, `<textarea>` 엘리먼트는 서로 너비 값이 상이하다면 인라인 스타일로 제어한다.
 
 ```html
 <!-- Bad -->
@@ -173,7 +178,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### E. 버튼
 
-```<button>``` 엘리먼트는 ```type``` 애트리뷰트가 선언되지 않으면 ```<form>``` 엘리먼트에서 의도치 않은 액션을 발생시키므로 기본값으로 ```type="button"```을 선언한다.
+`<button>` 엘리먼트는 `type` 애트리뷰트가 선언되지 않으면 `<form>` 엘리먼트에서 의도치 않은 액션을 발생시키므로 기본값으로 `type="button"`을 선언한다.
 
 ```html
 <!-- Bad -->
@@ -189,13 +194,13 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
     ```html
     <input type="password" class="input" name="f-pw" id="f-pw" title="비밀번호" style="width:100px" disabled>
     ```
-- HTML5에서 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 ```true```를 의미하므로 필요치 않다면 값을 지정하지 않는다.
+- HTML5에서 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
 
 <h3 id="html-import">1-7. Include</h3>
 
-- HTML5는 CSS와 JS 파일을 불러올 때 ```type``` 애트리뷰트는 이미 기본값이 지정되어 있으므로 선언하지 않는다.
+- HTML5는 CSS와 JS 파일을 불러올 때 `type` 애트리뷰트는 이미 기본값이 지정되어 있으므로 선언하지 않는다.
 - 일반적으로 JS 보다 CSS를 먼저 선언한다.
-- 일반적으로 JS 파일은 종류에 따라 ```<head>``` 또는 ```<body>``` 엘리먼트의 마지막에 작성한다.
+- 일반적으로 JS 파일은 종류에 따라 `<head>` 또는 `<body>` 엘리먼트의 마지막에 작성한다.
 
 <h3 id="html-comments">1-8. Comments</h3>
 
@@ -211,17 +216,17 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### A. 참고 주석
 
-작업 진행에 참고해야 하는 주석은 맨 앞에 ```@desc```를 추가하여 작성한다.
+작업 진행에 참고해야 하는 주석은 맨 앞에 `@desc`를 추가하여 작성한다.
 
 ```html
 <!-- @desc
-    blah, blah, blah...
+    blah, blah, blah..
 -->
 ```
 
 #### B. 엘리먼트 주석
 
-레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 맨 앞에 ```@start``` 또는 ```@end```를 표기한다.
+레이아웃 또는 그루핑된 엘리먼트의 시작과 끝을 알리는 주석은 아래의 형식에 맞게 작성하며, 맨 앞에 `@start` 또는 `@end`를 표기한다.
 
 ```html
 <!-- @start Content -->
@@ -240,7 +245,7 @@ CSS 코드의 작성 규칙을 설명한다.
 - **CSS의 코드 스타일은 컨벤션에서 강제하는 내용을 준수함과 동시에 자신이 원하는 스타일(nested, expanded, compact, compressed, ..)로 작성한다. 단, 하나의 프로젝트 또는 서비스 내에서는 통일된 스타일로 작성하도록 한다.**
 - 들여쓰기는 4개의 공백 문자를 가지는 하드탭(<kbd>tab</kbd>)을 사용한다.
 - 프로퍼티는 영문 소문자를 사용한다.
-- 일반적으로 작은 따옴표(```'```)를 사용하며 @charset 선언과 선택자 안에서만 큰 따옴표(```"```)를 사용한다. 만약 따옴표를 생략할 수 있는 경우에는 반드시 생략한다.
+- 일반적으로 작은 따옴표(`'`)를 사용하며 @charset 선언과 선택자 안에서만 큰 따옴표(`"`)를 사용한다. 만약 따옴표를 생략할 수 있는 경우에는 반드시 생략한다.
     ```css
     @charset "UTF-8";
     input[type="text"] {
@@ -252,7 +257,7 @@ CSS 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-charset">2-2. Charset</h3>
 
-문서의 ```Charset```은 일반적으로 ```UTF-8```으로 선언하며 최상위에 선언한다.
+문서의 `Charset`은 일반적으로 `UTF-8`으로 선언하며 최상위에 선언한다.
 
 ```css
 @charset "UTF-8";
@@ -266,12 +271,12 @@ CSS 코드의 작성 규칙을 설명한다.
 - 여러개의 선택자를 사용하는 경우 선택자 사이에 개행을 추가한다.
     ```css
     /* Bad */
-    .one, .two, .three { }
+    .one, .two, .three {}
     
     /* Good */
     .one,
     .two,
-    .three { }
+    .three {}
     ```
 
 <dl>
@@ -286,9 +291,9 @@ CSS 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-properties">2-4. Properties</h3>
 
-- 16진수 값들은 가능하다면 축약형으로 표현한다. (ex: ```#ffffff``` 대신 ```#fff```)
-- 속성값이 0인 값은 단위를 생략한다. (ex: ```0px``` 대신 ```0```)
-- ```0.*```의 소수값은 소수점 앞의 0을 생략한다. (ex: ```0.5``` 대신 ```.5```)
+- 16진수 값들은 가능하다면 축약형으로 표현한다. (ex: `#ffffff` 대신 `#fff`)
+- 속성값이 0인 값은 단위를 생략한다. (ex: `0px` 대신 `0`)
+- `0.*`의 소수값은 소수점 앞의 0을 생략한다. (ex: `0.5` 대신 `.5`)
 - 프로퍼티값 안의 콤마는 뒤에 공백 문자 하나를 포함한다.
     ```css
     /* Bad */
@@ -336,12 +341,12 @@ CSS 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS에서 기본으로 제공하는 ```@import```는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용하도록 한다.
+**CSS에서 기본으로 제공하는 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용하도록 한다.
 
-- 여러개의 ```<link>``` 엘리먼트를 사용
+- 여러개의 `<link>` 엘리먼트를 사용
 - 하나의 CSS 파일로 작성
     - 도구를 이용하여 CSS 파일을 하나로 합침
-    - SASS나 Stylus 등의 CSS 전처리기에서 제공하는 ```@import```를 사용
+    - SASS나 Stylus 등의 CSS 전처리기에서 제공하는 `@import`를 사용
 
 ```html
 <!-- Too Bad -->
@@ -366,13 +371,13 @@ SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#
 미디어 쿼리의 위치는 상황에 따라 문서의 마지막에 작성하거나 스타일 코드를 모듈, 컴포넌트 등의 단위로 분류하여 관련 규칙 바로 뒤에 작성한다.
 
 ```css
-.element { }
-.element-foo { }
-.element-bar { }
+.element {}
+.element-foo {}
+.element-bar {}
 @media (min-width: 768px) {
-  .element { }
-  .element-foo { }
-  .element-bar { }
+  .element {}
+  .element-foo {}
+  .element-bar {}
 }
 ```
 
@@ -412,7 +417,7 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 
 #### A. 프로젝트 주석
 
-프로젝트 정보를 나타내는 주석은 아래의 양식에 맞게 ```@charset``` 바로 아래에 작성한다. (```/*! */```)
+프로젝트 정보를 나타내는 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성한다. (`/*! */`)
 
 ```css
 /*!
@@ -430,12 +435,12 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 
 #### B. 참고 주석
 
-작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (```/*# */```)
+작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (`/*# */`)
 ```css
 /*#
     @title CSS z-index Guidelines 
 
-    blah, blah, blah...
+    blah, blah, blah..
 */
 ```
 
@@ -444,16 +449,16 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
     <dd>주석 내용의 제목.</dd>
 </dl>
 
-#### C. 엘리먼트 주석
+#### C. 코드 주석
 
-엘리먼트 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성한다. (```/*= */```)
+코드 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
   
 ```css
 /*=
     @type Base
     @name Reset
 */
-article, aside, details, figcaption, figure, footer, header, menu, nav, section { }
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {}
 
 /*=
     @type Module
@@ -461,19 +466,19 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
     @namespace foo
     @since v1.1.0 2016-04-08
 */
-#foo-cbo { }
+#foo-cbo {}
 
 /*=
     @type Media
     @name Screen Reader
     @author Your Name <email_id@domain.com>
 */
-@media aural, speech { }
+@media aural, speech {}
 ```
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. <code>Base</code>, <code>Layout</code>, <code>Component</code>, <code>Module</code>, <code>Media</code>로 나뉜다</dd>
+    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>generic</code>, <code>base</code>, <code>object</code>, <code>layout</code>, <code>component</code>, <code>theme</code>, <code>trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>
@@ -492,12 +497,21 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *ITCSS 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>*를 기본으로 한다.** (BEM + ITCSS = BEMIT)
+> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a>*를 기본으로 한다.** (BEM + ITCSS = BEMIT)  
+> 스타일시트의 계층(또는 섹션)은 Settings, Tools, Generic, Base, Objects, Layouts, Components, Themes, Trumps로 나뉜다.
 >
 > *참고 문서*
-> - <a target="_blank" href="https://speakerdeck.com/dafed/managing-css-projects-with-itcss">https:&#47;&#47;speakerdeck.com&#47;dafed&#47;managing-css-projects-with-itcss</a>
-> - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">https:&#47;&#47;willianjusten.com.br&#47;organizando-seu-css-com-itcss&#47;</a>
-> - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">http:$#47;$#47;csswizardry.com$#47;2015$#47;03$#47;more-transparent-ui-code-with-namespaces$#47;</a>
+> - BEM
+>   - https://en.bem.info/
+>   - http://getbem.com/
+> - ITCSS
+>   - http://csswizardry.net/talks/2014/11/itcss-dafed.pdf
+>   - https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+>   - https://willianjusten.com.br/organizando-seu-css-com-itcss/
+> - BEMIT
+>   - http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/
+>   - http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+>   - http://www.jamesturneronline.net/blog/bemit-naming-convention.html
 
 - **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
@@ -505,8 +519,6 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 - 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인적인 면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
 
 #### A. Naming
-
-> - <a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM Rules</a>
 
 Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
 
@@ -519,12 +531,13 @@ Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has
 ```
 
 ```css
-.fieldset { }
-.fieldset--simple { }
-.fieldset__input { }
-.fotn__btn {}
-.fieldset__btn--submit { }
-.fieldset__btn--submit.is-disabled { }
+.fieldset {}
+.fieldset--simple {}
+.fieldset__input {}
+.fieldset__btn {}
+.fieldset__btn.is-disabled {}
+.fieldset__btn--submit {}
+.fieldset__btn--submit.is-disabled {}
 ```
 
 #### B. Architecture
@@ -535,9 +548,9 @@ Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has
 
 ```sass
 $breakpoints: (
-        'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
-        'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
-        'tablet_landscape': 'screen and (min-width: 1024px)'
+    'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
+    'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
+    'tablet_landscape': 'screen and (min-width: 1024px)'
 );
 ```
 
@@ -565,7 +578,7 @@ $current-breakpoint: $default-breakpoint;
 
 ##### c. Generic
 
-CSS 초기화 또는 normalize.css 등의 초기 스타일을 지정한다.
+CSS 초기화 또는 normalize.css 등의 문서 초기 스타일을 지정한다.
 
 ```sass
 article,
@@ -598,7 +611,7 @@ input[type='image'] {}
 
 Namespace: `o`
 
-반복적이며 재사용이 가능한 디자인 패턴을 작성한다.
+반복적이며 재사용이 가능한 디자인 패턴을 작성한다.  
 블로그 댓글, 트윗 등의 미디어 객체 또는 모듈 등이 해당된다.
 
 ```sass
@@ -611,7 +624,7 @@ Namespace: `o`
 
 Namespace: `l`
 
-레이아웃의 스타일을 작성한다.
+레이아웃의 스타일을 작성한다.  
 이는 *ITCSS*의 규칙에 포함되지 않으며, `Objects` 규칙에서 파생되었다.
 
 ```sass
@@ -636,8 +649,12 @@ Namespace: `c`
 
 Namespace: `t`
 
-테마 스타일을 작성한다. 이 클래스는 반드시 `body` 엘리먼트에 추가해야 하며, 테마 스타일만 별도의 CSS 파일로 분리하여 관리하는 방법도 있다.
-이는 `Trumps` 규칙에서 파생되었다.
+테마 스타일을 작성한다. **이 클래스는 반드시 `body` 엘리먼트에만 추가**할 수 있다.
+관리 방법은 여러가지가 있으나, 하나의 프로젝트 또는 서비스 내에서는 한가지 방법으로 통일하도록 한다.
+
+###### Inline
+
+엘리먼트와 함께 작성한다.
 
 ```sass
 .c-btn {
@@ -645,18 +662,48 @@ Namespace: `t`
 }
 ```
 
+```sass
+.c-btn {}
+.t-light {
+    .c-btn {}
+}
+```
+
+###### Separated layers
+
+`Components` 계층과 `Trumps` 계층 사이에 작성한다.
+
+```sass
+..
+@import "components/_share-menu";
+
+@import "themes/_light";
+
+@import "trumps/_blind";
+..
+```
+
+###### Separated CSS files
+
+CSS 파일을 분리하여 작성한다.
+
+```html
+<link rel="stylesheet" href="/css/project.css">
+<link rel="stylesheet" href="/css/theme-light.css">
+```
+
 ##### h. Trumps(Utilities)
 
 Namespace: `u`
 
-스타일을 오버라이드하거나 전역에 사용할 수 있는 헬퍼를 작성한다.
+스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성한다.
 
 ```sass
 .u-blind {}
 .u-clearfix {}
 ```
 
-###### `@import` example with SASS
+##### `@import` example with SASS
 
 ```sass
 @import "settings/_breakpoints";
@@ -734,21 +781,7 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 <h3 id="naming-prefix">3-3. Prefix</h3>
 
-#### A. 관계 애트리뷰트
-
-> 여기서 얘기하는 관계 애트리뷰트(Relationship Attributes)란,  
-> 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.
-
-엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다.
-**앵커의 참조 엘리먼트로 사용될 경우 가급적 언더스코어를 지우도록 한다.**
-
-```html
-<div id="lnb" role="navigation" aria-labelledby="_lnb_heading">
-    <h2 id="_lnb_heading">Local Navigation Bar</h2>
-</div>
-```
-
-#### B. 폼 애트리뷰트
+#### A. 폼 애트리뷰트
 
 `<input>`, `<select>` 등의 사용자 입력을 받는 폼과 관련된 엘리먼트에 제공되는 `id`, `name` 애트리뷰트 값은 프리픽스 `field`를 추가한다.
 **엘리먼트가 데이터를 주고받는 용도로 사용되지 않을 경우 *관계 애트리뷰트*의 규칙을 따른다.**
@@ -781,13 +814,29 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 </table>
 ```
 
+#### C. 관계 애트리뷰트
+
+> 여기서 얘기하는 관계 애트리뷰트(Relationship Attributes)란,  
+> 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.  
+> 위에서 이미 설명한 애트리뷰트의 경우 이 섹션에서 다루는 내용과는 별개로 예외처리한다.
+
+엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다.
+**앵커의 참조 엘리먼트로 사용될 경우 가급적 언더스코어를 지우도록 한다.**
+
+```html
+<div id="lnb" role="navigation" aria-labelledby="_lnb_heading">
+    <h2 id="_lnb_heading">Local Navigation Bar</h2>
+</div>
+```
+
 
 
 <h2 id="changelogs">Changelogs</h2>
 
 <a target="_blank" href="https://github.com/choi4450/markup-coding-conventions">https:&#47;&#47;github.com&#47;choi4450&#47;markup-coding-conventions</a>
 
-> - 2016.04.08 개편(v2.0)
+> - 2016.06.21 네이밍 개편(BEMIT 도입) - 최규민
+> - 2016.04.08 개편
 > - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod) - 최규민
 > - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경 - 최규민
 > - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의 - 최규민

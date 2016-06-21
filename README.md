@@ -495,9 +495,9 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >   - <a target="_blank" href="https://en.bem.info/">BEM</a>
 >   - <a target="_blank" href="http://getbem.com/">Get BEM</a>
 > - ITCSS
->   - <a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">itcss-dafed.pdf</a>
+>   - <a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">Managing CSS Projects with ITCSS</a>
 >   - <a target="_blank" href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/">ITCSS: SCALABLE AND MAINTAINABLE CSS ARCHITECTURE</a>
->   - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">https://willianjusten.com.br/organizando-seu-css-com-itcss/</a>
+>   - <a target="_blank" href="https://willianjusten.com.br/organizando-seu-css-com-itcss/">Organizando seu CSS com ITCSS</a>
 > - BEMIT
 >   - <a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT: Taking the BEM Naming Convention a Step Further</a>
 >   - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a>

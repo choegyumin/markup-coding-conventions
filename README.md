@@ -732,7 +732,7 @@ CSS 파일을 분리하여 작성한다.
 <link rel="stylesheet" href="/css/theme-light.css">
 ```
 
-##### h. Trumps(Utilities)
+##### i. Trumps(Utilities)
 
 Namespace: `u`
 

@@ -562,7 +562,7 @@ Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has
 @import "layouts/_footer";
 @import "layouts/_header";
 @import "layouts/_wrapper";
-_
+
 @import "components/_about";
 @import "components/_ads-banner";
 @import "components/_archive";

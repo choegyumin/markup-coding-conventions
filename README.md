@@ -532,6 +532,54 @@ Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has
 
 #### B. Architecture
 
+##### `@import` example with SASS
+
+```sass
+@import "settings/_breakpoints";
+@import "settings/_colors";
+
+@import "tools/_functions";
+@import "tools/_mixins";
+
+@import "generic/_normalize.scss";
+
+@import "base/_forms";
+@import "base/_headings";
+@import "base/_hr";
+@import "base/_links";
+@import "base/_lists";
+@import "base/_page";
+@import "base/_quotes";
+@import "base/_tables";
+
+@import "objects/_combobox";
+@import "objects/_overlays";
+@import "objects/_toggle-button";
+
+@import "layouts/_aside";
+@import "layouts/_container";
+@import "layouts/_drawer";
+@import "layouts/_footer";
+@import "layouts/_header";
+@import "layouts/_wrapper";
+_
+@import "components/_about";
+@import "components/_ads-banner";
+@import "components/_archive";
+@import "components/_comments";
+@import "components/_contact";
+@import "components/_error";
+@import "components/_faq";
+@import "components/_page-title";
+@import "components/_pagination";
+@import "components/_post";
+@import "components/_process";
+@import "components/_share-menu";
+
+@import "trumps/_blind";
+@import "trumps/_clearfix";
+```
+
 ##### a. Settings
 
 전역 변수를 작성한다.
@@ -691,54 +739,6 @@ Namespace: `u`
 ```sass
 .u-blind {}
 .u-clearfix {}
-```
-
-##### `@import` example with SASS
-
-```sass
-@import "settings/_breakpoints";
-@import "settings/_colors";
-
-@import "tools/_functions";
-@import "tools/_mixins";
-
-@import "generic/_normalize.scss";
-
-@import "base/_forms";
-@import "base/_headings";
-@import "base/_hr";
-@import "base/_links";
-@import "base/_lists";
-@import "base/_page";
-@import "base/_quotes";
-@import "base/_tables";
-
-@import "objects/_combobox";
-@import "objects/_overlays";
-@import "objects/_toggle-button";
-
-@import "layouts/_aside";
-@import "layouts/_container";
-@import "layouts/_drawer";
-@import "layouts/_footer";
-@import "layouts/_header";
-@import "layouts/_wrapper";
-_
-@import "components/_about";
-@import "components/_ads-banner";
-@import "components/_archive";
-@import "components/_comments";
-@import "components/_contact";
-@import "components/_error";
-@import "components/_faq";
-@import "components/_page-title";
-@import "components/_pagination";
-@import "components/_post";
-@import "components/_process";
-@import "components/_share-menu";
-
-@import "trumps/_blind";
-@import "trumps/_clearfix";
 ```
 
 <h3 id="naming-files">3-2. Files</h3>

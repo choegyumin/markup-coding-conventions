@@ -512,7 +512,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
 
-BEM의 네이밍 문법에 ITCSS의 네임스페이스가 추가되었다.
+BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 
 ```html
 <fieldset class="fieldset fieldset--simple">

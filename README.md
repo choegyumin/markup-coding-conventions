@@ -468,7 +468,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>generic</code>, <code>base</code>, <code>object</code>, <code>layout</code>, <code>component</code>, <code>theme</code>, <code>trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
+    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>Generic</code>, <code>Base</code>, <code>Object</code>, <code>Layout</code>, <code>Component</code>, <code>Theme</code>, <code>Trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>

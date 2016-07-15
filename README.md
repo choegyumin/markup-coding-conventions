@@ -442,28 +442,28 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 #### C. 코드 주석
 
 코드 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
-  
+
 ```css
 /*=
-    @type Base
+    @type Generic
     @name Reset
 */
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {}
 
 /*=
-    @type Module
+    @type Object
+    @name Combobox
+    @since v1.1.0 2016-04-08
+*/
+.o-foo-cbo {}
+
+/*=
+    @type Object
     @name Combobox
     @namespace foo
     @since v1.1.0 2016-04-08
 */
-#foo-cbo {}
-
-/*=
-    @type Media
-    @name Screen Reader
-    @author Your Name <email_id@domain.com>
-*/
-@media aural, speech {}
+.foo-cbo {}
 ```
 
 <dl>

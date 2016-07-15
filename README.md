@@ -579,7 +579,6 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 @import "components/_share-menu";
 
 @import "trumps/_blind";
-@import "trumps/_clearfix";
 ```
 
 ##### a. Settings

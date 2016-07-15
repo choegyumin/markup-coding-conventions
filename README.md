@@ -536,14 +536,14 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 
 ##### `@import` example with SASS
 
-```sass
+```scss
 @import "settings/_breakpoints";
 @import "settings/_colors";
 
 @import "tools/_functions";
 @import "tools/_mixins";
 
-@import "generic/_normalize.scss";
+@import "generic/_normalize";
 
 @import "base/_forms";
 @import "base/_headings";
@@ -586,7 +586,7 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 
 전역 변수를 작성한다.
 
-```sass
+```scss
 $breakpoints: (
     'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
     'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
@@ -598,7 +598,7 @@ $breakpoints: (
 
 CSS 전처리기를 사용할 경우 Function과 Mixin을 작성한다.
 
-```sass
+```scss
 $default-breakpoint: root;
 $current-breakpoint: $default-breakpoint;
 @mixin media($breakpoint) {
@@ -620,7 +620,7 @@ $current-breakpoint: $default-breakpoint;
 
 CSS 초기화 또는 normalize.css 등의 문서 초기 스타일을 지정한다.
 
-```sass
+```scss
 article,
 aside,
 details,
@@ -639,7 +639,7 @@ body {}
 
 클래스 없이 태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성한다.
 
-```sass
+```scss
 button,
 input[type='button'],
 input[type='submit'],
@@ -654,7 +654,7 @@ Namespace: `o`
 반복적이며 재사용이 가능한 디자인 패턴을 작성한다.  
 블로그 댓글, 트윗 등의 미디어 객체 또는 모듈 등이 해당된다.
 
-```sass
+```scss
 .o-combobox {}
 .o-combobox__item {}
 .o-combobox.is-expanded {}
@@ -667,7 +667,7 @@ Namespace: `l`
 레이아웃의 스타일을 작성한다.  
 이는 `Objects` 계층에 포함되어 있었으나 용도를 더 명확히 구분하기 위해 분리하였다.
 
-```sass
+```scss
 .l-header {}
 .l-header__item {}
 .l-header--fixed {}
@@ -679,7 +679,7 @@ Namespace: `c`
 
 컴포넌트의 스타일을 작성한다.
 
-```sass
+```scss
 .c-modal {}
 .c-modal__title {}
 .c-modal--gallery {}
@@ -696,13 +696,13 @@ Namespace: `t`
 
 엘리먼트와 함께 작성한다.
 
-```sass
+```scss
 .c-modal {
     .t-light & {}
 }
 ```
 
-```sass
+```scss
 .c-modal {}
 .t-light {
     .c-modal {}
@@ -713,7 +713,7 @@ Namespace: `t`
 
 `Components` 계층과 `Trumps` 계층 사이에 작성한다.
 
-```sass
+```scss
 ..
 @import "components/_share-menu";
 
@@ -738,7 +738,7 @@ Namespace: `u`
 
 스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성한다.
 
-```sass
+```scss
 .u-blind {}
 .u-clearfix {}
 ```

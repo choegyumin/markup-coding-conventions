@@ -505,10 +505,10 @@ Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has
 BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클래스는 분리한다.
 
 ```html
-<fieldset class="fieldset fieldset--simple">
-    <input class="fieldset__input" type="text">
-    <input class="fieldset__btn" type="reset">
-    <input class="fieldset__btn fieldset__btn--submit is-disabled" type="submit">
+<fieldset class="c-fieldset c-fieldset--simple">
+    <input class="c-fieldset__input" type="text">
+    <input class="c-fieldset__btn" type="reset">
+    <input class="c-fieldset__btn c-fieldset__btn--submit is-disabled" type="submit">
 </fieldset>
 ```
 

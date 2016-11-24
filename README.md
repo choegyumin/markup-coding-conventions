@@ -458,7 +458,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>Generic</code>, <code>Base</code>, <code>Object</code>, <code>Layout</code>, <code>Component</code>, <code>Theme</code>, <code>Trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
+    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>Generic</code>, <code>Base</code>, <code>Object</code>, <code>Component</code>, <code><strong>Container</strong></strong></code>, <code>Theme</code>, <code>Trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
     <dt><code>@namespace</code></dt>
@@ -477,8 +477,8 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 문서는 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기본으로 한다.** (BEM + ITCSS = BEMIT)  
-> 스타일시트의 계층(또는 섹션)은 Settings, Tools, Generic, Base, Objects, Layouts, Components, Themes, Trumps로 나뉜다.
+> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 한다.** (BEM + ITCSS = BEMIT)  
+> 스타일시트의 계층(또는 섹션)은 Settings, Tools, Generic, Base, Objects, Components, **Containers**, Themes, Trumps로 나뉜다.
 >
 > *참고 문서*
 > - BEM
@@ -493,16 +493,16 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >   - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a>
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
-- **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
+- **아이디는 가급적 스타일 제어를 위한 선택자로 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
-  용량 축소의 문제로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
+  용량 축소의 이유로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
 - 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인적인 면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
 
 #### A. Naming
 
 Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
 
-BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
+BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클래스는 분리한다.
 
 ```html
 <fieldset class="fieldset fieldset--simple">
@@ -524,7 +524,7 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 
 #### B. Architecture
 
-##### `@import` example with SASS
+##### `@import` example with SASS(scss)
 
 ```scss
 @import "settings/_breakpoints";
@@ -544,36 +544,36 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가한다.
 @import "base/_quotes";
 @import "base/_tables";
 
-@import "objects/_combobox";
-@import "objects/_overlays";
-@import "objects/_toggle-button";
+@import "objects/_dialog";
+@import "objects/_drawer";
+@import "objects/_grid";
 
-@import "layouts/_aside";
-@import "layouts/_container";
-@import "layouts/_drawer";
-@import "layouts/_footer";
-@import "layouts/_header";
-@import "layouts/_wrapper";
-
-@import "components/_about";
 @import "components/_ads-banner";
-@import "components/_archive";
-@import "components/_comments";
-@import "components/_contact";
-@import "components/_error";
-@import "components/_faq";
+@import "components/_comment";
+@import "components/_fields";
+@import "components/_dialog";
+@import "components/_drawer";
+@import "components/_footer";
+@import "components/_header";
+@import "components/_overlays";
 @import "components/_page-title";
 @import "components/_pagination";
 @import "components/_post";
-@import "components/_process";
 @import "components/_share-menu";
+
+@import "containers/_about";
+@import "containers/_archive";
+@import "containers/_contact";
+@import "containers/_error";
+@import "containers/_faq";
+@import "containers/_process";
 
 @import "trumps/_blind";
 ```
 
 ##### a. Settings
 
-전역 변수를 작성한다.
+CSS 전처리기를 사용할 경우 전역 변수를 작성한다.
 
 ```scss
 $breakpoints: (
@@ -610,18 +610,12 @@ $current-breakpoint: $default-breakpoint;
 CSS 초기화 또는 normalize.css 등의 문서 초기 스타일을 지정한다.
 
 ```scss
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-menu,
-nav,
-section {}
 html,
 body {}
+a,
+input,
+textarea,
+button {}
 ```
 
 ##### d. Base
@@ -641,37 +635,37 @@ input[type='image'] {}
 Namespace: `o`
 
 반복적이며 재사용이 가능한 디자인 패턴을 작성한다.  
-블로그 댓글, 트윗 등의 미디어 객체 또는 모듈 등이 해당된다.
+이는 시각적인 효과의 스타일보다는 레이아웃을 잡기 위한 스타일을 위주로 작성한다.
 
 ```scss
-.o-combobox {}
-.o-combobox__item {}
-.o-combobox.is-expanded {}
+.o-dialog {}
+.o-dialog__overlay {}
+.o-dialog--container {}
 ```
 
-##### f. Layouts
-
-Namespace: `l`
-
-레이아웃의 스타일을 작성한다.  
-이는 `Objects` 계층에 포함되어 있었으나 용도를 더 명확히 구분하기 위해 분리하였다.
-
-```scss
-.l-header {}
-.l-header__item {}
-.l-header--fixed {}
-```
-
-##### g. Components
+##### f. Components
 
 Namespace: `c`
 
-컴포넌트의 스타일을 작성한다.
+스타일이 적용된 UI를 작성한다.  
+컴포넌트란 입력 필드, 버튼, 댓글 폼과 같은 하나의 완성된 모듈을 말하며, 컴포넌트는 오브젝트를 포함할 수 있다.
 
 ```scss
-.c-modal {}
-.c-modal__title {}
-.c-modal--gallery {}
+.c-combobox {}
+.c-combobox__item {}
+.c-combobox.is-expanded {}
+```
+
+##### g. Containers
+
+컨테이너는 BEMIT가 아닌 컨벤션에서 추가한 아키텍쳐이며, 하나의 완성된 UI 세트를 말한다.  
+네임스페이스는 작성하지 않으며, 컨테이너는 오브젝트와 컴포넌트를 포함할 수 있다.  
+**컨테이너는 절대 서로 조합하여서는 안된다.**
+
+```scss
+.about__title {}
+.about__info {}
+.about__contact {}
 ```
 
 ##### h. Themes - optional
@@ -686,25 +680,25 @@ Namespace: `t`
 엘리먼트와 함께 작성한다.
 
 ```scss
-.c-modal {
+.c-combobox {
     .t-light & {}
 }
 ```
 
 ```scss
-.c-modal {}
+.c-combobox {}
 .t-light {
-    .c-modal {}
+    .c-combobox {}
 }
 ```
 
 ###### Separated layers
 
-`Components` 계층과 `Trumps` 계층 사이에 작성한다.
+`Containers` 계층과 `Trumps` 계층 사이에 작성한다.
 
 ```scss
 ..
-@import "components/_share-menu";
+@import "containers/_about";
 
 @import "themes/_light";
 
@@ -725,7 +719,8 @@ CSS 파일을 분리하여 작성한다.
 
 Namespace: `u`
 
-스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성한다.
+스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성한다.  
+만약 스타일시트의 상단에 작성해야 할 경우 모든 프로퍼티에 `!important`를 추가한다.
 
 ```scss
 .u-blind {}
@@ -816,16 +811,17 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
 
 <a target="_blank" href="https://github.com/choi4450/markup-coding-conventions">https:&#47;&#47;github.com&#47;choi4450&#47;markup-coding-conventions</a>
 
-> - 2016.06.21 네이밍 개편(BEMIT 도입) - 최규민
+> - 2016.11.24 네이밍 개선(Objects, Components의 의미 재정의 및 Containers 추가)
+> - 2016.06.21 네이밍 개편(BEMIT 도입)
 > - 2016.04.08 개편
-> - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod) - 최규민
-> - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경 - 최규민
-> - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의 - 최규민
-> - 2015.12.14 글로벌 컴포넌트 익스텐션 정의 - 최규민
-> - 2015.10.28 프리픽스 네이밍 수정, 키보드 접근성 내용 추가 - 최규민
-> - 2015.09.10 네이밍 규칙 개선 - 최규민
-> - 2015.05.29 전역 및 컨텐츠 네이밍 내용 보충 - 최규민
-> - 2015.05.18 글로벌 컴포넌트 네이밍 방법 정의 - 최규민
+> - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod)
+> - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경
+> - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의
+> - 2015.12.14 글로벌 컴포넌트 익스텐션 정의
+> - 2015.10.28 프리픽스 네이밍 수정, 키보드 접근성 내용 추가
+> - 2015.09.10 네이밍 규칙 개선
+> - 2015.05.29 전역 및 컨텐츠 네이밍 내용 보충
+> - 2015.05.18 글로벌 컴포넌트 네이밍 방법 정의
 > - 2015.04.15 작성 완료
 
 

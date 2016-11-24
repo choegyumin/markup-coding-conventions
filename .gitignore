@@ -1,7 +1,3 @@
-.idea/
-node_modules/
-.dropbox
-.dropbox.cache/
 *.obj
 *.exe
 *.pdb
@@ -28,3 +24,8 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+.DS_Store
+node_modules/
+
+.idea/
+.vscode/

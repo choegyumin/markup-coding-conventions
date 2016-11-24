@@ -513,13 +513,13 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 ```
 
 ```css
-.fieldset {}
-.fieldset--simple {}
-.fieldset__input {}
-.fieldset__btn {}
-.fieldset__btn.is-disabled {}
-.fieldset__btn--submit {}
-.fieldset__btn--submit.is-disabled {}
+.c-fieldset {}
+.c-fieldset--simple {}
+.c-fieldset__input {}
+.c-fieldset__btn {}
+.c-fieldset__btn.is-disabled {}
+.c-fieldset__btn--submit {}
+.c-fieldset__btn--submit.is-disabled {}
 ```
 
 #### B. Architecture

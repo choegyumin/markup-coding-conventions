@@ -298,26 +298,6 @@ CSS 코드의 작성 규칙을 설명한다.
     /* Good */
     .foo { position: absolute; clip: rect(0 0 0 0); }
     ```
-- 프로퍼티 작성 순서는 아래 순서를 따르며, 명시되지 않은 프로퍼티는 적절한 위치에 배치하여 사용한다.
-    - content
-    - overflow
-    - opacity
-    - display
-    - zoom
-    - visibility
-    - position
-    - float
-    - clear
-    - box-sizing
-    - width
-    - height
-    - padding
-    - border
-    - margin
-    - background
-    - color
-    - font-size
-    - line-height
 
 <h3 id="css-import">2-5. Import</h3>
 

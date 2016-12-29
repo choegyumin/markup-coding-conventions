@@ -457,8 +457,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 한다.** (BEM + ITCSS = BEMIT)  
-> 스타일시트의 계층(또는 섹션)은 Settings, Tools, Generic, Base, Objects, Components, **Containers**, Themes, Trumps로 나뉜다.
+> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 한다.**
 >
 > *참고 문서*
 > - BEM
@@ -473,6 +472,8 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >   - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a>
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
+
+- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Container, Themes, Trumps로 나뉜다.
 - **아이디는 가급적 스타일 제어를 위한 선택자로 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
   용량 축소의 이유로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
@@ -615,7 +616,7 @@ input[type='image'] {}
 Namespace: `o`
 
 반복적이며 재사용이 가능한 디자인 패턴을 작성한다.  
-이는 시각적인 효과의 스타일이 아닌 레이아웃을 위한 스타일 위주로 작성하며, **오브젝트끼리는 절대 서로 조합하여서는 안된다.**
+이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성한다.
 
 ```scss
 .o-dialog {}
@@ -623,12 +624,19 @@ Namespace: `o`
 .o-dialog--container {}
 ```
 
+###### 계층 간의 관계
+
+| | Objects | Components | Containers |
+| :--- | :---: | :---: | :---: |
+| 조합 (`.a.b`) | X | X | X |
+| 포함 (`.a > .b`) | O | O | O |
+
 ##### f. Components
 
 Namespace: `c`
 
-스타일이 적용된 UI를 작성한다.  
-컴포넌트란 입력 필드, 버튼, 댓글 폼과 같은 하나의 완성된 모듈을 말하며, 컴포넌트는 오브젝트를 포함하거나 조합할 수 있다.
+컴포넌트란 입력 필드, 버튼과 같이 완성된 UI 모듈을 뜻한다.  
+여기서 컴포넌트는 기능을 가지지 않고 시각적으로만 완성된 `Dumb/Presentational Component`를 뜻한다.
 
 ```scss
 .c-combobox {}
@@ -636,16 +644,29 @@ Namespace: `c`
 .c-combobox.is-expanded {}
 ```
 
+###### 계층 간의 관계
+
+| | Objects | Components | Containers |
+| :--- | :---: | :---: | :---: |
+| 조합 (`.a.b`) | O | X | X |
+| 포함 (`.a > .b`) | O | X | X |
+
 ##### g. Containers
 
-컨테이너는 컴포넌트의 일종으로 하위 컴포넌트를 포함한 완성된 UI 세트를 말한다.  
-컨테이너는 컴포넌트와 오브젝트를 모두 포함할 수 있으며, 동시에 오브젝트와의 조합도 가능하다. **단, 컨테이너를 포함하거나 서로 조합하여서는 안된다.**  
+컨테이너는 컴포넌트의 일종으로 기능을 가진 모듈(`Smart/Container Component`)을 뜻한다.
 
 ```scss
 .about__title {}
 .about__info {}
 .about__contact {}
 ```
+
+###### 계층 간의 관계
+
+| | Objects | Components | Containers |
+| :--- | :---: | :---: | :---: |
+| 조합 (`.a.b`) | O | X | X |
+| 포함 (`.a > .b`) | O | O | O |
 
 ##### h. Themes - optional
 

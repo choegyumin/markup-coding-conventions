@@ -29,7 +29,7 @@
 - <a href="#naming">3. Naming</a>
     - <a href="#naming-selectors">3-1. Selectors</a>
     - <a href="#naming-files">3-2. Files</a>
-    - <a href="#naming-prefix">3-3. Prefix</a>
+    - <a href="#naming-exception">3-3. Exception</a>
 
 <a href="#changelogs">Changelogs</a>  
 <a href="#license">License</a>
@@ -731,11 +731,11 @@ Namespace: `u`
 
 #### A. HTML
 
-HTML 파일은 페이지명을 토대로 네이밍한다.
+HTML 파일은 페이지명을 기준으로 네이밍한다.
 
 #### B. CSS
 
-CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할 경우 `style.css`로 네이밍한다.
+CSS 파일은 컨텐츠를 기준으로 네이밍하며, 하나의 CSS만 사용할 경우 `style.css`로 네이밍한다.
 
 #### C. 이미지
 
@@ -755,44 +755,28 @@ CSS 파일은 컨텐츠를 토대로 네이밍하며, 하나의 CSS만 사용할
     _bg-exam.png
     ```
 
-<h3 id="naming-prefix">3-3. Prefix</h3>
+<h3 id="naming-exception">3-3. Exception</h3>
 
 #### A. 폼 애트리뷰트
 
-`<input>`, `<select>` 등의 사용자 입력을 받는 폼과 관련된 엘리먼트에 제공되는 `id`, `name` 애트리뷰트 값은 프리픽스 `field`를 추가한다.
-**엘리먼트가 데이터를 주고받는 용도로 사용되지 않을 경우 *관계 애트리뷰트*의 규칙을 따른다.**
+- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성한다. 다만 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 절대 사용하지 않으며, 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장한다.
+- `<form>` 엘리먼트에 제공되는 `name` 애트리뷰트는 서픽스 `form`을 반드시 추가한다.
 
 ```html
-<label for="field-car">Select car</label>
-<select id="field-car" name="field-car">
-    <option value="volvo">Volvo</option>
-    <option value="mercedes">Mercedes</option>
-    <option value="audi">Audi</option>
-</select>
+<!-- Good (PascalCase) -->
+<form class="my-form" name="MyForm" id="MyForm">
+    <input type="text" name="UserName" id="UserName">
+</form>
+
+<!-- Bad (kebab-case) -->
+<form class="my-form" name="my-form" id="my-form">
+    <input type="text" name="user-name" id="user-name">
+</form>
 ```
 
-#### B. 테이블 셀 애트리뷰트
+#### B. 관계 애트리뷰트
 
-`<th>`, `<td>` 엘리먼트에 제공되는 `id`, `headers` 애트리뷰트 값은 프리픽스 `cell`를 추가한다.
-
-```html
-<table>
-    <tbody>
-        <tr>
-            <th id="cell-name">Name</th>
-            <th id="cell-email">Email</th>
-        </tr>
-        <tr>
-            <td headers="cell-name">Overtimeman</td>
-            <td headers="cell-email">overtimeman@example.com</td>
-        </tr>
-    </tbody>
-</table>
-```
-
-#### C. 관계 애트리뷰트
-
-> 여기서 얘기하는 관계 애트리뷰트(Relationship Attributes)란,  
+> 여기서 설명하는 관계 애트리뷰트(Relationship Attributes)란,  
 > 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.  
 > 위에서 이미 설명한 애트리뷰트의 경우 이 섹션에서 다루는 내용과는 별개로 예외처리한다.
 

@@ -168,8 +168,8 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 ```html
 <!-- Bad -->
-<input type="text" class="input type-width_120">
-<input type="text" class="input type-width_180">
+<input type="text" class="input input--width-120">
+<input type="text" class="input input--width-180">
 
 <!-- Good -->
 <input type="text" class="input" style="width:120px">

@@ -272,14 +272,6 @@ CSS 코드의 작성 규칙을 설명한다.
     /* Good */
     .foo { box-shadow: 0px 1px 2px #ccc, inset 0 1px 0 #fff; }
     ```
-- rgb(), rgba(), hsl(), hsla() 등의 색상을 나타내는 프로퍼티값은 다른 프로퍼티값과의 차별화를 위해 콤마 뒤에 공백 문자를 포함시키지 않는다.
-    ```css
-    /* Bad */
-    .foo { background: rgba(0, 0, 0, .33); }
-    
-    /* Good */
-    .foo { background: rgba(0,0,0,.33); }
-    ```
 - rect() 프로퍼티값 안에서는 구버전의 IE 브라우저와의 호환성을 위해 콤마 대신 공백 문자만 표기한다.
     ```css
     /* Bad */

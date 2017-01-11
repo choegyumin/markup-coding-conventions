@@ -192,7 +192,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 - 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
     ```html
-    <input class="input" type="password" name="field-pw" id="field-pw" title="비밀번호" style="width:100px" disabled>
+    <input class="input" type="password" name="Password" id="Password" title="비밀번호" style="width:100px" disabled>
     ```
 - HTML5에서 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
 

@@ -473,7 +473,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
 
-- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Container, Themes, Trumps로 나뉜다.
+- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Containers, Themes, Trumps로 나뉜다.
 - **아이디는 가급적 스타일 제어를 위한 선택자로 사용하지 않는다.**
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
   용량 축소의 이유로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.

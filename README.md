@@ -780,12 +780,11 @@ CSS 파일은 컨텐츠를 기준으로 네이밍하며, 하나의 CSS만 사용
 > 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.  
 > 위에서 이미 설명한 애트리뷰트의 경우 이 섹션에서 다루는 내용과는 별개로 예외처리한다.
 
-엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다.
-**앵커의 참조 엘리먼트로 사용될 경우 가급적 언더스코어를 지우도록 한다.**
+엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다. 만약 앵커의 참조 엘리먼트로 사용될 경우 언더스코어를 생략한다.
 
 ```html
-<div id="lnb" role="navigation" aria-labelledby="_lnb_heading">
-    <h2 id="_lnb_heading">Local Navigation Bar</h2>
+<div id="lnb" role="navigation" aria-labelledby="_lnb-heading">
+    <h2 id="_lnb-heading">Local Navigation Bar</h2>
 </div>
 ```
 

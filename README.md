@@ -610,8 +610,8 @@ Namespace: `o`
 
 | | Objects | Components | Containers |
 | :--- | :---: | :---: | :---: |
-| 조합 (`.a.b`) | X | X | X |
-| 포함 (`.a > .b`) | O | O | O |
+| 조합 (`.object.foo`) | X | X | X |
+| 포함 (`.object > .foo`) | O | O | O |
 
 ##### f. Components
 
@@ -630,8 +630,8 @@ Namespace: `c`
 
 | | Objects | Components | Containers |
 | :--- | :---: | :---: | :---: |
-| 조합 (`.a.b`) | O | X | X |
-| 포함 (`.a > .b`) | O | X | X |
+| 조합 (`.component.foo`) | O | X | X |
+| 포함 (`.component > .foo`) | O | X | X |
 
 ##### g. Containers
 
@@ -647,8 +647,8 @@ Namespace: `c`
 
 | | Objects | Components | Containers |
 | :--- | :---: | :---: | :---: |
-| 조합 (`.a.b`) | O | X | X |
-| 포함 (`.a > .b`) | O | O | O |
+| 조합 (`.container.foo`) | O | X | X |
+| 포함 (`.container > .foo`) | O | O | O |
 
 ##### h. Themes - optional
 

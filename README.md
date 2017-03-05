@@ -469,20 +469,20 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 
 ```html
 <fieldset class="c-fieldset c-fieldset--simple">
-    <input class="c-fieldset__input" type="text">
-    <input class="c-fieldset__btn" type="reset">
-    <input class="c-fieldset__btn c-fieldset__btn--submit is-disabled" type="submit">
+    <input class="textfield" type="text">
+    <input class="btn" type="reset">
+    <input class="btn btn--submit is-disabled" type="submit">
 </fieldset>
 ```
 
 ```css
 .c-fieldset {}
 .c-fieldset--simple {}
-.c-fieldset__input {}
-.c-fieldset__btn {}
-.c-fieldset__btn.is-disabled {}
-.c-fieldset__btn--submit {}
-.c-fieldset__btn--submit.is-disabled {}
+.textfield {}
+.btn {}
+.btn.is-disabled {}
+.btn--submit {}
+.btn--submit.is-disabled {}
 ```
 
 #### B. Architecture
@@ -615,15 +615,15 @@ Namespace: `o`
 
 ##### f. Components
 
-Namespace: `c`
+Namespace: -
 
 컴포넌트란 입력 필드, 버튼과 같이 완성된 UI 모듈을 뜻한다.  
 여기서 컴포넌트는 기능을 가지지 않고 시각적으로만 완성된 `Dumb/Presentational Component`를 뜻한다.
 
 ```scss
-.c-combobox {}
-.c-combobox__item {}
-.c-combobox.is-expanded {}
+.combobox {}
+.combobox__item {}
+.combobox.is-expanded {}
 ```
 
 ###### 계층 간의 관계
@@ -635,12 +635,14 @@ Namespace: `c`
 
 ##### g. Containers
 
+Namespace: `c`
+
 컨테이너는 컴포넌트의 일종으로 기능을 가진 모듈(`Smart/Container Component`)을 뜻한다.
 
 ```scss
-.about__title {}
-.about__info {}
-.about__contact {}
+.c-about__title {}
+.c-about__info {}
+.c-about__contact {}
 ```
 
 ###### 계층 간의 관계
@@ -662,15 +664,15 @@ Namespace: `t`
 엘리먼트와 함께 작성한다.
 
 ```scss
-.c-combobox {
+.combobox {
     .t-light & {}
 }
 ```
 
 ```scss
-.c-combobox {}
+.combobox {}
 .t-light {
-    .c-combobox {}
+    .combobox {}
 }
 ```
 

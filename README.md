@@ -507,8 +507,6 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 @import "base/_quotes";
 @import "base/_tables";
 
-@import "objects/_dialog";
-@import "objects/_drawer";
 @import "objects/_grid";
 
 @import "components/_ads-banner";
@@ -601,9 +599,11 @@ Namespace: `o`
 이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성한다.
 
 ```scss
-.o-dialog {}
-.o-dialog__overlay {}
-.o-dialog--container {}
+.o-row {}
+.o-col {}
+.o-col--s12 {}
+.o-col--m12 {}
+.o-col--l12 {}
 ```
 
 ###### 계층 간의 관계

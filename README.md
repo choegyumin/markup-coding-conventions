@@ -637,9 +637,12 @@ CSS 전처리기를 사용할 경우 전역 변수를 작성한다.
 
 ```scss
 $breakpoints: (
-    'tablet': 'screen and (min-width: 600px) and (orientation: portrait), screen and (min-width: 1024px)',
-    'tablet_portrait': 'screen and (min-width: 600px) and (orientation: portrait)',
-    'tablet_landscape': 'screen and (min-width: 1024px)'
+    //'xsmall': 'screen',
+    'small': 'screen and (min-width: 640px)',
+    'medium': 'screen and (min-width: 1024px)',
+    'large': 'screen and (min-width: 1280px)',
+    'xlarge': 'screen and (min-width: 1440px)',
+    'retina': 'screen and (-webkit-min-device-pixel-ratio:1.5)'
 );
 ```
 
@@ -648,19 +651,13 @@ $breakpoints: (
 CSS 전처리기를 사용할 경우 Function과 Mixin을 작성한다.
 
 ```scss
-$default-breakpoint: root;
-$current-breakpoint: $default-breakpoint;
-@mixin media($breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
-    @if $value != null {
-        $current-breakpoint: $breakpoint !global;
-        @media #{$value} {
-            @content;
-        }
-        $current-breakpoint: $default-breakpoint !global;
-    }
-    @else {
-        @warn "Invalid breakpoint `#{$breakpoint}`.";
+@mixin background-rgba($color, $alpha) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: $rgba;
+    filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
+    &:not([dummy]) {
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
     }
 }
 ```

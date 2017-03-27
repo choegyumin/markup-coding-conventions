@@ -9,12 +9,11 @@
 - <a href="#html">1. HTML</a>
     - <a href="#html-syntax">1-1. Syntax</a>
     - <a href="#html-doctype">1-2. Doctype</a>
-    - <a href="#html-encoding">1-3. Encoding</a>
-    - <a href="#html-metadata">1-4. Metadata</a>
-    - <a href="#html-elements">1-5. Elements</a>
-    - <a href="#html-attributes">1-6. Attributes</a>
-    - <a href="#html-import">1-7. Include</a>
-    - <a href="#html-comments">1-8. Comments</a>
+    - <a href="#html-metadata">1-3. Metadata</a>
+    - <a href="#html-elements">1-4. Elements</a>
+    - <a href="#html-attributes">1-5. Attributes</a>
+    - <a href="#html-import">1-6. Import</a>
+    - <a href="#html-comments">1-7. Comments</a>
 - <a href="#css">2. CSS</a>
     - <a href="#css-syntax">2-1. Syntax</a>
     - <a href="#css-charset">2-2. Charset</a>
@@ -28,8 +27,7 @@
     - <a href="#css-comments">2-10. Comments</a>
 - <a href="#naming">3. Naming</a>
     - <a href="#naming-selectors">3-1. Selectors</a>
-    - <a href="#naming-files">3-2. Files</a>
-    - <a href="#naming-exception">3-3. Exception</a>
+    - <a href="#naming-exception">3-2. Exception</a>
 
 <a href="#changelogs">Changelogs</a>  
 <a href="#license">License</a>
@@ -38,7 +36,7 @@
 
 <h2 id="glossaries">Glossaries</h2>
 
-먼저 **마크업 코딩 컨벤션**에 자주 사용되는 용어의 정의를 설명한다.
+먼저 컨벤션에 자주 사용되는 용어의 정의를 설명한다.
 
 <dl>
     <dt>엘리먼트(Element)</dt>
@@ -51,12 +49,10 @@
     <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미한다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분된다.</dd>
     <dt>프로퍼티(Property)</dt>
     <dd>스타일과 관련하여 사용했을 경우 스타일 시트의 속성을 의미한다.</dd>
-    <dt>프리픽스(Prefix)</dt>
-    <dd>네이밍 시 사용되는 접두사를 의미한다.</dd>
+    <dt>프리픽스(Prefix) & 서픽스(Suffix)</dt>
+    <dd>네이밍 시 사용되는 접두사, 접미사를 의미한다.</dd>
     <dt>컴포넌트(Component)</dt>
-    <dd>온전한 기능을 가진 컨텐츠 단위의 UI 구성요소를 의미한다. 사이트의 메뉴, 쇼핑몰의 상품 목록, 언론 사이트의 댓글 폼 등을 예로 들 수 있다.</dd>
-    <dt>모듈(Module)</dt>
-    <dd>반복적이며 재사용이 가능한 작은 단위의 UI 구성요소를 의미한다. 이는 컴포넌트보다 작은 단위이다. 예를 들어 텍스트 박스, 셀렉트 박스, 버튼 등이 있다.</dd>
+    <dd>하나 이상의 기능 또는 역할을 가진 컨텐츠 단위의 UI 구성요소를 의미한다.</dd>
 </dl>
 
 
@@ -67,7 +63,7 @@ HTML 코드의 작성 규칙을 설명한다.
 
 <h3 id="html-syntax">1-1. Syntax</h3>
 
-- 들여쓰기는 4개의 공백 문자를 가지는 하드탭(<kbd>tab</kbd>)을 사용한다.
+- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
 - 엘리먼트 명과 애트리뷰트 명은 영문 소문자를 사용한다.
 - 모든 애트리뷰트값은 큰 따옴표(`"`)를 사용하여 감싼다.
 - 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 않는다.
@@ -81,39 +77,51 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 <!DOCTYPE html>
 ```
 
-<h3 id="html-encoding">1-3. Encoding</h3>
+<h3 id="html-metadata">1-3. Metadata</h3>
 
-문서의 `Charset`은 일반적으로 `UTF-8`으로 선언하며 `<head>` 엘리먼트 내에서 최초의 엘리먼트로 작성한다.
+`<head>` 엘리먼트의 자식 엘리먼트 순서는 아래와 같다.
+
+1. Charset
+2. X-UA-Compatible
+3. Viewport
+4. Title
+5. Meta
+6. Style
+7. JavaScript
+    
+```html
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
+<title>예제 페이지 - 구글</title>
+..
+```
+
+#### A. Charset
+
+문서의 언어셋은 일반적으로 `UTF-8`으로 선언한다.
 
 ```html
 <meta charset="utf-8">
 ```
 
-<h3 id="html-metadata">1-4. Metadata</h3>
+#### B. X-UA-Compatible
 
-- IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 최신 버전의 IE로 렌더링되도록 한다.
-    ```html
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    ```
-- 아래의 `<meta>` 엘리먼트를 추가하여 브라우저가 전화번호 또는 이메일, 주소 포맷을 가진 문자를 감지하지 못하도록 한다.
-    ```html
-    <meta name="format-detection" content="telephone=no,address=no,email=no">
-    ```
-- 필요에 따라 `keywords`, `description` 등의 다른 `<meta>` 엘리먼트를 추가하도록 한다.
-- `<head>` 엘리먼트의 자식 엘리먼트 작성 순서는 아래와 같다.
-    1. Charset
-    2. X-UA-Compatible
-    3. Viewport
-    4. Title
-    5. ..
+IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 최신 버전의 IE로 렌더링한다.
 
-<h3 id="html-elements">1-5. Elements</h3>
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
 
-- 렌더링 엔진 최적화를 위해 **스타일 또는 스크립트 제어가 필요한 모든 엘리먼트에는 클래스를 부여**하도록 한다.
+<h3 id="html-elements">1-4. Elements</h3>
+
+- 렌더링 엔진 최적화를 위해 **스타일 또는 스크립트 제어가 필요한 모든 엘리먼트에는 클래스를 부여**한다.
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
-자식 엘리먼트로 사용할 수 있는 태그가 한정적인 엘리먼트(`<table>`, `<ul>`, ..) 또는 자기 자신의 스타일 제어에 한계를 가진 엘리먼트(`<img>`, `<select>`, ..)는 의미없는 엘리먼트로 감싸는 것을 권장한다. (이 외의 불필요한 엘리먼트 상속은 피하도록 함)
+자식 엘리먼트 태그가 한정적인 엘리먼트(ex. `<table>`) 또는 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트 엘리먼트로 사용될 경우 의미없는 엘리먼트로 감싸는 것을 권장한다.
+
+> 이 외의 불필요한 엘리먼트 상속은 피한다.
 
 ```html
 <!-- Not Bad -->
@@ -127,7 +135,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### B. 테이블 제목
 
-`<caption>` 엘리먼트를 숨김 처리할 때는 의미없는 엘리먼트로 감싸서 숨기도록 한다.
+`<caption>` 엘리먼트의 뷰를 숨길 때는 의미없는 엘리먼트로 감싸서 숨긴다.
 
 ```html
 <!-- Bad -->
@@ -144,27 +152,43 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 </table>
 ```
 
+테이블의 제목이 필요하지 않거나 이미 `<table>` 엘리먼트 앞에 제공되었다면 생략한다.
+
+```html
+<!-- Bad -->
+<h4>테이블 제목</h4>
+<table>
+    <caption class="blind">테이블 제목</caption>
+</table>
+
+<!-- Good -->
+<h4>테이블 제목</h4>
+<table>
+    ..
+</table>
+```
+
 #### C. 테이블 그룹
 
-`<table>` 엘리먼트를 제작 시 `<thead>`, `<tfoot>`의 유무와 관계없이 `<tbody>`를 사용하도록 한다.
+`<table>` 엘리먼트를 제작 시 `<thead>`, `<tfoot>`의 유무와 관계없이 `<tbody>`를 반드시 사용한다.
 
 ```html
 <!-- Bad -->
 <table>
-    <tr></tr>
+    <tr>..</tr>
 </table>
 
 <!-- Good -->
 <table>
     <tbody>
-        <tr></tr>
+        <tr>..</tr>
     </tbody>
 </table>
 ```
 
 #### D. 입력 폼
 
-회원가입 등의 문서 작성 폼에 사용되는 `<input>`, `<select>`, `<textarea>` 엘리먼트는 서로 너비 값이 상이하다면 인라인 스타일로 제어한다.
+회원가입 등의 문서 작성 폼에 사용되는 `<input>`, `<select>`, `<textarea>` 엘리먼트의 유동적인 너비, 높이 값은 인라인 스타일로 제어한다.
 
 ```html
 <!-- Bad -->
@@ -178,7 +202,9 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### E. 버튼
 
-`<button>` 엘리먼트는 `type` 애트리뷰트가 선언되지 않으면 `<form>` 엘리먼트에서 의도치 않은 액션을 발생시키므로 기본값으로 `type="button"`을 선언한다.
+`<button>` 엘리먼트는 `type` 애트리뷰트가 선언되지 않으면 문서 맥락에 따라 `type`이 다른 동작을 하므로 `type="button"`을 반드시 선언한다.
+
+> `type` 애트리뷰트를 지정하지 않은 `<button>` 엘리먼트가 `<form>` 엘리먼트 안에 들어가면 submit 이벤트를 발생시킨다.
 
 ```html
 <!-- Bad -->
@@ -188,21 +214,30 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 <button type="button"></button>
 ```
 
-<h3 id="html-attributes">1-6. Attributes</h3>
+<h3 id="html-attributes">1-5. Attributes</h3>
 
-- 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
-    ```html
-    <input class="input" type="password" name="Password" id="Password" title="비밀번호" style="width:100px" disabled>
-    ```
-- HTML5에서 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
+엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
 
-<h3 id="html-import">1-7. Include</h3>
+```html
+<input class="input" type="password" name="Password" id="Password" title="비밀번호" style="width:100px" disabled>
+```
+
+HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
+
+```html
+<!-- Not Bad -->
+<button disabled="true"></button>
+
+<!-- Good -->
+<button disabled></button>
+```
+
+<h3 id="html-import">1-6. Import</h3>
 
 - HTML5는 CSS와 JS 파일을 불러올 때 `type` 애트리뷰트는 이미 기본값이 지정되어 있으므로 선언하지 않는다.
-- 일반적으로 JS 보다 CSS를 먼저 선언한다.
-- 일반적으로 JS 파일은 종류에 따라 `<head>` 또는 `<body>` 엘리먼트의 마지막에 작성한다.
+- 일반적으로 JS 파일은 `<head>` 또는 `<body>` 엘리먼트의 가장 마지막에 작성한다.
 
-<h3 id="html-comments">1-8. Comments</h3>
+<h3 id="html-comments">1-7. Comments</h3>
 
 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
 
@@ -222,22 +257,14 @@ CSS 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
-- **CSS의 코드 스타일은 컨벤션에서 강제하는 내용을 준수함과 동시에 자신이 원하는 스타일(nested, expanded, compact, compressed, ..)로 작성한다. 단, 하나의 프로젝트 또는 서비스 내에서는 통일된 스타일로 작성하도록 한다.**
-- 들여쓰기는 4개의 공백 문자를 가지는 하드탭(<kbd>tab</kbd>)을 사용한다.
+- **CSS는 컨벤션의 내용을 준수함과 동시에 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성한다.**
+- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
 - 프로퍼티는 영문 소문자를 사용한다.
 - 일반적으로 작은 따옴표(`'`)를 사용하며 @charset 선언과 선택자 안에서만 큰 따옴표(`"`)를 사용한다. 만약 따옴표를 생략할 수 있는 경우에는 반드시 생략한다.
-    ```css
-    @charset "UTF-8";
-    input[type="text"] {
-        background: url(bg.gif);
-        font-family: Dotum,'돋움';
-        content: 'lol';
-    }
-    ```
 
 <h3 id="css-charset">2-2. Charset</h3>
 
-문서의 `Charset`은 일반적으로 `UTF-8`으로 선언하며 최상위에 선언한다.
+문서의 언어셋은 일반적으로 `UTF-8`으로 선언하며 최상위에 선언한다. 언어셋이 정해진 번들링 파일이라면 선언하지 않는다.
 
 ```css
 @charset "UTF-8";
@@ -246,44 +273,91 @@ CSS 코드의 작성 규칙을 설명한다.
 <h3 id="css-selectors">2-3. Selectors</h3>
 
 - **선택자는 가급적 종속하지 않는다.**
-- **아이디는 스타일 제어를 위한 선택자로 절대 사용하지 않는다.**
-- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.** 
-
-<dl>
-    <dt>참고 자료</dt>
-    <dd>
-        <ul>
-            <li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a></li>
-            <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a></li>
-        </ul>
-    </dd>
-</dl>
+- **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
+- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**
+ 
+> ###### 참고 자료
+> - <a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
+> - <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a>
 
 <h3 id="css-properties">2-4. Properties</h3>
 
-- 16진수 값들은 가능하다면 축약형으로 표현한다. (ex: `#ffffff` 대신 `#fff`)
-- 속성값이 0인 값은 단위를 생략한다. (ex: `0px` 대신 `0`)
-- `0.*`의 소수값은 소수점 앞의 0을 생략한다. (ex: `0.5` 대신 `.5`)
-- 프로퍼티값 안의 콤마는 뒤에 공백 문자 하나를 포함한다.
-    ```css
-    /* Bad */
-    .foo { box-shadow: 0px 1px 2px #ccc,inset 0 1px 0 #fff; }
-    
-    /* Good */
-    .foo { box-shadow: 0px 1px 2px #ccc, inset 0 1px 0 #fff; }
-    ```
-- rect() 프로퍼티값 안에서는 구버전의 IE 브라우저와의 호환성을 위해 콤마 대신 공백 문자만 표기한다.
-    ```css
-    /* Bad */
-    .foo { position: absolute; clip: rect(0, 0, 0, 0); }
-    
-    /* Good */
-    .foo { position: absolute; clip: rect(0 0 0 0); }
-    ```
+#### A. 속기 프로퍼티 (Shorthand Properties)
+
+속기로 작성 가능한 프로퍼티는 속기로 작성한다. 
+
+```css
+/* Bad */
+.foo {
+    border-top-style: none;
+    font-family: palatino, georgia, serif;
+    font-size: 100%;
+    line-height: 1.6;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0;
+}
+
+/* Good */
+.bar {
+    border-top: 0;
+    font: 100%/1.6 palatino, georgia, serif;
+    padding: 0 1em 2em;
+}
+```
+
+#### B. 단위 생략
+
+속성값이 0인 값은 단위를 생략한다.
+
+```css
+/* Bad */
+.foo {
+    margin: 0px;
+}
+
+/* Good */
+.bar {
+    margin: 0;
+}
+```
+
+#### C. 0 선행 생략
+
+소수값 앞에 오는 0은 생략한다.
+
+```css
+/* Bad */
+.foo {
+    opacity: 0.5;
+}
+
+/* Good */
+.bar {
+    opacity: .5;
+}
+```
+
+#### D. 속기 16진수
+
+16진수 값들은 가능하다면 축약형으로 표현한다.
+
+```css
+/* Bad */
+.foo {
+    color: #aabbcc;
+}
+
+/* Good */
+.bar {
+    color: #abc;
+}
+```
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS에서 기본으로 제공하는 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용하도록 한다.
+**CSS에서 기본으로 제공하는 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용한다.
 
 - 여러개의 `<link>` 엘리먼트를 사용
 - 하나의 CSS 파일로 작성
@@ -302,31 +376,61 @@ CSS 코드의 작성 규칙을 설명한다.
 <link rel="stylesheet" href="one.css">
 <link rel="stylesheet" href="two.css">
 <link rel="stylesheet" href="three.css">
+
+<!-- Very Good -->
+<link rel="stylesheet" href="bundle.css"> <!-- one.css, .. in bundle.css -->
 ```
 
 <h3 id="css-nesting">2-6. Nesting</h3>
 
-SASS, LESS, Stylus 등의 CSS 전처리기에서 선택자 중첩 시 <a href="#css-selectors">2-3. Selectors</a> 섹션에서 설명한 것과 같이 최대 3단계까지만 중첩하며, 가급적 중첩하지 않는다. **이것을 무분별하게 사용할 경우 컴파일된 CSS가 엉망이 될 수 있다.**
+우리는 선택자의 중첩을 최대한 지양하므로 SASS, LESS, Stylus 등의 CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 않는다. **이것을 무분별하게 사용할 경우 컴파일된 CSS가 엉망이 될 수 있다.**
+
+```scss
+/* Bad */
+.foo {
+    .bar {
+        color: #abc;
+    }
+}
+
+/* Good */
+.foo__bar {
+    color: #abc;
+}
+```
+ 
+> <a href="#css-selectors">2-3. Selectors</a> 섹션 참고
 
 <h3 id="css-media-query">2-7. Media Query</h3>
 
-미디어 쿼리의 위치는 상황에 따라 문서의 마지막에 작성하거나 스타일 코드를 모듈, 컴포넌트 등의 단위로 분류하여 관련 규칙 바로 뒤에 작성한다.
+미디어 쿼리의 위치는 상황에 따라 문서의 마지막에 작성하거나 또는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성한다.
 
 ```css
-.element {}
-.element-foo {}
-.element-bar {}
+.foo-a {}
+.foo-b {}
+
+.bar {}
+
 @media (min-width: 768px) {
-  .element {}
-  .element-foo {}
-  .element-bar {}
+  .foo-a {}
+  .foo-b {}
 }
+
+/* or */
+
+.foo-a {}
+.foo-b {}
+@media (min-width: 768px) {
+  .foo-a {}
+  .foo-b {}
+}
+
+.bar {}
 ```
 
 <h3 id="css-resets">2-8. Resets</h3>
 
-CSS 초기화 스타일은 서비스에 맞게 정의한다.  
-단 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 사용하는 경우 스타일 초기화는 하지 않는다.
+CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 사용하는 경우 스타일 초기화를 하지 않는다.
 
 <h3 id="css-prefix">2-9. Prefix</h3>
 
@@ -335,13 +439,13 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 ```css
 /* Bad */
 .foo {
-    box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
 }
 /* Good */
 .foo {
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
-    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
 }
 ```
 
@@ -378,6 +482,7 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 #### B. 참고 주석
 
 작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (`/*# */`)
+
 ```css
 /*#
     @title CSS z-index Guidelines 
@@ -403,28 +508,18 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다.
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {}
 
 /*=
-    @type Object
+    @type Components
     @name Combobox
     @since v1.1.0 2016-04-08
 */
-.o-foo-cbo {}
-
-/*=
-    @type Object
-    @name Combobox
-    @namespace foo
-    @since v1.1.0 2016-04-08
-*/
-.foo-cbo {}
+.combobox {}
 ```
 
 <dl>
     <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. <code>Setting</code>, <code>Tool</code>, <code>Generic</code>, <code>Base</code>, <code>Object</code>, <code>Component</code>, <code><strong>Container</strong></strong></code>, <code>Theme</code>, <code>Trump</code>로 나뉜다. (<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>)</dd>
+    <dd>엘리먼트 그룹의 타입. 타입은 후술할 <a href="#naming">3. Naming</a>의 규칙과 동일하다.</dd>
     <dt><code>@name</code></dt>
     <dd>엘리먼트 그룹의 이름.</dd>
-    <dt><code>@namespace</code></dt>
-    <dd>엘리먼트 그룹의 네임스페이스. 네임스페이스가 없거나 모듈의 기본값(<code>mod</code>)이라면 생략 가능하다.</dd>
     <dt><code>@author</code></dt>
     <dd>작성자 정보. 프로젝트 주석에 표기된 작성자와 동일 인물이 아닐 경우에만 작성한다.</dd>
     <dt><code>@since</code></dt>
@@ -435,7 +530,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 <h2 id="naming">3. Naming</h2>
 
-선택자, 이미지, 파일 및 폴더의 네이밍 규칙을 설명한다.
+네이밍 규칙을 설명한다.
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
@@ -456,22 +551,21 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 
 
 - 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Containers, Themes, Trumps로 나뉜다.
-- **아이디는 가급적 스타일 제어를 위한 선택자로 사용하지 않는다.**
-- 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.  
-  용량 축소의 이유로 byte 수를 줄여야 할 경우 클래스명을 축약할 수 있으며, 이러한 경우 CSS의 해당 선택자에 주석으로 원래 명칭을 반드시 기재한다.
-- 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않도록 하며, 디자인적인 면보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
+- 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.
+- 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않으며, 디자인보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
+- **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
 
 #### A. Naming
 
-Syntax: `[<namespace>-]<block-name>[__<element-name>][--<modifier-name>][.is|has-<state-name>]`
+Syntax: `[<namespace>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
-BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클래스는 분리한다.
+BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클래스는 `modifier`에서 분리한다.
 
 ```html
 <fieldset class="c-fieldset c-fieldset--simple">
     <input class="textfield" type="text">
     <input class="btn" type="reset">
-    <input class="btn btn--submit is-disabled" type="submit">
+    <input class="btn btn--submit is-disabled" type="submit" disabled>
 </fieldset>
 ```
 
@@ -509,14 +603,12 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 
 @import "objects/_grid";
 
-@import "components/_ads-banner";
 @import "components/_comment";
 @import "components/_fields";
 @import "components/_dialog";
 @import "components/_drawer";
 @import "components/_footer";
 @import "components/_header";
-@import "components/_overlays";
 @import "components/_page-title";
 @import "components/_pagination";
 @import "components/_post";
@@ -581,7 +673,7 @@ button {}
 
 ##### d. Base
 
-클래스 없이 태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성한다.
+태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성한다.
 
 ```scss
 button,
@@ -657,7 +749,7 @@ Namespace: `c`
 Namespace: `t`
 
 테마 스타일을 작성한다. **이 클래스는 반드시 `body` 엘리먼트에만 추가**할 수 있다.
-관리 방법은 여러가지가 있으나, 하나의 프로젝트 또는 서비스 내에서는 한가지 방법으로 통일하도록 한다.
+관리 방법은 여러가지가 있으나, 하나의 프로젝트 또는 서비스 내에서는 한가지 방법으로 통일한다.
 
 ###### Inline
 
@@ -708,42 +800,13 @@ Namespace: `u`
 
 ```scss
 .u-blind {}
-.u-clearfix {}
 ```
 
-<h3 id="naming-files">3-2. Files</h3>
-
-#### A. HTML
-
-HTML 파일은 페이지명을 기준으로 네이밍한다.
-
-#### B. CSS
-
-CSS 파일은 컨텐츠를 기준으로 네이밍하며, 하나의 CSS만 사용할 경우 `style.css`로 네이밍한다.
-
-#### C. 이미지
-
-- 이미지 확장자와 관계없이 중복되지 않도록 네이밍한다.
-    ```shell
-    bg-exam.jpg
-    bg-exam2.gif
-    bg-exam3.png
-    bg-menu
-    bg-menu--hover.jpg
-    bg-menu.type-compact--hover.jpg
-    bg-menu.type-compact--scrolled.jpg
-    ```
-- 임시 이미지의 경우 앞에 언더스코어(`_`)를 추가한다.
-    ```shell
-    _img-exam.png
-    _bg-exam.png
-    ```
-
-<h3 id="naming-exception">3-3. Exception</h3>
+<h3 id="naming-exception">3-2. Exception</h3>
 
 #### A. 폼 애트리뷰트
 
-- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성한다. 다만 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 절대 사용하지 않으며, 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장한다.
+- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성한다. 단, 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 사용하지 않으며, 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장한다.
 - `<form>` 엘리먼트에 제공되는 `name` 애트리뷰트는 서픽스 `form`을 반드시 추가한다.
 
 ```html
@@ -758,13 +821,11 @@ CSS 파일은 컨텐츠를 기준으로 네이밍하며, 하나의 CSS만 사용
 </form>
 ```
 
-#### B. 관계 애트리뷰트
+#### B. ID 관계 애트리뷰트
 
-> 여기서 설명하는 관계 애트리뷰트(Relationship Attributes)란,  
-> 'rel' 애트리뷰트가 아닌 엘리먼트의 관계를 나타내는 모든 애트리뷰트를 뜻한다.  
-> 위에서 이미 설명한 애트리뷰트의 경우 이 섹션에서 다루는 내용과는 별개로 예외처리한다.
+> 여기서 이야기하는 ID 관계 애트리뷰트란, 엘리먼트의 관계 표시를 위해 `id` 애트리뷰트 값을 사용하는 모든 애트리뷰트를 말한다.
 
-엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다. 만약 앵커의 참조 엘리먼트로 사용될 경우 언더스코어를 생략한다.
+엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다. 만약 다른 용도(ex. 앵커의 참조 엘리먼트)로 함께 사용될 경우 언더스코어를 생략한다.
 
 ```html
 <div id="lnb" role="navigation" aria-labelledby="_lnb-heading">
@@ -778,17 +839,8 @@ CSS 파일은 컨텐츠를 기준으로 네이밍하며, 하나의 CSS만 사용
 
 <a target="_blank" href="https://github.com/choi4450/markup-coding-conventions">https:&#47;&#47;github.com&#47;choi4450&#47;markup-coding-conventions</a>
 
-> - 2016.11.24 네이밍 개선(Objects, Components의 의미 재정의 및 Containers 추가)
 > - 2016.06.21 네이밍 개편(BEMIT 도입)
 > - 2016.04.08 개편
-> - 2016.02.02 컴포넌트 관련 용어 재정의, 프리픽스 네이밍 변경(글로벌 컴포넌트, ui → 모듈, mod)
-> - 2016.01.23 확장 네이밍 분류 정의 및 조합 방법 변경
-> - 2016.01.07 렌더링 엔진 최적화를 위한 클래스 사용 방법 정의
-> - 2015.12.14 글로벌 컴포넌트 익스텐션 정의
-> - 2015.10.28 프리픽스 네이밍 수정, 키보드 접근성 내용 추가
-> - 2015.09.10 네이밍 규칙 개선
-> - 2015.05.29 전역 및 컨텐츠 네이밍 내용 보충
-> - 2015.05.18 글로벌 컴포넌트 네이밍 방법 정의
 > - 2015.04.15 작성 완료
 
 

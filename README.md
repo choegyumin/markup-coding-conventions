@@ -810,14 +810,14 @@ Namespace: `u`
 - `<form>` 엘리먼트에 제공되는 `name` 애트리뷰트는 서픽스 `form`을 반드시 추가한다.
 
 ```html
-<!-- Good (PascalCase) -->
-<form class="my-form" name="MyForm" id="MyForm">
-    <input type="text" name="UserName" id="UserName">
-</form>
-
 <!-- Bad (kebab-case) -->
 <form class="my-form" name="my-form" id="my-form">
     <input type="text" name="user-name" id="user-name">
+</form>
+
+<!-- Good (PascalCase) -->
+<form class="my-form" name="MyForm" id="MyForm">
+    <input type="text" name="UserName" id="UserName">
 </form>
 ```
 

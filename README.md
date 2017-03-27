@@ -20,11 +20,12 @@
     - <a href="#css-selectors">2-3. Selectors</a>
     - <a href="#css-properties">2-4. Properties</a>
     - <a href="#css-import">2-5. Import</a>
-    - <a href="#css-nesting">2-6. Nesting</a>
-    - <a href="#css-media-query">2-7. Media Query</a>
-    - <a href="#css-resets">2-8. Resets</a>
-    - <a href="#css-prefix">2-9. Prefix</a>
-    - <a href="#css-comments">2-10. Comments</a>
+    - <a href="#css-media-query">2-6. Media Query</a>
+    - <a href="#css-nesting">2-7. Nesting</a>
+    - <a href="#css-extend">2-8. Extend</a>
+    - <a href="#css-reset">2-9. Reset</a>
+    - <a href="#css-prefix">2-10. Prefix</a>
+    - <a href="#css-comments">2-11. Comments</a>
 - <a href="#naming">3. Naming</a>
     - <a href="#naming-selectors">3-1. Selectors</a>
     - <a href="#naming-exception">3-2. Exception</a>
@@ -253,7 +254,7 @@ HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어�
 
 <h2 id="css">2. CSS</h2>
 
-CSS 코드의 작성 규칙을 설명한다.
+CSS와 CSS 전처리기(SASS, LESS, Stylus) 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
@@ -275,10 +276,10 @@ CSS 코드의 작성 규칙을 설명한다.
 - **선택자는 가급적 종속하지 않는다.**
 - **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
 - **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**
- 
-> ###### 참고 자료
-> - <a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
-> - <a href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a>
+
+> ###### 참고자료
+> - <a target="_blank" href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
+> - <a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a>
 
 <h3 id="css-properties">2-4. Properties</h3>
 
@@ -362,7 +363,7 @@ CSS 코드의 작성 규칙을 설명한다.
 - 여러개의 `<link>` 엘리먼트를 사용
 - 하나의 CSS 파일로 작성
     - 태스크러너 등의 도구를 이용하여 CSS 파일을 하나로 합침
-    - SASS나 Stylus 등의 CSS 전처리기에서 제공하는 `@import`를 사용
+    - CSS 전처리기가 제공하는 `@import`를 사용
 
 ```html
 <!-- Too Bad -->
@@ -381,27 +382,7 @@ CSS 코드의 작성 규칙을 설명한다.
 <link rel="stylesheet" href="bundle.css"> <!-- one.css, .. in bundle.css -->
 ```
 
-<h3 id="css-nesting">2-6. Nesting</h3>
-
-우리는 선택자의 중첩을 최대한 지양하므로 SASS, LESS, Stylus 등의 CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 않는다. **이것을 무분별하게 사용할 경우 컴파일된 CSS가 엉망이 될 수 있다.**
-
-```scss
-/* Bad */
-.foo {
-    .bar {
-        color: #abc;
-    }
-}
-
-/* Good */
-.foo__bar {
-    color: #abc;
-}
-```
- 
-> <a href="#css-selectors">2-3. Selectors</a> 섹션 참고
-
-<h3 id="css-media-query">2-7. Media Query</h3>
+<h3 id="css-media-query">2-6. Media Query</h3>
 
 미디어 쿼리의 위치는 상황에 따라 문서의 마지막에 작성하거나 또는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성한다.
 
@@ -428,11 +409,37 @@ CSS 코드의 작성 규칙을 설명한다.
 .bar {}
 ```
 
-<h3 id="css-resets">2-8. Resets</h3>
+<h3 id="css-nesting">2-7. Nesting</h3>
+
+우리는 선택자의 중첩을 최대한 지양하므로 CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 않는다. **이것을 무분별하게 사용할 경우 컴파일된 CSS가 엉망이 될 수 있다.**
+
+```scss
+/* Bad */
+.foo {
+    .bar {
+        color: #abc;
+    }
+}
+
+/* Good */
+.foo__bar {
+    color: #abc;
+}
+```
+
+<h3 id="css-extend">2-8. Extend</h3>
+
+CSS 전처리기가 지원하는 **Extend 문법은 절대 사용하지 않으며, Mixin으로 대체한다.** 
+
+> ###### 참고자료
+> - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
+> - <a target="_blank" href="https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/">When to use @extend; when to use a mixin</a>
+
+<h3 id="css-reset">2-9. Reset</h3>
 
 CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 사용하는 경우 스타일 초기화를 하지 않는다.
 
-<h3 id="css-prefix">2-9. Prefix</h3>
+<h3 id="css-prefix">2-10. Prefix</h3>
 
 브라우저별 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언한다. 
 
@@ -449,7 +456,7 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_
 }
 ```
 
-<h3 id="css-comments">2-10. Comments</h3>
+<h3 id="css-comments">2-11. Comments</h3>
 
 주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
 

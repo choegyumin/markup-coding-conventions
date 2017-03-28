@@ -13,7 +13,6 @@
     - <a href="#html-elements">1-4. Elements</a>
     - <a href="#html-attributes">1-5. Attributes</a>
     - <a href="#html-import">1-6. Import</a>
-    - <a href="#html-comments">1-7. Comments</a>
 - <a href="#css">2. CSS</a>
     - <a href="#css-syntax">2-1. Syntax</a>
     - <a href="#css-charset">2-2. Charset</a>
@@ -37,42 +36,42 @@
 
 <h2 id="glossaries">Glossaries</h2>
 
-먼저 컨벤션에 자주 사용되는 용어의 정의를 설명한다.
+먼저 컨벤션에 자주 사용되는 용어의 정의를 설명합니다.
 
 <dl>
     <dt>엘리먼트(Element)</dt>
-    <dd>HTML 문서를 구성하는 요소(태그)를 의미한다.</dd>
+    <dd>HTML 문서를 구성하는 요소(태그)를 의미합니다.</dd>
     <dt>애트리뷰트(Attribute)</dt>
-    <dd>엘리먼트에 부여할 수 있는 특성을 의미한다.</dd>
+    <dd>엘리먼트에 부여할 수 있는 특성을 의미합니다.</dd>
     <dt>선택자(Selector)</dt>
-    <dd>엘리먼트를 식별할 수 있는 이름을 의미한다.</dd>
+    <dd>엘리먼트를 식별할 수 있는 이름을 의미합니다.</dd>
     <dt>스타일(Style)</dt>
-    <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미한다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분된다.</dd>
+    <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미합니다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분합니다..</dd>
     <dt>프로퍼티(Property)</dt>
-    <dd>스타일과 관련하여 사용했을 경우 스타일 시트의 속성을 의미한다.</dd>
+    <dd>스타일과 관련된 문맥일 경우 스타일 시트의 속성을 의미합니다.</dd>
     <dt>프리픽스(Prefix) & 서픽스(Suffix)</dt>
-    <dd>네이밍 시 사용되는 접두사, 접미사를 의미한다.</dd>
+    <dd>네이밍 시 사용되는 접두사, 접미사를 의미합니다.</dd>
     <dt>컴포넌트(Component)</dt>
-    <dd>하나 이상의 기능 또는 역할을 가진 컨텐츠 단위의 UI 구성요소를 의미한다.</dd>
+    <dd>하나 이상의 기능 또는 역할을 가진 컨텐츠 단위의 UI 구성요소를 의미합니다.</dd>
 </dl>
 
 
 
 <h2 id="html">1. HTML</h2>
 
-HTML 코드의 작성 규칙을 설명한다.
+HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-syntax">1-1. Syntax</h3>
 
-- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
-- 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성한다.
-- 모든 애트리뷰트값은 큰 따옴표(`"`)를 사용하여 감싼다.
-- 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 않는다.
-- 닫는 태그가 선택적인 경우에도 생략하지 않는다. (ex: `</li>`, `</body>`)
+- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
+- 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성하세요.
+- 모든 애트리뷰트 값은 큰 따옴표(`"`)로 감싸세요.
+- 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 마세요.
+- 닫는 태그가 선택적이라도 생략하지 마세요. (ex: `</li>`, `</body>`)
 
 <h3 id="html-doctype">1-2. Doctype</h3>
 
-Doctype은 일반적으로 HTML5 DTD로 선언한다.
+일반적으로 Doctype은 HTML5 DTD로 선언하세요. 이어서 자기 마침 엘리먼트(self-closing elements)에 후행 슬래시를 사용하지 마세요. 
  
 ```html
 <!DOCTYPE html>
@@ -80,7 +79,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 <h3 id="html-metadata">1-3. Metadata</h3>
 
-`<head>` 엘리먼트의 자식 엘리먼트 순서는 아래와 같다.
+`<head>` 엘리먼트의 자식 엘리먼트는 아래의 순서대로 작성하세요.
 
 1. Charset
 2. X-UA-Compatible
@@ -100,7 +99,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### A. Charset
 
-일반적으로 문서의 언어셋은 `UTF-8`으로 선언한다.
+일반적으로 문서의 언어셋은 `UTF-8`으로 선언하세요.
 
 ```html
 <meta charset="utf-8">
@@ -108,7 +107,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### B. X-UA-Compatible
 
-IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 최신 버전의 IE로 렌더링한다.
+최신 버전의 IE로 렌더링하기 위해 문서모드를 `Edge`로 선언하세요.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -118,15 +117,19 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
-자식 엘리먼트 태그가 한정적인 엘리먼트(ex. `<table>`) 또는 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트 엘리먼트로 사용될 경우 의미없는 엘리먼트로 감싸는 것을 권장한다.
+자식 엘리먼트 태그가 한정적이거나(ex. `<table>`) 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트에 위치한다면 유지보수를 고려해 의미없는 엘리먼트로 감싸는 것을 권장합니다.
 
-> 이 외의 불필요한 엘리먼트 상속은 피한다.
+> 이 외의 불필요한 엘리먼트 상속은 반드시 피하세요!
 
 ```html
 <!-- Not Bad -->
+<select class="input"></select>
 <table class="table"></table>
 
 <!-- Good -->
+<span class="input">
+    <select></select>
+</span>
 <div class="table">
     <table></table>
 </div>
@@ -151,7 +154,7 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 </table>
 ```
 
-테이블의 제목이 필요하지 않거나 이미 `<table>` 엘리먼트 앞에 제공되었다면 생략한다.
+테이블의 제목이 필요없거나 이미 제공되었다면 생략하세요. 컨텐츠를 중복 제공하는 것은 좋지 않습니다.
 
 ```html
 <!-- Bad -->
@@ -171,7 +174,7 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 
 #### C. 입력 필드
 
-문서 작성 폼에 사용되는 사용자 입력 필드처럼 유동적인 너비, 높이 값을 가질 경우 인라인 스타일로 제어한다.
+문서 작성 폼의 사용자 입력 필드처럼 너비, 높이가 유동적이라면 인라인 스타일로 제어하세요. 불필요한 클래스 생성을 막을 수 있습니다.
 
 ```html
 <!-- Bad -->
@@ -185,14 +188,14 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 
 <h3 id="html-attributes">1-5. Attributes</h3>
 
-엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
+애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 이는 에디터로 특정 엘리먼트를 검색할 때 효율을 증가 시킵니다.
 
 ```html
 <input class="input" type="text" name="UserId" id="UserId" title="아이디" style="width:100px">
 <input class="input" type="password" name="UserPw" id="UserPw" title="비밀번호" style="width:120px">
 ```
 
-HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
+HTML5는 Boolean 애트리뷰트를 선언만 해도 `true`를 의미하므로 필요하지 않다면 값을 지정하지 마세요.
 
 ```html
 <!-- Not Bad -->
@@ -204,37 +207,25 @@ HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어�
 
 <h3 id="html-import">1-6. Import</h3>
 
-- HTML5는 CSS와 JS 파일을 불러올 때 `type` 애트리뷰트는 이미 기본값이 지정되어 있으므로 선언하지 않는다.
-- 일반적으로 JS 파일은 `<head>` 또는 `<body>` 엘리먼트의 가장 마지막에 작성한다.
-
-<h3 id="html-comments">1-7. Comments</h3>
-
-주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 주석기호와 주석내용 사이에 개행과 들여쓰기를 추가한다.
-
-```html
-<!-- This comment is 1 line -->
-<!--
-    This comment is
-    2 lines
--->
-```
+- HTML5에서 CSS와 JS 파일을 불러올 때는 `type` 애트리뷰트가 이미 기본값을 가지므로 필요하지 않다면 선언하지 마세요.
+- 일반적으로 JS 파일은 `<head>` 또는 `<body>` 엘리먼트의 가장 마지막에 작성하세요. 웹브라우저는 `<script>` 엘리먼트를 만나면 처리가 끝날 때까지 HTML 파싱을 멈춥니다.
 
 
 
 <h2 id="css">2. CSS</h2>
 
-CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 작성 규칙을 설명한다.
+CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 작성 규칙을 설명합니다.
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
-- **CSS는 컨벤션의 내용을 준수함과 동시에 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성한다.**
-- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
-- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 동일하게 작성한다.
-- 일반적으로 작은 따옴표(`'`)를 사용하며 `@charset` 선언과 타입 선택자 안에서만 큰 따옴표(`"`)를 사용한다. 생략이 가능한 경우엔 생략한다.
+- **CSS는 컨벤션의 내용을 준수함을 전제로 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성하세요.**
+- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
+- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 동일하게 작성하세요.
+- 일반적으로 작은 따옴표(`'`)를 사용하며, `@charset` 선언과 타입 선택자만 큰 따옴표(`"`)를 사용하세요. 가능하다면 생략하는 것이 좋습니다.
 
 <h3 id="css-charset">2-2. Charset</h3>
 
-일반적으로 문서의 언어셋은 `UTF-8`으로 최상위에 선언한다. 언어셋이 정해진 번들링 파일이라면 선언하지 않는다.
+일반적으로 문서의 언어셋은 `UTF-8`으로 최상위에 선언하세요. 언어셋이 정해진 번들링 파일이라면 선언하지 않습니다.
 
 ```css
 @charset "UTF-8";
@@ -242,9 +233,11 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-selectors">2-3. Selectors</h3>
 
-- **선택자는 가급적 종속하지 않는다.**
-- **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
-- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 지양한다.**
+- **선택자는 가급적 중첩하지 마세요!**
+- **스타일 제어를 위해 아이디 선택자를 사용하는 것을 피하세요!**
+- **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 피하세요!**
+
+> 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
 
 > ###### 참고자료
 > - <a target="_blank" href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
@@ -254,7 +247,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### A. 속기 프로퍼티 (Shorthand Properties)
 
-속기로 작성 가능한 프로퍼티는 속기로 작성한다. 
+속기로 작성 가능한 프로퍼티는 속기로 작성하세요.
 
 ```css
 /* Bad */
@@ -277,7 +270,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### B. 속기 16진수
 
-16진수 값들은 가능하다면 축약형으로 표현한다.
+16진수 값들은 가능하다면 축약형으로 작성하세요.
 
 ```css
 /* Bad */
@@ -293,7 +286,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### C. 단위 생략
 
-속성값이 0인 값은 단위를 생략한다.
+값이 0이라면 단위를 생략하세요.
 
 ```css
 /* Bad */
@@ -309,7 +302,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### D. 선행 0 생략
 
-소수값 앞에 오는 0은 생략한다.
+소수값 앞에 오는 0은 생략하세요.
 
 ```css
 /* Bad */
@@ -325,12 +318,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS에서 기본 문법인 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용한다.
+**CSS에서 기본 문법인 `@import`는 성능 문제로 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
 
-- 여러개의 `<link>` 엘리먼트를 사용
-- 하나의 CSS 파일로 작성
-    - 태스크러너 등의 도구를 이용하여 CSS 파일을 하나로 합침
-    - CSS 전처리기가 제공하는 `@import`를 사용
+- 여러개의 `<link>` 엘리먼트를 사용하기
+- 하나의 CSS 파일로 작성하기
+    - CSS 전처리기의 `@import` 문법을 사용하기
+    - 도구를 이용하여 하나의 CSS 파일로 합치기
 
 ```html
 <!-- Too Bad -->
@@ -351,7 +344,18 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-media-query">2-6. Media Query</h3>
 
-미디어 쿼리의 위치는 상황에 따라 문서의 마지막에 작성하거나 또는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성한다.
+미디어 쿼리는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성하세요. 이는 파편화된 스타일을 하나로 합쳐 보기 좋게 해줍니다. 불가능하다면 문서의 마지막에 모아서 작성하세요. 
+
+```css
+.foo-a {}
+.foo-b {}
+@media (min-width: 768px) {
+  .foo-a {}
+  .foo-b {}
+}
+
+.bar {}
+```
 
 ```css
 .foo-a {}
@@ -363,22 +367,14 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
   .foo-a {}
   .foo-b {}
 }
-
-/* or */
-
-.foo-a {}
-.foo-b {}
-@media (min-width: 768px) {
-  .foo-a {}
-  .foo-b {}
-}
-
-.bar {}
 ```
 
 <h3 id="css-nesting">2-7. Nesting</h3>
 
-우리는 선택자의 중첩을 최대한 지양하므로 CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 않는다. **이것을 무분별하게 사용할 경우 컴파일된 CSS가 엉망이 될 수 있다.**
+우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 이것을 무분별하게 사용한다면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
+
+> - 선택자의 중첩을 피해야하는 이유는 <a href="css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
+> - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
 
 ```scss
 /* Bad */
@@ -396,7 +392,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-extend">2-8. Extend</h3>
 
-CSS 전처리기가 지원하는 **Extend 문법은 절대 사용하지 않으며, Mixin으로 대체한다.** 
+CSS 전처리기가 지원하는 **Extend 문법은 절대 사용하지 마세요! Mixin으로 대체하세요!** 
 
 > ###### 참고자료
 > - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
@@ -404,11 +400,11 @@ CSS 전처리기가 지원하는 **Extend 문법은 절대 사용하지 않으�
 
 <h3 id="css-reset">2-9. Reset</h3>
 
-CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a>를 사용하는 경우 스타일 초기화를 하지 않는다.
+초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 따로 초기화하지 마세요.
 
 <h3 id="css-prefix">2-10. Prefix</h3>
 
-브라우저별 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언한다. 
+벤더 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언하세요.
 
 ```css
 /* Bad */
@@ -425,23 +421,11 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_
 
 <h3 id="css-comments">2-11. Comments</h3>
 
-주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다. CSS 전처리기를 사용할 경우 한줄 주석도 사용 가능하다.
-
-```css
-/* This comment is 1 line */
-/*
-    This comment is
-    2 lines
-*/
-```
-
-```scss
-// This comment is 1 line with CSS Preprocessor
-```
+코드를 알아보기 쉽게 주석으로 스타일을 그룹화하세요.
 
 #### A. 프로젝트 주석
 
-프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성한다. (`/*! */`)
+프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성하세요. (`/*! */`)
 
 ```css
 /*!
@@ -452,16 +436,18 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_
 
 <dl>
     <dt><code>@author</code></dt>
-    <dd>작성자 정보. 이름과 이메일을 작성한다.</dd>
+    <dd>작성자 정보입니다. 이름과 이메일을 작성하세요.</dd>
     <dt><code>@since</code></dt>
-    <dd>문서의 버전 및 작성일. 둘 중 하나만 작성하여도 상관없다.</dd>
+    <dd>문서의 버전 및 작성일입니다. 둘 중 하나만 작성하셔도 됩니다.</dd>
 </dl>
 
 #### B. 코드 문서화 주석
 
+코드를 문서화하기 위한 주석입니다.
+
 ##### a. CSS
 
-CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
+CSS로 작성 시 아래의 형식에 맞게 작성하세요. (`/*= */`)
 
 ```css
 /*=
@@ -478,20 +464,20 @@ CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
 
 <dl>
     <dt><code>@group</code></dt>
-    <dd>항목의 계층(layer). 후술할 <a href="#naming">3. Naming</a>의 규칙과 동일하다.</dd>
+    <dd>항목의 계층(Layer)입니다. 후술할 <a href="#naming">3. Naming</a> 섹션의 규칙과 동일합니다.</dd>
     <dt><code>@name</code></dt>
-    <dd>항목의 이름.</dd>
+    <dd>항목의 이름입니다.</dd>
     <dt><code>@author</code></dt>
-    <dd>작성자 정보. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략한다.</dd>
+    <dd>작성자 정보입니다. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략하세요.</dd>
     <dt><code>@since</code></dt>
-    <dd>항목의 버전 및 작성일. 개발단계에서는 작성하지 않는다.</dd>
+    <dd>항목의 버전 및 작성일입니다. 개발단계에서는 작성하지 마세요.</dd>
     <dt>Description</dt>
-    <dd>항목에 대한 설명. 블록 태그(<code>@</code>)는 작성하지 않는다.</dd>
+    <dd>항목에 대한 설명입니다. 블록 태그(<code>@</code>)는 없습니다.</dd>
 </dl>
 
 ##### b. CSS 전처리기
 
-CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방식으로 작성하며, 없다면 CSS 규칙으로 작성한다. 아래 예제는 [SassDoc](http://sassdoc.com/)을 사용한 것이다.
+CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙으로 작성합니다. 아래 예제는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
 
 ```scss
 /// @group Tools
@@ -520,13 +506,13 @@ CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방
 
 <h2 id="naming">3. Naming</h2>
 
-네이밍 규칙을 설명한다.
+네이밍 규칙을 설명합니다.
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 네이밍 컨벤션*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 아키텍쳐*가 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 한다.**
+> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 방법론*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 방법론*이 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 만들어졌습니다.**
 >
-> *참고 문서*
+> ###### 참고 문서
 > - BEM
 >   - <a target="_blank" href="https://en.bem.info/">BEM</a>
 >   - <a target="_blank" href="http://getbem.com/">Get BEM</a>
@@ -540,20 +526,24 @@ CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
 
-- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Containers, Themes, Utilities로 나뉜다.
-- 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.
-- 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않으며, 디자인보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
-- **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
+- **스타일 제어를 위해 아이디 선택자를 사용하는 것을 피하세요!**
+- **클래스명은 반드시 엘리먼트의 의미를 전부 담아서 네이밍하세요!**
+- **클래스명은 페이지에 상속받지 않으며, 디자인보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍하세요!**
 
 #### A. Naming
 
-Syntax: `[<namespace>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
+Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
-BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클래스는 `modifier`에서 분리한다.
+1. 네이밍 규칙은 BEM을 기반으로 합니다.  
+  ```BLOCK__ELEMENT--MODIFIER```
+1. 앞에 ITCSS를 기반으로 한 네임스페이스를 추가합니다.  
+  ```NAMESPACE-BLOCK__ELEMENT--MODIFIER```
+1. 상태 클래스는 `modifier`에서 분리하여 따로 관리합니다.  
+  ```NAMESPACE-BLOCK__ELEMENT--MODIFIER.is-STATE```
 
 ```html
 <fieldset class="c-fieldset c-fieldset--simple">
-    <input class="textfield" type="text">
+    <input class="input" type="text">
     <input class="btn" type="reset">
     <input class="btn btn--submit is-disabled" type="submit" disabled>
 </fieldset>
@@ -569,9 +559,21 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 .btn--submit.is-disabled {}
 ```
 
-#### B. Architecture
+#### B. Layer
 
-##### `@import` example with SASS(scss)
+스타일시트의 계층(Layer)은 9단계로 나뉩니다.
+
+- Settings
+- Tools
+- Generic
+- Base
+- Objects
+- Components
+- Containers
+- Themes
+- Utilities(Trumps)
+
+###### Example with SASS(scss)
 
 ```scss
 @import "settings/_breakpoints";
@@ -616,7 +618,7 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 
 ##### a. Settings
 
-CSS 전처리기를 사용할 경우 전역 변수를 작성한다.
+CSS 전처리기를 사용한다면 전역 변수를 작성하세요.
 
 ```scss
 $breakpoints: (
@@ -631,7 +633,7 @@ $breakpoints: (
 
 ##### b. Tools
 
-CSS 전처리기를 사용할 경우 Function과 Mixin을 작성한다.
+CSS 전처리기를 사용한다면 Function과 Mixin을 작성하세요.
 
 ```scss
 @mixin background-rgba($color, $alpha) {
@@ -647,7 +649,7 @@ CSS 전처리기를 사용할 경우 Function과 Mixin을 작성한다.
 
 ##### c. Generic
 
-CSS 초기화 또는 normalize.css 등의 문서 초기 스타일을 지정한다.
+문서의 초기 스타일을 지정하세요.
 
 ```scss
 html,
@@ -660,7 +662,7 @@ button {}
 
 ##### d. Base
 
-태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성한다.
+태그 선택자 또는 타입 선택자를 이용하여 각 태그 엘리먼트의 기본 스타일을 작성하세요.
 
 ```scss
 button,
@@ -674,8 +676,7 @@ input[type='image'] {}
 
 Namespace: `o`
 
-반복적이며 재사용이 가능한 디자인 패턴을 작성한다.  
-이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성한다.
+반복적이며 재사용이 가능한 디자인 패턴을 작성하세요. 이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성합니다.
 
 ```scss
 .o-row {}
@@ -696,8 +697,7 @@ Namespace: `o`
 
 Namespace: -
 
-컴포넌트란 입력 필드, 버튼과 같이 완성된 UI 모듈을 뜻한다.  
-여기서 컴포넌트는 기능을 가지지 않고 시각적으로만 완성된 `Dumb/Presentational Component`를 뜻한다.
+기능을 가질 수 없고, 시각적으로만 완성된 컴포넌트(`Dumb/Presentational Component`)를 작성하세요. 여기서 이야기하는 기능이란 주어진 데이터를 I/O하는 수준의 인터랙션이 아닌 API와 통신하고 데이터를 다루는 수준의 기능을 의미합니다.
 
 ```scss
 .combobox {}
@@ -716,7 +716,7 @@ Namespace: -
 
 Namespace: `c`
 
-컨테이너는 컴포넌트의 일종으로 기능을 가진 모듈(`Smart/Container Component`)을 뜻한다.
+기능을 가진 컴포넌트(`Smart/Container Component`)를 작성하세요. 이것은 컴포넌트의 한 종류입니다.
 
 ```scss
 .c-about__title {}
@@ -735,12 +735,11 @@ Namespace: `c`
 
 Namespace: `t`
 
-테마 스타일을 작성한다. **이 클래스는 반드시 `body` 엘리먼트에만 추가**할 수 있다.
-관리 방법은 여러가지가 있으나, 하나의 프로젝트 또는 서비스 내에서는 한가지 방법으로 통일한다.
+테마 스타일을 작성하세요. **이 클래스는 `body` 엘리먼트에 추가하는 것을 권장합니다.** 관리 방법은 여러가지가 있으며, 하나의 규칙으로 통일하여 작성하세요.
 
 ###### Inline
 
-엘리먼트와 함께 작성한다.
+엘리먼트와 함께 작성합니다.
 
 ```scss
 .combobox {
@@ -757,7 +756,7 @@ Namespace: `t`
 
 ###### Separated layers
 
-`Containers` 계층과 `Utilities` 계층 사이에 작성한다.
+`Containers` 계층과 `Utilities` 계층 사이에 작성합니다.
 
 ```scss
 ..
@@ -771,7 +770,7 @@ Namespace: `t`
 
 ###### Separated CSS files
 
-CSS 파일을 분리하여 작성한다.
+CSS 파일을 분리하여 작성합니다.
 
 ```html
 <link rel="stylesheet" href="/css/project.css">
@@ -782,8 +781,7 @@ CSS 파일을 분리하여 작성한다.
 
 Namespace: `u`
 
-스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성한다.  
-만약 스타일시트의 상단에 작성해야 할 경우 모든 프로퍼티에 `!important`를 추가한다.
+스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성합니다. 때에 따라 프로퍼티에 `!important`를 추가할 수 있습니다.
 
 ```scss
 .u-blind {}
@@ -793,8 +791,8 @@ Namespace: `u`
 
 #### A. 폼 애트리뷰트
 
-- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성한다. 단, 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 사용하지 않으며, 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장한다.
-- `<form>` 엘리먼트에 제공되는 `name` 애트리뷰트는 서픽스 `form`을 반드시 추가한다.
+- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성하세요. 단, 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 사용하지 마세요. 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장합니다.
+- `<form>` 엘리먼트의 `name` 애트리뷰트는 가급적 뒤에 'form'을 추가하세요.
 
 ```html
 <!-- Bad (kebab-case) -->
@@ -810,9 +808,9 @@ Namespace: `u`
 
 #### B. ID 관계 애트리뷰트
 
-> 여기서 이야기하는 ID 관계 애트리뷰트란, 엘리먼트의 관계 표시를 위해 `id` 애트리뷰트 값을 사용하는 모든 애트리뷰트를 말한다.
+> 여기서 이야기하는 ID 관계 애트리뷰트란, 엘리먼트의 관계 표시를 위해 `id` 애트리뷰트를 사용하는 모든 애트리뷰트를 의미합니다.
 
-엘리먼트의 관계를 설명하기 위해 제공되는 `id` 애트리뷰트 값은 앞에 언더스코어(`_`) 하나를 추가한다. 만약 다른 용도(ex. 앵커의 참조 엘리먼트)로 함께 사용될 경우 언더스코어를 생략한다.
+ID 관계 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용될 경우 언더스코어를 생략하세요.
 
 ```html
 <div id="lnb" role="navigation" aria-labelledby="_lnb-heading">

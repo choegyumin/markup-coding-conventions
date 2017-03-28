@@ -207,7 +207,7 @@ HTML5는 Boolean 애트리뷰트를 선언만 해도 `true`를 의미하므로 �
 
 <h3 id="html-import">1-6. Import</h3>
 
-- HTML5에서 CSS와 JS 파일을 불러올 때는 `type` 애트리뷰트가 이미 기본값을 가지므로 필요하지 않다면 선언하지 마세요.
+- HTML5에서 CSS와 JS 파일을 불러올 때는 `type` 애트리뷰트가 이미 기본값을 가집니다. 필요하지 않다면 선언하지 마세요.
 - 일반적으로 JS 파일은 `<head>` 또는 `<body>` 엘리먼트의 가장 마지막에 작성하세요. 웹브라우저는 `<script>` 엘리먼트를 만나면 처리가 끝날 때까지 HTML 파싱을 멈춥니다.
 
 
@@ -392,7 +392,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-extend">2-8. Extend</h3>
 
-CSS 전처리기가 지원하는 **Extend 문법은 절대 사용하지 마세요! Mixin으로 대체하세요!** 
+**CSS 전처리기가 지원하는 Extend 문법은 절대 사용하지 마세요! Mixin으로 대체하세요!** 
 
 > ###### 참고자료
 > - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
@@ -477,7 +477,7 @@ CSS로 작성 시 아래의 형식에 맞게 작성하세요. (`/*= */`)
 
 ##### b. CSS 전처리기
 
-CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙으로 작성합니다. 아래 예제는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
+CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙으로 작성하세요. 아래 코드는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
 
 ```scss
 /// @group Tools
@@ -792,7 +792,7 @@ Namespace: `u`
 #### A. 폼 애트리뷰트
 
 - `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성하세요. 단, 하이픈(`-`)을 사용하는 `케밥 표기법`(`kebab-case`)은 사용하지 마세요. 컨벤션이 없다면 `파스칼 표기법`(`PascalCase`)을 권장합니다.
-- `<form>` 엘리먼트의 `name` 애트리뷰트는 가급적 뒤에 'form'을 추가하세요.
+- `<form>` 엘리먼트의 `id`, `name` 애트리뷰트는 가급적 뒤에 'form'을 추가하세요.
 
 ```html
 <!-- Bad (kebab-case) -->

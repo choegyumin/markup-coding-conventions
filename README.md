@@ -503,7 +503,8 @@ CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
     @author My Name <id@domain.com>
     @since v1.2.0 2016-04-11
 
-    This is example! blah, blah, blah..
+    This is example!
+    blah, blah, blah, blah..
 */
 .combobox {}
 ```
@@ -535,9 +536,8 @@ CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방
 /// @param {Length} $alpha [1] - Element's background alpha
 /// @output `background-color` and `filter`
 ///
-/// Helper mixin to size elements in a single line.
-/// This mixin is essentially a short hand to define
-/// both `width` and `height` simultaneously.
+/// This is example!
+/// blah, blah, blah, blah..
 @mixin background-rgba($color, $alpha: 1) {
     $rgba: rgba($color, $alpha);
     $ie-hex-str: ie-hex-str($rgba);

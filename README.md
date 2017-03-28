@@ -499,7 +499,7 @@ CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
 ```css
 /*=
     @group Components
-    @name Combobox
+    @name combobox
     @author My Name <id@domain.com>
     @since v1.2.0 2016-04-11
 
@@ -527,7 +527,7 @@ CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방
 
 ```scss
 /// @group Tools
-/// @name Background rgba
+/// @name background-rgba
 /// @author My Name <id@domain.com>
 /// @since v1.2.0 2016-04-11
 ///

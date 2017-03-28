@@ -526,7 +526,7 @@ CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
 CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방식으로 작성하며, 없다면 CSS 규칙으로 작성한다. 아래 예제는 [sassDOC](http://sassdoc.com/)을 사용한 것이다.
 
 ```scss
-/// @group tools
+/// @group Tools
 /// @name Background rgba
 /// @author My Name <id@domain.com>
 /// @since v1.2.0 2016-04-11

@@ -254,7 +254,7 @@ HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어�
 
 <h2 id="css">2. CSS</h2>
 
-CSS와 CSS 전처리기(SASS, LESS, Stylus) 코드의 작성 규칙을 설명한다.
+CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 작성 규칙을 설명한다.
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
@@ -458,7 +458,7 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_
 
 <h3 id="css-comments">2-11. Comments</h3>
 
-주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다.
+주석을 한줄로 작성할 경우 주석기호와 주석내용 사이에 한칸의 공백을 추가하며, 두줄 이상의 경우 아래의 문법을 따른다. CSS 전처리기를 사용할 경우 한줄 주석도 사용 가능하다.
 
 ```css
 /* This comment is 1 line */
@@ -468,70 +468,86 @@ CSS 초기화 스타일은 서비스에 맞게 정의한다. 만약 <a target="_
 */
 ```
 
+```scss
+// This comment is 1 line with CSS Preprocessor
+```
+
 #### A. 프로젝트 주석
 
-프로젝트 정보를 나타내는 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성한다. (`/*! */`)
+프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성한다. (`/*! */`)
 
 ```css
 /*!
-    @author My Name <email_id@domain.com> 
-    @version v1.2.0 2016-04-11
+    @author My Name <id@domain.com> 
+    @since v1.2.0 2016-04-11
 */
 ```
 
 <dl>
     <dt><code>@author</code></dt>
     <dd>작성자 정보. 이름과 이메일을 작성한다.</dd>
-    <dt><code>@version</code></dt>
+    <dt><code>@since</code></dt>
     <dd>문서의 버전 및 작성일. 둘 중 하나만 작성하여도 상관없다.</dd>
 </dl>
 
-#### B. 참고 주석
+#### B. 코드 문서화 주석
 
-작업 진행에 참고해야 하는 주석은 아래의 양식에 맞게 작성한다. (`/*# */`)
+##### a. CSS
 
-```css
-/*#
-    @title CSS z-index Guidelines 
-
-    blah, blah, blah..
-*/
-```
-
-<dl>
-    <dt><code>@title</code></dt>
-    <dd>주석 내용의 제목.</dd>
-</dl>
-
-#### C. 코드 주석
-
-코드 그룹의 정보를 나타내는 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
+CSS 작성 시 주석은 아래의 형식에 맞게 작성한다. (`/*= */`)
 
 ```css
 /*=
-    @type Generic
-    @name Reset
-*/
-article, aside, details, figcaption, figure, footer, header, menu, nav, section {}
-
-/*=
-    @type Components
+    @group Components
     @name Combobox
-    @since v1.1.0 2016-04-08
+    @author My Name <id@domain.com>
+    @since v1.2.0 2016-04-11
+
+    This is example! blah, blah, blah..
 */
 .combobox {}
 ```
 
 <dl>
-    <dt><code>@type</code></dt>
-    <dd>엘리먼트 그룹의 타입. 타입은 후술할 <a href="#naming">3. Naming</a>의 규칙과 동일하다.</dd>
+    <dt><code>@group</code></dt>
+    <dd>항목의 계층(layer). 후술할 <a href="#naming">3. Naming</a>의 규칙과 동일하다.</dd>
     <dt><code>@name</code></dt>
-    <dd>엘리먼트 그룹의 이름.</dd>
+    <dd>항목의 이름.</dd>
     <dt><code>@author</code></dt>
-    <dd>작성자 정보. 프로젝트 주석에 표기된 작성자와 동일 인물이 아닐 경우에만 작성한다.</dd>
+    <dd>작성자 정보. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략한다.</dd>
     <dt><code>@since</code></dt>
-    <dd>작성된 버전 및 작성일. 문서의 최초 작성 이후 추가된 코드에만 표기하며, 프로젝트 주석의 <code>@version</code>과 같은 양식으로 작성한다.</dd>
+    <dd>항목의 버전 및 작성일. 개발단계에서는 작성하지 않는다.</dd>
+    <dt>Description</dt>
+    <dd>항목에 대한 설명. 블록 태그(<code>@</code>)는 작성하지 않는다.</dd>
 </dl>
+
+##### b. CSS 전처리기
+
+CSS 전처리기 작성 시 주석은 전처리기가 제공하는 문서화 방식으로 작성하며, 없다면 CSS 규칙으로 작성한다. 아래 예제는 [sassDOC](http://sassdoc.com/)을 사용한 것이다.
+
+```scss
+/// @group tools
+/// @name Background rgba
+/// @author My Name <id@domain.com>
+/// @since v1.2.0 2016-04-11
+///
+/// @param {Length} $color - Element's background color
+/// @param {Length} $alpha [1] - Element's background alpha
+/// @output `background-color` and `filter`
+///
+/// Helper mixin to size elements in a single line.
+/// This mixin is essentially a short hand to define
+/// both `width` and `height` simultaneously.
+@mixin background-rgba($color, $alpha: 1) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: $rgba;
+    filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
+    &:not([dummy]) {
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+    }
+}
+```
 
 
 

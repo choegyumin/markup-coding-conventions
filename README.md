@@ -557,7 +557,7 @@ article, aside, details, figcaption, figure, footer, header, menu, nav, section 
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
 
-- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Containers, Themes, Trumps로 나뉜다.
+- 스타일시트의 계층(Section)은 Settings, Tools, Generic, Base, Objects, Components, Containers, Themes, Utilities로 나뉜다.
 - 클래스명은 반드시 엘리먼트의 의미를 전부 담아야 한다.
 - 클래스명은 가급적 메뉴 및 페이지 등에 상속받지 않으며, 디자인보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍한다.
 - **스타일 제어를 위해 아이디 선택자를 사용하는 것은 지양한다.**
@@ -628,7 +628,7 @@ BEM의 네이밍 문법에 ITCSS 네임스페이스를 추가하고, 상태 클�
 @import "containers/_faq";
 @import "containers/_process";
 
-@import "trumps/_blind";
+@import "utilities/_blind";
 ```
 
 ##### a. Settings
@@ -774,7 +774,7 @@ Namespace: `t`
 
 ###### Separated layers
 
-`Containers` 계층과 `Trumps` 계층 사이에 작성한다.
+`Containers` 계층과 `Utilities` 계층 사이에 작성한다.
 
 ```scss
 ..
@@ -782,7 +782,7 @@ Namespace: `t`
 
 @import "themes/_light";
 
-@import "trumps/_blind";
+@import "utilities/_blind";
 ..
 ```
 
@@ -795,7 +795,7 @@ CSS 파일을 분리하여 작성한다.
 <link rel="stylesheet" href="/css/theme-light.css">
 ```
 
-##### i. Trumps(Utilities)
+##### i. Utilities(Trumps)
 
 Namespace: `u`
 

@@ -65,7 +65,7 @@ HTML 코드의 작성 규칙을 설명한다.
 <h3 id="html-syntax">1-1. Syntax</h3>
 
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
-- 엘리먼트 명과 애트리뷰트 명은 영문 소문자를 사용한다.
+- 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성한다.
 - 모든 애트리뷰트값은 큰 따옴표(`"`)를 사용하여 감싼다.
 - 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 않는다.
 - 닫는 태그가 선택적인 경우에도 생략하지 않는다. (ex: `</li>`, `</body>`)
@@ -100,7 +100,7 @@ Doctype은 일반적으로 HTML5 DTD로 선언한다.
 
 #### A. Charset
 
-문서의 언어셋은 일반적으로 `UTF-8`으로 선언한다.
+일반적으로 문서의 언어셋은 `UTF-8`으로 선언한다.
 
 ```html
 <meta charset="utf-8">
@@ -115,8 +115,6 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 ```
 
 <h3 id="html-elements">1-4. Elements</h3>
-
-- 렌더링 엔진 최적화를 위해 **스타일 또는 스크립트 제어가 필요한 모든 엘리먼트에는 클래스를 부여**한다.
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
@@ -141,13 +139,13 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 ```html
 <!-- Bad -->
 <table>
-    <caption class="blind"></caption>
+    <caption class="blind">Table caption</caption>
 </table>
 
 <!-- Good -->
 <table>
     <caption>
-        <div class="blind"></div>
+        <div class="blind">Table caption</div>
     </caption>
     ..
 </table>
@@ -157,39 +155,23 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 
 ```html
 <!-- Bad -->
-<h4>테이블 제목</h4>
+<h4>Table caption</h4>
 <table>
-    <caption class="blind">테이블 제목</caption>
+    <caption>
+        <div class="blind">Table caption</div>
+    </caption>
 </table>
 
 <!-- Good -->
-<h4>테이블 제목</h4>
+<h4>Table caption</h4>
 <table>
     ..
 </table>
 ```
 
-#### C. 테이블 그룹
+#### C. 입력 필드
 
-`<table>` 엘리먼트를 제작 시 `<thead>`, `<tfoot>`의 유무와 관계없이 `<tbody>`를 반드시 사용한다.
-
-```html
-<!-- Bad -->
-<table>
-    <tr>..</tr>
-</table>
-
-<!-- Good -->
-<table>
-    <tbody>
-        <tr>..</tr>
-    </tbody>
-</table>
-```
-
-#### D. 입력 폼
-
-회원가입 등의 문서 작성 폼에 사용되는 `<input>`, `<select>`, `<textarea>` 엘리먼트의 유동적인 너비, 높이 값은 인라인 스타일로 제어한다.
+문서 작성 폼에 사용되는 사용자 입력 필드처럼 유동적인 너비, 높이 값을 가질 경우 인라인 스타일로 제어한다.
 
 ```html
 <!-- Bad -->
@@ -201,26 +183,13 @@ IE 브라우저의 호환성을 위해 문서모드를 `Edge`로 선언하여 �
 <input type="text" class="input" style="width:180px">
 ```
 
-#### E. 버튼
-
-`<button>` 엘리먼트는 `type` 애트리뷰트가 선언되지 않으면 문서 맥락에 따라 `type`이 다른 동작을 하므로 `type="button"`을 반드시 선언한다.
-
-> `type` 애트리뷰트를 지정하지 않은 `<button>` 엘리먼트가 `<form>` 엘리먼트 안에 들어가면 submit 이벤트를 발생시킨다.
-
-```html
-<!-- Bad -->
-<button></button>
-
-<!-- Good -->
-<button type="button"></button>
-```
-
 <h3 id="html-attributes">1-5. Attributes</h3>
 
 엘리먼트 애트리뷰트의 선언 순서는 상황에 맞게 가변 애트리뷰트를 가장 나중에 작성한다.
 
 ```html
-<input class="input" type="password" name="Password" id="Password" title="비밀번호" style="width:100px" disabled>
+<input class="input" type="text" name="UserId" id="UserId" title="아이디" style="width:100px">
+<input class="input" type="password" name="UserPw" id="UserPw" title="비밀번호" style="width:120px">
 ```
 
 HTML5는 Boolean 애트리뷰트는 값을 지정하지 않은 채 선언되어도 `true`를 의미하므로 필요치 않다면 값을 지정하지 않는다.
@@ -260,12 +229,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 - **CSS는 컨벤션의 내용을 준수함과 동시에 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성한다.**
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성한다.
-- 프로퍼티는 영문 소문자를 사용한다.
-- 일반적으로 작은 따옴표(`'`)를 사용하며 @charset 선언과 선택자 안에서만 큰 따옴표(`"`)를 사용한다. 만약 따옴표를 생략할 수 있는 경우에는 반드시 생략한다.
+- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 동일하게 작성한다.
+- 일반적으로 작은 따옴표(`'`)를 사용하며 `@charset` 선언과 타입 선택자 안에서만 큰 따옴표(`"`)를 사용한다. 생략이 가능한 경우엔 생략한다.
 
 <h3 id="css-charset">2-2. Charset</h3>
 
-문서의 언어셋은 일반적으로 `UTF-8`으로 선언하며 최상위에 선언한다. 언어셋이 정해진 번들링 파일이라면 선언하지 않는다.
+일반적으로 문서의 언어셋은 `UTF-8`으로 최상위에 선언한다. 언어셋이 정해진 번들링 파일이라면 선언하지 않는다.
 
 ```css
 @charset "UTF-8";
@@ -290,57 +259,23 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    border-top-style: none;
     font-family: palatino, georgia, serif;
     font-size: 100%;
     line-height: 1.6;
+    padding-top: 0;
+    padding-right: 1em;
     padding-bottom: 2em;
     padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0;
 }
 
 /* Good */
 .bar {
-    border-top: 0;
     font: 100%/1.6 palatino, georgia, serif;
     padding: 0 1em 2em;
 }
 ```
 
-#### B. 단위 생략
-
-속성값이 0인 값은 단위를 생략한다.
-
-```css
-/* Bad */
-.foo {
-    margin: 0px;
-}
-
-/* Good */
-.bar {
-    margin: 0;
-}
-```
-
-#### C. 0 선행 생략
-
-소수값 앞에 오는 0은 생략한다.
-
-```css
-/* Bad */
-.foo {
-    opacity: 0.5;
-}
-
-/* Good */
-.bar {
-    opacity: .5;
-}
-```
-
-#### D. 속기 16진수
+#### B. 속기 16진수
 
 16진수 값들은 가능하다면 축약형으로 표현한다.
 
@@ -356,9 +291,41 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
+#### C. 단위 생략
+
+속성값이 0인 값은 단위를 생략한다.
+
+```css
+/* Bad */
+.foo {
+    margin: 0px;
+}
+
+/* Good */
+.bar {
+    margin: 0;
+}
+```
+
+#### D. 선행 0 생략
+
+소수값 앞에 오는 0은 생략한다.
+
+```css
+/* Bad */
+.foo {
+    opacity: 0.5;
+}
+
+/* Good */
+.bar {
+    opacity: .5;
+}
+```
+
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS에서 기본으로 제공하는 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용한다.
+**CSS에서 기본 문법인 `@import`는 성능 문제로 절대 사용하지 않는다.** 대신 아래의 방법 중 하나를 사용한다.
 
 - 여러개의 `<link>` 엘리먼트를 사용
 - 하나의 CSS 파일로 작성
@@ -857,7 +824,7 @@ Namespace: `u`
 
 <h2 id="changelogs">Changelogs</h2>
 
-<a target="_blank" href="https://github.com/choi4450/markup-coding-conventions">https:&#47;&#47;github.com&#47;choi4450&#47;markup-coding-conventions</a>
+[https://github.com/choi4450/markup-coding-conventions](https://github.com/choi4450/markup-coding-conventions)
 
 > - 2016.06.21 네이밍 개편(BEMIT 도입)
 > - 2016.04.08 개편
@@ -869,4 +836,4 @@ Namespace: `u`
 
 이 저작물은 <a rel="license" target="ccl" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="vertical-align:top">크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락 4.0 국제 라이선스</a>에 따라 이용할 수 있습니다.
 
-<img alt="" title="" style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+<img alt="크리에이티브 커먼즈 저작자표시-비영리-동일조건변경허락" title="" style="border-width:0;vertical-align:top" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />

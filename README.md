@@ -63,7 +63,7 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-syntax">1-1. Syntax</h3>
 
-> **<a target="_blank" href="http://editorconfig.org/">Editor Config</a>를 사용하는 것을 권장합니다!**
+> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>를 사용하는 것을 권장합니다!**
 
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
 - 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성하세요.
@@ -220,7 +220,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
-> **<a target="_blank" href="http://editorconfig.org/">Editor Config</a>와 Lint를 사용하는 것을 권장합니다!**
+> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>와 Lint를 사용하는 것을 권장합니다!**
 
 - **CSS는 컨벤션의 내용을 준수함을 전제로 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성하세요.**
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
@@ -322,7 +322,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
+**CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 개발하세요.
 
 - 여러개의 `<link>` 엘리먼트를 사용하기
 - 하나의 CSS 파일로 작성하기
@@ -514,7 +514,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 방법론*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 방법론*이 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 만들어졌습니다.**
+> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 방법론*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 방법론*이 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 제작되었습니다.**
 >
 > ###### 참고 문서
 > - BEM

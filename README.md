@@ -322,7 +322,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS의 기본 문법인 `@import`는 성능에 문제가 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
+**CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
 
 - 여러개의 `<link>` 엘리먼트를 사용하기
 - 하나의 CSS 파일로 작성하기

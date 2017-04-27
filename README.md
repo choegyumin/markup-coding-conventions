@@ -46,7 +46,7 @@
     <dt>선택자(Selector)</dt>
     <dd>엘리먼트를 식별할 수 있는 이름을 의미합니다.</dd>
     <dt>스타일(Style)</dt>
-    <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미합니다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분합니다..</dd>
+    <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미합니다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분합니다.</dd>
     <dt>프로퍼티(Property)</dt>
     <dd>스타일과 관련된 문맥일 경우 스타일 시트의 속성을 의미합니다.</dd>
     <dt>프리픽스(Prefix) & 서픽스(Suffix)</dt>
@@ -63,6 +63,8 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-syntax">1-1. Syntax</h3>
 
+> **<a target="_blank" href="http://editorconfig.org/">Editor Config</a>를 사용하는 것을 권장합니다!**
+
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
 - 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성하세요.
 - 모든 애트리뷰트 값은 큰 따옴표(`"`)로 감싸세요.
@@ -71,7 +73,7 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-doctype">1-2. Doctype</h3>
 
-일반적으로 Doctype은 HTML5 DTD로 선언하세요. 이어서 자기 마침 엘리먼트(self-closing elements)에 후행 슬래시를 사용하지 마세요. 
+Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침 엘리먼트(self-closing elements)에 후행 슬래시를 사용하지 마세요. 
  
 ```html
 <!DOCTYPE html>
@@ -82,13 +84,13 @@ HTML 코드의 작성 규칙을 설명합니다.
 `<head>` 엘리먼트의 자식 엘리먼트는 아래의 순서대로 작성하세요.
 
 1. Charset
-2. X-UA-Compatible
-3. Viewport
-4. Title
-5. Meta
-6. Style
-7. JavaScript
-    
+1. X-UA-Compatible
+1. Viewport
+1. Title
+1. Meta
+1. Style
+1. JavaScript
+
 ```html
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -117,9 +119,9 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 #### A. 스타일 제어가 어려운 엘리먼트
 
-자식 엘리먼트 태그가 한정적이거나(ex. `<table>`) 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트에 위치한다면 유지보수를 고려해 의미없는 엘리먼트로 감싸는 것을 권장합니다.
+자식 엘리먼트 태그가 한정적이거나(ex. `<table>`) 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트 역할로 쓰일 땐 의미없는 엘리먼트로 감싸는 것을 권장합니다. 이는 나중에 발생할 유지보수를 고려하기 위함입니다.
 
-> 이 외의 불필요한 엘리먼트 상속은 반드시 피하세요!
+> 이 외의 불필요한 엘리먼트 상속은 반드시 피해야 합니다!
 
 ```html
 <!-- Not Bad -->
@@ -137,7 +139,7 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 #### B. 테이블 제목
 
-`<caption>` 엘리먼트의 뷰를 숨길 때는 의미없는 엘리먼트로 감싸서 숨기세요.
+`<caption>` 엘리먼트의 뷰를 숨길 때는 `<div>` 또는 `<span>` 엘리먼트로 감싸서 숨기세요. `<caption>`을 바로 숨길 경우 브라우저에 따라 스타일이 깨질 수도 있습니다.
 
 ```html
 <!-- Bad -->
@@ -174,7 +176,7 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 #### C. 입력 필드
 
-문서 작성 폼의 사용자 입력 필드처럼 너비, 높이가 유동적이라면 인라인 스타일로 제어하세요. 불필요한 클래스 생성을 막을 수 있습니다.
+회원가입 폼의 입력 필드처럼 너비, 높이가 유동적이라면 인라인 스타일로 제어하세요. 이렇게 하면 불필요한 클래스 생성을 막을 수 있습니다.
 
 ```html
 <!-- Bad -->
@@ -188,14 +190,14 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-attributes">1-5. Attributes</h3>
 
-애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 이는 에디터로 특정 엘리먼트를 검색할 때 효율을 증가 시킵니다.
+애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 이렇게 하면 에디터로 특정 엘리먼트를 검색할 때 효율이 증가됩니다.
 
 ```html
 <input class="input" type="text" name="UserId" id="UserId" title="아이디" style="width:100px">
 <input class="input" type="password" name="UserPw" id="UserPw" title="비밀번호" style="width:120px">
 ```
 
-HTML5는 Boolean 애트리뷰트를 선언만 해도 `true` 값을 가집니다. 필요하지 않다면 값을 지정하지 마세요.
+HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` 값을 가집니다. 필요하지 않다면 값을 지정하지 마세요.
 
 ```html
 <!-- Not Bad -->
@@ -218,10 +220,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
+> **<a target="_blank" href="http://editorconfig.org/">Editor Config</a>와 Lint를 사용하는 것을 권장합니다!**
+
 - **CSS는 컨벤션의 내용을 준수함을 전제로 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성하세요.**
 - 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
-- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 동일하게 작성하세요.
-- 일반적으로 작은 따옴표(`'`)를 사용하며, `@charset` 선언과 타입 선택자만 큰 따옴표(`"`)를 사용하세요. 가능하다면 생략하는 것이 좋습니다.
+- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 영문 소문자로 작성하세요.
+- 일반적으로 작은 따옴표(`'`)를 사용하지만 `@charset` 선언과 타입 선택자는 큰 따옴표(`"`)를 사용하세요. 가능하다면 생략하는 것이 가장 좋습니다.
 
 <h3 id="css-charset">2-2. Charset</h3>
 
@@ -318,12 +322,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS에서 기본 문법인 `@import`는 성능 문제로 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
+**CSS의 기본 문법인 `@import`는 성능에 문제가 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 선택하세요.
 
 - 여러개의 `<link>` 엘리먼트를 사용하기
 - 하나의 CSS 파일로 작성하기
     - CSS 전처리기의 `@import` 문법을 사용하기
-    - 도구를 이용하여 하나의 CSS 파일로 합치기
+    - 도구를 이용하여 하나의 CSS 파일로 병합하기
 
 ```html
 <!-- Too Bad -->
@@ -344,7 +348,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-media-query">2-6. Media Query</h3>
 
-미디어 쿼리는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성하세요. 이는 파편화된 스타일을 하나로 합쳐 보기 좋게 해줍니다. 불가능하다면 문서의 마지막에 모아서 작성하세요. 
+미디어 쿼리는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성하세요. 이렇게 하면 파편화된 스타일이 한곳으로 모여져 가독성이 좋아집니다. 불가능하다면 문서의 마지막에 모아서 작성하세요. 
 
 ```css
 .foo-a {}
@@ -371,7 +375,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-nesting">2-7. Nesting</h3>
 
-우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 이것을 무분별하게 사용하면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
+우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
 
 > - 선택자의 중첩을 피해야하는 이유는 <a href="css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
 > - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
@@ -400,7 +404,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-reset">2-9. Reset</h3>
 
-초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 따로 초기화하지 마세요.
+초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 초기화를 생략하세요.
 
 <h3 id="css-prefix">2-10. Prefix</h3>
 
@@ -470,14 +474,14 @@ CSS로 작성 시 아래의 형식에 맞게 작성하세요. (`/*= */`)
     <dt><code>@author</code></dt>
     <dd>작성자 정보입니다. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략하세요.</dd>
     <dt><code>@since</code></dt>
-    <dd>항목의 버전 및 작성일입니다. 개발단계에서는 작성하지 마세요.</dd>
+    <dd>항목의 버전 및 작성일입니다. 최초 개발단계에서는 생략하세요.</dd>
     <dt>Description</dt>
     <dd>항목에 대한 설명입니다. 블록 태그(<code>@</code>)는 없습니다.</dd>
 </dl>
 
 ##### b. CSS 전처리기
 
-CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙으로 작성하세요. 아래 코드는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
+CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙을 따릅니다. 아래 코드는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
 
 ```scss
 /// @group Tools
@@ -534,11 +538,11 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
-1. 네이밍 규칙은 BEM을 기반으로 합니다.  
-  ```BLOCK__ELEMENT--MODIFIER```
-1. 앞에 ITCSS를 기반으로 한 네임스페이스를 추가합니다.  
+1. 먼저 네이밍 규칙은 BEM을 기반으로 합니다.  
+  ```BLOCK__ELEMENT--MODIFIER```  
+1. 앞에 ITCSS의 계층을 나타내는 네임스페이스를 추가합니다.  
   ```NAMESPACE-BLOCK__ELEMENT--MODIFIER```
-1. 상태 클래스는 `modifier`에서 분리하여 따로 관리합니다.  
+1. 상태 클래스는 `modifier`에서 분리하여 따로 관리합니다. (`is-`, `has-`)  
   ```NAMESPACE-BLOCK__ELEMENT--MODIFIER.is-STATE```
 
 ```html
@@ -806,11 +810,11 @@ Namespace: `u`
 </form>
 ```
 
-#### B. ID 관계 애트리뷰트
+#### B. 관계 ID 애트리뷰트
 
-> 여기서 이야기하는 ID 관계 애트리뷰트란, 엘리먼트의 관계 표시를 위해 `id` 애트리뷰트를 사용하는 모든 애트리뷰트를 의미합니다.
+> 여기서 이야기하는 관계 ID 애트리뷰트란, 엘리먼트의 관계를 나타내기 위해 `id` 애트리뷰트를 사용하는 모든 애트리뷰트를 의미합니다.
 
-ID 관계 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용될 경우 언더스코어를 생략하세요.
+관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용될 경우 언더스코어를 생략하세요.
 
 ```html
 <div id="lnb" role="navigation" aria-labelledby="_lnb-heading">
@@ -825,8 +829,8 @@ ID 관계 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. �
 [https://github.com/choi4450/markup-coding-conventions](https://github.com/choi4450/markup-coding-conventions)
 
 > - 2016.06.21 네이밍 개편(BEMIT 도입)
-> - 2016.04.08 개편
-> - 2015.04.15 작성 완료
+> - 2016.04.08 전면 개편
+> - 2015.04.15 최초 작성 완료
 
 
 

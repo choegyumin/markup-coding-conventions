@@ -694,7 +694,7 @@ Namespace: `o`
 
 | | Objects | Components | Containers |
 | :--- | :---: | :---: | :---: |
-| 조합 (`.object.foo`) | X | O | O |
+| 조합 (`.object.foo`) | O | O | O |
 | 포함 (`.object > .foo`) | O | O | O |
 
 ##### f. Components
@@ -714,7 +714,7 @@ Namespace: -
 | | Objects | Components | Containers |
 | :--- | :---: | :---: | :---: |
 | 조합 (`.component.foo`) | O | X | X |
-| 포함 (`.component > .foo`) | O | △ | X |
+| 포함 (`.component > .foo`) | O | O | X |
 
 ##### g. Containers
 

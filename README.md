@@ -322,7 +322,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-import">2-5. Import</h3>
 
-**CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법 중 하나를 개발하세요.
+**CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법으로 개발하세요.
 
 - 여러개의 `<link>` 엘리먼트를 사용하기
 - 하나의 CSS 파일로 작성하기
@@ -342,7 +342,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 <link rel="stylesheet" href="two.css">
 <link rel="stylesheet" href="three.css">
 
-<!-- Very Good -->
+<!-- Very Nice -->
 <link rel="stylesheet" href="bundle.css"> <!-- one.css, .. in bundle.css -->
 ```
 

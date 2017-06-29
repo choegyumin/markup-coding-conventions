@@ -377,7 +377,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
 
-> - 선택자의 중첩을 피해야하는 이유는 <a href="css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
+> - 선택자의 중첩을 피해야하는 이유는 <a href="#css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
 > - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
 
 ```scss

@@ -697,11 +697,14 @@ Namespace: `o`
 | 조합 (`.object.foo`) | O | O | O |
 | 포함 (`.object > .foo`) | O | O | O |
 
-##### f. Components
+##### f. Components (Dumb Components)
 
 Namespace: -
 
-기능을 가질 수 없고, 시각적으로만 완성된 컴포넌트(`Dumb/Presentational Component`)를 작성하세요. 여기서 이야기하는 기능이란 이미 주어진 데이터를 I/O하는 수준의 단순 인터랙션이 아닌 API에게 데이터를 주고 받는 수준을 의미합니다.
+덤브 컴포넌트(`Dumb/Presentational/멍청한 Component`)를 작성하세요. 덤브 컴포넌트는 기능 없이 시각적 표현만 하거나 오직 주어진 데이터만을 조작하는 역할의 컴포넌트입니다.
+
+> ###### 참고자료
+> - <a target="_blank" href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0/">Presentational and Container Components - Dan Abramov</a>
 
 ```scss
 .combobox {}
@@ -716,16 +719,14 @@ Namespace: -
 | 조합 (`.component.foo`) | O | X | X |
 | 포함 (`.component > .foo`) | O | O | X |
 
-##### g. Containers
+##### g. Containers (Smart Components)
 
 Namespace: `c`
 
-기능을 가진 컴포넌트(`Smart/Container Component`)를 작성하세요.
+스마트 컴포넌트(`Smart/Container/똑똑한 Component`)를 작성하세요. 스마트 컴포넌트는 목적이나 기능을 위해 하위 덤브 컴포넌트를 관리하고 최종으로 데이터를 처리하는 컴포넌트입니다. 그러므로 스타일은 가급적 덤브 컴포넌트에 작성하세요.
 
 ```scss
-.c-about__title {}
-.c-about__info {}
-.c-about__contact {}
+.c-ads-manager__editor {}
 ```
 
 ###### 계층 간의 관계
@@ -739,7 +740,15 @@ Namespace: `c`
 
 Namespace: `t`
 
-테마 스타일을 작성하세요. **이 클래스는 `body` 엘리먼트에 추가하는 것을 권장합니다.** 여러 관리 방법 중 하나의 규칙으로 통일하여 작성하세요.
+테마 스타일을 작성하세요. **테마의 루트 클래스는 `html` 엘리먼트에 추가하는 것을 권장합니다.** 여러 관리 방법 중 하나의 규칙으로 통일하여 작성하세요.
+
+```html
+<html class="t-light">
+  <body>
+    <span class="combobox">..</span>
+  </body>
+</html>
+```
 
 ###### Inline
 
@@ -781,7 +790,7 @@ CSS 파일을 분리하여 작성합니다.
 <link rel="stylesheet" href="/css/theme-light.css">
 ```
 
-##### i. Utilities(Trumps)
+##### i. Utilities (Trumps)
 
 Namespace: `u`
 

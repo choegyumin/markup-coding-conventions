@@ -400,7 +400,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 > ###### 참고자료
 > - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
-> - <a target="_blank" href="https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/">When to use @extend; when to use a mixin</a>
+> - <a target="_blank" href="https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/">When to use @extend; when to use a mixin - CSS Wizardry</a>
 
 <h3 id="css-reset">2-9. Reset</h3>
 
@@ -516,7 +516,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 > **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 방법론*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 방법론*이 조합된 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 제작되었습니다.**
 >
-> ###### 참고 문서
+> ###### 참고문서
 > - BEM
 >   - <a target="_blank" href="https://en.bem.info/">BEM</a>
 >   - <a target="_blank" href="http://getbem.com/">Get BEM</a>

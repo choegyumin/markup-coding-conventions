@@ -18,13 +18,14 @@
     - <a href="#css-charset">2-2. Charset</a>
     - <a href="#css-selectors">2-3. Selectors</a>
     - <a href="#css-properties">2-4. Properties</a>
-    - <a href="#css-import">2-5. Import</a>
-    - <a href="#css-media-query">2-6. Media Query</a>
-    - <a href="#css-nesting">2-7. Nesting</a>
-    - <a href="#css-extend">2-8. Extend</a>
-    - <a href="#css-reset">2-9. Reset</a>
-    - <a href="#css-prefix">2-10. Prefix</a>
-    - <a href="#css-comments">2-11. Comments</a>
+    - <a href="#css-z-index">2-5. z-index</a>
+    - <a href="#css-import">2-6. Import</a>
+    - <a href="#css-media-query">2-7. Media Query</a>
+    - <a href="#css-nesting">2-8. Nesting</a>
+    - <a href="#css-extend">2-9. Extend</a>
+    - <a href="#css-reset">2-10. Reset</a>
+    - <a href="#css-prefix">2-11. Prefix</a>
+    - <a href="#css-comments">2-12. Comments</a>
 - <a href="#naming">3. Naming</a>
     - <a href="#naming-selectors">3-1. Selectors</a>
     - <a href="#naming-exception">3-2. Exception</a>
@@ -320,7 +321,55 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-import">2-5. Import</h3>
+<h3 id="css-z-index">2-5. z-index</h3>
+
+`z-index` 프로퍼티의 값을 규칙 없이 임의로 지정한다면 서로 겹친 엘리먼트의 레이어 스택 순서는 반드시 꼬이게 되어있습니다. `0`을 기준으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 값을 계층을 나누는 것이 더 좋은 방법입니다.
+
+#### 스킵 네비게이션
+
+값: `16777271`
+
+스킵 네비게이션은 어디서든 접근 가능해야 합니다. 다른 레이어에 절대 가려지지 않도록 하세요.
+
+#### 풀스크린 레이어
+
+값: `16600000` ~ `16699999`
+
+풀스크린 레이어는 새로운 `body`의 역할을 합니다. 레이어 아래의 컨텐츠를 모두 가리거나 백드롭(`Backdrop`, `Dimmed screen`)으로 조작을 막으세요.
+
+#### 다이얼로그
+
+값: `16500000` ~ `16599999`
+
+다이얼로그는 하나의 `body`에서 상위에 노출되어야 합니다.
+
+#### 플로팅 레이어
+
+값: `16400000` ~ `16499999`
+
+플로팅 레이어는 스크롤을 따라다니므로 브라우저에 항상 노출되어야 합니다.
+
+#### 상호작용 엘리먼트
+
+값: `16300000` ~ `16399999`
+
+펼쳐진 상태의 콤보박스처럼 특정 상황에서 가장 상위에 노출되어야 하는 레이어는 스택을 유동적으로 관리하세요.
+
+```css
+.combobox {
+    position: relative;
+    z-index: 0;
+}
+.combobox.is-expanded {
+    z-index: 16399999;
+}
+```
+
+#### 기타 엘리먼트
+
+값: `-1` ~ `99999`
+
+<h3 id="css-import">2-6. Import</h3>
 
 **CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법으로 개발하세요.
 
@@ -346,7 +395,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 <link rel="stylesheet" href="bundle.css"> <!-- one.css, .. in bundle.css -->
 ```
 
-<h3 id="css-media-query">2-6. Media Query</h3>
+<h3 id="css-media-query">2-7. Media Query</h3>
 
 미디어 쿼리는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성하세요. 이렇게 하면 파편화된 스타일이 한곳으로 모여져 가독성이 좋아집니다. 불가능하다면 문서의 마지막에 모아서 작성하세요. 
 
@@ -373,7 +422,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-nesting">2-7. Nesting</h3>
+<h3 id="css-nesting">2-8. Nesting</h3>
 
 우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
 
@@ -394,7 +443,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-extend">2-8. Extend</h3>
+<h3 id="css-extend">2-9. Extend</h3>
 
 **CSS 전처리기가 지원하는 Extend 문법은 절대 사용하지 마세요! Mixin으로 대체하세요!** 
 
@@ -402,11 +451,11 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 > - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
 > - <a target="_blank" href="https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/">When to use @extend; when to use a mixin - CSS Wizardry</a>
 
-<h3 id="css-reset">2-9. Reset</h3>
+<h3 id="css-reset">2-10. Reset</h3>
 
 초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 초기화를 생략하세요.
 
-<h3 id="css-prefix">2-10. Prefix</h3>
+<h3 id="css-prefix">2-11. Prefix</h3>
 
 벤더 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언하세요.
 
@@ -423,7 +472,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-comments">2-11. Comments</h3>
+<h3 id="css-comments">2-12. Comments</h3>
 
 코드를 알아보기 쉽게 주석으로 스타일을 그룹화하세요.
 

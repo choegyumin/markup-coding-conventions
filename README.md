@@ -615,7 +615,7 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
 #### B. Layer
 
-스타일시트의 계층(Layer)은 9단계로 나뉩니다.
+스타일 시트의 계층(Layer)은 9단계로 나뉩니다.
 
 - Settings
 - Tools
@@ -666,6 +666,8 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 @import "containers/_error";
 @import "containers/_faq";
 @import "containers/_process";
+
+@import "themes/_dark"; /* Not recommended */
 
 @import "utilities/_blind";
 ```
@@ -786,58 +788,58 @@ Namespace: `c`
 | 조합 (`.container.foo`) | O | X | X |
 | 포함 (`.container > .foo`) | O | O | O |
 
-##### h. Themes - optional
+##### h. Themes
 
 Namespace: `t`
 
-테마 스타일을 작성하세요. **테마의 루트 클래스는 `html` 엘리먼트에 추가하는 것을 권장합니다.** 여러 관리 방법 중 하나의 규칙으로 통일하여 작성하세요.
+테마 스타일을 작성하세요. 테마 스타일 시트의 작성 규칙은 아래의 방법 중 하나로 통일하세요. **만약 테마 클래스가 필요하다면 `html` 엘리먼트에 추가하는 것을 권장합니다.**
 
 ```html
-<html class="t-light">
+<html class="t-dark">
   <body>
     <span class="combobox">..</span>
   </body>
 </html>
 ```
 
-###### Inline
+###### CSS 분리
 
-엘리먼트와 함께 작성합니다.
+CSS 파일을 분리하여 작성합니다. **가장 권장하는 방법으로 이 방법은 테마 클래스를 상속받지 않아 성능에 좋은 영향을 줍니다.**
+
+```html
+<link rel="stylesheet" href="/css/project.css">
+<link rel="stylesheet" href="/css/t-dark.css">
+```
+
+###### 인라인
+
+해당 엘리먼트와 함께 작성합니다. 이 방법은 파편화된 스타일을 한곳으로 모아 가독성은 좋지만 테마를 사용하지 않아도 스타일을 불러와야하는 단점이 있습니다.
 
 ```scss
 .combobox {
-    .t-light & {}
+    .t-dark & {}
 }
 ```
 
 ```scss
 .combobox {}
-.t-light {
+.t-dark {
     .combobox {}
 }
 ```
 
-###### Separated layers
+###### 계층 분리
 
-`Containers` 계층과 `Utilities` 계층 사이에 작성합니다.
+`Containers` 계층과 `Utilities` 계층 사이에 작성합니다. 이 방법은 권장하지 않습니다. 가급적 CSS 파일을 분리하세요.
 
 ```scss
 ..
 @import "containers/_about";
 
-@import "themes/_light";
+@import "themes/_dark";
 
 @import "utilities/_blind";
 ..
-```
-
-###### Separated CSS files
-
-CSS 파일을 분리하여 작성합니다.
-
-```html
-<link rel="stylesheet" href="/css/project.css">
-<link rel="stylesheet" href="/css/theme-light.css">
 ```
 
 ##### i. Utilities (Trumps)

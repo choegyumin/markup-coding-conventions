@@ -751,7 +751,7 @@ Namespace: `o`
 
 Namespace: -
 
-덤브 컴포넌트(`Dumb/Presentational/멍청한 Component`)를 작성하세요. 덤브 컴포넌트는 기능 없이 시각적 표현만 하거나 오직 주어진 데이터만을 조작하는 역할의 컴포넌트입니다.
+덤브 컴포넌트(`Dumb/Presentational/멍청한 컴포넌트`)를 작성하세요. 덤브 컴포넌트는 기능 없이 시각적 표현만 하거나 오직 주어진 데이터만을 조작하는 역할의 컴포넌트입니다.
 
 > ###### 참고자료
 > - <a target="_blank" href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0/">Presentational and Container Components - Dan Abramov</a>
@@ -773,7 +773,7 @@ Namespace: -
 
 Namespace: `c`
 
-스마트 컴포넌트(`Smart/Container/똑똑한 Component`)를 작성하세요. 스마트 컴포넌트는 목적이나 기능을 위해 하위 덤브 컴포넌트를 관리하고 최종으로 데이터를 처리하는 컴포넌트입니다. 그러므로 스타일은 가급적 덤브 컴포넌트에 작성하세요.
+스마트 컴포넌트(`Smart/Container/똑똑한 컴포넌트`)를 작성하세요. 스마트 컴포넌트는 목적이나 기능을 위해 하위 덤브 컴포넌트를 관리하고 최종으로 데이터를 처리하는 컴포넌트입니다. 그러므로 스타일은 가급적 덤브 컴포넌트에 작성하세요.
 
 ```scss
 .c-ads-manager__editor {}

@@ -595,17 +595,18 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
   ```NAMESPACE-BLOCK__ELEMENT--MODIFIER.is-STATE```
 
 ```html
-<fieldset class="c-fieldset c-fieldset--simple">
-    <input class="input" type="text">
-    <input class="btn" type="reset">
-    <input class="btn btn--submit is-disabled" type="submit" disabled>
+<fieldset class="o-box o-box--wide">
+    <input class="input" type="text" aria-label="Text Field">
+    <a class="btn" href="#">Previous</button>
+    <button class="btn" type="reset">Reset</button>
+    <button class="btn btn--submit is-disabled" type="submit" disabled>Submit</button>
 </fieldset>
 ```
 
 ```css
-.c-fieldset {}
-.c-fieldset--simple {}
-.textfield {}
+.o-box {}
+.o-box--wide {}
+.input {}
 .btn {}
 .btn.is-disabled {}
 .btn--submit {}

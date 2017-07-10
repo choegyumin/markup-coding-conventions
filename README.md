@@ -242,7 +242,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 - **스타일 제어를 위해 아이디 선택자를 사용하는 것을 피하세요!**
 - **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 피하세요!**
 
-> 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
+> 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
 
 > ###### 참고자료
 > - <a target="_blank" href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
@@ -424,10 +424,10 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-nesting">2-8. Nesting</h3>
 
-우리는 선택자의 중첩을 최대한 피해야 합니다. 그러므로 **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될지도 모릅니다!**
+선택자의 중첩은 최대한 피해야 합니다. **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다!**
 
 > - 선택자의 중첩을 피해야하는 이유는 <a href="#css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
-> - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션의 내용을 참고하세요.
+> - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
 
 ```scss
 /* Bad */

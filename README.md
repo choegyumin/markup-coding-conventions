@@ -1,4 +1,4 @@
-# Markup Coding Conventions <small>(Markup Coding Style Guide)</small>
+# Markup Coding Conventions <small>(HTML/CSS Style Guide)</small>
 
 
 
@@ -72,8 +72,21 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-doctype">1-2. Doctype</h3>
 
-Doctype은 HTML5 DTD로 선언하세요. (`<!DOCTYPE html>`)
-이어서 자기 마침 태그(Self-Closing Tags)에 후행 슬래시(`/`)를 사용하지 마세요. (ex: `<br />`)
+Doctype은 HTML5 DTD로 선언하세요. 이어서 자기 마침 태그(Self-Closing Tags)에 후행 슬래시(`/`)를 사용하지 마세요.
+
+```html
+<!DOCTYPE html>
+```
+
+```html
+<!-- Bad -->
+<input />
+<br />
+
+<!-- Good -->
+<input>
+<br>
+```
 
 <h3 id="html-metadata">1-3. Metadata</h3>
 

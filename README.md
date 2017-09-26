@@ -922,7 +922,7 @@ Namespace: `u`
 
 <h2 id="changelogs">Changelogs</h2>
 
-[https://github.com/choi4450/markup-coding-conventions](https://github.com/choi4450/markup-coding-conventions)
+[https://github.com/choi4450/markup-coding-conventions/commits/master](https://github.com/choi4450/markup-coding-conventions)
 
 > - 2016.06.21 네이밍 개편(BEMIT 도입)
 > - 2016.04.08 전면 개편

@@ -7,28 +7,27 @@
 <a href="#glossaries">Glossaries</a>
 
 - <a href="#html">1. HTML</a>
-    - <a href="#html-syntax">1-1. Syntax</a>
-    - <a href="#html-doctype">1-2. Doctype</a>
-    - <a href="#html-metadata">1-3. Metadata</a>
-    - <a href="#html-elements">1-4. Elements</a>
-    - <a href="#html-attributes">1-5. Attributes</a>
-    - <a href="#html-import">1-6. Import</a>
+  - <a href="#html-syntax">1-1. Syntax</a>
+  - <a href="#html-doctype">1-2. Doctype</a>
+  - <a href="#html-metadata">1-3. Metadata</a>
+  - <a href="#html-elements">1-4. Elements</a>
+  - <a href="#html-attributes">1-5. Attributes</a>
+  - <a href="#html-import">1-6. Import</a>
 - <a href="#css">2. CSS</a>
-    - <a href="#css-syntax">2-1. Syntax</a>
-    - <a href="#css-charset">2-2. Charset</a>
-    - <a href="#css-selectors">2-3. Selectors</a>
-    - <a href="#css-properties">2-4. Properties</a>
-    - <a href="#css-z-index">2-5. z-index</a>
-    - <a href="#css-import">2-6. Import</a>
-    - <a href="#css-media-query">2-7. Media Query</a>
-    - <a href="#css-nesting">2-8. Nesting</a>
-    - <a href="#css-extend">2-9. Extend</a>
-    - <a href="#css-reset">2-10. Reset</a>
-    - <a href="#css-prefix">2-11. Prefix</a>
-    - <a href="#css-comments">2-12. Comments</a>
+  - <a href="#css-syntax">2-1. Syntax</a>
+  - <a href="#css-charset">2-2. Charset</a>
+  - <a href="#css-selectors">2-3. Selectors</a>
+  - <a href="#css-properties">2-4. Properties</a>
+  - <a href="#css-z-index">2-5. z-index</a>
+  - <a href="#css-import">2-6. Import</a>
+  - <a href="#css-media-query">2-7. Media Query</a>
+  - <a href="#css-nesting">2-8. Nesting</a>
+  - <a href="#css-extend">2-9. Extend</a>
+  - <a href="#css-reset">2-10. Reset</a>
+  - <a href="#css-prefix">2-11. Prefix</a>
+  - <a href="#css-comments">2-12. Comments</a>
 - <a href="#naming">3. Naming</a>
-    - <a href="#naming-selectors">3-1. Selectors</a>
-    - <a href="#naming-exception">3-2. Exception</a>
+  - <a href="#naming-selectors">3-1. Selectors</a>
 
 <a href="#changelogs">Changelogs</a>  
 <a href="#license">License</a>
@@ -37,23 +36,23 @@
 
 <h2 id="glossaries">Glossaries</h2>
 
-먼저 컨벤션에 자주 사용되는 용어의 정의를 설명합니다.
+먼저 스타일 가이드에 자주 사용되는 용어의 정의를 설명합니다.
 
 <dl>
-    <dt>엘리먼트(Element)</dt>
-    <dd>HTML 문서를 구성하는 요소(태그)를 의미합니다.</dd>
-    <dt>애트리뷰트(Attribute)</dt>
-    <dd>엘리먼트에 부여할 수 있는 특성을 의미합니다.</dd>
-    <dt>선택자(Selector)</dt>
-    <dd>엘리먼트를 식별할 수 있는 이름을 의미합니다.</dd>
-    <dt>스타일(Style)</dt>
-    <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미합니다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분합니다.</dd>
-    <dt>프로퍼티(Property)</dt>
-    <dd>스타일과 관련된 문맥일 경우 스타일 시트의 속성을 의미합니다.</dd>
-    <dt>프리픽스(Prefix) & 서픽스(Suffix)</dt>
-    <dd>네이밍 시 사용되는 접두사, 접미사를 의미합니다.</dd>
-    <dt>컴포넌트(Component)</dt>
-    <dd>하나 이상의 기능 또는 역할을 가진 컨텐츠 단위의 UI 구성요소를 의미합니다.</dd>
+  <dt>엘리먼트(Element)</dt>
+  <dd>HTML 문서를 구성하는 요소(태그)를 의미합니다.</dd>
+  <dt>애트리뷰트(Attribute)</dt>
+  <dd>엘리먼트에 부여할 수 있는 특성을 의미합니다.</dd>
+  <dt>선택자(Selector)</dt>
+  <dd>엘리먼트를 식별할 수 있는 이름을 의미합니다.</dd>
+  <dt>스타일(Style)</dt>
+  <dd>엘리먼트에 부여할 스타일 시트(Style Sheet)를 의미합니다. 인라인 스타일(Inline Style), 내부 스타일(Internal Style), 외부 스타일(External Style), CSS 네가지로 구분합니다.</dd>
+  <dt>프로퍼티(Property)</dt>
+  <dd>스타일과 관련된 문맥일 경우 스타일 시트의 속성을 의미합니다.</dd>
+  <dt>프리픽스(Prefix) & 서픽스(Suffix)</dt>
+  <dd>네이밍 시 사용되는 접두사, 접미사를 의미합니다.</dd>
+  <dt>컴포넌트(Component)</dt>
+  <dd>하나 이상의 기능 또는 역할을 가진 컨텐츠 단위의 UI 구성요소를 의미합니다.</dd>
 </dl>
 
 
@@ -64,21 +63,17 @@ HTML 코드의 작성 규칙을 설명합니다.
 
 <h3 id="html-syntax">1-1. Syntax</h3>
 
-> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>를 사용하는 것을 권장합니다!**
+> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>의 사용을 권장합니다!**
 
-- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
-- 엘리먼트 명과 애트리뷰트 명은 영문 소문자로 작성하세요.
+- 들여쓰기는 2개의 공백 문자(소프트탭)을 사용하세요. 다른 규칙으로 통일하여 작성해도 됩니다.
+- 모든 엘리먼트 명과 애트리뷰트 명은 케밥 표기법(`kebab-case`)으로 작성하세요.
 - 모든 애트리뷰트 값은 큰 따옴표(`"`)로 감싸세요.
-- 단일 태그 엘리먼트는 슬래시(`/`)를 사용하지 마세요.
 - 닫는 태그가 선택적이라도 생략하지 마세요. (ex: `</li>`, `</body>`)
 
 <h3 id="html-doctype">1-2. Doctype</h3>
 
-Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침 엘리먼트(self-closing elements)에 후행 슬래시를 사용하지 마세요. 
- 
-```html
-<!DOCTYPE html>
-```
+Doctype은 HTML5 DTD로 선언하세요. (`<!DOCTYPE html>`)
+이어서 자기 마침 태그(Self-Closing Tags)에 후행 슬래시(`/`)를 사용하지 마세요. (ex: `<br />`)
 
 <h3 id="html-metadata">1-3. Metadata</h3>
 
@@ -96,13 +91,15 @@ Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,target-densitydpi=medium-dpi">
-<title>예제 페이지 - 구글</title>
-..
+<title>Hello, World!</title>
+<meta property="og:title" content="Hello, World!" />
+<link rel="stylesheet" href="foo.css">
+<script src="bar.js"></script>
 ```
 
 #### A. Charset
 
-일반적으로 문서의 언어셋은 `UTF-8`으로 선언하세요.
+문서의 언어셋은 `UTF-8`으로 선언하세요.
 
 ```html
 <meta charset="utf-8">
@@ -110,7 +107,7 @@ Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침
 
 #### B. X-UA-Compatible
 
-최신 버전의 IE로 렌더링하기 위해 문서모드를 `Edge`로 선언하세요.
+PC용 웹사이트는 최신 버전의 IE로 렌더링하기 위해 문서모드를 `Edge`로 선언하세요.
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -118,64 +115,79 @@ Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침
 
 <h3 id="html-elements">1-4. Elements</h3>
 
-#### A. 스타일 제어가 어려운 엘리먼트
+#### A. `<body>` 래퍼 엘리먼트
 
-자식 엘리먼트 태그가 한정적이거나(ex. `<table>`) 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트 역할로 쓰일 땐 의미없는 엘리먼트로 감싸는 것을 권장합니다. 이는 나중에 발생할 유지보수를 고려하기 위함입니다.
+필요에 따라 본문을 숨겨야 하거나, 본문 위에 다른 레이어 엘리먼트가 겹칠 수도 있습니다. 본문의 화면 조작을 위해 본문을 래퍼 엘리먼트에 작성하세요.
+
+```html
+<body>
+  <div class="wrapper">
+    <h1>Hello, World!</h1>
+  </div>
+  <div class="layer"></div>
+  <div role="dialog" class="dialog"></div>
+</body>
+```
+
+#### B. 스타일 제어가 어려운 엘리먼트
+
+자식 엘리먼트 태그가 한정적이거나(ex. `<table>`) 스타일 제어에 한계를 가진 엘리먼트(ex. `<select>`)가 컴포넌트의 루트 역할로 쓰일 땐 `<div>`나 `<span>` 엘리먼트로 감싸는 것을 권장합니다. 이는 나중에 발생할 유지보수를 고려한 행동입니다.
 
 > 이 외의 불필요한 엘리먼트 상속은 반드시 피해야 합니다!
 
 ```html
 <!-- Not Bad -->
-<select class="input"></select>
 <table class="table"></table>
+<select class="combobox"></select>
 
 <!-- Good -->
-<span class="input">
-    <select></select>
-</span>
 <div class="table">
-    <table></table>
+  <table></table>
 </div>
+<span class="combobox">
+  <select></select>
+</span>
 ```
 
-#### B. 테이블 제목
+#### C. 테이블 제목
 
-`<caption>` 엘리먼트의 뷰를 숨길 때는 `<div>` 또는 `<span>` 엘리먼트로 감싸서 숨기세요. `<caption>`을 바로 숨길 경우 브라우저에 따라 스타일이 깨질 수도 있습니다.
+`<caption>` 엘리먼트의 뷰를 숨길 때는 새로운 엘리먼트로 감싸서 숨기세요. `<caption>`을 바로 숨긴다면 브라우저에 따라 스타일이 깨질 수도 있습니다.
 
 ```html
 <!-- Bad -->
 <table>
-    <caption class="blind">Table caption</caption>
+  <caption class="blind">My Caption</caption>
 </table>
 
 <!-- Good -->
 <table>
-    <caption>
-        <div class="blind">Table caption</div>
-    </caption>
-    ..
+  <caption>
+    <div class="blind">My Caption</div>
+  </caption>
 </table>
 ```
 
-테이블의 제목이 필요없거나 이미 제공되었다면 생략하세요. 컨텐츠를 중복 제공하는 것은 좋지 않습니다.
+테이블의 제목이 필요없거나 이미 제공되었다면 생략하세요. 컨텐츠를 중복 제공하는 것은 좋지 않습니다. 이 때 `aria-labelledby` 애트리뷰트를 사용하면 더 좋습니다.
 
 ```html
 <!-- Bad -->
-<h4>Table caption</h4>
+<h4>My Caption</h4>
 <table>
-    <caption>
-        <div class="blind">Table caption</div>
-    </caption>
+  <caption>
+    <div class="blind">My Caption</div>
+  </caption>
 </table>
+
+<!-- Not Bad -->
+<h4>My Caption</h4>
+<table></table>
 
 <!-- Good -->
-<h4>Table caption</h4>
-<table>
-    ..
-</table>
+<h4 id="_my-caption">My Caption</h4>
+<table aria-labelledby="_my-caption"></table>
 ```
 
-#### C. 입력 필드
+#### D. 입력 필드
 
 회원가입 폼의 입력 필드처럼 너비, 높이가 유동적이라면 인라인 스타일로 제어하세요. 이렇게 하면 불필요한 클래스 생성을 막을 수 있습니다.
 
@@ -194,11 +206,13 @@ Doctype은 가급적이면 HTML5 DTD로 선언하세요. 이어서 자기 마침
 애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 이렇게 하면 에디터로 특정 엘리먼트를 검색할 때 효율이 증가됩니다.
 
 ```html
-<input class="input" type="text" name="UserId" id="UserId" title="아이디" style="width:100px">
-<input class="input" type="password" name="UserPw" id="UserPw" title="비밀번호" style="width:120px">
+<input class="input" type="text" id="user-id" name="UserId" title="아이디" style="width:100px">
+<input class="input" type="password" id="user-pw" name="UserPw" title="비밀번호" style="width:120px">
 ```
 
-HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` 값을 가집니다. 필요하지 않다면 값을 지정하지 마세요.
+#### A. Boolean 애트리뷰트
+
+HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` 값을 가집니다. 필요하지 않다면 값을 작성하지 마세요.
 
 ```html
 <!-- Not Bad -->
@@ -206,6 +220,29 @@ HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` �
 
 <!-- Good -->
 <button disabled></button>
+```
+
+#### B. `name` 애트리뷰트
+
+`name` 애트리뷰트 값은 서버사이드 언어의 네이밍 규칙에 맞게 작성하세요.
+
+```html
+<!-- PascalCase -->
+<form class="form" id="my-form" name="MyForm">
+  <input class="input" type="text" id="my-user-name" name="MyUserName">
+</form>
+```
+
+#### C. 관계 ID 애트리뷰트
+
+> 여기서 이야기하는 관계 ID 애트리뷰트란, 엘리먼트의 관계를 나타내기 위해 사용된 `id` 애트리뷰트와 이를 사용하는 모든 애트리뷰트를 의미합니다.
+
+관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용된다면 언더스코어를 생략하세요.
+
+```html
+<div role="navigation" id="lnb" aria-labelledby="_lnb-heading">
+  <h2 id="_lnb-heading">Local Navigation Bar</h2>
+</div>
 ```
 
 <h3 id="html-import">1-6. Import</h3>
@@ -221,16 +258,16 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-syntax">2-1. Syntax</h3>
 
-> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>와 Lint를 사용하는 것을 권장합니다!**
+> **<a target="_blank" href="http://editorconfig.org/">EditorConfig</a>와 Lint의 사용을 권장합니다!**
 
-- **CSS는 컨벤션의 내용을 준수함을 전제로 원하는 스타일(nested, expanded, compact, compressed, ..) 중 하나의 규칙으로 통일하여 작성하세요.**
-- 들여쓰기는 2개 &middot; 4개의 공백 문자(소프트탭) 또는 하드탭 중 하나의 규칙으로 통일하여 작성하세요.
-- 프로퍼티는 영문 소문자로 작성하며, 프로퍼티 값도 가급적 영문 소문자로 작성하세요.
+- 들여쓰기는 2개의 공백 문자(소프트탭)을 사용하세요. 다른 규칙으로 통일하여 작성해도 됩니다.
+- 프로퍼티는 한 줄에 하나씩 작성하세요. 다른 규칙으로 통일하여 작성해도 됩니다.
+- 프로퍼티는 영문 소문자로 작성하세요.
 - 일반적으로 작은 따옴표(`'`)를 사용하지만 `@charset` 선언과 타입 선택자는 큰 따옴표(`"`)를 사용하세요. 가능하다면 생략하는 것이 가장 좋습니다.
 
 <h3 id="css-charset">2-2. Charset</h3>
 
-일반적으로 문서의 언어셋은 `UTF-8`으로 최상위에 선언하세요. 언어셋이 정해진 번들링 파일이라면 선언하지 않습니다.
+문서의 언어셋은 `UTF-8`으로 최상위에 선언하세요. 언어셋이 정해진 번들링 파일이라면 선언하지 않습니다.
 
 ```css
 @charset "UTF-8";
@@ -239,7 +276,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 <h3 id="css-selectors">2-3. Selectors</h3>
 
 - **선택자는 가급적 중첩하지 마세요!**
-- **스타일 제어를 위해 아이디 선택자를 사용하는 것을 피하세요!**
+- **스타일 제어를 위해 아이디 선택자의 사용을 피하세요!**
 - **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 피하세요!**
 
 > 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
@@ -257,19 +294,19 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    font-family: palatino, georgia, serif;
-    font-size: 100%;
-    line-height: 1.6;
-    padding-top: 0;
-    padding-right: 1em;
-    padding-bottom: 2em;
-    padding-left: 1em;
+  font-family: palatino, georgia, serif;
+  font-size: 100%;
+  line-height: 1.6;
+  padding-top: 0;
+  padding-right: 1em;
+  padding-bottom: 2em;
+  padding-left: 1em;
 }
 
 /* Good */
 .bar {
-    font: 100%/1.6 palatino, georgia, serif;
-    padding: 0 1em 2em;
+  font: 100%/1.6 palatino, georgia, serif;
+  padding: 0 1em 2em;
 }
 ```
 
@@ -280,12 +317,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    color: #aabbcc;
+  color: #aabbcc;
 }
 
 /* Good */
 .bar {
-    color: #abc;
+  color: #abc;
 }
 ```
 
@@ -296,12 +333,12 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    margin: 0px;
+  margin: 0px;
 }
 
 /* Good */
 .bar {
-    margin: 0;
+  margin: 0;
 }
 ```
 
@@ -312,60 +349,83 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 /* Good */
 .bar {
-    opacity: .5;
+  opacity: .5;
 }
 ```
 
 <h3 id="css-z-index">2-5. z-index</h3>
 
-`z-index` 프로퍼티의 값을 규칙 없이 임의로 지정한다면 서로 겹친 엘리먼트의 스택 순서는 반드시 꼬이게 되어있습니다. `0`을 기준으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 값을 계층으로 나누는 것이 더 좋은 방법입니다.
+`z-index` 스택을 규칙 없이 지정한다면 서로 겹친 엘리먼트의 스택 순서는 반드시 꼬이게 됩니다. `0`을 시작으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 계층을 나누는 것이 더 좋은 방법입니다.
 
 #### A. 일반 엘리먼트
 
-값: `-1` ~ `99999`
+Value: 음수 ~ `99999`
 
 #### B. 상호작용 엘리먼트
 
-값: `16300000` ~ `16399999`
+Value: `16100000` ~ `16199999`
 
 펼쳐진 상태의 콤보박스처럼 특정 상황에서 최상위에 노출되어야 하는 레이어는 스택을 유동적으로 관리하세요.
 
 ```css
 .combobox {
-    position: relative;
-    z-index: 0;
+  position: relative;
+  z-index: 0;
 }
 .combobox.is-expanded {
-    z-index: 16399999;
+  z-index: 16199999;
 }
 ```
 
-#### C. 플로팅 레이어
+#### C. 플로팅 레이어 엘리먼트
 
-값: `16400000` ~ `16499999`
+Value: `16200000` ~ `16299999`
 
-플로팅 레이어는 브라우저의 스크롤을 따라다니므로 일반 엘리먼트에 가려져서는 안됩니다.
+플로팅 레이어 엘리먼트는 브라우저의 스크롤을 따라다니므로 일반 엘리먼트에 가려져서는 안됩니다.
 
-#### D. 다이얼로그
+#### D. 풀스크린 레이어 엘리먼트
 
-값: `16500000` ~ `16599999`
+Value: `16300000` ~ `16399999`
 
-다이얼로그는 하나의 `body`에서 최상위에 노출되어야 합니다.
+풀스크린 레이어 엘리먼트는 기존의 본문을 숨기고 새로운 본문 역할을 합니다. 이 엘리먼트를 노출할 때는 `<body>` 래퍼 엘리먼트와 의도치 않게 풀스크린 엘리먼트 위에 보여지는 모든 엘리먼트를 숨기세요.
 
-#### E. 풀스크린 레이어
+```html
+<body>
+  <!-- Hide -->
+  <div class="wrapper" style="display: none;">
+    <h1>Hello, World!</h1>
+    <div role="dialog" class="dialog">
+      .wrapper > .dialog
+    </div>
+  </div>
+  <!-- Show -->
+  <div class="layer" style="display: block;">
+    <h1>Hell, Korea!</h1>
+    <div role="dialog" class="dialog">
+      .layer > .dialog
+    </div>
+  </div>
+  <!-- Hide -->
+  <div role="dialog" class="dialog" style="display: none;">
+    .dialog
+  </div>
+</body>
+```
 
-값: `16600000` ~ `16699999`
+#### E. 다이얼로그
 
-풀스크린 레이어는 새로운 `body`의 역할을 합니다. 풀스크린 레이어 아래의 모든 레이어를 가리거나 백드롭(`Backdrop`, `Dimmed screen`)으로 조작을 막으세요.
+Value: `16400000` ~ `16499999`
+
+다이얼로그는 본문 엘리먼트 내에서 최상위에 노출되어야 합니다.
 
 #### F. 스킵 네비게이션
 
-값: `16777271`
+Value: `16777271`
 
 스킵 네비게이션은 어디서든 접근 가능해야 합니다. 다른 레이어에 절대 가려지지 않도록 하세요.
 
@@ -375,15 +435,15 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 - 여러개의 `<link>` 엘리먼트를 사용하기
 - 하나의 CSS 파일로 작성하기
-    - CSS 전처리기의 `@import` 문법을 사용하기
-    - 도구를 이용하여 하나의 CSS 파일로 병합하기
+  - CSS 전처리기의 `@import` 문법을 사용하기
+  - 도구를 이용하여 하나의 CSS 파일로 병합하기
 
 ```html
 <!-- Too Bad -->
 <style>
-    @import url("one.css");
-    @import url("two.css");
-    @import url("three.css");
+  @import url("one.css");
+  @import url("two.css");
+  @import url("three.css");
 </style>
 
 <!-- Good -->
@@ -424,7 +484,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-nesting">2-8. Nesting</h3>
 
-선택자의 중첩은 최대한 피해야 합니다. **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요! 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다!**
+선택자의 중첩은 최대한 피해야 하므로, **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요!** 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다.
 
 > - 선택자의 중첩을 피해야하는 이유는 <a href="#css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
 > - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
@@ -432,14 +492,14 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```scss
 /* Bad */
 .foo {
-    .bar {
-        color: #abc;
-    }
+  .bar {
+    color: #abc;
+  }
 }
 
 /* Good */
 .foo__bar {
-    color: #abc;
+  color: #abc;
 }
 ```
 
@@ -462,13 +522,13 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 ```css
 /* Bad */
 .foo {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
 }
 /* Good */
 .foo {
-    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
 }
 ```
 
@@ -482,16 +542,16 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 ```css
 /*!
-    @author My Name <id@domain.com> 
-    @since v1.2.0 2016-04-11
+  @author My Name <id@domain.com> 
+  @since v1.2.0 2016-04-11
 */
 ```
 
 <dl>
-    <dt><code>@author</code></dt>
-    <dd>작성자 정보입니다. 이름과 이메일을 작성하세요.</dd>
-    <dt><code>@since</code></dt>
-    <dd>문서의 버전 및 작성일입니다. 둘 중 하나만 작성하셔도 됩니다.</dd>
+  <dt><code>@author</code></dt>
+  <dd>작성자 정보입니다. 이름과 이메일을 작성하세요.</dd>
+  <dt><code>@since</code></dt>
+  <dd>문서의 버전 및 작성일입니다. 둘 중 하나만 작성하셔도 됩니다.</dd>
 </dl>
 
 #### B. 코드 문서화 주석
@@ -504,28 +564,28 @@ CSS로 작성 시 아래의 형식에 맞게 작성하세요. (`/*= */`)
 
 ```css
 /*=
-    @group Components
-    @name combobox
-    @author My Name <id@domain.com>
-    @since v1.2.0 2016-04-11
+  @group Components
+  @name combobox
+  @author My Name <id@domain.com>
+  @since v1.2.0 2016-04-11
 
-    This is example!
-    blah, blah, blah, blah..
+  This is example!
+  blah, blah, blah, blah..
 */
 .combobox {}
 ```
 
 <dl>
-    <dt><code>@group</code></dt>
-    <dd>항목의 계층(Layer)입니다. 후술할 <a href="#naming">3. Naming</a> 섹션의 규칙과 동일합니다.</dd>
-    <dt><code>@name</code></dt>
-    <dd>항목의 이름입니다.</dd>
-    <dt><code>@author</code></dt>
-    <dd>작성자 정보입니다. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략하세요.</dd>
-    <dt><code>@since</code></dt>
-    <dd>항목의 버전 및 작성일입니다. 최초 개발단계에서는 생략하세요.</dd>
-    <dt>Description</dt>
-    <dd>항목에 대한 설명입니다. 블록 태그(<code>@</code>)는 없습니다.</dd>
+  <dt><code>@group</code></dt>
+  <dd>항목의 계층(Layer)입니다. 후술할 <a href="#naming">3. Naming</a> 섹션의 규칙과 동일합니다.</dd>
+  <dt><code>@name</code></dt>
+  <dd>항목의 이름입니다.</dd>
+  <dt><code>@author</code></dt>
+  <dd>작성자 정보입니다. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략하세요.</dd>
+  <dt><code>@since</code></dt>
+  <dd>항목의 버전 및 작성일입니다. 최초 개발단계에서는 생략하세요.</dd>
+  <dt>Description</dt>
+  <dd>항목에 대한 설명입니다. 블록 태그(<code>@</code>)는 없습니다.</dd>
 </dl>
 
 ##### b. CSS 전처리기
@@ -545,13 +605,13 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 /// This is example!
 /// blah, blah, blah, blah..
 @mixin background-rgba($color, $alpha: 1) {
-    $rgba: rgba($color, $alpha);
-    $ie-hex-str: ie-hex-str($rgba);
-    background-color: $rgba;
-    filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
-    &:not([dummy]) {
-        filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
-    }
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba;
+  filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
+  &:not([dummy]) {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+  }
 }
 ```
 
@@ -563,7 +623,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 컨벤션은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a> 방법론*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a> 방법론*을 조합한 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 제작되었습니다.**
+> **이 규칙은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a>*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>*를 조합한 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 제작되었습니다.**
 >
 > ###### 참고문서
 > - BEM
@@ -578,8 +638,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 >   - <a target="_blank" href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More Transparent UI Code with Namespaces</a>
 >   - <a target="_blank" href="http://www.jamesturneronline.net/blog/bemit-naming-convention.html">The BEMIT naming convention</a>
 
-
-- **스타일 제어를 위해 아이디 선택자를 사용하는 것을 피하세요!**
+- **스타일 제어를 위해 아이디 선택자의 사용을 피하세요!**
 - **클래스명은 반드시 엘리먼트의 의미를 전부 담아서 네이밍하세요!**
 - **클래스명은 페이지에 상속받지 않으며, 디자인보다는 구조, 기능, 목적을 나타내는 이름으로 네이밍하세요!**
 
@@ -587,7 +646,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
-1. 먼저 네이밍 규칙은 BEM을 기반으로 합니다.  
+1. 기본 네이밍 규칙은 BEM을 따릅니다.  
   ```BLOCK__ELEMENT--MODIFIER```  
 1. 앞에 ITCSS의 계층을 나타내는 네임스페이스를 추가합니다.  
   ```NAMESPACE-BLOCK__ELEMENT--MODIFIER```
@@ -595,22 +654,24 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
   ```NAMESPACE-BLOCK__ELEMENT--MODIFIER.is-STATE```
 
 ```html
-<fieldset class="o-box o-box--wide">
+<div class="o-widget">
+  <div class="o-widget__wrapper o-widget__wrapper--dark">
     <input class="input" type="text" aria-label="Text Field">
-    <a class="btn" href="#">Previous</button>
     <button class="btn" type="reset">Reset</button>
     <button class="btn btn--submit is-disabled" type="submit" disabled>Submit</button>
-</fieldset>
+  </div>
+</div>
 ```
 
 ```css
-.o-box {}
-.o-box--wide {}
-.input {}
-.btn {}
-.btn.is-disabled {}
-.btn--submit {}
-.btn--submit.is-disabled {}
+.o-widget {} /* NAMESPACE-BLOCK */
+.o-widget__wrapper {} /* NAMESPACE-BLOCK__ELEMENT */
+.o-widget__wrapper--dark {} /* NAMESPACE-BLOCK__ELEMENT--MODIFIER */
+.input {} /* BLOCK */
+.btn {} /* BLOCK */
+.btn.is-disabled {} /* .BLOCK.is-STATE */
+.btn--submit {} /* .BLOCK--MODIFIER */
+.btn--submit.is-disabled {} /* .BLOCK--MODIFIER.is-STATE */
 ```
 
 #### B. Layer
@@ -623,7 +684,7 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 - Base
 - Objects
 - Components
-- Containers
+- Pages
 - Themes
 - Utilities(Trumps)
 
@@ -660,12 +721,12 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 @import "components/_post";
 @import "components/_share-menu";
 
-@import "containers/_about";
-@import "containers/_archive";
-@import "containers/_contact";
-@import "containers/_error";
-@import "containers/_faq";
-@import "containers/_process";
+@import "pages/_about";
+@import "pages/_archive";
+@import "pages/_contact";
+@import "pages/_error";
+@import "pages/_faq";
+@import "pages/_process";
 
 @import "themes/_dark"; /* Not recommended */
 
@@ -678,12 +739,12 @@ CSS 전처리기를 사용한다면 전역 변수를 작성하세요.
 
 ```scss
 $breakpoints: (
-    //'xsmall': 'screen',
-    'small': 'screen and (min-width: 640px)',
-    'medium': 'screen and (min-width: 1024px)',
-    'large': 'screen and (min-width: 1280px)',
-    'xlarge': 'screen and (min-width: 1440px)',
-    'retina': 'screen and (-webkit-min-device-pixel-ratio:1.5)'
+  //'xsmall': 'screen',
+  'small': 'screen and (min-width: 640px)',
+  'medium': 'screen and (min-width: 1024px)',
+  'large': 'screen and (min-width: 1280px)',
+  'xlarge': 'screen and (min-width: 1440px)',
+  'retina': 'screen and (-webkit-min-device-pixel-ratio:1.5)'
 );
 ```
 
@@ -693,13 +754,13 @@ CSS 전처리기를 사용한다면 Function과 Mixin을 작성하세요.
 
 ```scss
 @mixin background-rgba($color, $alpha) {
-    $rgba: rgba($color, $alpha);
-    $ie-hex-str: ie-hex-str($rgba);
-    background-color: $rgba;
-    filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
-    &:not([dummy]) {
-        filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
-    }
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: $rgba;
+  filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
+  &:not([dummy]) {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
+  }
 }
 ```
 
@@ -744,19 +805,16 @@ Namespace: `o`
 
 ###### 계층 간의 관계
 
-| | Objects | Components | Containers |
-| :--- | :---: | :---: | :---: |
-| 조합 (`.object.foo`) | O | O | O |
-| 포함 (`.object > .foo`) | O | O | O |
+| | Objects | Components |
+| :--- | :---: | :---: |
+| 조합 (`.object.foo`) | O | O |
+| 포함 (`.object > .foo`) | O | O |
 
-##### f. Components (Dumb Components)
+##### f. Components
 
 Namespace: -
 
-덤브 컴포넌트(`Dumb/Presentational/멍청한 컴포넌트`)를 작성하세요. 덤브 컴포넌트는 기능 없이 시각적 표현만 하거나 오직 주어진 데이터만을 조작하는 역할의 컴포넌트입니다.
-
-> ###### 참고자료
-> - <a target="_blank" href="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0/">Presentational and Container Components - Dan Abramov</a>
+컴포넌트 스타일을 작성하세요.
 
 ```scss
 .combobox {}
@@ -766,27 +824,23 @@ Namespace: -
 
 ###### 계층 간의 관계
 
-| | Objects | Components | Containers |
-| :--- | :---: | :---: | :---: |
-| 조합 (`.component.foo`) | O | X | X |
-| 포함 (`.component > .foo`) | O | O | X |
+| | Objects | Components |
+| :--- | :---: | :---: |
+| 조합 (`.component.foo`) | O | X |
+| 포함 (`.component > .foo`) | O | O |
 
-##### g. Containers (Smart Components)
+##### g. Pages
 
-Namespace: `c`
+Namespace: `p`
 
-스마트 컴포넌트(`Smart/Container/똑똑한 컴포넌트`)를 작성하세요. 스마트 컴포넌트는 목적이나 기능을 위해 하위 덤브 컴포넌트를 관리하고 최종으로 데이터를 처리하는 컴포넌트입니다. 그러므로 스타일은 가급적 덤브 컴포넌트에 작성하세요.
+페이지 스타일을 작성하세요. 컴포넌트 기반 개발 방식을 따르는 경우 페이지 스타일이 무수히 많아진다면 설계가 잘못됐을 가능성이 높습니다. (Pages 계층은 *BEMIT*에 없습니다)
+
+> ###### 참고자료
+> - <a target="_blank" href="http://slowalk.tistory.com/2440">슬로워크 블로그 :: 스타일 가이드로 웹서비스 개발하기</a>
 
 ```scss
-.c-ads-manager__editor {}
+.p-about {}
 ```
-
-###### 계층 간의 관계
-
-| | Objects | Components | Containers |
-| :--- | :---: | :---: | :---: |
-| 조합 (`.container.foo`) | O | X | X |
-| 포함 (`.container > .foo`) | O | O | O |
 
 ##### h. Themes
 
@@ -797,7 +851,7 @@ Namespace: `t`
 ```html
 <html class="t-dark">
   <body>
-    <span class="combobox">..</span>
+    <div class="spinner"></div>
   </body>
 </html>
 ```
@@ -817,24 +871,24 @@ CSS 파일을 분리하여 작성합니다. **가장 권장하는 방법으로 �
 
 ```scss
 .combobox {
-    .t-dark & {}
+  .t-dark & {}
 }
 ```
 
 ```scss
 .combobox {}
 .t-dark {
-    .combobox {}
+  .combobox {}
 }
 ```
 
 ###### 계층 분리
 
-`Containers` 계층과 `Utilities` 계층 사이에 작성합니다. 이 방법은 권장하지 않습니다. 가급적 CSS 파일을 분리하세요.
+`Pages` 계층과 `Utilities` 계층 사이에 작성합니다. 이 방법은 권장하지 않습니다. 가급적 CSS 파일을 분리하세요.
 
 ```scss
 ..
-@import "containers/_about";
+@import "pages/_about";
 
 @import "themes/_dark";
 
@@ -850,37 +904,6 @@ Namespace: `u`
 
 ```scss
 .u-blind {}
-```
-
-<h3 id="naming-exception">3-2. Exception</h3>
-
-#### A. 폼 애트리뷰트
-
-- `id`, `name` 애트리뷰트 값은 서버사이드 언어의 네이밍 컨벤션에 맞게 작성하세요. 단, 케밥 표기법(`kebab-case`)은 사용하지 마세요. 컨벤션이 없다면 파스칼 표기법(`PascalCase`)을 권장합니다.
-- `<form>` 엘리먼트의 `id`, `name` 애트리뷰트는 가급적 뒤에 'form'을 추가하세요.
-
-```html
-<!-- Bad (kebab-case) -->
-<form class="my-form" name="my-form" id="my-form">
-    <input type="text" name="user-name" id="user-name">
-</form>
-
-<!-- Good (PascalCase) -->
-<form class="my-form" name="MyForm" id="MyForm">
-    <input type="text" name="UserName" id="UserName">
-</form>
-```
-
-#### B. 관계 ID 애트리뷰트
-
-> 여기서 이야기하는 관계 ID 애트리뷰트란, 엘리먼트의 관계를 나타내기 위해 `id` 애트리뷰트를 사용하는 모든 애트리뷰트를 의미합니다.
-
-관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용될 경우 언더스코어를 생략하세요.
-
-```html
-<div id="lnb" role="navigation" aria-labelledby="_lnb-heading">
-    <h2 id="_lnb-heading">Local Navigation Bar</h2>
-</div>
 ```
 
 

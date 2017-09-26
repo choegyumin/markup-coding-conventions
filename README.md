@@ -623,8 +623,8 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 <h3 id="naming-selectors">3-1. Selectors</h3>
 
-> **이 규칙은 *<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a>*과 *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>*를 조합한 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*을 기반으로 제작되었습니다.**
->
+> 이 규칙은 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*(*<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a>* + *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>*)을 기반으로 작성되었습니다.
+
 > ###### 참고문서
 > - BEM
 >   - <a target="_blank" href="https://en.bem.info/">BEM</a>
@@ -726,7 +726,6 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 @import "pages/_contact";
 @import "pages/_error";
 @import "pages/_faq";
-@import "pages/_process";
 
 @import "themes/_dark"; /* Not recommended */
 
@@ -833,7 +832,7 @@ Namespace: -
 
 Namespace: `p`
 
-페이지 스타일을 작성하세요. 컴포넌트 기반 개발 방식을 따르는 경우 페이지 스타일이 무수히 많아진다면 설계가 잘못됐을 가능성이 높습니다. (Pages 계층은 *BEMIT*에 없습니다)
+페이지 스타일을 작성하세요. 컴포넌트 기반 개발 방식을 따르는 경우에도 페이지 스타일이 무수히 많아진다면 설계가 잘못됐을 가능성이 높습니다. (Pages 계층은 *ITCSS* 규칙이 아닙니다)
 
 > ###### 참고자료
 > - <a target="_blank" href="http://slowalk.tistory.com/2440">슬로워크 블로그 :: 스타일 가이드로 웹서비스 개발하기</a>
@@ -858,7 +857,7 @@ Namespace: `t`
 
 ###### CSS 분리
 
-CSS 파일을 분리하여 작성합니다. **가장 권장하는 방법으로 이 방법은 테마 클래스를 상속받지 않아 성능에 좋은 영향을 줍니다.**
+CSS 파일을 분리하여 작성합니다. **가장 권장하는 방법으로 이 방법은 HTTP 리퀘스트가 발생하지만 테마 클래스를 상속받지 않아 렌더링 성능과 유지보수에 좋은 영향을 줍니다.**
 
 ```html
 <link rel="stylesheet" href="/css/project.css">

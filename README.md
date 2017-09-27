@@ -250,7 +250,7 @@ HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` �
 
 > 여기서 이야기하는 관계 ID 애트리뷰트란, 엘리먼트의 관계를 나타내기 위해 사용된 `id` 애트리뷰트와 이를 사용하는 모든 애트리뷰트를 의미합니다.
 
-관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. 만약 다른 용도(ex. Fragment identifier)로 함께 사용된다면 언더스코어를 생략하세요.
+관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. ID 선택자로 스타일을 추가하거나 다른 용도(ex. Fragment identifier)로 함께 사용된다면 언더스코어를 생략하세요.
 
 ```html
 <div role="navigation" id="lnb" aria-labelledby="_lnb-heading">

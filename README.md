@@ -4,33 +4,33 @@
 
 ## Table of Contents
 
-<a href="#glossaries">Glossaries</a>
+[Glossaries](#glossaries)
 
-- <a href="#html">1. HTML</a>
-  - <a href="#html-syntax">1-1. Syntax</a>
-  - <a href="#html-doctype">1-2. Doctype</a>
-  - <a href="#html-metadata">1-3. Metadata</a>
-  - <a href="#html-elements">1-4. Elements</a>
-  - <a href="#html-attributes">1-5. Attributes</a>
-  - <a href="#html-import">1-6. Import</a>
-- <a href="#css">2. CSS</a>
-  - <a href="#css-syntax">2-1. Syntax</a>
-  - <a href="#css-charset">2-2. Charset</a>
-  - <a href="#css-selectors">2-3. Selectors</a>
-  - <a href="#css-properties">2-4. Properties</a>
-  - <a href="#css-z-index">2-5. z-index</a>
-  - <a href="#css-import">2-6. Import</a>
-  - <a href="#css-media-query">2-7. Media Query</a>
-  - <a href="#css-nesting">2-8. Nesting</a>
-  - <a href="#css-extend">2-9. Extend</a>
-  - <a href="#css-reset">2-10. Reset</a>
-  - <a href="#css-prefix">2-11. Prefix</a>
-  - <a href="#css-comments">2-12. Comments</a>
-- <a href="#naming">3. Naming</a>
-  - <a href="#naming-selectors">3-1. Selectors</a>
+- [1. HTML](#html)
+  - [1-1. Syntax](#html-syntax)
+  - [1-2. Doctype](#html-doctype)
+  - [1-3. Metadata](#html-metadata)
+  - [1-4. Elements](#html-elements)
+  - [1-5. Attributes](#html-attributes)
+  - [1-6. Import](#html-import)
+- [2. CSS](#css)
+  - [2-1. Syntax](#css-syntax)
+  - [2-2. Charset](#css-charset)
+  - [2-3. Selectors](#css-selectors)
+  - [2-4. Properties](#css-properties)
+  - [2-5. z-index](#css-z-index)
+  - [2-6. Import](#css-import)
+  - [2-7. Media Query](#css-media-query)
+  - [2-8. Nesting](#css-nesting)
+  - [2-9. Extend](#css-extend)
+  - [2-10. Reset](#css-reset)
+  - [2-11. Prefix](#css-prefix)
+  - [2-12. Comments](#css-comments)
+- [3. Naming](#naming)
+  - [3-1. Selectors](#naming-selectors)
 
-<a href="#changelogs">Changelogs</a>  
-<a href="#license">License</a>
+[Changelogs](#changelogs)
+[License](#license)
 
 
 

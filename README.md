@@ -292,29 +292,28 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 <h3 id="css-selectors">2-3. Selectors</h3>
 
 - **선택자는 가급적 중첩하지 마세요!**
-- **스타일 제어를 위해 아이디 선택자의 사용을 피하세요!**
 - **렌더링 성능 최적화를 위해 클래스, 가상 선택자 외의 선택자는 사용을 피하세요!**
 
 > 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
 
 > ###### 참고자료
 > - <a target="_blank" href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
-> - <del><a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a></del> <a target="_blank" href="http://webclub.tistory.com/361">대체 번역본</a>
+> - <del><a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a></del> (<a target="_blank" href="http://webclub.tistory.com/361"> 번역본</a>)
 
 <h3 id="css-z-index">2-4. z-index</h3>
 
-`z-index` 스택을 규칙 없이 지정한다면 서로 겹친 엘리먼트의 스택 순서는 반드시 꼬이게 됩니다. `0`을 시작으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 계층을 나누는 것이 더 좋은 방법입니다.
+`z-index` 스택을 `0`부터 규칙 없이 쌓는다면 순서가 꼬일 수 밖에 없습니다. 엘리먼트의 특성에 맞게 계층을 분리하여 체계적으로 관리하는 것이 더 좋은 방법입니다.
 
-> CSS 전처리기의 믹스인을 활용한다면 간편하게 작성할 수 있습니다.
+> **CSS 전처리기의 믹스인을 활용한다면 간편하게 작성할 수 있습니다.**
 
 ```scss
+/* scss */
 .foo {
   position: absolute;
   @include layer-index('floating', 3000);
 }
-```
 
-```css
+/* css */
 .foo {
   z-index: 16203000
 }
@@ -352,7 +351,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### D. `dialog`
 
-다이얼로그는 본문의 최상위에 노출되어야 합니다.
+다이얼로그는 본문보다 위에 노출되어야 합니다.
 
 - Value: `16300000` ~ `16399999`
 
@@ -372,13 +371,13 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 #### F. `toast`
 
-토스트는 페이지의 최상위에 노출되어야 합니다.
+토스트는 사용자가 확인할 수 있도록 페이지의 최상위에 노출되어야 합니다.
 
 - Value: `16500000` ~ `16599999`
 
 #### G. `super`
 
-반드시 최상위에 노출되어야 하는 엘리먼트입니다.
+무조건 최상위에 노출됩니다. 정말 필요할 때만 사용하세요.
 
 - Value: `16600000` ~ `16699999`
 
@@ -392,10 +391,10 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 **CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법으로 개발하세요.
 
-- 여러개의 `<link>` 엘리먼트를 사용하기
+- 여러개의 `<link>` 엘리먼트로 작성하기
 - 하나의 CSS 파일로 작성하기
   - CSS 전처리기의 `@import` 문법을 사용하기
-  - 도구를 이용하여 하나의 CSS 파일로 병합하기
+  - 번들러 등의 도구를 이용하여 하나의 CSS 파일로 병합하기
 
 ```html
 <!-- Too Bad -->

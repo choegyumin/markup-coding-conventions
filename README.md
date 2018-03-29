@@ -380,72 +380,88 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 `z-index` 스택을 규칙 없이 지정한다면 서로 겹친 엘리먼트의 스택 순서는 반드시 꼬이게 됩니다. `0`을 시작으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 계층을 나누는 것이 더 좋은 방법입니다.
 
-#### A. 일반 엘리먼트
+> CSS 전처리기의 믹스인을 활용한다면 간편하게 작성할 수 있습니다.
 
-Value: 음수 ~ `99999`
-
-#### B. 상호작용 엘리먼트
-
-Value: `16100000` ~ `16199999`
-
-펼쳐진 상태의 콤보박스처럼 특정 상황에서 최상위에 노출되어야 하는 레이어는 스택을 유동적으로 관리하세요.
+```scss
+.foo {
+  position: absolute;
+  @include layer-index('floating', 3000);
+}
+```
 
 ```css
-.combobox {
+.foo {
+  z-index: 16203000
+}
+```
+
+#### A. Normal
+
+평범한 엘리먼트입니다.
+
+- Value: `-1` ~ `99999`
+
+#### B. `inline-popover`
+
+마우스 오버 또는, 클릭 등의 이벤트 트리거링으로 특정 상황에서 상위에 노출되어야 하는 엘리먼트입니다. 상태 클래스를 이용하여 스택을 유동적으로 관리하세요.
+
+> 부모 엘리먼트의 위치에 영향을 받지 않는 엘리먼트는 `inline-popover` 대신 `popover`을 사용합니다.
+
+- Value: `16100000` ~ `16199999`
+
+```css
+.dropdown {
   position: relative;
-  z-index: 0;
 }
-.combobox.is-expanded {
-  z-index: 16199999;
+.dropdown.is-expand {
+  position: absolute;
+  @include layer-index('inline-popover');
 }
 ```
 
-#### C. 플로팅 레이어 엘리먼트
+#### C. `floating`
 
-Value: `16200000` ~ `16299999`
+플로팅 레이어는 항상 상위에 떠있어야 합니다.
 
-플로팅 레이어 엘리먼트는 브라우저의 스크롤을 따라다니므로 일반 엘리먼트에 가려져서는 안됩니다.
+- Value: `16200000` ~ `16299999`
 
-#### D. 풀스크린 레이어 엘리먼트
+#### D. `dialog`
 
-Value: `16300000` ~ `16399999`
+다이얼로그는 본문의 최상위에 노출되어야 합니다.
 
-풀스크린 레이어 엘리먼트는 기존의 본문을 숨기고 새로운 본문 역할을 합니다. 이 엘리먼트를 노출할 때는 `<body>` 래퍼 엘리먼트와 의도치 않게 풀스크린 엘리먼트 위에 보여지는 모든 엘리먼트를 숨기세요.
+- Value: `16300000` ~ `16399999`
 
-```html
-<body>
-  <!-- Hide -->
-  <div class="wrapper" style="display: none;">
-    <h1>Hello, World!</h1>
-    <div role="dialog" class="dialog">
-      .wrapper > .dialog
-    </div>
-  </div>
-  <!-- Show -->
-  <div class="layer" style="display: block;">
-    <h1>Hell, Korea!</h1>
-    <div role="dialog" class="dialog">
-      .layer > .dialog
-    </div>
-  </div>
-  <!-- Hide -->
-  <div role="dialog" class="dialog" style="display: none;">
-    .dialog
-  </div>
-</body>
+#### E. `popover`
+
+이벤트 트리거링으로 상위에 노출되어야 하는 엘리먼트입니다. `inline-popover`와 같은 상황일 때 엘리먼트가 `position: fixed;`거나 `<body>`의 자식으로 존재한다면 사용하세요.
+
+- Value: `16400000` ~ `16499999`
+
+```css
+.dropdown {}
+.dropdown-menu {
+  position: fixed;
+  @include layer-index('popover');
+}
 ```
 
-#### E. 다이얼로그
+#### F. `toast`
 
-Value: `16400000` ~ `16499999`
+토스트는 페이지의 최상위에 노출되어야 합니다.
 
-다이얼로그는 본문 엘리먼트 내에서 최상위에 노출되어야 합니다.
+- Value: `16500000` ~ `16599999`
 
-#### F. 스킵 네비게이션
+#### G. `super`
 
-Value: `16777271`
+반드시 최상위에 노출되어야 하는 엘리먼트입니다.
 
-스킵 네비게이션은 어디서든 접근 가능해야 합니다. 다른 레이어에 절대 가려지지 않도록 하세요.
+- Value: `16600000` ~ `16699999`
+
+#### H. `skip`
+
+스킵 네비게이션은 어디서든 접근 가능해야 하므로 다른 레이어에 절대 가려지지 않아야 합니다.
+
+- Value: `16777271`
 
 <h3 id="css-import">2-6. Import</h3>
 
@@ -646,7 +662,7 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 > 이 규칙은 *<a target="_blank" href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/">BEMIT</a> 방법론*(*<a target="_blank" href="https://en.bem.info/methodology/naming-convention/">BEM</a>* + *<a target="_blank" href="http://csswizardry.net/talks/2014/11/itcss-dafed.pdf">ITCSS</a>*)을 기반으로 작성되었습니다.
 
-> ###### 참고문서
+> ###### 참고자료
 > - BEM
 >   - <a target="_blank" href="https://en.bem.info/">BEM</a>
 >   - <a target="_blank" href="http://getbem.com/">Get BEM</a>

@@ -16,15 +16,14 @@
   - [2-1. Syntax](#css-syntax)
   - [2-2. Charset](#css-charset)
   - [2-3. Selectors](#css-selectors)
-  - [2-4. Properties](#css-properties)
-  - [2-5. z-index](#css-z-index)
-  - [2-6. Import](#css-import)
-  - [2-7. Media Query](#css-media-query)
-  - [2-8. Nesting](#css-nesting)
-  - [2-9. Extend](#css-extend)
-  - [2-10. Reset](#css-reset)
-  - [2-11. Prefix](#css-prefix)
-  - [2-12. Comments](#css-comments)
+  - [2-4. z-index](#css-z-index)
+  - [2-5. Import](#css-import)
+  - [2-6. Media Query](#css-media-query)
+  - [2-7. Nesting](#css-nesting)
+  - [2-8. Extend](#css-extend)
+  - [2-9. Reset](#css-reset)
+  - [2-10. Prefix](#css-prefix)
+  - [2-11. Comments](#css-comments)
 - [3. Naming](#naming)
   - [3-1. Selectors](#naming-selectors)
 
@@ -136,10 +135,9 @@ PC용 웹사이트는 최신 버전의 IE로 렌더링하기 위해 문서모드
 
 ```html
 <body>
-  <div class="wrapper">
+  <div id="app">
     <h1>Hello, World!</h1>
   </div>
-  <div class="layer"></div>
   <div role="dialog" class="dialog"></div>
 </body>
 ```
@@ -218,7 +216,7 @@ PC용 웹사이트는 최신 버전의 IE로 렌더링하기 위해 문서모드
 
 <h3 id="html-attributes">1-5. Attributes</h3>
 
-애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 이렇게 하면 에디터로 특정 엘리먼트를 검색할 때 효율이 증가됩니다.
+애트리뷰트는 변하지 않는 것부터 먼저 선언하세요. 애트리뷰트의 순서가 비슷한 엘리먼트끼리 통일되므로 검색하기 편해집니다.
 
 ```html
 <input class="input" type="text" id="user-id" name="UserId" title="아이디" style="width:100px">
@@ -239,7 +237,7 @@ HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` �
 
 #### B. `name` 애트리뷰트
 
-`name` 애트리뷰트 값은 서버사이드 언어의 네이밍 규칙에 맞게 작성하세요.
+`name` 애트리뷰트 값은 비즈니스 로직을 작성하는 언어의 네이밍 규칙에 맞게 작성하는 것을 권장합니다.
 
 ```html
 <!-- PascalCase -->
@@ -248,11 +246,11 @@ HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` �
 </form>
 ```
 
-#### C. 관계 ID 애트리뷰트
+#### C. 관계 애트리뷰트
 
-> 여기서 이야기하는 관계 ID 애트리뷰트란, 엘리먼트의 관계를 나타내기 위해 사용된 `id` 애트리뷰트와 이를 사용하는 모든 애트리뷰트를 의미합니다.
+> **`rel` 애트리뷰트를 말하는 것이 아닙니다!** 여기서는 엘리먼트의 관계를 나타내기 위해 사용된 `id` 애트리뷰트와 이를 사용하는 모든 애트리뷰트를 말합니다.
 
-관계 ID 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. ID 선택자로 스타일을 추가하거나 다른 용도(ex. Fragment identifier)로 함께 사용된다면 언더스코어를 생략하세요.
+관계 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. ID 선택자가 다른 용도(ex. Style, Fragment id)로 함께 사용된다면 언더스코어를 생략하세요.
 
 ```html
 <div role="navigation" id="lnb" aria-labelledby="_lnb-heading">
@@ -303,80 +301,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 > - <a target="_blank" href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade &middot; @mdo</a>
 > - <del><a target="_blank" href="https://developer.mozilla.org/ko/docs/Web/CSS/Writing_Efficient_CSS">효율적인 CSS 작성하기 - CSS | MDN</a></del> <a target="_blank" href="http://webclub.tistory.com/361">대체 번역본</a>
 
-<h3 id="css-properties">2-4. Properties</h3>
-
-#### A. 속기 프로퍼티 (Shorthand Properties)
-
-속기로 작성 가능한 프로퍼티는 속기로 작성하세요.
-
-```css
-/* Bad */
-.foo {
-  font-family: palatino, georgia, serif;
-  font-size: 100%;
-  line-height: 1.6;
-  padding-top: 0;
-  padding-right: 1em;
-  padding-bottom: 2em;
-  padding-left: 1em;
-}
-
-/* Good */
-.bar {
-  font: 100%/1.6 palatino, georgia, serif;
-  padding: 0 1em 2em;
-}
-```
-
-#### B. 속기 16진수
-
-16진수 값들은 가능하다면 축약형으로 작성하세요.
-
-```css
-/* Bad */
-.foo {
-  color: #aabbcc;
-}
-
-/* Good */
-.bar {
-  color: #abc;
-}
-```
-
-#### C. 단위 생략
-
-값이 0이라면 단위를 생략하세요.
-
-```css
-/* Bad */
-.foo {
-  margin: 0px;
-}
-
-/* Good */
-.bar {
-  margin: 0;
-}
-```
-
-#### D. 선행 0 생략
-
-소수값 앞에 오는 0은 생략하세요.
-
-```css
-/* Bad */
-.foo {
-  opacity: 0.5;
-}
-
-/* Good */
-.bar {
-  opacity: .5;
-}
-```
-
-<h3 id="css-z-index">2-5. z-index</h3>
+<h3 id="css-z-index">2-4. z-index</h3>
 
 `z-index` 스택을 규칙 없이 지정한다면 서로 겹친 엘리먼트의 스택 순서는 반드시 꼬이게 됩니다. `0`을 시작으로 차곡차곡 쌓는 것 보다 엘리먼트의 특성에 맞게 계층을 나누는 것이 더 좋은 방법입니다.
 
@@ -463,7 +388,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 - Value: `16777271`
 
-<h3 id="css-import">2-6. Import</h3>
+<h3 id="css-import">2-5. Import</h3>
 
 **CSS의 기본 문법인 `@import`는 성능 문제를 가지고 있습니다. 절대 사용하지 마세요!** 대신 아래의 방법으로 개발하세요.
 
@@ -489,7 +414,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 <link rel="stylesheet" href="bundle.css"> <!-- one.css, .. in bundle.css -->
 ```
 
-<h3 id="css-media-query">2-7. Media Query</h3>
+<h3 id="css-media-query">2-6. Media Query</h3>
 
 미디어 쿼리는 컴포넌트 단위로 분류하여 관련 규칙 바로 뒤에 작성하세요. 이렇게 하면 파편화된 스타일이 한곳으로 모여져 가독성이 좋아집니다. 불가능하다면 문서의 마지막에 모아서 작성하세요. 
 
@@ -516,7 +441,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-nesting">2-8. Nesting</h3>
+<h3 id="css-nesting">2-7. Nesting</h3>
 
 선택자의 중첩은 최대한 피해야 하므로, **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요!** 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다.
 
@@ -537,7 +462,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-extend">2-9. Extend</h3>
+<h3 id="css-extend">2-8. Extend</h3>
 
 **CSS 전처리기가 지원하는 Extend 문법은 절대 사용하지 마세요! Mixin으로 대체하세요!** 
 
@@ -545,11 +470,11 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 > - <a target="_blank" href="https://sass-guidelin.es/ko/#extend">Sass 가이드라인</a>
 > - <a target="_blank" href="https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/">When to use @extend; when to use a mixin - CSS Wizardry</a>
 
-<h3 id="css-reset">2-10. Reset</h3>
+<h3 id="css-reset">2-9. Reset</h3>
 
 초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 초기화를 생략하세요.
 
-<h3 id="css-prefix">2-11. Prefix</h3>
+<h3 id="css-prefix">2-10. Prefix</h3>
 
 벤더 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언하세요.
 
@@ -566,27 +491,20 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 }
 ```
 
-<h3 id="css-comments">2-12. Comments</h3>
+<h3 id="css-comments">2-11. Comments</h3>
 
 코드를 알아보기 쉽게 주석으로 스타일을 그룹화하세요.
 
 #### A. 프로젝트 주석
 
-프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성하세요. (`/*! */`)
+프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성하세요. (`/*! .. */`)
 
 ```css
 /*!
-  @author My Name <id@domain.com> 
+  @author My Name <id@domain.com>
   @since v1.2.0 2016-04-11
 */
 ```
-
-<dl>
-  <dt><code>@author</code></dt>
-  <dd>작성자 정보입니다. 이름과 이메일을 작성하세요.</dd>
-  <dt><code>@since</code></dt>
-  <dd>문서의 버전 및 작성일입니다. 둘 중 하나만 작성하셔도 됩니다.</dd>
-</dl>
 
 #### B. 코드 문서화 주석
 
@@ -594,33 +512,18 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 ##### a. CSS
 
-CSS로 작성 시 아래의 형식에 맞게 작성하세요. (`/*= */`)
+CSS로 작성 시 서로 간의 규칙을 정의하여 작성하세요.
 
 ```css
 /*=
   @group Components
   @name combobox
-  @author My Name <id@domain.com>
-  @since v1.2.0 2016-04-11
 
   This is example!
   blah, blah, blah, blah..
 */
 .combobox {}
 ```
-
-<dl>
-  <dt><code>@group</code></dt>
-  <dd>항목의 계층(Layer)입니다. 후술할 <a href="#naming">3. Naming</a> 섹션의 규칙과 동일합니다.</dd>
-  <dt><code>@name</code></dt>
-  <dd>항목의 이름입니다.</dd>
-  <dt><code>@author</code></dt>
-  <dd>작성자 정보입니다. 이름과 이메일을 작성하며, 프로젝트 주석에 표기된 작성자와 동일 인물일 경우 생략하세요.</dd>
-  <dt><code>@since</code></dt>
-  <dd>항목의 버전 및 작성일입니다. 최초 개발단계에서는 생략하세요.</dd>
-  <dt>Description</dt>
-  <dd>항목에 대한 설명입니다. 블록 태그(<code>@</code>)는 없습니다.</dd>
-</dl>
 
 ##### b. CSS 전처리기
 

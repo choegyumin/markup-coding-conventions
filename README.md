@@ -22,8 +22,7 @@
   - [2-7. Nesting](#css-nesting)
   - [2-8. Extend](#css-extend)
   - [2-9. Reset](#css-reset)
-  - [2-10. Prefix](#css-prefix)
-  - [2-11. Comments](#css-comments)
+  - [2-10. Vendor Prefix](#css-vendor-prefix)
 - [3. Naming](#naming)
   - [3-1. Selectors](#naming-selectors)
 
@@ -246,18 +245,6 @@ HTML5에서는 Boolean 애트리뷰트를 선언하는 것 만으로도 `true` �
 </form>
 ```
 
-#### C. 관계 애트리뷰트
-
-> **`rel` 애트리뷰트를 말하는 것이 아닙니다!** 여기서는 엘리먼트의 관계를 나타내기 위해 사용된 `id` 애트리뷰트와 이를 사용하는 모든 애트리뷰트를 말합니다.
-
-관계 애트리뷰트 값은 앞에 언더스코어(`_`) 추가하세요. ID 선택자가 다른 용도(ex. Style, Fragment id)로 함께 사용된다면 언더스코어를 생략하세요.
-
-```html
-<div role="navigation" id="lnb" aria-labelledby="_lnb-heading">
-  <h2 id="_lnb-heading">Local Navigation Bar</h2>
-</div>
-```
-
 <h3 id="html-import">1-6. Import</h3>
 
 - HTML5에서 CSS와 JS 파일을 불러올 때 `type` 애트리뷰트는 이미 기본값을 가집니다. 필요하지 않다면 선언하지 마세요.
@@ -442,7 +429,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 <h3 id="css-nesting">2-7. Nesting</h3>
 
-선택자의 중첩은 최대한 피해야 하므로, **CSS 전처리기가 지원하는 Nesting 문법은 가급적 사용하지 마세요!** 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다.
+너무 많은 선택자의 중첩은 피해야 하므로, **CSS 전처리기가 지원하는 Nesting 문법은 주의해서 사용해야 합니다!** 무분별하게 사용하면 컴파일된 CSS가 엉망이 될 수도 있습니다.
 
 > - 선택자의 중첩을 피해야하는 이유는 <a href="#css-selectors">2-3. Selectors</a> 섹션의 참고자료를 참고하세요.
 > - 선택자의 중첩을 피하는 방법은 <a href="#naming">3. Naming</a> 섹션을 참고하세요.
@@ -473,7 +460,7 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 
 초기화 스타일은 서비스에 맞게 정의하세요. 만약 <a target="_blank" href="http://necolas.github.io/normalize.css/">normalize.css</a> 또는 <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a> 등의 프레임워크를 사용한다면 초기화를 생략하세요.
 
-<h3 id="css-prefix">2-10. Prefix</h3>
+<h3 id="css-vendor-prefix">2-10. Vendor Prefix</h3>
 
 벤더 프리픽스 프로퍼티는 일반 프로퍼티보다 먼저 선언하세요.
 
@@ -487,67 +474,6 @@ CSS와 SASS, LESS, Stylus 등의 CSS 전처리기(CSS Preprocessor) 코드의 �
 .foo {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
   box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
-}
-```
-
-<h3 id="css-comments">2-11. Comments</h3>
-
-코드를 알아보기 쉽게 주석으로 스타일을 그룹화하세요.
-
-#### A. 프로젝트 주석
-
-프로젝트 정보를 담은 주석은 아래의 양식에 맞게 `@charset` 바로 아래에 작성하세요. (`/*! .. */`)
-
-```css
-/*!
-  @author My Name <id@domain.com>
-  @since v1.2.0 2016-04-11
-*/
-```
-
-#### B. 코드 문서화 주석
-
-코드를 문서화하기 위한 주석입니다.
-
-##### a. CSS
-
-CSS로 작성 시 서로 간의 규칙을 정의하여 작성하세요.
-
-```css
-/*=
-  @group Components
-  @name combobox
-
-  This is example!
-  blah, blah, blah, blah..
-*/
-.combobox {}
-```
-
-##### b. CSS 전처리기
-
-CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으로 작성하세요. 만약 없다면 CSS 규칙을 따릅니다. 아래 코드는 <a target="_blank" href="http://sassdoc.com/">SassDoc</a>을 사용한 예제입니다.
-
-```scss
-/// @group Tools
-/// @name background-rgba
-/// @author My Name <id@domain.com>
-/// @since v1.2.0 2016-04-11
-///
-/// @param {Length} $color - Element's background color
-/// @param {Length} $alpha [1] - Element's background alpha
-/// @output `background-color` and `filter`
-///
-/// This is example!
-/// blah, blah, blah, blah..
-@mixin background-rgba($color, $alpha: 1) {
-  $rgba: rgba($color, $alpha);
-  $ie-hex-str: ie-hex-str($rgba);
-  background-color: $rgba;
-  filter: progid:DXImageTransform.Microsoft.gradient(StartColorStr=#{$ie-hex-str},EndColorStr=#{$ie-hex-str});
-  &:not([dummy]) {
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled='false');
-  }
 }
 ```
 
@@ -583,18 +509,16 @@ CSS 전처리기로 작성 시 전처리기가 제공하는 문서화 방식으�
 
 #### A. Naming
 
-Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
+Syntax: `<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 
-1. 기본 네이밍 규칙은 BEM을 따릅니다.  
+- 기본 네이밍 규칙은 BEM을 따릅니다.  
   ```BLOCK__ELEMENT--MODIFIER```  
-1. 앞에 ITCSS의 계층을 나타내는 네임스페이스를 추가합니다.  
-  ```NAMESPACE-BLOCK__ELEMENT--MODIFIER```
-1. 상태 클래스는 `modifier`에서 분리하여 따로 관리합니다. (`is-`, `has-`)  
-  ```NAMESPACE-BLOCK__ELEMENT--MODIFIER.is-STATE```
+- 상태 클래스는 `modifier`에서 분리하여 따로 관리합니다.  
+  ```BLOCK__ELEMENT--MODIFIER.is-STATE```
 
 ```html
-<div class="o-widget">
-  <div class="o-widget__wrapper o-widget__wrapper--dark">
+<div class="widget">
+  <div class="widget__wrapper widget__wrapper--dark">
     <input class="input" type="text" aria-label="Text Field">
     <button class="btn" type="reset">Reset</button>
     <button class="btn btn--submit is-disabled" type="submit" disabled>Submit</button>
@@ -603,9 +527,9 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 ```
 
 ```css
-.o-widget {} /* NAMESPACE-BLOCK */
-.o-widget__wrapper {} /* NAMESPACE-BLOCK__ELEMENT */
-.o-widget__wrapper--dark {} /* NAMESPACE-BLOCK__ELEMENT--MODIFIER */
+.widget {} /* BLOCK */
+.widget__wrapper {} /* BLOCK__ELEMENT */
+.widget__wrapper--dark {} /* BLOCK__ELEMENT--MODIFIER */
 .input {} /* BLOCK */
 .btn {} /* BLOCK */
 .btn.is-disabled {} /* .BLOCK.is-STATE */
@@ -666,14 +590,12 @@ Syntax: `[<NAMESPACE>-]<BLOCK>[__<ELEMENT>][--<MODIFIER>][.is|has-<STATE>]`
 @import "pages/_error";
 @import "pages/_faq";
 
-@import "themes/_dark"; /* Not recommended */
-
 @import "utilities/_blind";
 ```
 
 ##### a. Settings
 
-CSS 전처리기를 사용한다면 전역 변수를 작성하세요.
+전역 변수를 작성하세요.
 
 ```scss
 $breakpoints: (
@@ -704,7 +626,7 @@ CSS 전처리기를 사용한다면 Function과 Mixin을 작성하세요.
 
 ##### c. Generic
 
-문서의 초기 스타일을 지정하세요.
+문서의 초기 스타일을 작성하세요.
 
 ```scss
 html,
@@ -729,28 +651,16 @@ input[type='image'] {}
 
 ##### e. Objects
 
-Namespace: `o`
-
-반복적이며 재사용이 가능한 디자인 패턴을 작성하세요. 이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성합니다.
+반복적이며 재사용이 가능한 디자인 패턴을 작성하세요. 이는 시각적인 효과보단 레이아웃을 위한 스타일을 중점으로 작성합니다. 클래스 대신 CSS 전처리기의 믹스인으로 작성하는 것도 좋은 방법입니다.
 
 ```scss
-.o-row {}
-.o-col {}
-.o-col--s12 {}
-.o-col--m12 {}
-.o-col--l12 {}
+.row {}
+.col-s12 {}
+.col-m12 {}
+.col-l12 {}
 ```
 
-###### 계층 간의 관계
-
-| | Objects | Components |
-| :--- | :---: | :---: |
-| 조합 (`.object.foo`) | O | O |
-| 포함 (`.object > .foo`) | O | O |
-
 ##### f. Components
-
-Namespace: -
 
 컴포넌트 스타일을 작성하세요.
 
@@ -760,16 +670,7 @@ Namespace: -
 .combobox.is-expanded {}
 ```
 
-###### 계층 간의 관계
-
-| | Objects | Components |
-| :--- | :---: | :---: |
-| 조합 (`.component.foo`) | O | X |
-| 포함 (`.component > .foo`) | O | O |
-
 ##### g. Pages
-
-Namespace: `p`
 
 페이지 스타일을 작성하세요. 컴포넌트 기반 개발 방식을 따르는 경우에도 페이지 스타일이 무수히 많아진다면 설계가 잘못됐을 가능성이 높습니다. (Pages 계층은 *ITCSS* 규칙이 아닙니다)
 
@@ -777,85 +678,48 @@ Namespace: `p`
 > - <a target="_blank" href="http://slowalk.tistory.com/2440">슬로워크 블로그 :: 스타일 가이드로 웹서비스 개발하기</a>
 
 ```scss
-.p-about {}
+.about-page {}
 ```
 
 ##### h. Themes
 
-Namespace: `t`
-
-테마 스타일을 작성하세요. 테마 스타일 시트의 작성 규칙은 아래의 방법 중 하나로 통일하세요. **만약 테마 클래스가 필요하다면 `html` 엘리먼트에 추가하는 것을 권장합니다.**
+테마 스타일을 작성하세요.
 
 ```html
-<html class="t-dark">
+<html class="dark-theme">
   <body>
     <div class="spinner"></div>
   </body>
 </html>
 ```
 
-###### CSS 분리
-
-CSS 파일을 분리하여 작성합니다. **가장 권장하는 방법으로 관리가 간편하고 HTTP 리퀘스트가 발생하지만 필요하지 않을 때는 오히려 리소스 낭비를 막습니다.**
-
-```html
-<link rel="stylesheet" href="/css/project.css">
-<link rel="stylesheet" href="/css/t-dark.css">
-```
-
-###### 인라인
-
-해당 엘리먼트와 함께 작성합니다. 이 방법은 파편화된 스타일을 한곳으로 모아 가독성은 좋지만 테마를 사용하지 않아도 스타일을 불러와야 하는 단점이 있습니다.
-
 ```scss
 .combobox {
-  .t-dark & {}
+  .dark-theme & {}
 }
 ```
 
 ```scss
 .combobox {}
-.t-dark {
+.dark-theme {
   .combobox {}
 }
 ```
 
-###### 계층 분리
+테마 스타일을 새로운 CSS 파일로 분리하여 작성할 수도 있습니다.
 
-`Pages` 계층과 `Utilities` 계층 사이에 작성합니다. 이 방법은 권장하지 않습니다. 가급적 다른 방법을 사용하세요.
-
-```scss
-..
-@import "pages/_about";
-
-@import "themes/_dark";
-
-@import "utilities/_blind";
-..
+```html
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/dark-theme.css">
 ```
 
 ##### i. Utilities (Trumps)
 
-Namespace: `u`
-
 스타일을 오버라이드하거나 전역 스타일로 사용할 수 있는 헬퍼를 작성합니다. 때에 따라 프로퍼티에 `!important`를 추가할 수 있습니다.
 
 ```scss
-.u-blind {}
+.blind {}
 ```
-
-
-[↑ Table of Conetnts](#table-of-contents)
-
-
-
-<h2 id="changelogs">Changelogs</h2>
-
-[https://github.com/choi4450/markup-coding-conventions/commits/master](https://github.com/choi4450/markup-coding-conventions)
-
-> - 2016.06.21 네이밍 개편(BEMIT 도입)
-> - 2016.04.08 전면 개편
-> - 2015.04.15 최초 작성 완료
 
 
 [↑ Table of Conetnts](#table-of-contents)
